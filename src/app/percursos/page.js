@@ -4,14 +4,6 @@ import styles from './page.module.css'; // Importa os estilos específicos para 
 const PercursosPage = () => {
   return (
     <div>
-      <header className={styles.header}>
-        <h1 className={styles.logo}>PerCurso</h1>
-        <nav className={styles.nav}>
-          <a href="/recursos">VER RECURSOS</a>
-          <a href="/percursos">VER PERCURSOS</a>
-        </nav>
-      </header>
-
       <main className={styles.main}>
         <section className={styles.introSection}>
           <h2 className={styles.title}>PERCURSOS</h2>

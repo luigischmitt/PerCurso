@@ -5,14 +5,6 @@ import styles from './page.module.css';
 const HomePage = () => {
   return (
     <div>
-      <header className={styles.header}>
-        <h1 style={{ fontFamily: 'Lemon, sans-serif', marginRight: '15px' }} className={styles.logo}>PerCurso</h1>
-        <nav className={styles.nav}>
-          <Link href="/recursos">VER RECURSOS</Link>
-          <Link href="/percursos">VER PERCURSOS</Link>
-        </nav>
-      </header>
-
       <main className={styles.main}>
         <h2 className={styles.title}>BEM-VINDOS!</h2>
         <div className={styles.contentContainer}>
@@ -34,7 +26,6 @@ const HomePage = () => {
           </div>
         </div>
       </main>
-
 
       <section className={styles.section}>
         <div className={styles.columns}>

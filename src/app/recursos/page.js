@@ -5,14 +5,6 @@ import Link from 'next/link';
 const PercursosPage = () => {
   return (
     <div>
-      <header className={styles.header}>
-        <h1 className={styles.logo}>PerCurso</h1>
-        <nav className={styles.nav}>
-          <Link href="/recursos">VER RECURSOS</Link>
-          <Link href="/percursos">VER PERCURSOS</Link>
-        </nav>
-      </header>
-
       <main className={styles.main}>
         <section className={styles.introSection}>
           <div className={styles.introText}>

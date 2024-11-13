@@ -1,6 +1,8 @@
+// layout.js
 import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link"; // Importa o Link do Next.js
+import styles from './page.module.css'; // Importa o CSS do page.js
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,11 +25,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <header style={{ padding: '20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid #EDF6FF' }}>
-          <h1>PerCurso</h1>
-          <nav>
-            <Link href="/recursos" style={{ marginRight: '15px' }}>Recursos</Link>
-            <Link href="/percursos">Percursos</Link>
+        <header className={styles.header}>
+          <Link href="/" passHref>
+            <h1 style={{ fontFamily: 'Lemon, sans-serif', marginRight: '15px', cursor: 'pointer' }} className={styles.logo}>PerCurso</h1>
+          </Link>
+          <nav className={styles.nav}>
+            <Link href="/recursos">VER RECURSOS</Link>
+            <Link href="/percursos">VER PERCURSOS</Link>
           </nav>
         </header>
         <main>{children}</main>
