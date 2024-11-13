@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './page.module.css'; // Arquivo CSS para os estilos específicos da página
-import Link from 'next/link';
 
 const PercursosPage = () => {
   return (
