@@ -1,11 +1,8 @@
-# PerCurso
-
-## Grupo 2 - Hackathon do TRILab
-### Composto por Beatriz Pessoa, Luigi Schmitt e Nicolas Kleiton
-
 ![PerCurso Logo](public/PerCurso.svg)
 
-O PerCurso vai te ajudar a se orientar durante a sua graduação em CC. Direcionado ao curso de Ciência da Computação da UFPB, esse repositório é um trabalho colaborativo contendo dicas, links úteis e provas antigas das disciplinas do curso. A ideia é que todos possam contribuir e ajudar uns aos outros a encontrar o seu percurso :)
+## Grupo 2 - Hackathon do TRILab
+
+### O PerCurso vai te ajudar a se orientar durante a sua graduação em CC. Direcionado ao curso de Ciência da Computação da UFPB, esse repositório é um trabalho colaborativo contendo dicas, links úteis e provas antigas das disciplinas do curso. A ideia é que todos possam contribuir e ajudar uns aos outros a encontrar o seu percurso :)
 
 ## Como Usar?
 
@@ -22,3 +19,4 @@ Para usar o projeto localmente, siga os passos abaixo:
     ```bash
    npm run dev
 
+### Produzido por Beatriz Pessoa, Luigi Schmitt e Nicolas Kleiton
