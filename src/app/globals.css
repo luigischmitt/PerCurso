@@ -1,0 +1,44 @@
+/* globals.css */
+:root {
+  --primary-color: #2C274B;
+  --secondary-color: #5436AD;
+  --accent-color: #FCBC49;
+  --background-color: #EDF6FF;
+  --white: #FFFFFF;
+}
+
+@font-face {
+  font-family: 'Lemon';
+  src: url('./fonts/Lemon-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('./fonts/Outfit-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  font-size: 16px;
+}

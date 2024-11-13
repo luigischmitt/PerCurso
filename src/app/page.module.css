@@ -1,0 +1,102 @@
+/* page.module.css */
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--background-color);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-right: 15px;
+}
+
+.main {
+  padding: 50px 20px;
+  background-color: #EDF6FF;
+}
+
+.description {
+  flex: 1; /* Ocupa o espaço necessário */
+  max-width: 600px; /* Limita a largura do texto */
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.title {
+  font-size: 48px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.accent {
+  color: var(--accent-color);
+}
+
+.buttonContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section {
+  background-color: #FFFF;
+  padding: 50px 20px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.column {
+  max-width: 368px;
+  max-height: 174px;
+}
+
+.columnTitle {
+  font-size: 20px;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; 
+  margin-top: 20px;
+}
+
+.description {
+  flex: 1; 
+  max-width: 600px; 
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mainImage {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
