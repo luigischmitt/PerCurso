@@ -22,7 +22,6 @@
   height: 552px;
   padding: 10px 0px;
   justify-content: space-evenly;
-
 }
 
 .backgroundRectangle {
@@ -48,8 +47,14 @@
 .buttonContainer {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 74px;
+}
+
+.button {
+  width: 307px;
+  height: 69.377px;
+  font-size: 24px;
+  padding: 307 69.4;
 }
 
 .textButtonContainer {
@@ -64,13 +69,17 @@
 
 .columns {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
+  gap: 23px;
 }
 
 .column {
-  max-width: 368px;
-  max-height: 174px;
+  width: 420px;
+  height: 241px;
+  border-radius: 18px;
+  background: rgba(237, 246, 255, 0.34);
+  box-shadow: 9px 11px 11px -3px rgba(0, 0, 0, 0.25); 
 }
 
 .columnTitle {
@@ -81,10 +90,10 @@
 
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 5px;
   background-color: var(--primary-color);
   color: var(--white);
-  
+  height: 73px;
 }
 
 .contentContainer {
@@ -105,8 +114,10 @@
 
 .imageContainer {
   flex: 1;
+  width: 573px;
+  height: 401px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .mainImage {

@@ -15,10 +15,10 @@ const HomePage = () => {
               </p>
               <div className={styles.buttonContainer}>
                 <Link href="/recursos">
-                  <button>RECURSOS</button>
+                  <button className={styles.button}>RECURSOS</button>
                 </Link>
                 <Link href="/percursos">
-                  <button>PERCURSOS</button>
+                  <button className={styles.button}>PERCURSOS</button>
                 </Link>
               </div>
             </div>
@@ -60,12 +60,12 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-
+      </div>
         <footer className={styles.footer}>
           <p>© 2024 PerCurso, Todos os direitos reservados</p>
           <a href="#politica">Políticas de Privacidade</a>
         </footer>
-      </div>
+      
     </div>
   );
 };
