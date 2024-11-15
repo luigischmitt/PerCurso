@@ -27,18 +27,20 @@
     justify-content: center;
     align-items: center;
     padding: 50px 20px;
-    background-color: #EDF6FF;
+    background: linear-gradient(to right, #EDF6FF 50%, white 50%);
     height: 100vh;
 }
 
   .introSection {
+    margin-left: 15px;
     flex: 1;
     text-align: left;
     padding: 20px;
+    margin-top: -100px;
 }
 
   .title {
-    font-size: 48px;
+    font-size: 100px;
     color: #5436AD;
     font-weight: bold;
     margin-bottom: 10px;
@@ -53,8 +55,9 @@
 }
 
   .image {
-    width: 250px;
-    margin: 20px auto;
+    width: 400px;
+    margin-left: 100%;
+    margin: 20px 50px;
     display: block;
 }
 
@@ -77,16 +80,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espaçamento entre os botões */
-    margin-top: 20px;
+    gap: 60px; /* Espaçamento entre os botões */
+    margin-top: -100px;
 }
 
   .button {
     background-color: #4B2A87;
     color: #fff;
-    padding: 20px 40px; /* Aumenta o tamanho dos botões */
+    padding: 30px 40px; /* Aumenta o tamanho dos botões */
     border: none;
-    border-radius: 8px;
+    border-radius: 25px;
     font-size: 1.2rem; /* Aumenta o tamanho da fonte */
     cursor: pointer;
     width: 80%; /* Controla a largura dos botões */
