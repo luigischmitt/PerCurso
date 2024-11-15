@@ -1,18 +1,19 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 const PercursosPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const disciplines = [
-    { name: "📘 Cálculo diferencial e integral I" },
-    { name: "🖥️ Introdução à programação" },
-    { name: "📚 Metodologia do trabalho científico" },
-    { name: "🔢 Matemática discreta" },
-    { name: "📐 Cálculo vetorial e geometria analítica" },
-    { name: "💻 Introdução à ciência da computação" },
+    { name: "📘 Cálculo diferencial e integral I", slug: 'calculo1' },
+    { name: "🖥️ Introdução à programação", slug: 'ip' },
+    { name: "📚 Metodologia do trabalho científico", slug: 'metodologia' },
+    { name: "🔢 Matemática discreta", slug: 'discreta' },
+    { name: "📐 Cálculo vetorial e geometria analítica", slug: 'vetorial' },
+    { name: "💻 Introdução à ciência da computação", slug: 'ic' },
   ];
 
   const filteredDisciplines = disciplines.filter(discipline =>
@@ -55,9 +56,11 @@ const PercursosPage = () => {
 
           <div className={styles.resourceCards}>
             {filteredDisciplines.map((discipline, index) => (
-              <div key={index} className={styles.card}>
-                {discipline.name}
-              </div>
+              <Link href={`/recursos/${discipline.slug}`} key={index} passHref>
+                <div className={styles.card}>
+                  {discipline.name}
+                </div>
+              </Link>
             ))}
           </div>
         </section>
