@@ -1,3 +1,3 @@
 ## Dificuldades
 
-estou testando
+Dificuldades comuns dessa disciplina.

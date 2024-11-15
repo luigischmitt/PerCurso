@@ -1,4 +1,3 @@
 ## Dicas
 
-luigi é lindo
-
+Dicas sobre a disciplina.

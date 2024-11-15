@@ -1,3 +1,3 @@
 ## Listas
 
-aqui vem as boas
+Listas dessa disciplina.

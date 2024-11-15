@@ -1,3 +1,3 @@
 ## Extras
 
-felizz
+Conteúdos extras sobre a disciplina.
