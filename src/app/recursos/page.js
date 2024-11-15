@@ -1,7 +1,24 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import styles from './page.module.css';
 
 const PercursosPage = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const disciplines = [
+    { name: "📘 Cálculo diferencial e integral I" },
+    { name: "🖥️ Introdução à programação" },
+    { name: "📚 Metodologia do trabalho científico" },
+    { name: "🔢 Matemática discreta" },
+    { name: "📐 Cálculo vetorial e geometria analítica" },
+    { name: "💻 Introdução à ciência da computação" },
+  ];
+
+  const filteredDisciplines = disciplines.filter(discipline =>
+    discipline.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <main className={styles.main}>
@@ -24,19 +41,24 @@ const PercursosPage = () => {
         <section className={styles.resourcesSection}>
           <h2 className={styles.sectionTitle}>RECURSOS</h2>
           <div className={styles.searchContainer}>
-            <input type="text" placeholder="Pesquisar cadeira..." className={styles.searchInput} />
+            <input
+              type="text"
+              placeholder="Pesquisar cadeira..."
+              className={styles.searchInput}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
             <button className={styles.searchButton}>
               🔍
             </button>
           </div>
 
           <div className={styles.resourceCards}>
-            <div className={styles.card}>📘 Cálculo diferencial e integral I</div>
-            <div className={styles.card}>🖥️ Introdução à programação</div>
-            <div className={styles.card}>📚 Metodologia do trabalho científico</div>
-            <div className={styles.card}>🔢 Matemática discreta</div>
-            <div className={styles.card}>📐 Cálculo vetorial e geometria analítica</div>
-            <div className={styles.card}>💻 Introdução à ciência da computação</div>
+            {filteredDisciplines.map((discipline, index) => (
+              <div key={index} className={styles.card}>
+                {discipline.name}
+              </div>
+            ))}
           </div>
         </section>
       </main>
