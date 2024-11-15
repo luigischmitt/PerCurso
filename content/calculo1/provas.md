@@ -1,3 +1,3 @@
 ## Provas
 
-melhor parte
+Provas antigas da disciplina.
