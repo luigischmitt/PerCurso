@@ -3,11 +3,11 @@ import { getDisciplinaContent } from '@/lib/markdown';
 export async function generateStaticParams() {
   return [
     { disciplina: 'calculo1' },
-    { disciplina: 'introducao-programacao' },
-    { disciplina: 'metodologia-trabalho-cientifico' },
-    { disciplina: 'matematica-discreta' },
-    { disciplina: 'calculo-vetorial' },
-    { disciplina: 'introducao-ciencia-computacao' },
+    { disciplina: 'ip' },
+    { disciplina: 'metodologia' },
+    { disciplina: 'discreta' },
+    { disciplina: 'vetorial' },
+    { disciplina: 'ic' },
     // Adicione outras disciplinas aqui
   ];
 }
