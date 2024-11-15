@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link'; // Importa o componente Link do Next.js
 import styles from './page.module.css'; // Importa os estilos específicos para esta página
 
 const PercursosPage = () => {
@@ -17,10 +18,18 @@ const PercursosPage = () => {
         </section>
 
         <section className={styles.buttonsSection}>
-          <button className={styles.button}>ENGENHARIA DE SOFTWARE</button>
-          <button className={styles.button}>CIÊNCIA DE DADOS & IA</button>
-          <button className={styles.button}>SEGURANÇA DA INFORMAÇÃO</button>
-          <button className={styles.button}>PESQUISA OPERACIONAL</button>
+          <Link href="/percursos/engenharia-de-software" className={styles.button}>
+            ENGENHARIA DE SOFTWARE
+          </Link>
+          <Link href="/percursos/ciencia-dados-ia" className={styles.button}>
+            CIÊNCIA DE DADOS & IA
+          </Link>
+          <Link href="/percursos/seguranca-da-informacao" className={styles.button}>
+            SEGURANÇA DA INFORMAÇÃO
+          </Link>
+          <Link href="/percursos/pesquisa-operacional" className={styles.button}>
+            PESQUISA OPERACIONAL
+          </Link>
         </section>
       </main>
 
@@ -31,6 +40,5 @@ const PercursosPage = () => {
     </div>
   );
 };
-
 
 export default PercursosPage;

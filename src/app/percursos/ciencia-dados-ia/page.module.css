@@ -1,4 +1,3 @@
-/* page.module.css */
 
 .header {
   padding: 20px;
@@ -23,79 +22,65 @@
 
 .main {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start; /* Centraliza o conteúdo, mas mantendo o alinhamento superior */
+  flex-direction: column; /* Alterado para coluna para centralizar todo o conteúdo */
+  justify-content: flex-start; /* Alinha o conteúdo no topo */
+  align-items: flex-start;
   padding: 50px 20px;
   background-color: #EDF6FF;
-  height: auto; /* Ajuste para permitir conteúdo flexível */
+  height: auto; /* Garantir que a área ocupe toda a altura da tela */
 }
 
 .introSection {
-  margin-left: 20px;
-  flex: 1;
-  text-align: left;
+  text-align: center; /* Centraliza o conteúdo */
   padding: 20px;
   margin-top: -50px; /* Ajuste para manter posição mais fixa */
 }
 
 .title {
-  font-size: 100px;
+  font-size: 70px;
   color: #5436AD;
   font-weight: bold;
   margin-bottom: 10px;
-  margin-left: 100px;
-  margin-top: -5px;
+  text-align: center; /* Centraliza horizontalmente */
+  margin: 0 auto; /* Remove margens laterais */
+  margin-top: 30px; /* Ajusta a distância do topo */
 }
 
-.description {
-  max-width: 600px;
+.description,
+.description2,
+.description3 {
+  max-width: 80%; /* Permite que o texto ocupe mais espaço horizontalmente */
   font-size: 21px;
-  line-height: 1.6;
+  line-height: 1.8; /* Aumenta o espaçamento entre linhas para legibilidade */
   color: #2C274B;
-  margin-bottom: 20px;
-  margin-left: 100px;
-}
-
-.image {
-  width: 500px;
-  margin: 20px;
-  display: block;
-  margin-left: 150px;
-}
-
-.subtitle {
-  max-width: 600px;
-  font-size: 21px;
-  color: #2C274B;
-  margin-top: 20px;
-  margin-left: 100px;
+  margin: 50px auto; /* Reduz margens superior e inferior */ /* Alinha o texto de forma mais uniforme */
 }
 
 .buttonsSection {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-  gap: 70px;
-  padding: 40px;
-  margin-top: 50px;
-  margin-left: 200px;
+  gap: 300px;
+  padding: 50px;
+  margin-top: -50px;
+  margin-left: 400px;
 }
 
 .button {
   background-color: #4B2A87;
   color: #fff;
-  padding: 2rem 5rem; 
+  padding: 1rem 5rem; 
   border: none;
   border-radius: 1.5rem; 
-  font-size: 1rem; 
+  font-size: 1.4rem; 
   cursor: pointer;
-  width: 80%;
+  width: 80%; /* Largura ajustada para responsividade */
   max-width: 25rem; 
   text-align: center;
   transition: background-color 0.3s ease;
-  box-sizing: border-box; 
+  box-sizing: border-box;
+  white-space: pre-line; /* Permite que o texto quebre em várias linhas */
 }
 
 .button:hover {
@@ -147,6 +132,17 @@
     font-size: 0.9rem; /* Ajusta proporção para telas menores */
     padding: 0.8rem 1.5rem; /* Proporção ajustada */
   }
+
+  .description,
+  .description2,
+  .description3 {
+    font-size: 16px;
+    max-width: 95%;
+    text-align: center;
+    margin: 10px auto; /* Reduz margem superior e inferior */
+  }
+
+
 }
 
 /* Responsividade para smartphones */
@@ -172,11 +168,12 @@
   }
 
   .description,
-  .subtitle {
+  .description2,
+  .description3 {
     font-size: 16px;
-    max-width: 100%;
+    max-width: 95%;
     text-align: center;
-    margin-left: 0; /* Remover margem lateral */
+    margin: 10px auto; /* Reduz margens superiores e inferiores */
   }
 
   .footer {
