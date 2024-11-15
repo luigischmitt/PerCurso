@@ -1,0 +1,163 @@
+/* Estilo geral da página */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Cabeçalho */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    font-weight: 900;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .editButton {
+    padding: 10px 20px;
+    background-color: var(--tertiary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .editButton:hover {
+    background-color: #5436AD;
+  }
+  
+  /* Nav Tabs - Barra de Navegação */
+  .navTabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #EDF6FF;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 10px; /* Espaçamento entre os itens */
+  }
+  
+  .navTabs span {
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    color: var(--primary-color);
+  }
+  
+  .navTabs span:hover {
+    background-color: #D0E6FF;
+  }
+  
+  .activeTab {
+    background-color: #D0E6FF;
+    color: var(--secondary-color);
+    border-radius: 5px;
+  }
+  
+  /* Seções de conteúdo */
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .sectionTitle {
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .card {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Responsividade */
+  
+  /* Desktops grandes e médios */
+  @media all and (min-width: 1024px) and (max-width: 1280px) {
+    .title {
+      font-size: 2.5rem;
+    }
+  
+    .navTabs {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Tablets em paisagem */
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .title {
+      font-size: 2.25rem;
+    }
+  
+    .editButton {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Tablets em retrato */
+  @media all and (min-width: 480px) and (max-width: 768px) {
+    .title {
+      font-size: 2rem;
+    }
+  
+    .editButton {
+      font-size: 0.85rem;
+    }
+  
+    .navTabs {
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Smartphones pequenos */
+  @media all and (max-width: 480px) {
+    .title {
+      font-size: 1.75rem;
+    }
+  
+    .editButton {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+    }
+  
+    .navTabs {
+      flex-direction: column;
+      align-items: center;
+      font-size: 0.85rem;
+    }
+  
+    .sectionTitle {
+      font-size: 1.25rem;
+    }
+  }
+  

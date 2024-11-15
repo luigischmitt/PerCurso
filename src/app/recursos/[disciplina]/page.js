@@ -1,4 +1,6 @@
 import { getDisciplinaContent } from '@/lib/markdown';
+import styles from './page.module.css';
+import DisciplinaContent from '../DisciplinaContent.js';
 
 export async function generateStaticParams() {
   return [
@@ -20,17 +22,27 @@ export default function DisciplinaPage({ params }) {
   const extras = getDisciplinaContent(params.disciplina, 'extras');
 
   return (
-    <div>
-      <h1>{dicas.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: dicas.contentHtml }} />
-      <h1>{dificuldades.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: dificuldades.contentHtml }} />
-      <h1>{listas.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: listas.contentHtml }} />
-      <h1>{provas.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: provas.contentHtml }} />
-      <h1>{extras.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: extras.contentHtml }} />
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <h1 className={styles.title}>CÁLCULO DIFERENCIAL E INTEGRAL I</h1>
+        <a 
+          href={`https://github.com/luigischmitt/PerCurso/tree/main/content/${params.disciplina}`} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={styles.editButton}
+        >
+          EDITAR ESTA CADEIRA
+        </a>
+      </header>
+
+      {/* Use o componente DisciplinaContent para o conteúdo interativo */}
+      <DisciplinaContent
+        dicas={dicas}
+        dificuldades={dificuldades}
+        listas={listas}
+        provas={provas}
+        extras={extras}
+      />
     </div>
   );
 }
