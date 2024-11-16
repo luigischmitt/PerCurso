@@ -57,30 +57,30 @@
 }
 
 .buttonsSection {
-  flex: 1;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 300px;
-  padding: 50px;
-  margin-top: -50px;
-  margin-left: 400px;
+  flex-direction: row; /* Alinha os botões lado a lado */
+  justify-content: center; /* Centraliza os botões no contêiner */
+  align-items: flex-start; /* Alinha os botões no topo */
+  gap: 200px; /* Espaçamento entre os botões */
+  padding: 20px;
+  width: 100%; /* Ocupa toda a largura disponível */
+  flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha se necessário */
+  margin-left: -20px;
 }
 
 .button {
   background-color: #4B2A87;
   color: #fff;
-  padding: 1rem 5rem; 
+  padding: 0.5rem 2rem; 
   border: none;
   border-radius: 1.5rem; 
-  font-size: 1.4rem; 
+  font-size: 1.3em; 
   cursor: pointer;
-  width: 80%; /* Largura ajustada para responsividade */
-  max-width: 25rem; 
+  width: 300px; 
   text-align: center;
   transition: background-color 0.3s ease;
   box-sizing: border-box;
-  white-space: pre-line; /* Permite que o texto quebre em várias linhas */
+  white-space: normal; /* Permite quebra de linha dentro do botão */
 }
 
 .button:hover {
@@ -125,12 +125,12 @@
   }
 
   .buttonsSection {
-    align-items: center;
+    justify-content: center; /* Mantém os botões centralizados */
   }
 
   .button {
-    font-size: 0.9rem; /* Ajusta proporção para telas menores */
-    padding: 0.8rem 1.5rem; /* Proporção ajustada */
+    font-size: 0.9rem; /* Reduz proporcionalmente */
+    padding: 0.8rem 5%; /* Ajusta padding proporcional */
   }
 
   .description,
@@ -161,10 +161,14 @@
     margin: 0; /* Remover margem lateral para centralização */
   }
 
+  .buttonsSection {
+    gap: 10px; /* Reduz o espaçamento em telas pequenas */
+  }
+
   .button {
     font-size: 0.8rem;
-    padding: 0.5rem 1rem; /* Proporção ajustada */
-    width: 90%; /* Maior flexibilidade para telas pequenas */
+    padding: 0.5rem 4%;
+    max-width: 100%; /* Permite maior flexibilidade */
   }
 
   .description,

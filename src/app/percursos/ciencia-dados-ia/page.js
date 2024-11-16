@@ -15,7 +15,7 @@ const PercursosPage = () => {
             Essa explosão de dados cria desafios e oportunidades únicas. Setores como saúde, transporte e agricultura estão se transformando: hospitais utilizam algoritmos de machine learning para prever surtos de doenças e personalizar tratamentos, enquanto produtores agrícolas aplicam técnicas de IA para maximizar a produtividade e reduzir desperdícios. Na indústria de entretenimento, plataformas de streaming como Netflix e Spotify utilizam ciência de dados para personalizar recomendações, moldando a forma como consumimos música, filmes e séries.
             </p>
             <p className={styles.description3} >
-            Com a demanda crescente por especialistas capazes de interpretar e transformar dados em valor real, o percurso de Ciência de Dados e Inteligência Artificial oferece uma formação prática e avançada para quem quer estar à frente dessas transformações. Seguindo esse percurso, você desenvolverá habilidades essenciais para analisar dados, criar modelos preditivos e construir soluções inovadoras com impacto direto na sociedade e no mercado
+            Com a demanda crescente por especialistas capazes de interpretar e transformar dados em valor real, o percurso de Ciência de Dados e Inteligência Artificial oferece uma formação prática e avançada para quem quer estar à frente dessas transformações. Seguindo esse percurso, você desenvolverá habilidades essenciais para analisar dados, criar modelos preditivos e construir soluções inovadoras com impacto direto na sociedade e no mercado.
             </p>
          </section>
 
