@@ -32,7 +32,6 @@ export async function generateStaticParams() {
     { disciplina: 'concorrente' },
     { disciplina: 'sistema_distribuidos' },
     { disciplina: 'engenharia_sistemas' },
-    { disciplina: 'tcc' },
     { disciplina: 'ip' },
     { disciplina: 'poo' },
     { disciplina: 'eda1' },

@@ -36,7 +36,6 @@ const PercursosPage = () => {
     { name: "🌐 Programação Concorrente e Distribuída", slug: 'concorrente' },
     { name: "🖥️ Sistemas Distribuídos", slug: 'sistema_distribuidos' },
     { name: "💼 Engenharia de Sistemas Distribuídos", slug: 'engenharia_sistemas' },
-    { name: "📜 Trabalho de Conclusão de Curso (TCC)", slug: 'tcc' },
     { name: "🖥️ Introdução à Programação", slug: 'ip' },
     { name: "🧑‍💻 Programação Orientada a Objetos", slug: 'poo' },
     { name: "🧮 Estruturas de Dados e Algoritmos I", slug: 'eda1' },
