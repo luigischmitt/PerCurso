@@ -50,6 +50,53 @@ export async function generateStaticParams() {
   ];
 }
 
+// Mapeamento dos slugs para os nomes completos das disciplinas
+const disciplinaNomes = {
+  calculo1: "CÁLCULO DIFERENCIAL E INTEGRAL I",
+  calculo2: "CÁLCULO DIFERENCIAL E INTEGRAL II",
+  numerico: "CÁLCULO NUMÉRICO",
+  ia: "INTRODUÇÃO À INTELIGÊNCIA ARTIFICIAL",
+  sbc: "SISTEMAS BASEADOS EM CONHECIMENTO",
+  aprendizagem_maquina: "PARADIGMAS DE APRENDIZAGEM DE MÁQUINA",
+  vetorial: "CÁLCULO VETORIAL E GEOMETRIA ANALÍTICA",
+  linear: "INTRODUÇÃO À ÁLGEBRA LINEAR",
+  probabilidade: "CÁLCULO DAS PROBABILIDADES E ESTATÍSTICA I",
+  redes: "REDES DE COMPUTADORES I",
+  apa: "ANÁLISE E PROJETO DE ALGORITMOS",
+  seguranca: "SEGURANÇA COMPUTACIONAL",
+  sistemas_informacao: "SISTEMAS DE INFORMAÇÃO NAS ORGANIZAÇÕES",
+  sociedade: "COMPUTADORES E SOCIEDADE",
+  discreta: "MATEMÁTICA DISCRETA",
+  logica: "LÓGICA APLICADA À COMPUTAÇÃO",
+  formais: "LINGUAGENS FORMAIS E COMPUTABILIDADE",
+  imagens: "INTRODUÇÃO AO PROCESSAMENTO DIGITAL DE IMAGENS",
+  paradigmas_linguagens: "PARADIGMAS DE LINGUAGENS DE PROGRAMAÇÃO",
+  compiladores: "CONSTRUÇÃO DE COMPILADORES I",
+  ihc: "INTERAÇÃO HUMANO-COMPUTADOR",
+  ic: "INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO",
+  arquitetura1: "ARQUITETURA DE COMPUTADORES I",
+  arquitetura2: "ARQUITETURA DE COMPUTADORES II",
+  so: "SISTEMAS OPERACIONAIS I",
+  concorrente: "PROGRAMAÇÃO CONCORRENTE E DISTRIBUÍDA",
+  sistema_distribuidos: "SISTEMAS DISTRIBUÍDOS",
+  engenharia_sistemas: "ENGENHARIA DE SISTEMAS DISTRIBUÍDOS",
+  ip: "INTRODUÇÃO À PROGRAMAÇÃO",
+  poo: "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+  eda1: "ESTRUTURAS DE DADOS E ALGORITMOS I",
+  eda2: "ESTRUTURAS DE DADOS E ALGORITMOS II",
+  bd: "BANCO DE DADOS I",
+  inovacao: "INOVAÇÃO DE BASE CIENTÍFICA-TECNOLÓGICA E EMPREENDEDORISMO",
+  gerencimento_psoft: "GERENCIAMENTO DE PROJETO DE SOFTWARE",
+  metodologia: "METODOLOGIA DO TRABALHO CIENTÍFICO",
+  funcional: "PROGRAMAÇÃO FUNCIONAL",
+  es: "ENGENHARIA DE SOFTWARE",
+  requisitos: "ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE",
+  metodos_psoft: "MÉTODOS DE PROJETO DE SOFTWARE",
+  teste_software: "TESTE DE SOFTWARE",
+  pesquisa: "PESQUISA APLICADA À COMPUTAÇÃO",
+  // Adicione outras disciplinas e optativas aqui
+};
+
 export default function DisciplinaPage({ params }) {
   const dicas = getDisciplinaContent(params.disciplina, 'dicas');
   const dificuldades = getDisciplinaContent(params.disciplina, 'dificuldades');
@@ -57,10 +104,13 @@ export default function DisciplinaPage({ params }) {
   const provas = getDisciplinaContent(params.disciplina, 'provas');
   const extras = getDisciplinaContent(params.disciplina, 'extras');
 
+  // Obter o nome da disciplina com base no slug
+  const disciplinaNome = disciplinaNomes[params.disciplina] || "Disciplina";
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.title}>CÁLCULO DIFERENCIAL E INTEGRAL I</h1>
+        <h1 className={styles.title}>{disciplinaNome}</h1>
         <a 
           href={`https://github.com/luigischmitt/PerCurso/tree/main/content/${params.disciplina}`} 
           target="_blank" 
@@ -82,3 +132,4 @@ export default function DisciplinaPage({ params }) {
     </div>
   );
 }
+
