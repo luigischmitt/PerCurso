@@ -1,47 +1,50 @@
 /* page.module.css */
 .header {
-  height: 73px;
   display: flex;
   margin: 0 60px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--background-color);
-  
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
+  margin-left: 20px;
 }
 
 .nav a {
-  margin-right: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 30px;
+}
+
+.nav a:first-child {
+  margin-right: 55px;
 }
 
 .main {
-  height: 552px;
   padding: 10px 0px;
   justify-content: space-evenly;
 }
 
 .backgroundRectangle {
-  background-color: #EDF6FF;
+  background-color: #edf6ff;
   width: 100%;
-  height: 552px;
-  padding: 10px 0px;
+  padding: 5px 0px 55px 0px;
 }
 
 .title {
-  width: 710px;
-  height: 4px;
   font-size: 98px;
   color: var(--secondary-color);
   font-weight: 900;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 100px 0px 0px 2px;
 }
 
 .accent {
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  border-radius: 8px;
 }
 
 .buttonContainer {
@@ -58,12 +61,14 @@
 }
 
 .textButtonContainer {
-  width: 739px;
-  height: 315px;
+  width: 52%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .section {
-  background-color: #FFFF;
+  background-color: #ffff;
   padding: 50px 20px;
 }
 
@@ -71,15 +76,16 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  gap: 23px;
+  gap: 60px;
 }
 
 .column {
   width: 420px;
-  height: 241px;
+  height: auto;
   border-radius: 18px;
   background: rgba(237, 246, 255, 0.34);
-  box-shadow: 9px 11px 11px -3px rgba(0, 0, 0, 0.25); 
+  box-shadow: 9px 11px 11px -3px rgba(0, 0, 0, 0.25);
+  padding: 35px;
 }
 
 .columnTitle {
@@ -100,33 +106,288 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px; 
-  margin-top: 20px;
+  margin: 20px 0px 30px 0px;
 }
 
 .description {
-  width: 730px;
-  height: 150px;
+  width: 100%;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 24px;
   font-weight: 500;
+  margin: 0px 0px 48px 0px;
 }
 
 .imageContainer {
-  flex: 1;
-  width: 573px;
-  height: 401px;
+  width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
 .mainImage {
   max-width: 100%;
-  height: auto;
+  height: 360px;
 }
 
 .container {
-  max-width: 1700px;
-  margin: 0 auto; 
-  padding: 0 20px; 
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.column li {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.columnText {
+  font-size: 16px;
+}
+
+/* Responsividade */
+
+/* 320px: Smartphones pequenos */
+@media (min-width: 320px) and (max-width: 480px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .title {
+    font-size: 32px;
+    width: 90%;
+  }
+
+  .buttonContainer {
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .mainImage {
+    height: 200px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+/* 480px: Smartphones maiores */
+@media (min-width: 480px) and (max-width: 768px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav a {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  .title {
+    font-size: 40px;
+    width: 90%;
+  }
+
+  .buttonContainer {
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .mainImage {
+    height: 250px;
+  }
+}
+
+/* 768px: Tablets (modo retrato) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 78px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .buttonContainer {
+    gap: 48px;
+  }
+
+  .button {
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .column li {
+    font-size: 11px;
+  }
+
+  .columnText {
+    font-size: 11px;
+  }
+
+  .columnTitle {
+    font-size: 16px;
+  }
+}
+
+/* 1024px: Tablets (modo paisagem) ou telas menores de laptops */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 78px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .buttonContainer {
+    gap: 48px;
+  }
+
+  .button {
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .column li {
+    font-size: 11px;
+  }
+
+  .columnText {
+    font-size: 11px;
+  }
+
+  .columnTitle {
+    font-size: 16px;
+  }
+}
+
+/* 1280px: Laptops e desktops menores */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .logo {
+    font-size: 32px;
+  }
+
+  .nav a {
+    font-size: 16px;
+  }
+
+  .title {
+    font-size: 84px;
+  }
+
+  .columnTitle {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .buttonContainer {
+    gap: 58px;
+  }
+
+  .button {
+    width: 250px;
+    height: 58px;
+    font-size: 20px;
+    padding: 270 64.4;
+  }
+
+  .column li {
+    font-size: 12px;
+  }
+
+  .columnText {
+    font-size: 12px;
+  }
+
+  .columnTitle {
+    font-size: 17px;
+  }
+}
+
+/* 1440px a 1920px: Desktops grandes (full HD e superiores) */
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .logo {
+    font-size: 34px;
+  }
+
+  .nav a {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 90px;
+  }
+
+  .columnTitle {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 22px;
+  }
+
+  .buttonContainer {
+    gap: 64px;
+  }
+
+  .button {
+    width: 280px;
+    height: 64px;
+    font-size: 23px;
+    padding: 290 69.4;
+  }
+
+  .column li {
+    font-size: 14px;
+  }
+
+  .columnText {
+    font-size: 14px;
+  }
+
+  .columnTitle {
+    font-size: 19px;
+  }
 }

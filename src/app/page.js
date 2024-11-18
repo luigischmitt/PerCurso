@@ -52,10 +52,8 @@ const HomePage = () => {
 
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>Como contribuir?</h3>
-              <p>
-              Alunos do curso colaboram com várias informações como links úteis, resumos, provas e várias dicas. Esses arquivos ficam todos em nosso repositório do GitHub, e também estão disponibilizados aqui no site.
-              Qualquer aluno pode pedir um Pull Request 
-              ao repositório e isso irá abastecer o site.
+              <p className={styles.columnText}>
+                Alunos do curso <strong className={styles.accent}>colaboram</strong> com várias informações como links úteis, resumos, provas e várias dicas. Esses arquivos ficam todos em nosso repositório do <strong className={styles.accent}>GitHub</strong>, e também estão disponibilizados aqui no site.
               </p>
             </div>
           </div>
