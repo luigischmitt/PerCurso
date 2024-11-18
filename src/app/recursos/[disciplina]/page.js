@@ -38,7 +38,7 @@ export async function generateStaticParams() {
     { disciplina: 'eda2' },
     { disciplina: 'bd' },
     { disciplina: 'inovacao' },
-    { disciplina: 'gerenciamento_psfot' },
+    { disciplina: 'gerencimento_psoft' },
     { disciplina: 'metodologia' },
     { disciplina: 'funcional' },
     { disciplina: 'es' },

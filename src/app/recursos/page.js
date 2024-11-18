@@ -42,7 +42,7 @@ const PercursosPage = () => {
     { name: "📊 Estruturas de Dados e Algoritmos II", slug: 'eda2' },
     { name: "💾 Banco de Dados I", slug: 'bd' },
     { name: "🚀 Inovação de Base Científica-Tecnológica", slug: 'inovacao' },
-    { name: "📅 Gerenciamento de Projeto de Software", slug: 'gerenciamento_psfot' },
+    { name: "📅 Gerenciamento de Projeto de Software", slug: 'gerencimento_psoft' },
     { name: "📚 Metodologia do trabalho científico", slug: 'metodologia' },
     { name: "🔣 Programação Funcional", slug: 'funcional' },
     { name: "⚙️ Engenharia de Software", slug: 'es' },
