@@ -34,7 +34,7 @@ const PercursosPage = () => {
     { name: "🔧 Arquitetura de Computadores II", slug: 'arquitetura2' },
     { name: "⚙️ Sistemas Operacionais I", slug: 'so' },
     { name: "🌐 Programação Concorrente e Distribuída", slug: 'concorrente' },
-    { name: "🖥️ Sistemas Distribuídos", slug: 'sistemas_distribuidos' },
+    { name: "🖥️ Sistemas Distribuídos", slug: 'sistema_distribuidos' },
     { name: "💼 Engenharia de Sistemas Distribuídos", slug: 'engenharia_sistemas' },
     { name: "📜 Trabalho de Conclusão de Curso (TCC)", slug: 'tcc' },
     { name: "🖥️ Introdução à Programação", slug: 'ip' },

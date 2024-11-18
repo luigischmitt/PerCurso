@@ -30,7 +30,7 @@ export async function generateStaticParams() {
     { disciplina: 'arquitetura2' },
     { disciplina: 'so' },
     { disciplina: 'concorrente' },
-    { disciplina: 'sistemas_distribuidos' },
+    { disciplina: 'sistema_distribuidos' },
     { disciplina: 'engenharia_sistemas' },
     { disciplina: 'tcc' },
     { disciplina: 'ip' },
