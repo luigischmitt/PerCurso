@@ -1,7 +1,6 @@
 <div align="center">
   <h1>Código de Conduta</h1>
   <img src="public/PerCurso2.svg" alt="PerCurso" width="350px">
-  <hr>
 </div>
 
 ## Nosso compromisso
