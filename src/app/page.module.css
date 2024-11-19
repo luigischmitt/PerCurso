@@ -102,6 +102,11 @@
   height: 73px;
 }
 
+.footerLink {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 .contentContainer {
   display: flex;
   align-items: center;

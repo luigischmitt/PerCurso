@@ -104,7 +104,7 @@ const PercursosPage = () => {
 
       <footer className={styles.footer}>
         <p>© 2024 PerCurso, Todos os direitos reservados</p>
-        <a href="#politica" className={styles.footerLink}>Políticas de Privacidade</a>
+        <a href="https://github.com/luigischmitt/PerCurso/blob/main/C%C3%B3digo_de_conduta.md" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Código de Conduta</a>
       </footer>
     </div>
   );
