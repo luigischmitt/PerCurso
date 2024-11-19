@@ -1,88 +1,139 @@
 .main {
-    padding: 40px 20px;
-    background-color: #f9f9fc;
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 48px;
-    font-weight: bold;
-    color: #5436ad;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-  
+  padding: 40px 20px;
+  background-color: #f9f9fc;
+  text-align: center;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #5436ad;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: inline-flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+
+.sectionTitle {
+  font-size: 28px;
+  color: #4b2a87;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 2px solid #4b2a87;
+  padding-bottom: 10px;
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; /* Mesma largura para todos os cards */
+  min-height: 300px; /* Define uma altura mínima */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 20px auto;
+}
+
+.cardText {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2c274b;
+}
+
+.accent {
+  background-color: var(--accent-color);
+  border-radius: 8px;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  width: 100%;
+}
+
+.carouselButton {
+  background-color: transparent;
+  color: #4b2a87;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carouselButton:hover {
+  color: #6a4ba0;
+}
+
+.carouselButton.left {
+  left: -40px;
+}
+
+.carouselButton.right {
+  right: -40px;
+}
+
+.arrow {
+  font-weight: bold;
+}
+
+.sectionGap {
+  margin-right: 80px; /* Adiciona espaço entre as seções */
+  margin-left: 80px;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    gap: 20px;
   }
-  
-  .column {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+
+  .title {
+    font-size: 36px;
   }
-  
+
   .sectionTitle {
-    font-size: 28px;
-    color: #4b2a87;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    border-bottom: 2px solid #4b2a87;
-    padding-bottom: 10px;
+    font-size: 24px;
   }
-  
-  .card {
-    background: #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .cardImage {
-    width: 100px;
-    height: auto;
-    margin: 0 auto 20px auto;
-  }
-  
+
   .cardText {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #2c274b;
+    font-size: 14px;
   }
-  
-  .accent {
-    background-color: var(--accent-color);
-    border-radius: 8px;
+
+  .carouselButton {
+    font-size: 1.5rem;
   }
-  
-  /* Responsividade */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    .title {
-      font-size: 36px;
-    }
-  
-    .sectionTitle {
-      font-size: 24px;
-    }
-  
-    .cardText {
-      font-size: 14px;
-    }
-  }
-  
+}
