@@ -21,7 +21,7 @@ const PercursosPage = () => {
               <li>Compreender e implementar algoritmos eficientes para problemas de decisão em larga escala.</li>
             </ul>
             <p className={styles.description3}>
-            Com foco em teoria e prática, o Percurso de Pesquisa Operacional capacita você a criar soluções inovadoras e a enfrentar desafios em áreas estratégicas do mercado e da academia.
+            A UFPB é referência no Brasil nessa área e o Percurso de Pesquisa Operacional capacita você a criar soluções inovadoras e a enfrentar desafios em áreas estratégicas do mercado e da academia.
             </p>
          </section>
 
