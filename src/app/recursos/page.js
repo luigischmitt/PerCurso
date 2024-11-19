@@ -139,7 +139,7 @@ const PercursosPage = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
               <button className={styles.searchButton}>
-                🔍
+                <img src="/lupa_icon.svg" alt="lupa" className={styles.searchIcon} />
               </button>
             </div>
 

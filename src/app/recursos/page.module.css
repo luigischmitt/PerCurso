@@ -132,32 +132,41 @@
 }
 
 .icon {
-  width: 4rem;
+  width: 3.3rem;
   margin: 0;
   margin-right: 1.5rem;
 }
 
 .searchContainer {
   display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;    /* Centraliza verticalmente */
+  margin-bottom: 30px;    /* Espaço abaixo do contêiner */
+  gap: 10px;              /* Espaço entre input e botão */
 }
+
 
 .searchInput {
   padding: 12px;
-  border: 1px solid #A1A1A1;
-  border-radius: 8px 0 0 8px;
+  border: 1px solid #dedede;
+  border-radius: 1.2rem;
   font-size: 16px;
-  width: 300px;
+  width: 20rem;
+  font-family: Outfit;
 }
 
 .searchButton {
-  padding: 12px;
-  background-color: #5436AD;
+  padding: 5px;
+  background-color: #edf6ff;
   color: #FFFFFF;
   border: none;
-  border-radius: 0 8px 8px 0;
+  border-radius: 6rem;
   cursor: pointer;
+}
+
+.searchIcon {
+  width: 1.6rem;
+  height: 1.4rem;
 }
 
 .resourceCards {
