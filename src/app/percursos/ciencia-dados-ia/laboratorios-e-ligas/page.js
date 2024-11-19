@@ -31,7 +31,7 @@ const LigasELaboratoriosPage = () => {
       id: 'lavid',
       title: 'LAVID',
       description:
-        'O Laboratório de Aplicações de Vídeo Digital (LAVID) é referência nacional em pesquisa e desenvolvimento de aplicações multimídia, com foco em inovação e tecnologias disruptivas.',
+        'O Laboratório de Aplicações de Vídeo Digital (LAVID) é uma referência nacional e internacional em desenvolvimento de tecnologia para TV Digital. O LAVID conta com a colaboração de mais de 40 pesquisadores, trazendo as atuais tendências tecnológicas mundiais nas áreas de vídeo e TV Digital.',
       imgSrc: '/lavid_logo.svg',
       link: 'http://lavid.ufpb.br/',
     },
