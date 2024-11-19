@@ -26,10 +26,10 @@ const PercursosPage = () => {
          </section>
 
          <section className={styles.buttonsSection}>
-           <Link href="/percusos/engenharia-de-software/disciplinas-optativas" className={styles.button}>
+           <Link href="/percursos/engenharia-de-software/disciplinas-optativas" className={styles.button}>
              DISCIPLINAS OPTATIVAS
            </Link>
-           <Link href="/percusos/engenharia-de-software/laboratios-e-ligas" className={styles.button}>
+           <Link href="/percursos/engenharia-de-software/laboratios-e-ligas" className={styles.button}>
            LABORATÓRIOS E LIGAS ACADÊMICAS
            </Link>
          </section>
