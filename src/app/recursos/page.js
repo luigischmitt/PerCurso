@@ -99,8 +99,9 @@ const PercursosPage = () => {
     
   };
 
-  const filteredDisciplines = disciplines.filter(discipline =>
-    discipline.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredDisciplines = disciplines.filter(discipline => 
+    discipline.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+      .includes(searchTerm.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase())
   );
 
   const disciplinaIcone = "Icone";
