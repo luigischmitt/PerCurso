@@ -46,11 +46,9 @@ export async function generateStaticParams() {
     { disciplina: 'metodos_psoft' },
     { disciplina: 'teste_software' },
     { disciplina: 'pesquisa' },
-    // Adicione optativas ou disciplinas futuras aqui
   ];
 }
 
-// Mapeamento dos slugs para os nomes completos das disciplinas
 const disciplinaNomes = {
   calculo1: "CÁLCULO DIFERENCIAL E INTEGRAL I",
   calculo2: "CÁLCULO DIFERENCIAL E INTEGRAL II",
@@ -94,7 +92,52 @@ const disciplinaNomes = {
   metodos_psoft: "MÉTODOS DE PROJETO DE SOFTWARE",
   teste_software: "TESTE DE SOFTWARE",
   pesquisa: "PESQUISA APLICADA À COMPUTAÇÃO",
-  // Adicione outras disciplinas e optativas aqui
+};
+
+const disciplinaIcones = {
+  calculo1: "/c1_icon.svg",
+  calculo2: "/c1_icon.svg",
+  ip: "/ip_icon.svg",
+  pesquisa: "/pa_icon.svg",
+  metodologia: "/mtc_icon.svg",
+  vetorial: "/cv_icon.svg",
+  ic: "/icc_icon.svg",
+  discreta: "/md_icon.svg",
+  logica: "/md_icon.svg",
+  linear: "/cv_icon.svg",
+  arquitetura1: "/ac_icon.svg",
+  arquitetura2:"/ac_icon.svg",
+  poo: "/ip_icon.svg",
+  numerico: "/c1_icon.svg",
+  probabilidade: "/estatistica_icon.svg",
+  ia: "/ia_icon.svg",
+  sbc: "/ia_icon.svg",
+  aprendizagem_maquina: "/ia_icon.svg",
+  redes: "/redes_icon.svg",
+  apa: "/apa_icon.svg",
+  seguranca: "/sc_icon.svg",
+  sistemas_informacao: "/ihc_icon.svg",
+  sociedade: "/ihc_icon.svg",
+  formais: "/icc_icon.svg",
+  imagens: "/pdi_icon.svg",
+  paradigmas_linguagens: "/apa_icon.svg",
+  compiladores: "/icc_icon.svg",
+  ihc: "/ihc_icon.svg",
+  so: "/ac_icon.svg",
+  concorrente: "/apa_icon.svg",
+  sistema_distribuidos: "/redes_icon.svg",
+  engenharia_sistemas: "/redes_icon.svg",
+  eda1: "/eda_icon.svg",
+  eda2: "/eda_icon.svg",
+  bd: "/bd_icon.svg",
+  inovacao: "/icc_icon.svg",
+  gerencimento_psoft: "/eds_icon.svg",
+  funcional: "/ip_icon.svg",
+  es: "/eds_icon.svg",
+  requisitos: "/eds_icon.svg",
+  metodos_psoft: "/eds_icon.svg",
+  teste_software: "/eds_icon.svg",
+  
 };
 
 export default function DisciplinaPage({ params }) {
@@ -104,31 +147,41 @@ export default function DisciplinaPage({ params }) {
   const provas = getDisciplinaContent(params.disciplina, 'provas');
   const extras = getDisciplinaContent(params.disciplina, 'extras');
 
-  // Obter o nome da disciplina com base no slug
   const disciplinaNome = disciplinaNomes[params.disciplina] || "Disciplina";
+  const disciplinaIcone = disciplinaIcones[params.disciplina] || "Icone";
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1 className={styles.title}>{disciplinaNome}</h1>
-        <a 
-          href={`https://github.com/luigischmitt/PerCurso/tree/main/content/${params.disciplina}`} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className={styles.editButton}
-        >
-          EDITAR ESTA CADEIRA
-        </a>
-      </header>
-
-      {/* Use o componente DisciplinaContent para o conteúdo interativo */}
-      <DisciplinaContent
-        dicas={dicas}
-        dificuldades={dificuldades}
-        listas={listas}
-        provas={provas}
-        extras={extras}
-      />
+    <div>
+      <div className={styles.backgroundRectangle}>
+        <div className={styles.lineTop}></div>
+        <div className={styles.container}>
+          <header className={styles.header}>
+            <div className={styles.iconTitle}>
+              <img src={disciplinaIcone} className={styles.icon} />
+              <h1 className={styles.title}>{disciplinaNome}</h1>
+            </div>
+            <a 
+              href={`https://github.com/luigischmitt/PerCurso/tree/main/content/${params.disciplina}`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.editButton}
+            >
+              EDITAR ESTA CADEIRA
+            </a>
+          </header>
+        </div>
+        <div className={styles.lineBottom}></div>
+      </div>
+      <div className={styles.container}>
+        {/* Use o componente DisciplinaContent para o conteúdo interativo */}
+        <DisciplinaContent
+          dicas={dicas}
+          dificuldades={dificuldades}
+          listas={listas}
+          provas={provas}
+          extras={extras}
+        />
+      </div>
     </div>
   );
 }

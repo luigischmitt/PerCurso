@@ -1,163 +1,270 @@
-/* Estilo geral da página */
+.backgroundRectangle {
+  background-color: #edf6ff;
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+  margin: 0; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lineTop {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+.lineBottom {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.iconTitle {
+  display: flex;
+  align-items: flex-start;
+  width: 70rem;
+}
+
+.icon {
+  width: 5.7rem;
+  height: 6.2rem;
+  margin: 0;
+  margin-right: 1.5rem;
+}
+
+.title {
+  flex: 1;
+  font-size: 4rem;
+  color: var(--secondary-color);
+  font-weight: 900;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  margin-left: 2rem;
+  white-space: normal;
+  max-width: 100%;
+}
+
+.editButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 20rem; 
+  height: 3rem;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1rem;
+  background-color: var(--tertiary-color);
+  color: var(--white);
+  border-radius: 19px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  margin: 1rem 0;
+}
+
+.editButton:hover {
+  background-color: #5436AD;
+}
+
+.navTabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: #EDF6FF;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+
+.navTabs span {
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+  color: var(--primary-color);
+}
+
+.navTabs span:hover {
+  background-color: #D0E6FF;
+}
+
+.activeTab {
+  background-color: #D0E6FF;
+  color: var(--secondary-color);
+  border-radius: 5px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  color: var(--primary-color);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsividade */
+
+/* Desktops grandes e médios */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .title {
+    font-size: 2.5rem;
   }
-  
-  /* Cabeçalho */
+
+  .navTabs {
+    font-size: 1rem;
+    gap: 8px;
+  }
+
+  .editButton {
+    width: 18rem;
+    height: 2.8rem;
+  }
+}
+
+/* Tablets em paisagem */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .editButton {
+    width: 16rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets em retrato */
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .lineTop, .lineBottom {
+    height: 0.15rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    margin-left: 2rem;
+    width: 35rem;
+  }
+
+  .editButton {
+    font-size: 0.85rem;
+    margin-left: 2rem;
+    width: 15rem;
+    margin-top: 1.5rem;
+    z-index: 10;
+    position: relative;
+  }
+
+  .navTabs {
+    font-size: 0.95rem;
+    gap: 6px;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 4rem;
+    margin-top: 2.5rem;
+    margin-left: 2rem;
+  }
+
   .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
   }
-  
-  .title {
-    font-size: 3rem;
-    color: var(--secondary-color);
-    font-weight: 900;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  
-  .editButton {
-    padding: 10px 20px;
-    background-color: var(--tertiary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-  }
-  
-  .editButton:hover {
-    background-color: #5436AD;
-  }
-  
-  /* Nav Tabs - Barra de Navegação */
-  .navTabs {
-    display: flex;
-    justify-content: space-around;
-    background-color: #EDF6FF;
-    padding: 10px 15px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    font-weight: bold;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    gap: 10px; /* Espaçamento entre os itens */
-  }
-  
-  .navTabs span {
-    cursor: pointer;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-    border-radius: 5px;
-    color: var(--primary-color);
-  }
-  
-  .navTabs span:hover {
-    background-color: #D0E6FF;
-  }
-  
-  .activeTab {
-    background-color: #D0E6FF;
-    color: var(--secondary-color);
-    border-radius: 5px;
-  }
-  
-  /* Seções de conteúdo */
-  .section {
-    margin-bottom: 40px;
-  }
-  
-  .sectionTitle {
-    font-size: 1.75rem;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .card {
-    background-color: #FFFFFF;
+
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    color: var(--primary-color);
-    line-height: 1.6;
-    margin-bottom: 20px;
-    transition: transform 0.2s;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
+}
+
+/* Smartphones pequenos */
+@media all and (max-width: 480px) {
+  .lineTop, .lineBottom {
+    height: 0.1rem;
   }
-  
-  /* Responsividade */
-  
-  /* Desktops grandes e médios */
-  @media all and (min-width: 1024px) and (max-width: 1280px) {
-    .title {
-      font-size: 2.5rem;
-    }
-  
-    .navTabs {
-      font-size: 1rem;
-    }
+
+  .container {
+    padding: 5px;
   }
-  
-  /* Tablets em paisagem */
-  @media all and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-      padding: 15px;
-    }
-  
-    .title {
-      font-size: 2.25rem;
-    }
-  
-    .editButton {
-      padding: 8px 15px;
-      font-size: 0.9rem;
-    }
+
+  .title {
+    font-size: 1.75rem;
+    width: auto;
   }
-  
-  /* Tablets em retrato */
-  @media all and (min-width: 480px) and (max-width: 768px) {
-    .title {
-      font-size: 2rem;
-    }
-  
-    .editButton {
-      font-size: 0.85rem;
-    }
-  
-    .navTabs {
-      font-size: 0.95rem;
-    }
+
+  .editButton {
+    width: 12rem;
+    font-size: 0.75rem;
+    padding: 4px 8px;
   }
-  
-  /* Smartphones pequenos */
-  @media all and (max-width: 480px) {
-    .title {
-      font-size: 1.75rem;
-    }
-  
-    .editButton {
-      font-size: 0.75rem;
-      padding: 5px 10px;
-    }
-  
-    .navTabs {
-      flex-direction: column;
-      align-items: center;
-      font-size: 0.85rem;
-    }
-  
-    .sectionTitle {
-      font-size: 1.25rem;
-    }
+
+  .navTabs {
+    flex-direction: column; 
+    align-items: center;
+    font-size: 0.85rem;
+    gap: 4px; 
   }
-  
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+}
