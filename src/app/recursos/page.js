@@ -8,61 +8,109 @@ const PercursosPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const disciplines = [
-    { name: "📘 Cálculo diferencial e integral I", slug: 'calculo1' },
-    { name: "📗 Cálculo diferencial e integral II", slug: 'calculo2' },
-    { name: "📙 Cálculo Numérico", slug: 'numerico' },
-    { name: "🤖 Introdução à Inteligência Artificial", slug: 'ia' },
-    { name: "📐 Sistemas Baseados em Conhecimento", slug: 'sbc' },
-    { name: "📊 Paradigmas de Aprendizagem de Máquina", slug: 'aprendizagem_maquina' },
-    { name: "📏 Cálculo Vetorial e Geometria Analítica", slug: 'vetorial' },
-    { name: "📏 Introdução à Álgebra Linear", slug: 'linear' },
-    { name: "📈 Cálculo das Probabilidades e Estatística I", slug: 'probabilidade' },
-    { name: "🌐 Redes de Computadores I", slug: 'redes' },
-    { name: "📉 Análise e Projeto de Algoritmos", slug: 'apa' },
-    { name: "🔒 Segurança Computacional", slug: 'seguranca' },
-    { name: "💼 Sistemas de Informação nas Organizações", slug: 'sistemas_informacao' },
-    { name: "🌍 Computadores e Sociedade", slug: 'sociedade' },
-    { name: "🔢 Matemática Discreta", slug: 'discreta' },
-    { name: "🧩 Lógica Aplicada à Computação", slug: 'logica' },
-    { name: "📜 Linguagens Formais e Computabilidade", slug: 'formais' },
-    { name: "🖼️ Processamento Digital de Imagens", slug: 'imagens' },
-    { name: "💻 Paradigmas de Linguagens de Programação", slug: 'paradigmas_linguagens' },
-    { name: "🔠 Construção de Compiladores I", slug: 'compiladores' },
-    { name: "🖥️ Interação Humano-Computador", slug: 'ihc' },
-    { name: "💻 Introdução à ciência da computação", slug: 'ic' },
-    { name: "🔧 Arquitetura de Computadores I", slug: 'arquitetura1' },
-    { name: "🔧 Arquitetura de Computadores II", slug: 'arquitetura2' },
-    { name: "⚙️ Sistemas Operacionais I", slug: 'so' },
-    { name: "🌐 Programação Concorrente e Distribuída", slug: 'concorrente' },
-    { name: "🖥️ Sistemas Distribuídos", slug: 'sistema_distribuidos' },
-    { name: "💼 Engenharia de Sistemas Distribuídos", slug: 'engenharia_sistemas' },
-    { name: "🖥️ Introdução à Programação", slug: 'ip' },
-    { name: "🧑‍💻 Programação Orientada a Objetos", slug: 'poo' },
-    { name: "🧮 Estruturas de Dados e Algoritmos I", slug: 'eda1' },
-    { name: "📊 Estruturas de Dados e Algoritmos II", slug: 'eda2' },
-    { name: "💾 Banco de Dados I", slug: 'bd' },
-    { name: "🚀 Inovação de Base Científica-Tecnológica", slug: 'inovacao' },
-    { name: "📅 Gerenciamento de Projeto de Software", slug: 'gerencimento_psoft' },
-    { name: "📚 Metodologia do trabalho científico", slug: 'metodologia' },
-    { name: "🔣 Programação Funcional", slug: 'funcional' },
-    { name: "⚙️ Engenharia de Software", slug: 'es' },
-    { name: "📝 Especificação de Requisitos de Software", slug: 'requisitos' },
-    { name: "🛠️ Métodos de Projeto de Software", slug: 'metodos_psoft' },
-    { name: "🧪 Teste de Software", slug: 'teste_software' },
-    { name: "🔍 Pesquisa Aplicada à Computação", slug: 'pesquisa' }
+    { name: "Cálculo diferencial e integral I", slug: 'calculo1' },
+    { name: "Cálculo diferencial e integral II", slug: 'calculo2' },
+    { name: "Cálculo Numérico", slug: 'numerico' },
+    { name: "Introdução à Inteligência Artificial", slug: 'ia' },
+    { name: "Sistemas Baseados em Conhecimento", slug: 'sbc' },
+    { name: "Paradigmas de Aprendizagem de Máquina", slug: 'aprendizagem_maquina' },
+    { name: "Cálculo Vetorial e Geometria Analítica", slug: 'vetorial' },
+    { name: "Introdução à Álgebra Linear", slug: 'linear' },
+    { name: "Cálculo das Probabilidades e Estatística I", slug: 'probabilidade' },
+    { name: "Redes de Computadores I", slug: 'redes' },
+    { name: "Análise e Projeto de Algoritmos", slug: 'apa' },
+    { name: "Segurança Computacional", slug: 'seguranca' },
+    { name: "Sistemas de Informação nas Organizações", slug: 'sistemas_informacao' },
+    { name: "Computadores e Sociedade", slug: 'sociedade' },
+    { name: "Matemática Discreta", slug: 'discreta' },
+    { name: "Lógica Aplicada à Computação", slug: 'logica' },
+    { name: "Linguagens Formais e Computabilidade", slug: 'formais' },
+    { name: "Processamento Digital de Imagens", slug: 'imagens' },
+    { name: "Paradigmas de Linguagens de Programação", slug: 'paradigmas_linguagens' },
+    { name: "Construção de Compiladores I", slug: 'compiladores' },
+    { name: "Interação Humano-Computador", slug: 'ihc' },
+    { name: "Introdução à ciência da computação", slug: 'ic' },
+    { name: "Arquitetura de Computadores I", slug: 'arquitetura1' },
+    { name: "Arquitetura de Computadores II", slug: 'arquitetura2' },
+    { name: "Sistemas Operacionais I", slug: 'so' },
+    { name: "Programação Concorrente e Distribuída", slug: 'concorrente' },
+    { name: "Sistemas Distribuídos", slug: 'sistema_distribuidos' },
+    { name: "Engenharia de Sistemas Distribuídos", slug: 'engenharia_sistemas' },
+    { name: "Introdução à Programação", slug: 'ip' },
+    { name: "Programação Orientada a Objetos", slug: 'poo' },
+    { name: "Estruturas de Dados e Algoritmos I", slug: 'eda1' },
+    { name: "Estruturas de Dados e Algoritmos II", slug: 'eda2' },
+    { name: "Banco de Dados I", slug: 'bd' },
+    { name: "Inovação de Base Científica-Tecnológica", slug: 'inovacao' },
+    { name: "Gerenciamento de Projeto de Software", slug: 'gerencimento_psoft' },
+    { name: "Metodologia do trabalho científico", slug: 'metodologia' },
+    { name: "Programação Funcional", slug: 'funcional' },
+    { name: "Engenharia de Software", slug: 'es' },
+    { name: "Especificação de Requisitos de Software", slug: 'requisitos' },
+    { name: "Métodos de Projeto de Software", slug: 'metodos_psoft' },
+    { name: "Teste de Software", slug: 'teste_software' },
+    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa' }
+
   ];  
 
-  const normalizeText = (text) =>
-    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-  
+  const disciplinaIcones = {
+    calculo1: "/c1_icon.svg",
+    calculo2: "/c1_icon.svg",
+    ip: "/ip_icon.svg",
+    pesquisa: "/pa_icon.svg",
+    metodologia: "/mtc_icon.svg",
+    vetorial: "/cv_icon.svg",
+    ic: "/icc_icon.svg",
+    discreta: "/md_icon.svg",
+    logica: "/md_icon.svg",
+    linear: "/cv_icon.svg",
+    arquitetura1: "/ac_icon.svg",
+    arquitetura2:"/ac_icon.svg",
+    poo: "/ip_icon.svg",
+    numerico: "/c1_icon.svg",
+    probabilidade: "/estatistica_icon.svg",
+    ia: "/ia_icon.svg",
+    sbc: "/ia_icon.svg",
+    aprendizagem_maquina: "/ia_icon.svg",
+    redes: "/redes_icon.svg",
+    apa: "/apa_icon.svg",
+    seguranca: "/sc_icon.svg",
+    sistemas_informacao: "/ihc_icon.svg",
+    sociedade: "/ihc_icon.svg",
+    formais: "/icc_icon.svg",
+    imagens: "/pdi_icon.svg",
+    paradigmas_linguagens: "/apa_icon.svg",
+    compiladores: "/icc_icon.svg",
+    ihc: "/ihc_icon.svg",
+    so: "/ac_icon.svg",
+    concorrente: "/apa_icon.svg",
+    sistema_distribuidos: "/redes_icon.svg",
+    engenharia_sistemas: "/redes_icon.svg",
+    eda1: "/eda_icon.svg",
+    eda2: "/eda_icon.svg",
+    bd: "/bd_icon.svg",
+    inovacao: "/icc_icon.svg",
+    gerencimento_psoft: "/eds_icon.svg",
+    funcional: "/ip_icon.svg",
+    es: "/eds_icon.svg",
+    requisitos: "/eds_icon.svg",
+    metodos_psoft: "/eds_icon.svg",
+    teste_software: "/eds_icon.svg",
+    
+  };
+
   const filteredDisciplines = disciplines.filter(discipline =>
-    normalizeText(discipline.name).includes(normalizeText(searchTerm))
+    discipline.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const disciplinaIcone = "Icone";
+
 
   return (
     <div>
-      <main className={styles.main}>
-        <section className={styles.introSection}>
+      <main>
+        <div className={styles.lineTop}></div>
+        <section className={`${styles.container} ${styles.introSection}`}>
           <img src="./././girl_studying.svg" alt="Imagem ilustrativa do PerCurso" className={styles.bannerImage} />
           <div className={styles.introText}>
             <h2 className={styles.title}>📂 Materiais de Estudo</h2>
@@ -78,31 +126,36 @@ const PercursosPage = () => {
           </div>
         </section>
 
-        <section className={styles.resourcesSection}>
-          <h2 className={styles.sectionTitle}>RECURSOS</h2>
-          <div className={styles.searchContainer}>
-            <input
-              type="text"
-              placeholder="Pesquisar cadeira..."
-              className={styles.searchInput}
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <button className={styles.searchButton}>
-              🔍
-            </button>
-          </div>
+        <div className={styles.backgroundRectangle}>
+          <div className={styles.lineMid}></div>
+          <section className={`${styles.container} ${styles.resourcesSection}`}>
+            <h2 className={styles.sectionTitle}>RECURSOS</h2>
+            <div className={styles.searchContainer}>
+              <input
+                type="text"
+                placeholder="Pesquisar cadeira..."
+                className={styles.searchInput}
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <button className={styles.searchButton}>
+                🔍
+              </button>
+            </div>
 
-          <div className={styles.resourceCards}>
-            {filteredDisciplines.map((discipline, index) => (
-              <Link href={`/recursos/${discipline.slug}`} key={index} passHref>
-                <div className={styles.card}>
-                  {discipline.name}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
+            <div className={styles.resourceCards}>
+              {filteredDisciplines.map((discipline, index) => (
+                <Link href={`/recursos/${discipline.slug}`} key={index} passHref>
+                  <div className={styles.card}>
+                    <img src={disciplinaIcones[discipline.slug]} alt={discipline.name} className={styles.icon} />
+                    {discipline.name}
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+          <div className={styles.lineBottom}></div>
+        </div>
       </main>
 
       <footer className={styles.footer}>
