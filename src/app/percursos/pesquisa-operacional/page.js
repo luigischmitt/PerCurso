@@ -9,32 +9,36 @@ const PercursosPage = () => {
          <section className={styles.introSection}>
             <h2 className={styles.title}>PESQUISA OPERACIONAL</h2>
             <p className={styles.description}>
-            Em um mundo repleto de dados e decisões complexas, a pesquisa operacional se destaca como uma ferramenta essencial para otimizar processos e melhorar a eficiência. Empresas de todos os setores buscam soluções para reduzir custos, melhorar a logística e aumentar a produtividade, enfrentando desafios que exigem análises quantitativas avançadas e tomada de decisões estratégicas.
+            O Percurso <strong className={styles.accent}>Pesquisa Operacional</strong> é voltado para estudantes interessados em solucionar problemas complexos de maneira eficiente. Este percurso oferece um guia estruturado, auxiliando na escolha de disciplinas, ligas acadêmicas e laboratórios que aprofundam o conhecimento na área de otimização e análise de sistemas.
             </p>
-            <p className={styles.description2} >
-            Com a evolução dos sistemas de informação e da computação, a pesquisa operacional oferece oportunidades únicas em áreas como logística, produção, finanças e saúde. Profissionais qualificados são necessários para aplicar modelos matemáticos e algoritmos que ajudem as organizações a tomar decisões mais informadas e a alcançar melhores resultados.
+            <p className={styles.description2}>
+            Ao optar por esse percurso, você desenvolverá habilidades fundamentais para atuar em setores que exigem análises críticas e soluções práticas. Algumas competências incluem:
             </p>
-            <p className={styles.description3} >
-            O percurso de Pesquisa Operacional oferece uma formação prática e teórica para quem deseja atuar na resolução de problemas complexos, utilizando ferramentas matemáticas e computacionais para otimizar processos e gerar resultados mais eficientes e sustentáveis.
+            <ul className={styles.description3}>
+              <li>Modelar e resolver problemas de otimização para maximizar resultados ou minimizar custos.</li>
+              <li>Analisar sistemas complexos e propor soluções com base em métodos matemáticos e computacionais.</li>
+              <li>Aplicar técnicas avançadas de simulação e modelagem em diferentes setores, como logística, manufatura e finanças.</li>
+              <li>Compreender e implementar algoritmos eficientes para problemas de decisão em larga escala.</li>
+            </ul>
+            <p className={styles.description3}>
+            Com foco em teoria e prática, o Percurso de Pesquisa Operacional capacita você a criar soluções inovadoras e a enfrentar desafios em áreas estratégicas do mercado e da academia.
             </p>
          </section>
 
          <section className={styles.buttonsSection}>
-           <Link href="/percusos/pesquisa-operacional/disciplinas-optativas" className={styles.button}>
+           <Link href="/percursos/pesquisa-operacional/disciplinas-optativas" className={styles.button}>
              DISCIPLINAS OPTATIVAS
            </Link>
-           <Link href="/percusos/pesquisa-operacional/laboratios-e-ligas" className={styles.button}>
-           LABORATÓRIOS E LIGAS ACADÊMICAS
+           <Link href="/percursos/pesquisa-operacional/laboratorios-e-ligas" className={styles.button}>
+             LABORATÓRIOS E LIGAS ACADÊMICAS
            </Link>
          </section>
          </main>
 
-         <footer className={styles.footer} >
+         <footer className={styles.footer}>
             <p>© 2024 PerCurso, Todos os direitos reservados</p>
-            <a href="#politica" className={styles.footerLink}>Políticas de Privacidade</a>
          </footer>
        </div> 
-        
     );
 };
 

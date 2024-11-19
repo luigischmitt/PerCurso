@@ -9,7 +9,7 @@ const PercursosPage = () => {
         <section className={styles.introSection}>
           <h2 className={styles.title}>PERCURSOS</h2>
           <p className={styles.description}>
-            O sistema de percursos permite que você se especialize em uma área de interesse, ajudando a orientar suas escolhas de disciplinas optativas, ligas acadêmicas e laboratórios que mais se alinham ao tópico que deseja se especializar.
+            O <strong className={styles.accent}>sistema de percursos</strong> permite que você se especialize em uma área de interesse, ajudando a orientar suas escolhas de disciplinas optativas, ligas acadêmicas e laboratórios que mais se alinham ao tópico que deseja se especializar.
           </p>
           <img src="././image2.svg" alt="Imagem ilustrativa do PerCurso" className={styles.image} />
           <p className={styles.subtitle}>

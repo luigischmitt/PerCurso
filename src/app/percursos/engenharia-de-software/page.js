@@ -9,13 +9,19 @@ const PercursosPage = () => {
          <section className={styles.introSection}>
             <h2 className={styles.title}>ENGENHARIA DE SOFTWARE</h2>
             <p className={styles.description}>
-            Vivemos em um mundo digital em constante evolução, onde as aplicações que utilizamos diariamente dependem de sistemas de software cada vez mais complexos. A cada dia, bilhões de interações acontecem em plataformas online, exigindo soluções robustas e escaláveis. No Brasil, o mercado de tecnologia cresce rapidamente, com empresas investindo em inovações que oferecem experiências mais ágeis e eficientes, desde aplicativos até sistemas corporativos avançados.
+            O Percurso <strong className={styles.accent}>Engenharia de Software</strong> é voltado para estudantes que desejam se especializar na área de desenvolvimento de software. Esse percurso funciona como um guia, ajudando você a se orientar durante o curso, por meio de disciplinas, ligas acadêmicas e laboratórios relacionados à área.
             </p>
-            <p className={styles.description2} >
-            Essa demanda por software de qualidade cria desafios e oportunidades imensas. Setores como finanças, saúde e educação estão se beneficiando de sistemas customizados que aumentam a produtividade e garantem maior acesso a serviços essenciais. As empresas estão em busca de engenheiros de software que saibam como construir, testar e manter sistemas confiáveis, capazes de atender às necessidades de um mundo cada vez mais conectado.
+            <p className={styles.description2}>
+            Ao seguir esse Percurso, os participantes estarão aptos a desempenhar diversas habilidades avançadas como cientistas da computação, incluindo:
             </p>
-            <p className={styles.description3} >
-            Com a crescente necessidade de soluções tecnológicas eficazes, o percurso de Engenharia de Software oferece uma formação sólida e prática, preparando você para criar softwares inovadores e de alto desempenho, com impacto direto em diversos setores da sociedade e do mercado.
+            <ul className={styles.description3}>
+              <li>Gerenciar sistemas de software de grande porte, compostos por diversos programas de alta complexidade.</li>
+              <li>Desenvolver soluções para lidar com grandes volumes de dados, utilizando técnicas avançadas de Big Data, Mineração de Dados e Aprendizado de Máquina.</li>
+              <li>Liderar equipes de desenvolvimento de software com eficiência e visão estratégica.</li>
+              <li>Comunicar-se de forma eficaz com clientes e usuários, compreendendo profundamente suas necessidades, desafios e expectativas.</li>
+            </ul>
+            <p className={styles.description3}>
+            O Percurso de Engenharia de Software é ideal para quem busca combinar teoria e prática de forma inovadora, desenvolvendo competências essenciais para o futuro da computação e o impacto positivo no mercado.
             </p>
          </section>
 
@@ -31,7 +37,6 @@ const PercursosPage = () => {
 
          <footer className={styles.footer} >
             <p>© 2024 PerCurso, Todos os direitos reservados</p>
-            <a href="#politica" className={styles.footerLink}>Políticas de Privacidade</a>
          </footer>
        </div> 
         

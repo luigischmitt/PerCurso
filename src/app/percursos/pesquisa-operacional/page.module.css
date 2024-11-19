@@ -49,11 +49,12 @@
   .description,
   .description2,
   .description3 {
+    text-align: left;
     max-width: 80%; /* Permite que o texto ocupe mais espaço horizontalmente */
     font-size: 21px;
-    line-height: 1.8; /* Aumenta o espaçamento entre linhas para legibilidade */
+    line-height: 1.2; /* Aumenta o espaçamento entre linhas para legibilidade */
     color: #2C274B;
-    margin: 50px auto; /* Reduz margens superior e inferior */ /* Alinha o texto de forma mais uniforme */
+    margin: 40px auto; /* Reduz margens superior e inferior */ /* Alinha o texto de forma mais uniforme */
   }
   
   .buttonsSection {
@@ -97,6 +98,11 @@
   .footerLink {
     color: #FFFFFF;
     text-decoration: none;
+  }
+
+  .accent {
+    background-color: var(--accent-color);
+    border-radius: 8px;
   }
   
   /* Responsividade para telas menores */

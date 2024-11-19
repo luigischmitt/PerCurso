@@ -51,10 +51,10 @@
 .description {
   max-width: 600px;
   font-size: 21px;
-  line-height: 1.6;
   color: #2C274B;
   margin-bottom: 20px;
   margin-left: 100px;
+  text-align: center;
 }
 
 .image {
@@ -70,6 +70,7 @@
   color: #2C274B;
   margin-top: 20px;
   margin-left: 100px;
+  text-align: center;
 }
 
 .buttonsSection {
@@ -79,7 +80,7 @@
   align-items: flex-start;
   gap: 70px;
   padding: 40px;
-  margin-top: 50px;
+  margin-top: 120px;
   margin-left: 200px;
 }
 
@@ -112,6 +113,11 @@
 .footerLink {
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.accent {
+  background-color: var(--accent-color);
+  border-radius: 8px;
 }
 
 /* Responsividade para telas menores */

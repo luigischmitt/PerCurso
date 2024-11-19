@@ -7,34 +7,38 @@ const PercursosPage = () => {
        <div>
          <main className={styles.main}>
          <section className={styles.introSection}>
-            <h2 className={styles.title}>SEGURANCA DA INFORMAÇÃO</h2>
+            <h2 className={styles.title}>SEGURANÇA DA INFORMAÇÃO</h2>
             <p className={styles.description}>
-            A transformação digital trouxe inúmeras vantagens, mas também aumentou os riscos associados à proteção de dados. Com bilhões de transações online e informações sensíveis sendo compartilhadas a todo momento, a segurança da informação tornou-se um dos maiores desafios do mundo moderno. Em um cenário onde ataques cibernéticos são cada vez mais sofisticados, as empresas precisam de sistemas de segurança cada vez mais eficazes.
+            O Percurso <strong className={styles.accent}>Segurança da Informação</strong> é direcionado a estudantes que desejam proteger sistemas e dados contra ameaças digitais e ataques cibernéticos. Este percurso funciona como um guia estruturado, auxiliando na escolha de disciplinas, laboratórios e atividades práticas voltadas para a área de cibersegurança.
             </p>
-            <p className={styles.description2} >
-            Essa crescente ameaça cria oportunidades únicas em áreas como proteção de dados, segurança em nuvem e criptografia. Organizações em todos os setores estão investindo em profissionais qualificados para proteger informações críticas e garantir a confiança de seus usuários. De grandes corporações a pequenas startups, a segurança da informação é fundamental para manter a integridade e a privacidade de dados em um ambiente digital.
+            <p className={styles.description2}>
+            Ao seguir este percurso, você será capacitado para enfrentar os crescentes desafios da segurança cibernética, desenvolvendo habilidades como:
             </p>
-            <p className={styles.description3} >
-            O percurso de Segurança da Informação oferece uma formação especializada para aqueles que desejam atuar na proteção de dados, desenvolvendo soluções inovadoras para garantir a segurança e a privacidade em um mundo cada vez mais interconectado.
+            <ul className={styles.description3}>
+              <li>Projetar sistemas seguros e implementar políticas de proteção de dados sensíveis.</li>
+              <li>Analisar vulnerabilidades em softwares e redes, identificando pontos críticos para mitigação de riscos.</li>
+              <li>Aplicar técnicas avançadas de criptografia e autenticação para garantir a integridade e a confidencialidade de dados.</li>
+              <li>Monitorar e responder a incidentes de segurança, garantindo a continuidade operacional de sistemas críticos.</li>
+            </ul>
+            <p className={styles.description3}>
+            O Percurso de Segurança da Informação prepara você para atuar em um dos mercados mais promissores, com alta demanda por especialistas capazes de proteger as infraestruturas digitais de empresas e governos.
             </p>
          </section>
 
          <section className={styles.buttonsSection}>
-           <Link href="/percusos/seguranca-da-informacao/disciplinas-optativas" className={styles.button}>
+           <Link href="/percursos/seguranca-da-informacao/disciplinas-optativas" className={styles.button}>
              DISCIPLINAS OPTATIVAS
            </Link>
-           <Link href="/percusos/seguranca-da-informacao/laboratios-e-ligas" className={styles.button}>
-           LABORATÓRIOS E LIGAS ACADÊMICAS
+           <Link href="/percursos/seguranca-da-informacao/laboratorios-e-ligas" className={styles.button}>
+             LABORATÓRIOS E LIGAS ACADÊMICAS
            </Link>
          </section>
          </main>
 
-         <footer className={styles.footer} >
+         <footer className={styles.footer}>
             <p>© 2024 PerCurso, Todos os direitos reservados</p>
-            <a href="#politica" className={styles.footerLink}>Políticas de Privacidade</a>
          </footer>
        </div> 
-        
     );
 };
 
