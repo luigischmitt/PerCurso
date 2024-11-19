@@ -52,8 +52,11 @@ const PercursosPage = () => {
     { name: "🔍 Pesquisa Aplicada à Computação", slug: 'pesquisa' }
   ];  
 
+  const normalizeText = (text) =>
+    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  
   const filteredDisciplines = disciplines.filter(discipline =>
-    discipline.name.toLowerCase().includes(searchTerm.toLowerCase())
+    normalizeText(discipline.name).includes(normalizeText(searchTerm))
   );
 
   return (
