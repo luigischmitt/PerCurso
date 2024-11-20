@@ -1,193 +1,177 @@
+.container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.backgroundRectangle {
+  background-color: #edf6ff;
+  width: 100%;
+  height: 25rem;
+  margin: 0; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.lineMid {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+.lineBottom {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.lineTop {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+}
 
 .header {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #EDF6FF;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #2C274B;
-  }
-  
-  .nav a {
-    margin-right: 15px;
-    color: #2C274B;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .main {
-    display: flex;
-    flex-direction: column; /* Alterado para coluna para centralizar todo o conteúdo */
-    justify-content: flex-start; /* Alinha o conteúdo no topo */
-    align-items: flex-start;
-    padding: 50px 20px;
-    background-color: #EDF6FF;
-    height: auto; /* Garantir que a área ocupe toda a altura da tela */
-  }
-  
-  .introSection {
-    text-align: center; /* Centraliza o conteúdo */
-    padding: 20px;
-    margin-top: -50px; /* Ajuste para manter posição mais fixa */
-  }
-  
-  .title {
-    font-size: 70px;
-    color: #5436AD;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center; /* Centraliza horizontalmente */
-    margin: 0 auto; /* Remove margens laterais */
-    margin-top: 30px; /* Ajusta a distância do topo */
-  }
-  
-  .description,
-  .description2,
-  .description3 {
-    text-align: left;
-    max-width: 80%; /* Permite que o texto ocupe mais espaço horizontalmente */
-    font-size: 21px;
-    line-height: 1.2; /* Aumenta o espaçamento entre linhas para legibilidade */
-    color: #2C274B;
-    margin: 40px auto; /* Reduz margens superior e inferior */ /* Alinha o texto de forma mais uniforme */
-  }
-  
-  .buttonsSection {
-    display: flex;
-    flex-direction: row; /* Alinha os botões lado a lado */
-    justify-content: center; /* Centraliza os botões no contêiner */
-    align-items: flex-start; /* Alinha os botões no topo */
-    gap: 200px; /* Espaçamento entre os botões */
-    padding: 20px;
-    width: 100%; /* Ocupa toda a largura disponível */
-    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha se necessário */
-    margin-left: -20px;
-  }
-  
-  .button {
-    background-color: #4B2A87;
-    color: #fff;
-    padding: 0.5rem 2rem; 
-    border: none;
-    border-radius: 1.5rem; 
-    font-size: 1.3em; 
-    cursor: pointer;
-    width: 300px; 
-    text-align: center;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
-    white-space: normal; /* Permite quebra de linha dentro do botão */
-  }
-  
-  .button:hover {
-    background-color: #6A4BA0;
-  }
-  
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2C274B;
-    color: #FFFFFF;
-  }
-  
-  .footerLink {
-    color: #FFFFFF;
-    text-decoration: none;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
 
-  .accent {
-    background-color: var(--accent-color);
-    border-radius: 8px;
-  }
-  
-  /* Responsividade para telas menores */
-  @media (max-width: 768px) {
-    .main {
-      flex-direction: column;
-      padding: 20px;
-      height: auto; /* Ajuste para melhorar o comportamento em telas menores */
-    }
-  
-    .title {
-      font-size: 8vw;
-      margin-left: 0;
-      text-align: center;
-    }
-  
-    .image {
-      width: 80%;
-      margin: 0 auto;
-    }
-  
-    .introSection {
-      margin: 0;
-      padding: 10px;
-      text-align: center;
-    }
-  
-    .buttonsSection {
-      justify-content: center; /* Mantém os botões centralizados */
-    }
-  
-    .button {
-      font-size: 0.9rem; /* Reduz proporcionalmente */
-      padding: 0.8rem 5%; /* Ajusta padding proporcional */
-    }
-  
-    .description,
-    .description2,
-    .description3 {
-      font-size: 16px;
-      max-width: 95%;
-      text-align: center;
-      margin: 10px auto; /* Reduz margem superior e inferior */
-    }
-  
-  
-  }
-  
-  /* Responsividade para smartphones */
-  @media (max-width: 480px) {
-    .header {
-      padding: 10px;
-    }
-  
-    .logo {
-      font-size: 20px;
-    }
-  
-    .title {
-      font-size: 10vw;
-      text-align: center;
-      margin: 0; /* Remover margem lateral para centralização */
-    }
-  
-    .buttonsSection {
-      gap: 10px; /* Reduz o espaçamento em telas pequenas */
-    }
-  
-    .button {
-      font-size: 0.8rem;
-      padding: 0.5rem 4%;
-      max-width: 100%; /* Permite maior flexibilidade */
-    }
-  
-    .description,
-    .description2,
-    .description3 {
-      font-size: 16px;
-      max-width: 95%;
-      text-align: center;
-      margin: 10px auto; /* Reduz margens superiores e inferiores */
-    }
-  
-    .footer {
-      padding: 15px;
-      font-size: 14px;
-    }
-  }
+.iconTitle {
+  display: flex;
+  align-items: flex-start;
+  width: 70rem;
+  margin-top: 0;
+}
+
+.icon {
+  width: 5.7rem;
+  height: 6.2rem;
+  margin: 0;
+  margin-right: 1.5rem;
+}
+
+.title {
+  flex: 1;
+  font-size: 4rem;
+  color: var(--secondary-color);
+  font-weight: 900;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 0;
+  margin-left: 2rem;
+  white-space: normal;
+  max-width: 100%;
+}
+
+.objectives {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+  margin-left: 2rem;
+}
+
+.objectives li {
+  margin-bottom: 8px;
+}
+
+.labs {
+  text-align: right;
+}
+
+.labs h3 {
+  font-size: 1.2rem;
+  color: #5e3aa1;
+}
+
+.labs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.map {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.mapImage {
+  width: 64.75rem;
+  height: 46.23056rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.legendItem {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.mandatory {
+  background-color: #5e3aa1;
+  color: #fff;
+}
+
+.optional {
+  background-color: #bda7e2;
+  color: #fff;
+}
+
+.courses {
+  margin-top: 60px;
+}
+
+.subtitle {
+  font-size: 2rem;
+  color: #5e3aa1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.courseCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  color: #5e3aa1;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 4px 0;
+}
