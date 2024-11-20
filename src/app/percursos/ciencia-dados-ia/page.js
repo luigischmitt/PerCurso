@@ -1,47 +1,69 @@
-import React from 'react';
 import styles from './page.module.css';
-import Link from 'next/link';
 
-const PercursosPage = () => {
-    return (
-       <div>
-         <main className={styles.main}>
-         <section className={styles.introSection}>
-            <h2 className={styles.title}>CIÊNCIA DE DADOS & IA</h2>
-            <p className={styles.description}>
-            O Percurso <strong className={styles.accent}>Ciência de Dados & IA</strong> é voltado para estudantes que desejam explorar o universo do Aprendizado de Máquina, Inteligência Artificial e Análise de Dados. Esse percurso funciona como um guia, auxiliando você a escolher disciplinas, ligas acadêmicas e laboratórios que aprofundam suas competências na área.
-            </p>
-            <p className={styles.description2}>
-            Ao seguir esse percurso, você terá a oportunidade de desenvolver habilidades essenciais para atuar em um dos campos mais promissores da tecnologia. Algumas das competências incluem:
-            </p>
-            <ul className={styles.description3}>
-              <li>Dominar técnicas avançadas de extração e visualização de dados.</li>
-              <li>Desenvolver modelos preditivos e sistemas inteligentes baseados em Machine Learning e Deep Learning.</li>
-              <li>Utilizar ferramentas modernas para manipulação e análise de grandes volumes de dados.</li>
-              <li>Implementar soluções práticas em áreas como saúde, finanças, indústria e muito mais.</li>
-            </ul>
-            <p className={styles.description3}>
-            Com uma abordagem teórica e prática, o Percurso de Ciência de Dados & IA prepara você para enfrentar desafios do mercado de trabalho e contribuir para avanços significativos na tecnologia e sociedade.
-            </p>
-         </section>
+export default function Page() {
+  return (
+    <div>
+      <div className={styles.backgroundRectangle}>
+        <div className={styles.lineMid}></div>
+        <div className={styles.container}>
+          <header className={styles.header}>
+            <div className={styles.iconTitle}>
+              <img src="/ia_icon.svg" alt="Logo Ciência de Dados & IA" className={styles.icon} />
+              <div>
+                <h1 className={styles.title}>CIÊNCIA DE DADOS & IA</h1>
+                <ul className={styles.objectives}>
+                  <li>Dominar técnicas avançadas de extração e visualização de dados.</li>
+                  <li>
+                    Desenvolver modelos preditivos e sistemas inteligentes baseados em Machine Learning e Deep Learning.
+                  </li>
+                  <li>
+                    Utilizar ferramentas modernas para manipulação e análise de grandes volumes de dados.
+                  </li>
+                  <li>
+                    Implementar soluções práticas em áreas como saúde, finanças, indústria e muito mais.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <aside className={styles.labs}>
+              <h3>Laboratórios & Ligas</h3>
+              <ul>
+                <li>TAIL</li>
+                <li>TRIL</li>
+                <li>ARIA</li>
+              </ul>
+            </aside>
+          </header>
+        </div>
+        <div className={styles.lineBottom}></div>
+      </div>
 
-         <section className={styles.buttonsSection}>
-           <Link href="/percursos/ciencia-dados-ia/disciplinas-optativas" className={styles.button}>
-             DISCIPLINAS OPTATIVAS
-           </Link>
-           <Link href="/percursos/ciencia-dados-ia/laboratorios-e-ligas" className={styles.button}>
-             LABORATÓRIOS E LIGAS ACADÊMICAS
-           </Link>
-         </section>
-         </main>
+      <section className={styles.map}>
+        <img
+          src="/cdia_roadmap.svg"
+          alt="Mapa de Disciplinas"
+          className={styles.mapImage}
+        />
+      </section>
 
-         <footer className={styles.footer}>
-            <p>© 2024 PerCurso, Todos os direitos reservados</p>
-            <a href="https://github.com/luigischmitt/PerCurso/blob/main/C%C3%B3digo_de_conduta.md" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Código de Conduta</a>
-         </footer>
-       </div> 
-        
-    );
-};
-
-export default PercursosPage;
+      <div className={styles.container}>
+        <section className={styles.courses}>
+          <h2 className={styles.subtitle}>DISCIPLINAS</h2>
+          <div className={styles.courseCards}>
+            {[...Array(4)].map((_, index) => (
+              <div className={styles.card} key={index}>
+                <h3>DSC000026</h3>
+                <p>Fundamentos de Interação Humano-Computador</p>
+                <p><strong>Obrigatória</strong></p>
+                <p>Período: 2</p>
+                <p>
+                  Aprenda os princípios de design centrado no usuário e como construir interfaces eficientes.
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
