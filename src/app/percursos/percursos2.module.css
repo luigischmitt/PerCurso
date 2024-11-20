@@ -1,0 +1,274 @@
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  .backgroundRectangle {
+    background-color: #edf6ff;
+    width: 100%;
+    height: 26.5625rem;
+    padding: 1rem 0;
+    margin: 0; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .lineMid {
+    background: rgba(161, 161, 161, 0.29);
+    width: 100%;
+    height: 0.19rem;
+    margin: 0;
+    position: absolute;
+    top: 0;
+  }
+  
+  .lineBottom {
+    background: rgba(161, 161, 161, 0.29);
+    width: 100%;
+    height: 0.19rem;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .lineTop {
+    background: rgba(161, 161, 161, 0.29);
+    width: 100%;
+    height: 0.19rem;
+    margin: 0;
+    position: absolute;
+  }
+  
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3b5998;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #3b5998;
+    font-weight: bold;
+  }
+  
+  .image {
+    width: 25rem;
+  }
+  
+  .percursos {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .sectionTitle {
+    font-size: 4.5rem;
+    color: #6747C7;;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    text-align: left;
+  }
+  
+  .percursosDescription {
+    width: 46rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0px 0px 48px 0px;
+    text-align: left;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: rgba(237, 246, 255, 0.34);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
+    text-align: center;
+    width: 19.375rem;
+    height: 27.25rem;
+  }
+  
+  
+  
+  .cardTitle {
+    font-size: 20px;
+    color: #5a37b6;
+  }
+  
+  .cardText {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .cardLink {
+    margin-top: 15px;
+    color: #3b5998;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  .laboratorios {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .highlightLab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .highlightLogo {
+    width: 100px;
+    margin-right: 20px;
+  }
+  
+  .highlightText {
+    text-align: left;
+  }
+  
+  .highlightTitle {
+    font-size: 24px;
+    color: #5a37b6;
+  }
+  
+  .highlightSubtitle {
+    font-size: 18px;
+    color: #3b5998;
+  }
+  
+  .highlightDescription {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .otherLabs {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .labCard {
+    background-color: #eef6ff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+  }
+  
+  .labTitle {
+    font-size: 20px;
+    color: #5a37b6;
+  }
+  
+  .labSubtitle {
+    font-size: 16px;
+    color: #3b5998;
+  }
+  
+  .labText {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .main {
+      flex-direction: column;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .title {
+      font-size: 8vw;
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .image {
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    .introSection {
+      margin: 0;
+      padding: 10px;
+      text-align: center;
+    }
+  
+    .buttonsSection {
+      align-items: center;
+    }
+  
+    .button {
+      font-size: 0.9rem;
+      padding: 0.8rem 1.5rem; 
+    }
+  }
+  
+  /* Responsividade para smartphones */
+  @media (max-width: 480px) {
+    .header {
+      padding: 10px;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .title {
+      font-size: 10vw;
+      text-align: center;
+      margin: 0; 
+    }
+  
+    .button {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+      width: 90%; 
+    }
+  
+    .description,
+    .subtitle {
+      font-size: 16px;
+      max-width: 100%;
+      text-align: center;
+      margin-left: 0;
+    }
+  
+    .footer {
+      padding: 15px;
+      font-size: 14px;
+    }
+  }
