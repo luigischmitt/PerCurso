@@ -6,6 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <div className={styles.backgroundRectangle}>
+        <div className={styles.lineMid}></div>
         <main className={`${styles.container} ${styles.main}`}>
           <h2 className={styles.title}>BEM-VINDOS!</h2>
           <div className={styles.contentContainer}>
@@ -23,10 +24,11 @@ const HomePage = () => {
               </div>
             </div>
             <div className={styles.imageContainer}>
-              <img src="././image1.svg" alt="Descrição da imagem" className={styles.mainImage} />
+              <img src="/image1.svg" alt="Descrição da imagem" className={styles.mainImage} />
             </div>
           </div>
         </main>
+        <div className={styles.lineBottom}></div>
       </div>
 
       <div className={styles.container}>

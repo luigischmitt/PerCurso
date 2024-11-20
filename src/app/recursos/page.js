@@ -112,15 +112,15 @@ const PercursosPage = () => {
       <main>
         <div className={styles.lineTop}></div>
         <section className={`${styles.container} ${styles.introSection}`}>
-          <img src="./././girl_studying.svg" alt="Imagem ilustrativa do PerCurso" className={styles.bannerImage} />
+          <img src="/girl_studying.svg" alt="Imagem ilustrativa do PerCurso" className={styles.bannerImage} />
           <div className={styles.introText}>
-            <h2 className={styles.title}>📂 Materiais de Estudo</h2>
+            <h2 className={styles.title}>Materiais de Estudo</h2>
             <p className={styles.title_p}>
               Para começar, basta escolher uma matéria e explorar os <strong className={styles.accent}>conteúdos e recursos</strong> disponíveis. Aqui você encontrará uma variedade de conteúdos, para facilitar sua revisão e aprofundamento nos temas abordados em aula. Aproveite todos os recursos para <strong className={styles.accent}>aprender</strong> de maneira eficiente e agradável!
             </p>
           </div>
           <div className={styles.introText}>
-            <h2 className={styles.title}>✨ Contribua com o PerCurso!</h2>
+            <h2 className={styles.title}>Contribua com o PerCurso!</h2>
             <p className={styles.title_p}>
               Tem materiais úteis, sugestões ou atividades para compartilhar? Você pode <strong className={styles.accent}>colaborar</strong> com o PerCurso enviando conteúdo que possa ajudar outros estudantes por meio do botão <strong className={styles.accent}>“editar”</strong> em cada disciplina.<strong className={styles.accent}>Seu apoio</strong> é muito bem-vindo para construir uma comunidade de aprendizado ainda mais rica!
             </p>

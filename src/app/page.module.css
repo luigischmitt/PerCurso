@@ -7,6 +7,31 @@
   border-bottom: 1px solid var(--background-color);
 }
 
+.lineTop {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+}
+
+.lineMid {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+.lineBottom {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  position: absolute;
+  bottom: 0;
+}
+
 .logo {
   font-size: 36px;
   font-weight: bold;
@@ -32,6 +57,8 @@
   background-color: #edf6ff;
   width: 100%;
   padding: 5px 0px 55px 0px;
+  height: 35rem;
+  position: relative;
 }
 
 .title {
