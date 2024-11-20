@@ -84,6 +84,16 @@
   text-align: left;
 }
 
+.sectionTitle2 {
+  font-size: 4.5rem;
+  color: #6747C7;;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  text-align: center;
+}
+
 .percursosDescription {
   width: 46rem;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -108,18 +118,25 @@
   text-align: center;
   width: 19.375rem;
   height: 27.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
+.card:hover {
+  transform: translateY(-10px); /* Move o card ligeiramente para cima */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); /* Intensifica a sombra */
+  background-color: rgba(237, 246, 255, 0.5); /* Torna o fundo ligeiramente mais opaco */
+  cursor: pointer; /* Mostra o cursor como uma mão ao passar o mouse */
+}
 
 .cardTitle {
-  font-size: 20px;
-  color: #5a37b6;
+  font-size: 28px;
+  color: #372179;
+  margin: 30px;
 }
 
 .cardText {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -130,7 +147,6 @@
   text-decoration: none;
   cursor: pointer;
 }
-
 
 .laboratorios {
   padding: 40px 20px;
@@ -161,11 +177,6 @@
 .highlightTitle {
   font-size: 24px;
   color: #5a37b6;
-}
-
-.highlightSubtitle {
-  font-size: 18px;
-  color: #3b5998;
 }
 
 .highlightDescription {
@@ -272,3 +283,4 @@
     font-size: 14px;
   }
 }
+
