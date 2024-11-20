@@ -3,6 +3,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 30px;
+  padding-bottom: 50px;
 }
 
 .backgroundRectangle {
@@ -17,7 +18,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .lineMid {
   background: rgba(161, 161, 161, 0.29);
@@ -44,7 +44,6 @@
   margin: 0;
   position: absolute;
 }
-
 
 .logo {
   font-size: 24px;
@@ -150,7 +149,7 @@
 
 .laboratorios {
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background-color: #edf6ff;
   text-align: center;
 }
 
@@ -184,34 +183,98 @@
   margin-top: 10px;
 }
 
-.otherLabs {
+.carouselContainer {
   display: flex;
-  gap: 20px;
+  align-items: center;
   justify-content: center;
+  gap: 20px;
+  background-color: #edf6ff; /* Fundo branco para o card */
+  padding: 30px; /* Espaçamento interno */
+  margin: 20px auto; /* Centraliza o container */
+  max-width: 80%; /* Limita a largura do container */
 }
 
 .labCard {
-  background-color: #eef6ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 60%; /* Largura do card */
+  max-width: 800px; /* Máxima largura para telas maiores */
+  height: 420px; /* Altura fixa para uniformidade */
   padding: 20px;
-  border-radius: 8px;
-  width: 300px;
-  text-align: left;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.labTitle {
-  font-size: 20px;
-  color: #5a37b6;
-}
-
-.labSubtitle {
-  font-size: 16px;
-  color: #3b5998;
-}
-
-.labText {
+.cardImage {
+  width: 150px; /* Tamanho fixo para a largura */
+  height: 150px; /* Altura fixa */
+  object-fit: contain; /* Garante que a imagem mantenha sua proporção */
   margin-top: 10px;
-  font-size: 14px;
+  margin-bottom: 12px; /* Espaçamento inferior */
+  display: block; /* Para centralizar */
+  margin-left: auto; /* Centraliza horizontalmente */
+  margin-right: auto; /* Centraliza horizontalmente */
 }
+
+.cardTitle {
+  font-size: 24px;
+  color: #372179;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cardText {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin: 20px;
+}
+
+.cardTextlab {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  margin: 30px;
+}
+
+.cardLink a {
+  font-size: 14px;
+  color: #3b5998;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.cardLink a:hover {
+  color: #6747c7;
+}
+
+.carouselButton {
+  background: transparent;
+  border: none;
+  color: #372179;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.carouselButton:hover {
+  transform: scale(1.1);
+  color: #6747c7;
+}
+
+.carouselButton.left {
+  margin-right: 10px;
+}
+
+.carouselButton.right {
+  margin-left: 10px;
+}
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
