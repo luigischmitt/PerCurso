@@ -1,10 +1,9 @@
 /* page.module.css */
 .header {
   display: flex;
-  margin: 0 60px;
+  margin: 15px 60px;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--background-color);
 }
 
 .lineTop {
@@ -102,7 +101,6 @@
 .columns {
   display: flex;
   justify-content: center;
-  text-align: center;
   gap: 60px;
 }
 
@@ -178,80 +176,281 @@
   font-size: 16px;
 }
 
-/* Responsividade */
 
-/* 320px: Smartphones pequenos */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 0px) and (max-width: 480px) {
   .logo {
-    font-size: 24px;
+    font-size: 21px;
+    margin: 30px 0px 5px 0px;
   }
 
   .nav a {
-    font-size: 14px;
-    margin-right: 10px;
+    font-size: 11px;
+    margin: 0px 1px 15px 0px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
   }
 
   .title {
-    font-size: 32px;
-    width: 90%;
-  }
-
-  .buttonContainer {
-    gap: 30px;
-    flex-direction: column;
-  }
-
-  .column {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .mainImage {
-    height: 200px;
+    font-size: 43px;
+    text-align: center;
+    margin: 35px 0px 15px 0px;
   }
 
   .description {
-    font-size: 16px;
-  }
-}
-
-/* 480px: Smartphones maiores */
-@media (min-width: 480px) and (max-width: 768px) {
-  .logo {
-    font-size: 28px;
-  }
-
-  .nav a {
-    font-size: 16px;
-    margin-right: 15px;
-  }
-
-  .title {
-    font-size: 40px;
-    width: 90%;
+    font-size: 13px;
+    text-align: center;
+    margin: 0px 0px 15px 0px; 
   }
 
   .buttonContainer {
-    gap: 40px;
-    flex-direction: column;
+    gap: 23px;
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+
+  .button {
+    width: 160px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    text-align: center; 
   }
 
   .column {
-    width: 100%;
+    width: 90%; 
     padding: 20px;
   }
 
-  .description {
-    font-size: 18px;
+  .column li {
+    font-size: 12px;
   }
 
-  .mainImage {
-    height: 250px;
+  .columnText {
+    font-size: 12px; 
+    text-align: center; 
+  }
+
+  .columnTitle {
+    font-size: 16px;
+    text-align: center; 
+  }
+
+  .imageContainer {
+    display: none; 
+  }
+
+  .columns {
+    flex-direction: column; 
+    gap: 30px; 
+    align-items: center; 
+  }
+
+  .backgroundRectangle {
+    padding: 20px 0px 17px 0px; 
+  }
+
+  .column ol {
+    padding: 0 20px;
+    margin: 0; 
+    list-style-position: inside; 
   }
 }
 
-/* 768px: Tablets (modo retrato) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 768px) {
+  .logo {
+    font-size: 23px;
+    margin: 30px 0px 5px 0px;
+  }
+
+  .nav a {
+    font-size: 13px;
+    margin: 0px 1px 15px 0px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  .title {
+    font-size: 58px;
+    text-align: center;
+    margin: 35px 0px 15px 0px;
+  }
+
+  .description {
+    font-size: 15px;
+    text-align: center; 
+    margin: 0px 0px 15px 0px;
+  }
+
+  .buttonContainer {
+    gap: 26px;
+    justify-content: center;
+    flex-wrap: wrap; 
+  }
+
+  .button {
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+  }
+
+  .column {
+    margin: 0 auto; 
+    text-align: center;
+  }
+
+  .column li {
+    font-size: 11px;
+  }
+
+  .columnText {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .columnTitle {
+    font-size: 16px;
+    text-align: center; 
+  }
+
+  .imageContainer {
+    display: none; 
+  }
+
+  .columns {
+    flex-direction: column; 
+    gap: 30px; 
+    align-items: center; 
+  }
+
+  .backgroundRectangle {
+    padding: 20px 0px 20px 0px;
+  }
+
+  .column ol {
+    padding: 0 10px; 
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo {
+    font-size: 25px;
+    margin-top: 25px;
+  }
+
+  .nav a {
+    font-size: 15px;
+    margin-bottom:15px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-top: 10px;
+  }
+
+  .title {
+    font-size: 72px;
+    text-align: center;
+    margin: 35px 0px 15px 0px;
+  }
+
+  .description {
+    font-size: 18px;
+    text-align: center;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .buttonContainer {
+    gap: 35px;
+    justify-content: center;
+  }
+
+  .button {
+    width: 200px;
+    height: 46px;
+    font-size: 17px;
+  }
+
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .column {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .column li {
+    font-size: 12px;
+  }
+
+  .columnText {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .columnTitle {
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .columns {
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+  }
+
+  .backgroundRectangle {
+    padding: 20px 0px 20px 0px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
   .logo {
     font-size: 28px;
   }
@@ -291,49 +490,7 @@
   }
 }
 
-/* 1024px: Tablets (modo paisagem) ou telas menores de laptops */
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .logo {
-    font-size: 28px;
-  }
-
-  .nav a {
-    font-size: 15px;
-  }
-
-  .title {
-    font-size: 78px;
-  }
-
-  .description {
-    font-size: 18px;
-  }
-
-  .buttonContainer {
-    gap: 48px;
-  }
-
-  .button {
-    width: 220px;
-    height: 50px;
-    font-size: 18px;
-  }
-
-  .column li {
-    font-size: 11px;
-  }
-
-  .columnText {
-    font-size: 11px;
-  }
-
-  .columnTitle {
-    font-size: 16px;
-  }
-}
-
-/* 1280px: Laptops e desktops menores */
-@media (min-width: 1280px) and (max-width: 1440px) {
+@media (min-width: 1281px) and (max-width: 1440px) {
   .logo {
     font-size: 32px;
   }
@@ -378,8 +535,7 @@
   }
 }
 
-/* 1440px a 1920px: Desktops grandes (full HD e superiores) */
-@media (min-width: 1440px) and (max-width: 1920px) {
+@media (min-width: 1441px) and (max-width: 1920px) {
   .logo {
     font-size: 34px;
   }
