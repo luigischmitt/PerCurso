@@ -1,7 +1,7 @@
 /* page.module.css */
 .header {
   display: flex;
-  margin: 10px 60px;
+  margin: 6px 60px;
   justify-content: space-between;
   align-items: center;
 }

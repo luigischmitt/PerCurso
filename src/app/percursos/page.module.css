@@ -1,123 +1,205 @@
-/* page.module.css */
-
-.header {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #EDF6FF;
+.container {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
 }
+
+.backgroundRectangle {
+  background-color: #edf6ff;
+  width: 100%;
+  height: 26.5625rem;
+  padding: 1rem 0;
+  margin: 0; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.lineMid {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+.lineBottom {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.lineTop {
+  background: rgba(161, 161, 161, 0.29);
+  width: 100%;
+  height: 0.19rem;
+  margin: 0;
+  position: absolute;
+}
+
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #2C274B;
+  color: #3b5998;
 }
 
-.nav a {
-  margin-right: 15px;
-  color: #2C274B;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.main {
+.nav {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start; /* Centraliza o conteúdo, mas mantendo o alinhamento superior */
-  padding: 50px 20px;
-  background-color: #EDF6FF;
-  height: auto; /* Ajuste para permitir conteúdo flexível */
+  gap: 15px;
 }
 
-.introSection {
-  margin-left: 20px;
-  flex: 1;
-  text-align: left;
-  padding: 20px;
-  margin-top: -50px; /* Ajuste para manter posição mais fixa */
-}
-
-.title {
-  font-size: 100px;
-  color: #5436AD;
+.navLink {
+  text-decoration: none;
+  color: #3b5998;
   font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: 100px;
-  margin-top: -5px;
-}
-
-.description {
-  max-width: 600px;
-  font-size: 21px;
-  color: #2C274B;
-  margin-bottom: 20px;
-  margin-left: 100px;
-  text-align: center;
 }
 
 .image {
-  width: 500px;
-  margin: 20px;
-  display: block;
-  margin-left: 150px;
+  width: 25rem;
 }
 
-.subtitle {
-  max-width: 600px;
-  font-size: 21px;
-  color: #2C274B;
-  margin-top: 20px;
-  margin-left: 100px;
+.percursos {
+  padding: 40px 20px;
   text-align: center;
-}
-
-.buttonsSection {
-  flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 70px;
-  padding: 40px;
-  margin-top: 120px;
-  margin-left: 200px;
+  justify-content: space-around;
 }
 
-.button {
-  background-color: #4B2A87;
-  color: #fff;
-  padding: 2rem 5rem; 
-  border: none;
-  border-radius: 1.5rem; 
-  font-size: 1rem; 
-  cursor: pointer;
-  width: 80%;
-  max-width: 25rem; 
-  text-align: center;
-  transition: background-color 0.3s ease;
-  box-sizing: border-box; 
+.sectionTitle {
+  font-size: 4.5rem;
+  color: #6747C7;;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+  text-align: left;
 }
 
-.button:hover {
-  background-color: #6A4BA0;
+.percursosDescription {
+  width: 46rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0px 0px 48px 0px;
+  text-align: left;
 }
 
-.footer {
-  text-align: center;
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: rgba(237, 246, 255, 0.34);
   padding: 20px;
-  background-color: #2C274B;
-  color: #FFFFFF;
-}
-
-.footerLink {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.accent {
-  background-color: var(--accent-color);
   border-radius: 8px;
+  box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
+  text-align: center;
+  width: 19.375rem;
+  height: 27.25rem;
+}
+
+
+
+.cardTitle {
+  font-size: 20px;
+  color: #5a37b6;
+}
+
+.cardText {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cardLink {
+  margin-top: 15px;
+  color: #3b5998;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.laboratorios {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.highlightLab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.highlightLogo {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.highlightText {
+  text-align: left;
+}
+
+.highlightTitle {
+  font-size: 24px;
+  color: #5a37b6;
+}
+
+.highlightSubtitle {
+  font-size: 18px;
+  color: #3b5998;
+}
+
+.highlightDescription {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.otherLabs {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.labCard {
+  background-color: #eef6ff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: left;
+}
+
+.labTitle {
+  font-size: 20px;
+  color: #5a37b6;
+}
+
+.labSubtitle {
+  font-size: 16px;
+  color: #3b5998;
+}
+
+.labText {
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 /* Responsividade para telas menores */
@@ -125,7 +207,7 @@
   .main {
     flex-direction: column;
     padding: 20px;
-    height: auto; /* Ajuste para melhorar o comportamento em telas menores */
+    height: auto;
   }
 
   .title {
@@ -150,8 +232,8 @@
   }
 
   .button {
-    font-size: 0.9rem; /* Ajusta proporção para telas menores */
-    padding: 0.8rem 1.5rem; /* Proporção ajustada */
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem; 
   }
 }
 
@@ -168,13 +250,13 @@
   .title {
     font-size: 10vw;
     text-align: center;
-    margin: 0; /* Remover margem lateral para centralização */
+    margin: 0; 
   }
 
   .button {
     font-size: 0.8rem;
-    padding: 0.5rem 1rem; /* Proporção ajustada */
-    width: 90%; /* Maior flexibilidade para telas pequenas */
+    padding: 0.5rem 1rem;
+    width: 90%; 
   }
 
   .description,
@@ -182,7 +264,7 @@
     font-size: 16px;
     max-width: 100%;
     text-align: center;
-    margin-left: 0; /* Remover margem lateral */
+    margin-left: 0;
   }
 
   .footer {
