@@ -72,13 +72,13 @@ const PercursosPage = () => {
 
   return (
   <div>
-    <div className={styles.lineTop}></div> 
     <div className={styles.backgroundRectangle}>
+      <div className={styles.lineMid}></div> 
       <div className={`${styles.container} ${styles.percursos}`}>
         <div className={styles.heroText}>
           <h2 className={styles.sectionTitle}>PERCURSOS</h2>
           <p className={styles.percursosDescription}>
-            O sistema de percursos permite que você se especialize em uma área de interesses, ajudando a orientar suas escolhas de disciplinas optativas, ligas acadêmicas e laboratórios que mais se alinham ao tópico que deseja se especializar.
+            O sistema de percursos permite que você se especialize em uma <strong className={styles.accent}>área de interesse</strong>, ajudando a orientar suas escolhas de disciplinas optativas, ligas acadêmicas e laboratórios que mais se alinham ao tópico que deseja se especializar.
           </p>
           <p className={styles.percursosDescription}>
             Ao seguir um percurso, você se beneficia de uma orientação direcionada, aproveitando ao máximo o que o curso oferece e fazendo escolhas mais assertivas para atingir seus objetivos.
@@ -135,42 +135,48 @@ const PercursosPage = () => {
       </Link>
     </div>
 
-    <div className={styles.lineTop}></div>
-    <div className={styles.laboratorios}>
-      <h2 className={styles.sectionTitle2}>LABORATÓRIOS</h2>
-      <div className={styles.carouselContainer}>
-        <button
-          className={`${styles.carouselButton} ${styles.left}`}
-          onClick={handleLabPrev}
-        >
-          &lt;
-        </button>
-        <div className={styles.labCard}>
-          <a href={labs[labIndex].link} target="_blank" rel="noopener noreferrer">
-            <img
-              src={labs[labIndex].imgSrc}
-              alt={`Logo ${labs[labIndex].title}`}
-              className={styles.cardImage}
-            />
-          </a>
-          <h3 className={styles.cardTitle}>{labs[labIndex].title}</h3>
-          <p className={styles.cardTextlab}>{labs[labIndex].description}</p>
-          <p className={styles.cardLink}>
+    <div className={styles.backgroundRectangle2}>
+      <div className={styles.lineMid}></div>
+      <div className={styles.laboratorios}>
+        <h2 className={styles.sectionTitle2}>LABORATÓRIOS</h2>
+        <div className={styles.carouselContainer}>
+          <button
+            className={`${styles.carouselButton} ${styles.left}`}
+            onClick={handleLabPrev}
+          >
+            &lt;
+          </button>
+          <div className={styles.labCard}>
             <a href={labs[labIndex].link} target="_blank" rel="noopener noreferrer">
-              Clique para saber mais!
+              <img
+                src={labs[labIndex].imgSrc}
+                alt={`Logo ${labs[labIndex].title}`}
+                className={styles.cardImage}
+              />
             </a>
-          </p>
+            <h3 className={styles.cardTitle}>{labs[labIndex].title}</h3>
+            <p className={styles.cardTextlab}>{labs[labIndex].description}</p>
+            <p className={styles.cardLink}>
+              <a href={labs[labIndex].link} target="_blank" rel="noopener noreferrer">
+                Clique para saber mais!
+              </a>
+            </p>
+          </div>
+          <button
+            className={`${styles.carouselButton} ${styles.right}`}
+            onClick={handleLabNext}
+          >
+            &gt;
+          </button>
         </div>
-        <button
-          className={`${styles.carouselButton} ${styles.right}`}
-          onClick={handleLabNext}
-        >
-          &gt;
-        </button>
       </div>
+      <div className={styles.lineBottom}></div>
     </div>
-    <div className={styles.lineTop}>
+
+    <div>
+      <h3>Ligas</h3>
     </div>
+
     <footer className={styles.footer}>
         <p>© 2024 PerCurso, Todos os direitos reservados</p>
         <a href="https://github.com/luigischmitt/PerCurso/blob/main/C%C3%B3digo_de_conduta.md" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Código de Conduta</a>

@@ -9,7 +9,20 @@
 .backgroundRectangle {
   background-color: #edf6ff;
   width: 100%;
-  height: 26.5625rem;
+  height: 25rem;
+  padding: 1rem 0;
+  margin: 0; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundRectangle2 {
+  background-color: #edf6ff;
+  width: 100%;
+  height: 34rem;
   padding: 1rem 0;
   margin: 0; 
   position: relative;
@@ -51,6 +64,10 @@
   color: #3b5998;
 }
 
+.heroText {
+  margin-top: 2rem;
+}
+
 .nav {
   display: flex;
   gap: 15px;
@@ -64,6 +81,7 @@
 
 .image {
   width: 25rem;
+  margin: 0;
 }
 
 .percursos {
@@ -84,11 +102,11 @@
 }
 
 .sectionTitle2 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: #6747C7;;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
   font-weight: 900;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
   margin-top: 0;
   text-align: center;
 }
@@ -98,7 +116,7 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 20px;
   font-weight: 500;
-  margin: 0px 0px 48px 0px;
+  margin: 0px 0px 20px 0px;
   text-align: left;
 }
 
@@ -112,11 +130,11 @@
 .card {
   background-color: rgba(237, 246, 255, 0.34);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 19px;
   box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
   text-align: center;
   width: 19.375rem;
-  height: 27.25rem;
+  height: 25rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -148,9 +166,8 @@
 }
 
 .laboratorios {
-  padding: 40px 20px;
-  background-color: #edf6ff;
   text-align: center;
+  height: auto;
 }
 
 .highlightLab {
@@ -190,7 +207,7 @@
   gap: 20px;
   background-color: #edf6ff; /* Fundo branco para o card */
   padding: 30px; /* Espaçamento interno */
-  margin: 20px auto; /* Centraliza o container */
+  margin: auto; /* Centraliza o container */
   max-width: 80%; /* Limita a largura do container */
 }
 
@@ -200,13 +217,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 60%; /* Largura do card */
-  max-width: 800px; /* Máxima largura para telas maiores */
-  height: 420px; /* Altura fixa para uniformidade */
+  width: 87rem; 
+  height: 21rem;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 19px;
   background-color: #fff;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  margin: 0%;
 }
 
 .cardImage {
@@ -237,8 +254,7 @@
 .cardTextlab {
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 10px;
-  margin: 30px;
+  margin-bottom: 0px;
 }
 
 .cardLink a {
@@ -287,6 +303,10 @@
   text-decoration: none;
 }
 
+.accent {
+  background-color: var(--accent-color);
+  border-radius: 8px;
+}
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
