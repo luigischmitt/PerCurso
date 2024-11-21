@@ -156,7 +156,7 @@
 
 .courseCards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 colunas fixas */
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
   gap: 20px;
 }
 
@@ -175,4 +175,16 @@
 
 .card p {
   margin: 4px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2C274B;
+  color: #FFFFFF;
+}
+
+.footerLink {
+  color: #FFFFFF;
+  text-decoration: none;
 }

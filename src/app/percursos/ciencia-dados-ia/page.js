@@ -50,20 +50,66 @@ export default function Page() {
         <section className={styles.courses}>
           <h2 className={styles.subtitle}>DISCIPLINAS</h2>
           <div className={styles.courseCards}>
-            {[...Array(4)].map((_, index) => (
+            {[
+              {
+                codigo: "GDCOC0096",
+                nome: "VISUALIZAÇÃO DE DADOS",
+                tipo: "Optativa",
+                periodo: 4,
+                descricao: "Ferramentas e técnicas para transformar dados complexos em gráficos e visualizações interativas, facilitando sua interpretação e análise.",
+              },
+              {
+                codigo: "GDCOC0114",
+                nome: "SÉRIES TEMPORAIS",
+                tipo: "Optativa",
+                periodo: 4,
+                descricao: "Análise de dados organizados em ordem cronológica para identificar padrões, tendências e previsões futuras.",
+              },
+              {
+                codigo: "GDSCO0032",
+                nome: "TEORIA DOS GRAFOS APLICADA",
+                tipo: "Optativa",
+                periodo: 4,
+                descricao: "Estudo de grafos para resolver problemas em áreas como redes sociais, rotas logísticas e análise de conectividade",
+              },
+              {
+                codigo: "DINF00068",
+                nome: "INTELIGÊNCIA ARTIFICIAL APLICADA À SAÚDE",
+                tipo: "Optativa",
+                periodo: 5,
+                descricao: "Uso de algoritmos de IA para diagnósticos, otimização de tratamentos, e avanços na medicina personalizada.",
+              },
+              {
+                codigo: "GDCOC0098",
+                nome: "BIG DATA",
+                tipo: "Optativa",
+                periodo: 6,
+                descricao: "Conjunto de tecnologias para processar e analisar grandes volumes de dados variados, gerando insights estratégicos.",
+              },
+              {
+                codigo: "GDCOC0094",
+                nome: "APRENDIZADO PROFUNDO",
+                tipo: "Optativa",
+                periodo: 7,
+                descricao: "Subcampo da IA que utiliza redes neurais profundas para resolver problemas complexos, como reconhecimento de imagens e processamento de linguagem natural.",
+              },
+                        
+            ].map((disciplina, index) => (
               <div className={styles.card} key={index}>
-                <h3>DSC000026</h3>
-                <p>Fundamentos de Interação Humano-Computador</p>
-                <p><strong>Obrigatória</strong></p>
-                <p>Período: 2</p>
-                <p>
-                  Aprenda os princípios de design centrado no usuário e como construir interfaces eficientes.
-                </p>
-              </div>
+                <h3>{disciplina.codigo}</h3>
+                <p>{disciplina.nome}</p>
+                <p><strong>{disciplina.tipo}</strong></p>
+                <p>Período: {disciplina.periodo}</p>
+                <p>{disciplina.descricao}</p>
+                </div>
             ))}
           </div>
         </section>
       </div>
+      <footer className={styles.footer}>
+        <p>© 2024 PerCurso, Todos os direitos reservados</p>
+        <a href="https://github.com/luigischmitt/PerCurso/blob/main/C%C3%B3digo_de_conduta.md" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Código de Conduta</a>
+      </footer>
     </div>
   );
 }

@@ -54,6 +54,20 @@ export default function Page() {
           <div className={styles.courseCards}>
             {[
               {
+                codigo: "GDCOC0101",
+                nome: "PROGRAMAÇÃO ORIENTADA A OBJETOS",
+                tipo: "Obrigatória",
+                periodo: 2,
+                descricao: "Aprenda a modelar soluções com base em objetos, encapsulando dados e comportamentos para desenvolver sistemas mais organizados e reutilizáveis.",
+              },
+              {
+                codigo: "DSCO00021",
+                nome: "REDES DE COMPUTADORES",
+                tipo: "Obrigatória",
+                periodo: 4,
+                descricao: "Explore os fundamentos da comunicação entre sistemas, aprendendo como projetar, configurar e gerenciar redes locais e globais de forma eficiente.",
+              },
+              {
                 codigo: "DSCO00021",
                 nome: "SEGURANÇA COMPUTACIONAL",
                 tipo: "Obrigatória",
@@ -66,13 +80,6 @@ export default function Page() {
                 tipo: "Obrigatória",
                 periodo: 6,
                 descricao: "Entenda como projetar e implementar sistemas que operam em vários computadores interconectados.",
-              },
-              {
-                codigo: "GDCOC0076",
-                nome: "ANÁLISE E PROJETO DE ALGORITMOS",
-                tipo: "Obrigatória",
-                periodo: 5,
-                descricao: "Desenvolva habilidades para criar algoritmos eficientes e analisar sua complexidade.",
               },
               {
                 codigo: "GDADM0117",
@@ -108,6 +115,10 @@ export default function Page() {
           </div>
         </section>
       </div>
+      <footer className={styles.footer}>
+        <p>© 2024 PerCurso, Todos os direitos reservados</p>
+        <a href="https://github.com/luigischmitt/PerCurso/blob/main/C%C3%B3digo_de_conduta.md" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Código de Conduta</a>
+      </footer>
     </div>
   );
 }

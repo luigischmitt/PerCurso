@@ -176,3 +176,14 @@
 .card p {
   margin: 4px 0;
 }
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2C274B;
+  color: #FFFFFF;
+}
+
+.footerLink {
+  color: #FFFFFF;
+  text-decoration: none;
+}

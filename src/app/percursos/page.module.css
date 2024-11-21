@@ -275,6 +275,18 @@
   margin-left: 10px;
 }
 
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2C274B;
+  color: #FFFFFF;
+}
+
+.footerLink {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
