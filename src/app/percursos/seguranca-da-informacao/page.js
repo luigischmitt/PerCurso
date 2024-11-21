@@ -1,45 +1,113 @@
-import React from 'react';
 import styles from './page.module.css';
-import Link from 'next/link';
 
-const PercursosPage = () => {
-    return (
-       <div>
-         <main className={styles.main}>
-         <section className={styles.introSection}>
-            <h2 className={styles.title}>SEGURANÇA DA INFORMAÇÃO</h2>
-            <p className={styles.description}>
-            O Percurso <strong className={styles.accent}>Segurança da Informação</strong> é direcionado a estudantes que desejam proteger sistemas e dados contra ameaças digitais e ataques cibernéticos. Este percurso funciona como um guia estruturado, auxiliando na escolha de disciplinas, laboratórios e atividades práticas voltadas para a área de cibersegurança.
-            </p>
-            <p className={styles.description2}>
-            Ao seguir este percurso, você será capacitado para enfrentar os crescentes desafios da segurança cibernética, desenvolvendo habilidades como:
-            </p>
-            <ul className={styles.description3}>
-              <li>Projetar sistemas seguros e implementar políticas de proteção de dados sensíveis.</li>
-              <li>Analisar vulnerabilidades em softwares e redes, identificando pontos críticos para mitigação de riscos.</li>
-              <li>Aplicar técnicas avançadas de criptografia e autenticação para garantir a integridade e a confidencialidade de dados.</li>
-              <li>Monitorar e responder a incidentes de segurança, garantindo a continuidade operacional de sistemas críticos.</li>
-            </ul>
-            <p className={styles.description3}>
-            O Percurso de Segurança da Informação prepara você para atuar em um dos mercados mais promissores, com alta demanda por especialistas capazes de proteger as infraestruturas digitais de empresas e governos.
-            </p>
-         </section>
+export default function Page() {
+  return (
+    <div>
+      <div className={styles.backgroundRectangle}>
+        <div className={styles.lineMid}></div>
+        <div className={styles.container}>
+          <header className={styles.header}>
+            <div className={styles.iconTitle}>
+              <img src="/sc_icon.svg" alt="Logo engenharia de software" className={styles.icon} />
+              <div>
+                <h1 className={styles.title}>SEGURANÇA DA INFORMAÇÃO</h1>
+                <ul className={styles.objectives}>
+                  <li>
+                    Projetar sistemas seguros e implementar políticas de proteção de dados sensíveis.
+                  </li>
+                  <li>
+                    Analisar vulnerabilidades em softwares e redes, identificando pontos críticos para mitigação de riscos.
+                  </li>
+                  <li>
+                   Aplicar técnicas avançadas de criptografia e autenticação para garantir a integridade e a confidencialidade de dados.
+                  </li>
+                  <li>
+                    Monitorar e responder a incidentes de segurança, garantindo a continuidade operacional de sistemas críticos.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <aside className={styles.labs}>
+              <h3>Laboratórios & Ligas</h3>
+              <ul>
+                <li>ARIA</li>
+                <li>TRILL</li>
+                <li>LASER</li>
+              </ul>
+            </aside>
+          </header>
+        </div>
+        <div className={styles.lineBottom}></div>
+      </div>
 
-         <section className={styles.buttonsSection}>
-           <Link href="/percursos/seguranca-da-informacao/disciplinas-optativas" className={styles.button}>
-             DISCIPLINAS OPTATIVAS
-           </Link>
-           <Link href="/percursos/seguranca-da-informacao/laboratorios-e-ligas" className={styles.button}>
-             LABORATÓRIOS E LIGAS ACADÊMICAS
-           </Link>
-         </section>
-         </main>
+      <section className={styles.map}>
+        <img
+          src="/cdia_roadmap.svg"
+          alt="Mapa de Disciplinas"
+          className={styles.mapImage}
+        />
+      </section>
 
-         <footer className={styles.footer}>
-            <p>© 2024 PerCurso, Todos os direitos reservados</p>
-         </footer>
-       </div> 
-    );
-};
-
-export default PercursosPage;
+      <div className={styles.container}>
+        <section className={styles.courses}>
+          <h2 className={styles.subtitle}>DISCIPLINAS</h2>
+          <div className={styles.courseCards}>
+            {[
+              {
+                codigo: "DSCO00021",
+                nome: "SEGURANÇA COMPUTACIONAL",
+                tipo: "Obrigatória",
+                periodo: 6,
+                descricao: "Explore as técnicas e práticas para proteger sistemas e dados contra ataques e vulnerabilidades.",
+              },
+              {
+                codigo: "DSCO00022",
+                nome: "SISTEMAS DISTRIBUÍDOS",
+                tipo: "Obrigatória",
+                periodo: 6,
+                descricao: "Entenda como projetar e implementar sistemas que operam em vários computadores interconectados.",
+              },
+              {
+                codigo: "GDCOC0076",
+                nome: "ANÁLISE E PROJETO DE ALGORITMOS",
+                tipo: "Obrigatória",
+                periodo: 5,
+                descricao: "Desenvolva habilidades para criar algoritmos eficientes e analisar sua complexidade.",
+              },
+              {
+                codigo: "GDADM0117",
+                nome: "SISTEMAS DE INFORMAÇÃO E DECISÃO",
+                tipo: "Optativa",
+                periodo: 0,
+                descricao: "Aprenda a integrar tecnologia e processos para suporte à tomada de decisão nas organizações.",
+              },
+              {
+                codigo: "GDSCO0032",
+                nome: "REDES SEM FIO",
+                tipo: "Optativa",
+                periodo: 5,
+                descricao: "Estude os princípios e tecnologias que possibilitam comunicação sem fio, como Wi-Fi e redes móveis.",
+              },
+              {
+                codigo: "DSCO00032",
+                nome: "ADMINISTRAÇÃO DE SISTEMAS",
+                tipo: "Optativa",
+                periodo: 6,
+                descricao: "Descubra como gerenciar e configurar sistemas operacionais, servidores e redes de maneira eficiente.",
+              },
+                        
+            ].map((disciplina, index) => (
+              <div className={styles.card} key={index}>
+                <h3>{disciplina.codigo}</h3>
+                <p>{disciplina.nome}</p>
+                <p><strong>{disciplina.tipo}</strong></p>
+                <p>Período: {disciplina.periodo}</p>
+                <p>{disciplina.descricao}</p>
+                </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
