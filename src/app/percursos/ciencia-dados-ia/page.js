@@ -31,8 +31,8 @@ export default function Page() {
                 <h3>Laboratórios & Ligas</h3>
                 <ul>
                   <li>TAIL</li>
-                  <li>TRIL</li>
                   <li>ARIA</li>
+                  <li>TRIL</li>
                 </ul>
               </div>
             </aside>

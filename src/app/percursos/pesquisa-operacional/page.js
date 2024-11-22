@@ -30,11 +30,10 @@ export default function Page() {
             <aside className={styles.labs}>
               <div className={styles.lineVertical}></div>
               <div className={styles.labsText}>
-                <h3>Laboratórios & Ligas</h3>
+                <h3>Laboratórios & Grupos</h3>
                 <ul>
-                  <li>TAIL</li>
+                  <li>LASER</li>
                   <li>LOG</li>
-                  <li>TRILL</li>
                 </ul>
               </div>
             </aside>
@@ -51,6 +50,8 @@ export default function Page() {
         />
       </section>
 
+      <div className={styles.backgroundRectangle2}>
+      <div className={styles.lineMid}></div>
       <div className={styles.container}>
         <section className={styles.courses}>
           <h2 className={styles.subtitle}>DISCIPLINAS</h2>
@@ -97,6 +98,8 @@ export default function Page() {
           </div>
         </section>
       </div>
+      </div>
+
       <footer className={styles.footer}>
         <p>© 2024 PerCurso, Todos os direitos reservados</p>
         <a href="https://github.com/luigischmitt/PerCurso/blob/main/C%C3%B3digo_de_conduta.md" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Código de Conduta</a>

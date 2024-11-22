@@ -49,14 +49,6 @@ const PercursosPage = () => {
       link: "https://lmi.ci.ufpb.br/",
     },
     {
-      id: "liaa",
-      title: "LIAA",
-      description:
-        "O Laboratório de Inteligência Artificial Aplicada (LIAA) tem o objetivo de investigar a aplicação de técnicas da Inteligência Artificial à solução de problemas em diferentes domínios do conhecimento, tais como, Informática em Saúde, Cidades Inteligentes, TV Digital Interativa, etc.",
-      imgSrc: "/liaa_logo.svg",
-      link: "https://www.facebook.com/liaalab/?locale=pt_BR",
-    },
-    {
       id: "lumo",
       title: "LUMO",
       description:
@@ -71,6 +63,14 @@ const PercursosPage = () => {
         "O Laboratório de Sistemas Digitais (LASID) tem a proposta de realizar pesquisas em desenvolvimento de hardware, sistemas embarcados e processamento de sinais. Também está ligado ao Programa de Pós Graduação em Informática (PPGI) e já participou de diversos projetos, ganhando conhecimento, experiência e infra-estrutura.",
       imgSrc: "/lasid_logo.svg",
       link: "http://www.lasid.di.ufpb.br/",
+    },
+    {
+      id: "liaa",
+      title: "LIAA",
+      description:
+        "O Laboratório de Inteligência Artificial Aplicada (LIAA) tem o objetivo de investigar a aplicação de técnicas da Inteligência Artificial à solução de problemas em diferentes domínios do conhecimento, tais como, Informática em Saúde, Cidades Inteligentes, TV Digital Interativa, etc.",
+      imgSrc: "/liaa_logo.svg",
+      link: "https://www.facebook.com/liaalab/?locale=pt_BR",
     },
     {
       id: "lar",

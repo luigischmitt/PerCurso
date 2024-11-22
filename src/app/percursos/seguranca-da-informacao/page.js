@@ -32,9 +32,7 @@ export default function Page() {
               <div className={styles.labsText}>
                 <h3>Laboratórios & Ligas</h3>
                 <ul>
-                  <li>TAIL</li>
-                  <li>TRIL</li>
-                  <li>ARIA</li>
+                  <li>Em breve...</li>
                 </ul>
               </div>
             </aside>
@@ -51,6 +49,8 @@ export default function Page() {
         />
       </section>
 
+      <div className={styles.backgroundRectangle2}>
+      <div className={styles.lineMid}></div>
       <div className={styles.container}>
         <section className={styles.courses}>
           <h2 className={styles.subtitle}>DISCIPLINAS</h2>
@@ -124,6 +124,8 @@ export default function Page() {
             ))}
           </div>
         </section>
+      </div>
+
       </div>
       <footer className={styles.footer}>
         <p>© 2024 PerCurso, Todos os direitos reservados</p>

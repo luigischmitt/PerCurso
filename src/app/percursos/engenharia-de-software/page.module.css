@@ -209,15 +209,34 @@
   border-radius: 8px;
   padding: 16px;
   box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Eleva o card levemente */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); /* Aumenta a sombra */
+  background-color: #f7f7ff; /* Altera a cor de fundo para algo mais claro */
+  border-color: #6747c7; /* Destaca a borda com a cor principal */
+  cursor: pointer; /* Mostra o cursor como uma mão ao passar o mouse */
 }
 
 .card h3 {
   color: #5e3aa1;
   margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.card:hover h3 {
+  color: #6747c7; /* Altera a cor do título ao passar o mouse */
 }
 
 .card p {
   margin: 4px 0;
+  transition: color 0.3s ease;
+}
+
+.card:hover p {
+  color: #333; /* Torna o texto mais destacado ao passar o mouse */
 }
 
 .footer {
