@@ -102,7 +102,7 @@
 .columns {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 70px;
 }
 
 .column {
@@ -163,7 +163,14 @@
 .container {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0px 20px;
+  margin-top: -40px;
+  padding: 0px 20px 0px 5px;
+}
+
+.container2 {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0px 20px 0px 5px;
 }
 
 .column li {
@@ -248,7 +255,7 @@
 
   .columnTitle {
     font-size: 16px;
-    text-align: center; 
+    text-align: left; 
   }
 
   .imageContainer {

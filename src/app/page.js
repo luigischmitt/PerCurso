@@ -31,7 +31,7 @@ const HomePage = () => {
         <div className={styles.lineBottom}></div>
       </div>
 
-      <div className={styles.container}>
+      <div className={styles.container2}>
         <section className={styles.section}>
           <div className={styles.columns}>
             <div className={styles.column}>
