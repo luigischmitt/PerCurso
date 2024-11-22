@@ -27,12 +27,15 @@ export default function Page() {
               </div>
             </div>
             <aside className={styles.labs}>
-              <h3>Laboratórios & Ligas</h3>
-              <ul>
-                <li>ARIA</li>
-                <li>TRILL</li>
-                <li>LASER</li>
-              </ul>
+              <div className={styles.lineVertical}></div>
+              <div className={styles.labsText}>
+                <h3>Laboratórios & Ligas</h3>
+                <ul>
+                  <li>TAIL</li>
+                  <li>TRIL</li>
+                  <li>ARIA</li>
+                </ul>
+              </div>
             </aside>
           </header>
         </div>

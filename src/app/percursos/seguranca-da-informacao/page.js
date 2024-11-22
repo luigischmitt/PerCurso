@@ -28,12 +28,15 @@ export default function Page() {
               </div>
             </div>
             <aside className={styles.labs}>
-              <h3>Laboratórios & Ligas</h3>
-              <ul>
-                <li>ARIA</li>
-                <li>TRILL</li>
-                <li>LASER</li>
-              </ul>
+              <div className={styles.lineVertical}></div>
+              <div className={styles.labsText}>
+                <h3>Laboratórios & Ligas</h3>
+                <ul>
+                  <li>TAIL</li>
+                  <li>TRIL</li>
+                  <li>ARIA</li>
+                </ul>
+              </div>
             </aside>
           </header>
         </div>
@@ -53,6 +56,13 @@ export default function Page() {
           <h2 className={styles.subtitle}>DISCIPLINAS</h2>
           <div className={styles.courseCards}>
             {[
+              {
+                codigo: "1107136",
+                nome: "INTRODUÇÃO À PROGRAMAÇÃO",
+                tipo: "Obrigatória",
+                periodo: 1,
+                descricao: "Entenda os fundamentos da lógica de programação e aprenda a criar soluções práticas com código eficiente.",
+              },
               {
                 codigo: "GDCOC0101",
                 nome: "PROGRAMAÇÃO ORIENTADA A OBJETOS",

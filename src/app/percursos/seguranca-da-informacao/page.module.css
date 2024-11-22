@@ -17,6 +17,18 @@
   justify-content: center;
 }
 
+.backgroundRectangle2 {
+  background-color: #edf6ff;
+  width: 100%;
+  height: auto;
+  margin: 0; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .lineMid {
   background: rgba(161, 161, 161, 0.29);
   width: 100%;
@@ -49,7 +61,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: 2rem;
-  margin-top: 0;
+  margin-top: 3rem;
 }
 
 .iconTitle {
@@ -82,10 +94,15 @@
 }
 
 .objectives {
-  list-style: none;
+  list-style: disc;
   padding: 0;
-  margin: 16px 0;
-  margin-left: 2rem;
+  margin: 2rem 0;
+  margin-left: 2.2rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #2C274B;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
 }
 
 .objectives li {
@@ -93,30 +110,53 @@
 }
 
 .labs {
+  display: flex;
   text-align: right;
-  margin-right: 40px;
+  margin-right: 2rem;
+  margin-top: 4.5rem;
+}
+
+.labsText {
+  margin-top: 0.5rem;
+  margin-left: 2.5rem;
+}
+
+.lineVertical {
+  background: rgba(161, 161, 161, 0.29);
+  width: 0.19rem;
+  height: 7rem;
+  margin: 0;
+  margin-top: 3rem;
+  position: absolute;
 }
 
 .labs h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #5e3aa1;
+  font-weight: 800;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
 }
 
 .labs ul {
-  list-style: none;
+  text-align: left;
+  list-style: disc;
   padding: 0;
+  margin: 0.8rem 0;
+  margin-left: 2.2rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  color: #2C274B;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .map {
   text-align: center;
-  margin: 40px 0;
 }
 
 .mapImage {
   width: 64.75rem;
   height: 46.23056rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .legend {
@@ -144,19 +184,22 @@
 }
 
 .courses {
-  margin-top: 60px;
+  margin: 0%;
 }
 
 .subtitle {
-  font-size: 2rem;
-  color: #5e3aa1;
+  font-size: 4rem;
+  color: #6747C7;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+  font-weight: 900;
+  margin-top: 0%;
 }
 
 .courseCards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -165,7 +208,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
 }
 
 .card h3 {
@@ -176,6 +219,7 @@
 .card p {
   margin: 4px 0;
 }
+
 .footer {
   text-align: center;
   padding: 20px;
