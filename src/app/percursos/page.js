@@ -49,12 +49,36 @@ const PercursosPage = () => {
       link: "https://lmi.ci.ufpb.br/",
     },
     {
+      id: "liaa",
+      title: "LIAA",
+      description:
+        "O Laboratório de Inteligência Artificial Aplicada (LIAA) tem o objetivo de investigar a aplicação de técnicas da Inteligência Artificial à solução de problemas em diferentes domínios do conhecimento, tais como, Informática em Saúde, Cidades Inteligentes, TV Digital Interativa, etc.",
+      imgSrc: "/liaa_logo.svg",
+      link: "https://www.facebook.com/liaalab/?locale=pt_BR",
+    },
+    {
+      id: "lumo",
+      title: "LUMO",
+      description:
+        "O Laboratório de Computação Ubíqua e Móvel (LUMO) tem por finalidade realizar pesquisas, desenvolvimento e extensão nas áreas de computação ubíqua, computação móvel e áreas correlatas tais como: computação ubíqua, computação móvel, interação humano-computador, cidades inteligentes, sistemas modulares, educação a distância, redes de sensores sem fios, redes veiculares, internet das coisas, e evolução computacional.",
+      imgSrc: "/lumo_logo.svg",
+      link: "http://plone.ufpb.br/lumo",
+    },
+    {
       id: "lasid",
       title: "LASID",
       description:
         "O Laboratório de Sistemas Digitais (LASID) tem a proposta de realizar pesquisas em desenvolvimento de hardware, sistemas embarcados e processamento de sinais. Também está ligado ao Programa de Pós Graduação em Informática (PPGI) e já participou de diversos projetos, ganhando conhecimento, experiência e infra-estrutura.",
       imgSrc: "/lasid_logo.svg",
       link: "http://www.lasid.di.ufpb.br/",
+    },
+    {
+      id: "lar",
+      title: "LAR",
+      description:
+        "O Laboratório de Redes (LAR) está vinculado ao Departamento de Sistemas de Computação e tem como principal atuação a área de redes de comunicação, com destaque para as áreas de segurança em redes, redes sem fio e redes definidas por software (SDN).",
+      imgSrc: "/lar_logo.svg",
+      link: "http://www.ci.ufpb.br/ci/documentos/resolucoes/resolucao-no-01-2014-ci",
     },
   ];
 
