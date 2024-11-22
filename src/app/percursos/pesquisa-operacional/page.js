@@ -8,7 +8,7 @@ export default function Page() {
         <div className={styles.container}>
           <header className={styles.header}>
             <div className={styles.iconTitle}>
-              <img src="/sc_icon.svg" alt="Logo engenharia de software" className={styles.icon} />
+              <img src="/estatistica_icon.svg" alt="Logo pesquisa operacional" className={styles.icon} />
               <div>
                 <h1 className={styles.title}>PESQUISA OPERACIONAL</h1>
                 <ul className={styles.objectives}>
