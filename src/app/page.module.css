@@ -87,6 +87,10 @@
   padding: 307 69.4;
 }
 
+.button:hover { 
+  background-color: #5436AD;
+}
+
 .textButtonContainer {
   width: 52%;
   display: flex;

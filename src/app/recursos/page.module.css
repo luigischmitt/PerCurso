@@ -200,6 +200,12 @@
   text-align: left;
 }
 
+.card:hover { 
+  background-color: #f7f7ff;
+  border-color: #6747c7;
+  cursor: pointer; 
+}
+
 .footer {
   background-color: var(--primary-color);
   color: var(--white);
