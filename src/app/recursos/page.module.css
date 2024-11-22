@@ -3,14 +3,14 @@
   width: 100%;
   margin: 0 auto;
   padding: 30px;
+  flex-grow: 1;
 }
 
 .backgroundRectangle {
   background-color: #edf6ff;
   width: 100%;
   height: auto;
-  padding: 1rem 0;
-  margin: 0; 
+  padding: 40px 0px 130px 0px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -49,25 +49,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #EDF6FF;
+  border-bottom: 1px solid #edf6ff;
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: #2C274B;
+  color: #2c274b;
 }
 
 .nav a {
   margin-right: 15px;
-  color: #2C274B;
+  color: #2c274b;
   text-decoration: none;
   font-weight: bold;
 }
 
 .main {
   padding: 40px 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .introSection {
@@ -77,7 +77,7 @@
   gap: 20px;
   margin-bottom: 40px;
   text-align: left;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .bannerImage {
@@ -97,14 +97,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .title {
   font-size: 1.5rem;
   text-align: center;
   font-weight: 800;
-  color: #5436AD;
+  color: #5436ad;
   margin-bottom: 10px;
 }
 
@@ -113,19 +112,19 @@
   font-size: 1rem;
   text-align: center;
   font-weight: 500;
-  color: #2C274B;
+  color: #2c274b;
 }
 
 .resourcesSection {
   text-align: center;
-  background-color: #EDF6FF;
+  background-color: #edf6ff;
   margin: 0;
 }
 
 .sectionTitle {
   font-size: 4.5rem;
-  color: #6747C7;;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+  color: #6747c7;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   font-weight: 900;
   margin-bottom: 1.5rem;
   margin-top: 0;
@@ -139,12 +138,11 @@
 
 .searchContainer {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;    /* Centraliza verticalmente */
-  margin-bottom: 30px;    /* Espaço abaixo do contêiner */
-  gap: 10px;              /* Espaço entre input e botão */
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 30px;
+  gap: 10px;
 }
-
 
 .searchInput {
   padding: 12px;
@@ -158,7 +156,7 @@
 .searchButton {
   padding: 5px;
   background-color: #edf6ff;
-  color: #FFFFFF;
+  color: #ffffff;
   border: none;
   border-radius: 6rem;
   cursor: pointer;
@@ -171,18 +169,30 @@
 
 .resourceCards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(387px, 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(387px, 1fr)
+  ); 
   gap: 20px;
   padding: 0 40px;
 }
 
+.noResults {
+  grid-column: 1 / -1; 
+  text-align: center;
+  font-size: 18px; 
+  color: #666;
+  margin: 0; 
+  padding: 10px 0; 
+}
+
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-size: 1.3rem;
-  color: #2C274B;
+  color: #2c274b;
   font-weight: 700;
   height: 4rem;
   display: flex;
@@ -191,18 +201,579 @@
 }
 
 .footer {
+  background-color: var(--primary-color);
+  color: var(--white);
   text-align: center;
   padding: 20px;
-  background-color: #2C274B;
-  color: #FFFFFF;
+  height: 80px; 
 }
 
 .footerLink {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+.mainContainer {
+  flex-grow: 1;
+  margin-bottom: 0;
+  padding-bottom: 0; 
 }
 
 .accent {
   background-color: var(--accent-color);
   border-radius: 8px;
+}
+
+/* Responsividade */
+
+@media (min-width: 0px) and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .backgroundRectangle {
+    width: 100%;
+    padding: 40px 0px 80px 0px;
+  }
+
+  .introSection {
+    gap: 16px;
+    margin-bottom: 35px;
+  }
+
+  .bannerImage {
+    display: none;
+  }
+
+  .introText {
+    width: 300px;
+    height: 200px;
+  }
+
+  .title {
+    font-size: 1.22rem;
+    margin-bottom: 10px;
+  }
+
+  .title_p {
+    width: 18rem;
+    font-size: 0.77rem;
+  }
+
+  .resourcesSection {
+    margin: 0;
+  }
+
+  .sectionTitle {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 2.05rem;
+    margin: 0;
+    margin-right: 1.5rem;
+  }
+
+  .searchContainer {
+    margin-bottom: 30px;
+    gap: 9px;
+  }
+
+  .searchInput {
+    padding: 9px;
+    font-size: 12px;
+    width: 15rem;
+  }
+
+  .searchIcon {
+    width: 1.4rem;
+    height: 1.2rem;
+  }
+
+  .card {
+    padding: 19px;
+    font-size: 0.88rem;
+    height: 3.8rem;
+    margin-right: 33px;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .inverted .introSection {
+    order: 2;
+  }
+
+  .inverted .resourcesSection {
+    order: 1; 
+  }
+
+  .resourceCards {
+    grid-template-columns: 1fr;
+  }
+
+  .noResults {
+    font-size: 11px; 
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .backgroundRectangle {
+    width: 100%;
+    padding: 40px 0px 80px 0px;
+  }
+
+  .introSection {
+    gap: 14px;
+    margin-bottom: 35px;
+  }
+
+  .bannerImage {
+    display: none;
+  }
+
+  .introText {
+    width: 320px;
+    height: 210px;
+  }
+
+  .title {
+    font-size: 1.26rem;
+    margin-bottom: 10px;
+  }
+
+  .title_p {
+    width: 19rem;
+    font-size: 0.8rem;
+  }
+
+  .resourcesSection {
+    margin: 0;
+  }
+
+  .sectionTitle {
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 2.3rem;
+    margin: 0;
+    margin-right: 1.5rem;
+  }
+
+  .searchContainer {
+    margin-bottom: 30px;
+    gap: 9px;
+  }
+
+  .searchInput {
+    padding: 9px;
+    font-size: 13px;
+    width: 17rem;
+  }
+
+  .searchIcon {
+    width: 1.5rem;
+    height: 1.3rem;
+  }
+
+  .resourceCards {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 17px;
+    padding: 0 34px;
+  }
+
+  .card {
+    padding: 18px;
+    font-size: 1.02rem;
+    height: 3.75rem;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inverted .introSection {
+    order: 2;
+  }
+
+  .inverted .resourcesSection {
+    order: 1; 
+  }
+
+  .noResults {
+    font-size: 12px; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .backgroundRectangle {
+    width: 100%;
+    padding: 40px 0px 90px 0px;
+  }
+
+  .introSection {
+    gap: 13px;
+    margin-bottom: 35px;
+  }
+
+  .bannerImage {
+    display: none;
+  }
+
+  .introText {
+    width: 320px;
+    height: 210px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .title_p {
+    width: 20rem;
+    font-size: 0.82rem;
+  }
+
+  .resourcesSection {
+    margin: 0;
+  }
+
+  .sectionTitle {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 2.5rem;
+    margin: 0;
+    margin-right: 1.5rem;
+  }
+
+  .searchContainer {
+    margin-bottom: 30px;
+    gap: 9px;
+  }
+
+  .searchInput {
+    padding: 9px;
+    font-size: 13px;
+    width: 19rem;
+  }
+
+  .searchIcon {
+    width: 1.5rem;
+    height: 1.3rem;
+  }
+
+  .resourceCards {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 20px;
+    padding: 0 34px;
+  }
+
+  .card {
+    padding: 18px;
+    font-size: 1.08rem;
+    height: 3.8rem;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inverted .introSection {
+    order: 2;
+  }
+
+  .inverted .resourcesSection {
+    order: 1;
+  }
+
+  .noResults {
+    font-size: 14px; 
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    max-width: 1400px;
+    padding: 24px;
+  }
+
+  .backgroundRectangle {
+    width: 100%;
+    padding: 40px 0px 80px 0px;
+  }
+
+  .introSection {
+    gap: 13px;
+    margin-bottom: 35px;
+  }
+
+  .bannerImage {
+    display: none;
+  }
+
+  .introText {
+    width: 350px;
+    height: 220px;
+  }
+
+  .title {
+    font-size: 1.35rem;
+    margin-bottom: 10px;
+  }
+
+  .title_p {
+    width: 21rem;
+    font-size: 0.87rem;
+  }
+
+  .resourcesSection {
+    margin: 0;
+  }
+
+  .sectionTitle {
+    font-size: 4.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 2.7rem;
+    margin: 0;
+    margin-right: 1.5rem;
+  }
+
+  .searchContainer {
+    margin-bottom: 30px;
+    gap: 9px;
+  }
+
+  .searchInput {
+    padding: 9px;
+    font-size: 14px;
+    width: 19rem;
+  }
+
+  .searchIcon {
+    width: 1.5rem;
+    height: 1.3rem;
+  }
+
+  .resourceCards {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 20px;
+    padding: 0 34px;
+  }
+
+  .card {
+    padding: 18px;
+    font-size: 1.12rem;
+    height: 3.9rem;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .inverted .introSection {
+    order: 2; 
+  }
+
+  .inverted .resourcesSection {
+    order: 1; 
+  }
+
+  .noResults {
+    font-size: 15px; 
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .container {
+    max-width: 1400px;
+    padding: 26px;
+  }
+
+  .backgroundRectangle {
+    width: 100%;
+    padding: 50px 0px 100px 0px;
+  }
+
+  .introSection {
+    gap: 17px;
+    margin-bottom: 70px;
+  }
+
+  .bannerImage {
+    width: 355px;
+    height: 220px;
+  }
+
+  .introText {
+    width: 355px;
+    height: 220px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .title_p {
+    width: 21.5rem;
+    font-size: 0.9rem;
+  }
+
+  .resourcesSection {
+    margin: 0;
+  }
+
+  .sectionTitle {
+    font-size: 4.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 2.9rem;
+    margin: 0;
+    margin-right: 1.5rem;
+  }
+
+  .searchContainer {
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .searchInput {
+    padding: 10px;
+    font-size: 15px;
+    width: 19rem;
+  }
+
+  .searchIcon {
+    width: 1.6rem;
+    height: 1.4rem;
+  }
+
+  .resourceCards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 0 34px;
+  }
+
+  .card {
+    padding: 18px;
+    font-size: 1.2rem;
+    height: 4rem;
+  }
+
+  .noResults {
+    font-size: 16px; 
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .container {
+    max-width: 1400px;
+    padding: 26px;
+  }
+
+  .backgroundRectangle {
+    width: 100%;
+    padding: 55px 0px 100px 0px;
+  }
+
+  .introSection {
+    gap: 17px;
+    margin-bottom: 50px;
+  }
+
+  .bannerImage {
+    width: 380px;
+    height: 240px;
+  }
+
+  .introText {
+    width: 385px;
+    height: 240px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .title_p {
+    width: 21.5rem;
+    font-size: 0.95rem;
+  }
+
+  .resourcesSection {
+    margin: 0;
+  }
+
+  .sectionTitle {
+    font-size: 4.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .icon {
+    width: 2.9rem;
+    margin: 0;
+    margin-right: 1.5rem;
+  }
+
+  .searchContainer {
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .searchInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 19rem;
+  }
+
+  .searchIcon {
+    width: 1.6rem;
+    height: 1.4rem;
+  }
+
+  .resourceCards {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 0 34px;
+  }
+
+  .card {
+    padding: 18px;
+    font-size: 1.25rem;
+    height: 4rem;
+  }
+
+  .noResults {
+    font-size: 18px; 
+  }
 }

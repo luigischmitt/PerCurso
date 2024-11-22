@@ -245,7 +245,7 @@ const PercursosPage = () => {
               <h3 className={styles.groupTitle}>LOG</h3>
               <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
               <p className={styles.groupDescription}>
-              O Logistics and Optimization Group (LOG) foi fundado com o intuito de reunir alunos e professores interessados em trabalhar com a área de Otimização Combinatória e Logística. O LOG conta com uma extensa rede de colaboração, a qual é composta por professores de universidades no Brasil e no Exterior.
+              O Logistics and Optimization Group (LOG) foi fundado com o intuito de reunir alunos e professores interessados em trabalhar com a área de Otimização Combinatória e Logística. O LOG conta com uma extensa rede de colaboração no Brasil e no Exterior.
               </p>
             </div>
           </div>

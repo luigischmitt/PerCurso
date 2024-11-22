@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './page.module.css';
 
 const PercursosPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
+  const [cardsToShow, setCardsToShow] = useState(18);
 
   const disciplines = [
     { name: "Cálculo diferencial e integral I", slug: 'calculo1' },
@@ -99,17 +100,42 @@ const PercursosPage = () => {
     
   };
 
+  const updateCardsToShow = () => {
+    const width = window.innerWidth;
+
+    if (width >= 1400) {
+      setCardsToShow(42); // Exibe 42 cards para telas grandes
+    } else if (width >= 1024) {
+      setCardsToShow(30); // Exibe 30 cards
+    } else if (width >= 800) {
+      setCardsToShow(16); // Exibe 16 cards
+    } else if (width >= 500) {
+      setCardsToShow(6); // Exibe 6 cards
+    } else {
+      setCardsToShow(4); // Exibe 4 cards para telas pequenas
+    }
+  };
+
+  useEffect(() => {
+    updateCardsToShow(); 
+
+    window.addEventListener("resize", updateCardsToShow);
+
+    return () => {
+      window.removeEventListener("resize", updateCardsToShow);
+    };
+  }, []);
+
   const filteredDisciplines = disciplines.filter(discipline => 
     discipline.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
       .includes(searchTerm.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase())
   );
 
-  const disciplinaIcone = "Icone";
-
+  const disciplinaIcone = "Icone"; 
 
   return (
-    <div>
-      <main>
+    <div className={styles.pageContainer}>
+       <main className={`${styles.mainContainer} ${styles.inverted}`}>
         <div className={styles.lineTop}></div>
         <section className={`${styles.container} ${styles.introSection}`}>
           <img src="/girl_studying.svg" alt="Imagem ilustrativa do PerCurso" className={styles.bannerImage} />
@@ -128,8 +154,8 @@ const PercursosPage = () => {
         </section>
 
         <div className={styles.backgroundRectangle}>
-          <div className={styles.lineMid}></div>
-          <section className={`${styles.container} ${styles.resourcesSection}`}>
+        <div className={styles.lineMid}></div>
+        <section className={`${styles.container} ${styles.resourcesSection}`}>
             <h2 className={styles.sectionTitle}>RECURSOS</h2>
             <div className={styles.searchContainer}>
               <input
@@ -145,14 +171,30 @@ const PercursosPage = () => {
             </div>
 
             <div className={styles.resourceCards}>
-              {filteredDisciplines.map((discipline, index) => (
-                <Link href={`/recursos/${discipline.slug}`} key={index} passHref>
-                  <div className={styles.card}>
-                    <img src={disciplinaIcones[discipline.slug]} alt={discipline.name} className={styles.icon} />
-                    {discipline.name}
-                  </div>
-                </Link>
-              ))}
+              {filteredDisciplines.length > 0 ? (
+                filteredDisciplines
+                  .slice(0, cardsToShow) 
+                  .map((discipline, index) => (
+                    <Link
+                      href={`/recursos/${discipline.slug}`}
+                      key={index}
+                      passHref
+                    >
+                      <div className={`${styles.card} ${styles.resourceCard}`}>
+                        <img
+                          src={disciplinaIcones[discipline.slug]}
+                          alt={discipline.name}
+                          className={styles.icon}
+                        />
+                        {discipline.name}
+                      </div>
+                    </Link>
+                  ))
+              ) : (
+                <p className={styles.noResults}>
+                  Nenhuma cadeira foi encontrada para o termo pesquisado.
+                </p>
+              )}
             </div>
           </section>
           <div className={styles.lineBottom}></div>
