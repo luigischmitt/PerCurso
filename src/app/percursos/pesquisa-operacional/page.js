@@ -79,6 +79,13 @@ export default function Page() {
                 descricao: "Explora redes e conexões, permitindo resolver problemas de roteamento, escalonamento e alocação de recursos em Pesquisa Operacional.",
               },
               {
+                codigo: "GDCOC0076",
+                nome: "ANÁLISE E PROJETO DE ALGORITMOS",
+                tipo: "OBRIGATÓRIA",
+                periodo: 5,
+                descricao: "Estudo de técnicas para criar algoritmos eficientes, essenciais na pesquisa operacional para resolver problemas de otimização e tomada de decisão.",
+              },
+              {
                 codigo: "PSAE00251",
                 nome: "PRINCÍPIOS DE ECONOMIA",
                 tipo: "Optativa",
