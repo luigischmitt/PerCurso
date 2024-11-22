@@ -228,7 +228,7 @@ const PercursosPage = () => {
           {/* Segunda linha de grupos */}
           <div className={styles.row}>
             <div className={styles.groupItem}>
-              <Link href="https://pet.ci.ufpb.br/" target="_blank">
+              <Link href="https://www.petccufpb.com.br/" target="_blank">
                 <img src="/pet_logo.svg" alt="Logo PET" className={styles.groupImage} />
               </Link>
               <h3 className={styles.groupTitle}>PET</h3>
@@ -239,13 +239,13 @@ const PercursosPage = () => {
             </div>
             <div className={styles.verticalDivider}></div>
             <div className={styles.groupItem}>
-              <Link href="https://log.ci.ufpb.br/" target="_blank">
+              <Link href="https://www.instagram.com/log.ufpb/" target="_blank">
                 <img src="/log_logo.svg" alt="Logo LOG" className={styles.groupImage} />
               </Link>
               <h3 className={styles.groupTitle}>LOG</h3>
               <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
               <p className={styles.groupDescription}>
-              O Logistics and Optimization Group (LOG) foi fundado com o intuito de reunir alunos e professores interessados em trabalhar com a área de Otimização Combinatória e Logística. O LOG conta com uma extensa rede de colaboração, composta por professores de universidades do Brasil e do Exterior.
+              O Logistics and Optimization Group (LOG) foi fundado com o intuito de reunir alunos e professores interessados em trabalhar com a área de Otimização Combinatória e Logística. O LOG conta com uma extensa rede de colaboração, a qual é composta por professores de universidades no Brasil e no Exterior.
               </p>
             </div>
           </div>
