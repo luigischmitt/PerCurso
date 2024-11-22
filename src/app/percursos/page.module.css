@@ -319,14 +319,22 @@
 }
 
 .groupsContainer {
-  display: flex; 
-  justify-content: center; 
-  align-items: flex-start; 
-  gap: 2rem; 
+  display: flex;
+  flex-direction: column; /* Agora os grupos são organizados em colunas (linhas) */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Espaçamento entre as linhas */
   margin: 20px auto;
   max-width: 90%;
-  position: relative;
-  height: auto;
+}
+
+.row {
+  display: flex; /* Organiza os grupos lado a lado */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem; /* Espaçamento horizontal entre os itens */
+  width: 100%;
+  max-width: 90%;
 }
 
 .groupItem {
