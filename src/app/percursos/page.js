@@ -197,8 +197,34 @@ const PercursosPage = () => {
       <div className={styles.lineBottom}></div>
     </div>
 
-    <div>
-      <h3>Ligas</h3>
+    <div className={styles.backgroundWhite}>
+      <div className={styles.lineMid}></div>
+      <div className={styles.grupos}>
+        <div className={styles.groupsContainer}>
+          <div className={styles.groupItem}>
+            <Link href="https://tail-tech.com/" target="_blank">
+              <img src="/tail_logo.svg" alt="Logo TAIL" className={styles.groupImage} />
+            </Link>
+            <h3 className={styles.groupTitle}>TAIL</h3>
+            <p className={styles.groupSubtitle}>Liga Acadêmica</p>
+            <p className={styles.groupDescription}>
+              Technology and Artificial Intelligence League, ou simplesmente TAIL, é a primeira liga acadêmica de IA da Paraíba, a TAIL busca incrementar a bagagem intelectual e social dos seus membros através do estudo e da aplicação de novas ideias no ramo da Inteligência Artificial.
+            </p>
+          </div>
+          <div className={styles.verticalDivider}></div>
+          <div className={styles.groupItem}>
+            <Link href="https://mcc.ci.ufpb.br/" target="_blank">
+              <img src="/mcc_logo.svg" alt="Logo MCCUFPB" className={styles.groupImage} />
+            </Link>
+            <h3 className={styles.groupTitle}>MCCUFPB</h3>
+            <p className={styles.groupSubtitle}>Meninas na Ciência da Computação</p>
+            <p className={styles.groupDescription}>
+              O Meninas na Ciência da Computação UFPB (MCCUFPB) é um grupo de professoras e alunas do CI que incentiva a presença feminina na computação, promovendo eventos e mentorias para aumentar a representatividade.
+            </p>
+          </div>
+        </div>
+        <div className={styles.lineBottom}></div>
+      </div>
     </div>
 
     <footer className={styles.footer}>
