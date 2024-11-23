@@ -134,7 +134,7 @@
   box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
   text-align: center;
   width: 19.375rem;
-  height: 25rem;
+  height: 27rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -158,9 +158,18 @@
 }
 
 .cardLink {
-  margin-top: 15px;
+  margin-top: -10px;
   color: #3b5998;
   font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cardLink2 {
+  margin-top: 10px;
+  color: #3b5998;
+  font-weight: bold;
+  font-size: 16px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -208,7 +217,7 @@
   background-color: #edf6ff; 
   padding: 30px; 
   margin: auto; 
-  max-width: 80%; 
+  max-width: 86%; 
 }
 
 .labCard {
@@ -218,7 +227,7 @@
   justify-content: center;
   text-align: center;
   width: 87rem; 
-  height: 21rem;
+  height: 24rem;
   padding: 20px;
   border-radius: 19px;
   background-color: #fff;
@@ -257,14 +266,6 @@
   margin-bottom: 0px;
   margin-left: 25px;
   margin-right: 25px;
-}
-
-.cardLink a {
-  font-size: 14px;
-  color: #3b5998;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 .cardLink a:hover {
@@ -320,19 +321,19 @@
 
 .groupsContainer {
   display: flex;
-  flex-direction: column; /* Agora os grupos são organizados em colunas (linhas) */
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Espaçamento entre as linhas */
+  gap: 2rem; 
   margin: 20px auto;
   max-width: 90%;
 }
 
 .row {
-  display: flex; /* Organiza os grupos lado a lado */
+  display: flex; 
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem; /* Espaçamento horizontal entre os itens */
+  gap: 2rem; 
   width: 100%;
   max-width: 90%;
 }

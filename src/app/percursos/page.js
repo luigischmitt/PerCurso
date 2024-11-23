@@ -180,7 +180,7 @@ const PercursosPage = () => {
             </a>
             <h3 className={styles.cardTitle}>{labs[labIndex].title}</h3>
             <p className={styles.cardTextlab}>{labs[labIndex].description}</p>
-            <p className={styles.cardLink}>
+            <p className={styles.cardLink2}>
               <a href={labs[labIndex].link} target="_blank" rel="noopener noreferrer">
                 Clique para saber mais!
               </a>

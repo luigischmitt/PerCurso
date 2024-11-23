@@ -250,3 +250,18 @@
   color: #FFFFFF;
   text-decoration: none;
 }
+
+.highlight {
+  background-color: #e0e4ff;
+  transition: background-color 0.3s ease;
+}
+
+.node-hover {
+  stroke: #6747c7;
+  stroke-width: 3px;
+}
+
+.node-clicked {
+  stroke: #e0e4ff;
+  stroke-width: 5px;
+}
