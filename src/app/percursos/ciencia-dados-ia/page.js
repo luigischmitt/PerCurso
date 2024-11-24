@@ -2,139 +2,154 @@
 
 import styles from './page.module.css';
 import * as d3 from 'd3';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
+  const [selectedDiscipline, setSelectedDiscipline] = useState(null);
+
   useEffect(() => {
-    // Dados das disciplinas
     const disciplinas = [
-      { id: "root", nome: "Ciência de Dados & IA", periodo: 0 },
-      { id: "1103177", nome: "Cálculo I", periodo: 1 },
-      { id: "1103179", nome: "Álgebra Linear", periodo: 2 },
-      { id: "1108100", nome: "Estatística", periodo: 3 },
-      { id: "1107191", nome: "Inteligência Artificial", periodo: 4 },
-      { id: "GDCOC0096", nome: "Visualização de Dados", periodo: 5 },
-    ];    
-
+      { id: "root", nome: "Ciência de Dados & IA", periodo: 0, obrigatoria: true },
+      { id: "P3_EDA", nome: "Estrutura de Dados e Algoritmos I", periodo: 3, obrigatoria: true },
+      { id: "P3_PROB", nome: "Cálculo das Probabilidades e Estatística I", periodo: 3, obrigatoria: true },
+      { id: "P4_IA", nome: "Introdução à IA", periodo: 4, obrigatoria: true },
+      { id: "P5_BD1", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
+      { id: "P6_ML", nome: "Paradigmas de Aprendizagem de Máquina", periodo: 6, obrigatoria: true },
+      { id: "VIS_DADOS", nome: "Visualização de Dados", periodo: 5, obrigatoria: false },
+      { id: "SERIES_TEMP", nome: "Séries Temporais", periodo: 4, obrigatoria: false },
+      { id: "GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
+      { id: "IA_SAUDE", nome: "IA Aplicada à Saúde", periodo: 5, obrigatoria: false },
+      { id: "BIG_DATA", nome: "Big Data", periodo: 6, obrigatoria: false },
+      { id: "DEEP_LEARN", nome: "Aprendizado Profundo", periodo: 7, obrigatoria: false },
+    ];
+  
     const links = [
-      { source: "root", target: "1103177" },
-      { source: "1103177", target: "1103179" },
-      { source: "1103179", target: "1108100" },
-      { source: "1108100", target: "1107191" },
-      { source: "1107191", target: "GDCOC0096" },
-    ];    
-
-    // Dimensões do SVG
-    const width = 1600;
+      { source: "root", target: "P3_EDA" },
+      { source: "P3_EDA", target: "VIS_DADOS" },
+      { source: "P3_EDA", target: "GRAFOS" },
+      { source: "root", target: "P3_PROB" },
+      { source: "P3_PROB", target: "SERIES_TEMP" },
+      { source: "root", target: "P4_IA" },
+      { source: "P4_IA", target: "IA_SAUDE" },
+      { source: "root", target: "P5_BD1" },
+      { source: "P5_BD1", target: "BIG_DATA" },
+      { source: "root", target: "P6_ML" },
+      { source: "P6_ML", target: "DEEP_LEARN" },
+    ];
+  
+    const width = 1000;
     const height = 600;
-
-    // Criando o SVG
+  
     const svg = d3
-      .select('#roadmap')
-      .append('svg')
-      .attr('width', width)
-      .attr('height', height);
+      .select("#roadmap")
+      .append("svg")
+      .attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("preserveAspectRatio", "xMidYMid meet")
+      .style("width", "100%")
+      .style("height", "auto");
 
-    // Simulação de força
+    window.addEventListener("resize", () => {
+      d3.select("#roadmap").select("svg").attr("viewBox", `0 0 ${width} ${height}`);
+    });
+      
     const simulation = d3
       .forceSimulation(disciplinas)
-      .force(
-        'link',
-        d3.forceLink(links).id((d) => d.id).distance(150)
-      )
-      .force('charge', d3.forceManyBody().strength(-500))
-      .force('x', d3.forceX().strength(1).x((d) => width / 6 * d.periodo + 100))
-      .force('y', d3.forceY().strength(0.05).y(height / 2))
-      .force('center', d3.forceCenter(width / 2, height / 2)); 
-
-    // Links
+      .force("link", d3.forceLink(links).id((d) => d.id).distance(100))
+      .force("charge", d3.forceManyBody().strength(-150))
+      .force("radial", d3.forceRadial((d) => d.periodo * 50, width / 2, height / 2))
+      .force("center", d3.forceCenter(width / 2, height / 2));
+  
     const link = svg
-      .append('g')
-      .selectAll('line')
+      .append("g")
+      .selectAll("line")
       .data(links)
       .enter()
-      .append('line')
-      .attr('stroke', '#999')
-      .attr('stroke-width', 2);
-
-    // Nós
-    const node = svg
-      .append('g')
-      .selectAll('circle')
+      .append("line")
+      .attr("stroke", "#999")
+      .attr("stroke-width", 2);
+  
+      const node = svg
+      .append("g")
+      .selectAll("circle")
       .data(disciplinas)
       .enter()
-      .append('circle')
-      .attr('r', 20)
-      .attr('fill', (d) => (d.periodo === 0 ? '#5e3aa1' : '#bda7e2'))
-      .call(
-        d3
-          .drag()
-          .on('start', (event, d) => {
-            if (!event.active) simulation.alphaTarget(0.3).restart();
-            d.fx = d.x;
-            d.fy = d.y;
-          })
-          .on('drag', (event, d) => {
-            d.fx = event.x;
-            d.fy = event.y;
-          })
-          .on('end', (event, d) => {
-            if (!event.active) simulation.alphaTarget(0);
-            d.fx = null;
-            d.fy = null;
-          })
-      )
-      .on('mouseover', function () {
-        d3.select(this).attr('fill', '#6747c7').attr('r', 25);
-        d3.select(this).classed('node-hover', true);
+      .append("circle")
+      .attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15))
+      .attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2"))
+      .style("cursor", "pointer")
+      .on("mouseover", function () {
+        d3.select(this).transition().duration(200).attr("fill", "#6747C7").attr("r", (d) => (d.id === "root" ? 45 : d.obrigatoria ? 30 : 20));
       })
-      .on('mouseout', function () {
-        d3.select(this).attr('fill', '#bda7e2').attr('r', 20);
-        d3.select(this).classed('node-hover', false);
+      .on("mouseout", function (event, d) {
+        d3.select(this)
+          .transition()
+          .duration(200)
+          .attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2"))
+          .attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15));
       })
-      .on('click', (event, d) => {
-        const coursesSection = document.querySelector(`.${styles.backgroundRectangle2}`);
-        if (coursesSection) {
-          coursesSection.scrollIntoView({ behavior: 'smooth' });
-      
-          const targetCard = document.querySelector(`#disciplina-${d.id}`);
-            if (targetCard) {
-              targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              targetCard.classList.add('highlight');
-              setTimeout(() => {
-                targetCard.classList.remove('highlight');
-              }, 2000);
-            }
+      .on("click", function (event, d) {
+        const targetId = `disciplina-${d.id}`;
+        const targetElement = document.getElementById(targetId);
+        if (!targetElement) {
+          console.warn(`Elemento com ID ${targetId} não encontrado.`);
+          return;
         }
-      });          
-
-    // Rótulos
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        setSelectedDiscipline(d.id);
+      
+        setTimeout(() => {
+          setSelectedDiscipline(null);
+        }, 1500); 
+      });
+    
+    node.call(
+      d3.drag()
+        .on("start", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+        .on("drag", (event, d) => {
+          d.fx = event.x;
+          d.fy = event.y;
+        })
+        .on("end", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        })
+    );    
+  
     const label = svg
-      .append('g')
-      .selectAll('text')
+      .append("g")
+      .selectAll("text")
       .data(disciplinas)
       .enter()
-      .append('text')
+      .append("text")
       .text((d) => d.nome)
-      .attr('x', 8)
-      .attr('y', 3)
-      .attr('font-size', '12px')
-      .attr('fill', '#000');
-
-    // Atualizando posições
-    simulation.on('tick', () => {
+      .attr("dy", ".35em")
+      .attr("font-size", "10px")
+      .attr("fill", "#000")
+      .attr("text-anchor", "middle")
+      .style("pointer-events", "none");
+  
+    simulation.on("tick", () => {
       link
-        .attr('x1', (d) => d.source.x)
-        .attr('y1', (d) => d.source.y)
-        .attr('x2', (d) => d.target.x)
-        .attr('y2', (d) => d.target.y);
-
-      node.attr('cx', (d) => d.x).attr('cy', (d) => d.y);
-
-      label.attr('x', (d) => d.x).attr('y', (d) => d.y);
+        .attr("x1", (d) => d.source.x)
+        .attr("y1", (d) => d.source.y)
+        .attr("x2", (d) => d.target.x)
+        .attr("y2", (d) => d.target.y);
+  
+      node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+  
+      label.attr("x", (d) => d.x).attr("y", (d) => d.y - 10);
     });
+  
+    return () => {
+      d3.select("#roadmap").select("svg").remove();
+    };
   }, []);
-
+  
   return (
     <div>
       <div className={styles.backgroundRectangle}>
@@ -185,119 +200,115 @@ export default function Page() {
             <div className={styles.courseCards}>
               {[
                 {
+                  id: "P3_EDA",
                   codigo: "1103118",
-                  nome: "CÁLCULO VETORIAL E GEOMETRIA ANÁLITICA",
-                  tipo: "OBRIGATÓRIA",
-                  periodo: 1,
-                  descricao: "Estudo de vetores, curvas e superfícies no espaço, com aplicações em geometriaEstudo de vetores, operações vetoriais e suas aplicações na geometria do espaço. Inclui conceitos como equações de planos, retas e superfícies, além de curvas no espaço e suas propriedades.",
-                },
-                {
-                  codigo: "1103177",
-                  nome: "CÁLCULO I",
-                  tipo: "OBRIGATÓRIA",
-                  periodo: 1,
-                  descricao: "Introdução ao cálculo diferencial e integral de funções de uma variável real. Inclui limites, derivadas, integrais e aplicações em problemas de otimização e modelagem.",
-                },
-                {
-                  codigo: "1103178",
-                  nome: "CÁLCULO II",
-                  tipo: "OBRIGATÓRIA",
-                  periodo: 2,
-                  descricao: "Continuação de Cálculo I, abordando integrais múltiplas, séries infinitas, equações diferenciais ordinárias e funções de várias variáveis.",
-                },
-                {
-                  codigo: "1103179",
-                  nome: "INTRODUÇÃO À ALGEBRA LINEAR",
-                  tipo: "OBRIGATÓRIA",
-                  periodo: 2,
-                  descricao: "Explora matrizes, determinantes, sistemas lineares, vetores, espaços vetoriais e transformações lineares, essencial em aplicações em áreas como computação e ciência de dados.",
-                },
-                {
-                codigo: "1108100",
-                nome: "CÁLCULO DAS PROBABILIDADES E ESTATÍSTICA I",
-                tipo: "OBRIGATÓRIA",
-                periodo: 3,
-                descricao: "Introdução à probabilidade, variáveis aleatórias, distribuições e estatística descritiva. Inclui conceitos básicos de inferência estatística e testes de hipóteses.",
-                },
-                {
-                  codigo: "GDCOC0072",
-                  nome: "CÁLCULO NUMERICO",
+                  nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
                   tipo: "OBRIGATÓRIA",
                   periodo: 3,
-                  descricao: "Estudo de métodos computacionais para resolver problemas matemáticos, como interpolação, integração, derivação numérica e resolução de sistemas lineares.",
+                  descricao:
+                    "Conceitos fundamentais de estruturas de dados e algoritmos, como listas, filas, pilhas e árvores. Inclui análises de complexidade e aplicações práticas.",
                 },
                 {
+                  id: "P3_PROB",
+                  codigo: "1108100",
+                  nome: "CÁLCULO DAS PROBABILIDADES E ESTATÍSTICA I",
+                  tipo: "OBRIGATÓRIA",
+                  periodo: 3,
+                  descricao:
+                    "Introdução à probabilidade, variáveis aleatórias, distribuições e estatística descritiva. Inclui conceitos básicos de inferência estatística e testes de hipóteses.",
+                },
+                {
+                  id: "P4_IA",
                   codigo: "1107191",
                   nome: "INTRODUÇÃO À INTELIGÊNCIA ARTIFICIAL",
                   tipo: "OBRIGATÓRIA",
                   periodo: 4,
-                  descricao: "Apresentação dos fundamentos da IA, incluindo técnicas básicas de busca, representação de conhecimento, raciocínio lógico e aprendizado de máquina.",
+                  descricao:
+                    "Apresentação dos fundamentos da IA, incluindo técnicas básicas de busca, representação de conhecimento, raciocínio lógico e aprendizado de máquina.",
                 },
                 {
+                  id: "P5_BD1",
                   codigo: "1107209",
-                  nome: "SISTEMA BASEADO EM CONHECIMENTO",
+                  nome: "BANCO DE DADOS I",
                   tipo: "OBRIGATÓRIA",
                   periodo: 5,
-                  descricao: "Foco em sistemas computacionais que utilizam bancos de conhecimento para resolver problemas específicos. Abrange conceitos de representação de conhecimento e raciocínio automatizado.",
+                  descricao:
+                    "Introdução ao conceito de bancos de dados, modelagem de dados, normalização e linguagens de consulta como SQL.",
                 },
                 {
+                  id: "P6_ML",
                   codigo: "DINF00051",
                   nome: "PARADIGMAS DE APRENDIZAGEM DE MÁQUINA",
                   tipo: "OBRIGATÓRIA",
                   periodo: 6,
-                  descricao: "Explora abordagens e técnicas de aprendizado de máquina, como aprendizado supervisionado, não supervisionado e por reforço, além de aplicações práticas em dados reais.",
+                  descricao:
+                    "Explora abordagens e técnicas de aprendizado de máquina, como aprendizado supervisionado, não supervisionado e por reforço, além de aplicações práticas em dados reais.",
                 },
                 {
+                  id: "VIS_DADOS",
                   codigo: "GDCOC0096",
                   nome: "VISUALIZAÇÃO DE DADOS",
-                  tipo: "Optativa",
+                  tipo: "OPTATIVA",
                   periodo: 4,
-                  descricao: "Ferramentas e técnicas para transformar dados complexos em gráficos e visualizações interativas, facilitando sua interpretação e análise.",
+                  descricao:
+                    "Ferramentas e técnicas para transformar dados complexos em gráficos e visualizações interativas, facilitando sua interpretação e análise.",
                 },
                 {
+                  id: "SERIES_TEMP",
                   codigo: "GDCOC0114",
                   nome: "SÉRIES TEMPORAIS",
-                  tipo: "Optativa",
+                  tipo: "OPTATIVA",
                   periodo: 4,
-                  descricao: "Análise de dados organizados em ordem cronológica para identificar padrões, tendências e previsões futuras.",
+                  descricao:
+                    "Análise de dados organizados em ordem cronológica para identificar padrões, tendências e previsões futuras.",
                 },
                 {
+                  id: "GRAFOS",
                   codigo: "GDSCO0032",
                   nome: "TEORIA DOS GRAFOS APLICADA",
-                  tipo: "Optativa",
+                  tipo: "OPTATIVA",
                   periodo: 4,
-                  descricao: "Estudo de grafos para resolver problemas em áreas como redes sociais, rotas logísticas e análise de conectividade",
+                  descricao:
+                    "Estudo de grafos para resolver problemas em áreas como redes sociais, rotas logísticas e análise de conectividade.",
                 },
                 {
+                  id: "IA_SAUDE",
                   codigo: "DINF00068",
-                  nome: "INTELIGÊNCIA ARTIFICIAL APLICADA À SAÚDE",
-                  tipo: "Optativa",
+                  nome: "IA APLICADA À SAÚDE",
+                  tipo: "OPTATIVA",
                   periodo: 5,
-                  descricao: "Uso de algoritmos de IA para diagnósticos, otimização de tratamentos, e avanços na medicina personalizada.",
+                  descricao:
+                    "Uso de algoritmos de IA para diagnósticos, otimização de tratamentos, e avanços na medicina personalizada.",
                 },
                 {
+                  id: "BIG_DATA",
                   codigo: "GDCOC0098",
                   nome: "BIG DATA",
-                  tipo: "Optativa",
+                  tipo: "OPTATIVA",
                   periodo: 6,
-                  descricao: "Conjunto de tecnologias para processar e analisar grandes volumes de dados variados, gerando insights estratégicos.",
+                  descricao:
+                    "Conjunto de tecnologias para processar e analisar grandes volumes de dados variados, gerando insights estratégicos.",
                 },
                 {
+                  id: "DEEP_LEARN",
                   codigo: "GDCOC0094",
                   nome: "APRENDIZADO PROFUNDO",
-                  tipo: "Optativa",
+                  tipo: "OPTATIVA",
                   periodo: 7,
-                  descricao: "Subcampo da IA que utiliza redes neurais profundas para resolver problemas complexos, como reconhecimento de imagens e processamento de linguagem natural.",
+                  descricao:
+                    "Subcampo da IA que utiliza redes neurais profundas para resolver problemas complexos, como reconhecimento de imagens e processamento de linguagem natural.",
                 },
-                          
-              ].map((disciplina, index) => (
-                <div className={styles.card} key={index} id={`disciplina-${disciplina.codigo}`}>
-                  <p>{disciplina.codigo}</p>
+              ].map((disciplina) => (
+                <div
+                className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
+                key={disciplina.id}
+                id={`disciplina-${disciplina.id}`}
+                >
                   <h3>{disciplina.nome}</h3>
                   <p><strong>{disciplina.tipo}</strong></p>
                   <p>Período: {disciplina.periodo}</p>
                   <p>{disciplina.descricao}</p>
-                  </div>
+                </div>
               ))}
             </div>
           </section>

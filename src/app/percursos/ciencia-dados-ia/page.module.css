@@ -150,13 +150,8 @@
 }
 
 .map {
+  margin: -4%;
   text-align: center;
-}
-
-.mapImage {
-  width: 64.75rem;
-  height: 46.23056rem;
-  border-radius: 8px;
 }
 
 .legend {
@@ -264,4 +259,12 @@
 .node-clicked {
   stroke: #e0e4ff;
   stroke-width: 5px;
+}
+
+.selectedCard {
+  background-color: #e0e4ff;
+  border-color: #6747c7;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }

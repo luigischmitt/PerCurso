@@ -1,6 +1,143 @@
+"use client";
+
 import styles from './page.module.css';
+import * as d3 from 'd3';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
+  const [selectedDiscipline, setSelectedDiscipline] = useState(null);
+
+  useEffect(() => {
+    const disciplinas = [
+      { id: "root", nome: "Engenharia de Software", periodo: 0, obrigatoria: true },
+      { id: "FUND_IHC", nome: "Fundamentos da Interação Humano-Computador", periodo: 0, obrigatoria: false },
+      { id: "DESIGN_INTERACAO", nome: "Design de Interação", periodo: 8, obrigatoria: false },
+      { id: "IHC", nome: "Interação Humano-Computador", periodo: 7, obrigatoria: true },
+      { id: "REUSO_SOFTWARE", nome: "Reuso de Software", periodo: 5, obrigatoria: false },
+      { id: "TEORIA_GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
+      { id: "SISTEMAS_MOVEIS", nome: "Implementação de Sistemas para Dispositivos Móveis", periodo: 6, obrigatoria: false },
+      { id: "METODOS_FORMAIS", nome: "Métodos Formais para Desenvolvimento de Software", periodo: 7, obrigatoria: false },
+    ];
+
+    const links = [
+      { source: "root", target: "FUND_IHC" },
+      { source: "FUND_IHC", target: "DESIGN_INTERACAO" },
+      { source: "root", target: "IHC" },
+      { source: "root", target: "REUSO_SOFTWARE" },
+      { source: "root", target: "TEORIA_GRAFOS" },
+      { source: "root", target: "SISTEMAS_MOVEIS" },
+      { source: "root", target: "METODOS_FORMAIS" },
+    ];
+
+    const width = 1000;
+    const height = 600;
+
+    const svg = d3
+      .select("#roadmap")
+      .append("svg")
+      .attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("preserveAspectRatio", "xMidYMid meet")
+      .style("width", "100%")
+      .style("height", "auto");
+
+    window.addEventListener("resize", () => {
+      d3.select("#roadmap").select("svg").attr("viewBox", `0 0 ${width} ${height}`);
+    });
+
+    const simulation = d3
+      .forceSimulation(disciplinas)
+      .force("link", d3.forceLink(links).id((d) => d.id).distance(100))
+      .force("charge", d3.forceManyBody().strength(-150))
+      .force("radial", d3.forceRadial((d) => d.periodo * 50, width / 2, height / 2))
+      .force("center", d3.forceCenter(width / 2, height / 2));
+
+    const link = svg
+      .append("g")
+      .selectAll("line")
+      .data(links)
+      .enter()
+      .append("line")
+      .attr("stroke", "#999")
+      .attr("stroke-width", 2);
+
+    const node = svg
+      .append("g")
+      .selectAll("circle")
+      .data(disciplinas)
+      .enter()
+      .append("circle")
+      .attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15))
+      .attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2"))
+      .style("cursor", "pointer")
+      .on("mouseover", function () {
+        d3.select(this).transition().duration(200).attr("fill", "#6747C7").attr("r", (d) => (d.id === "root" ? 45 : d.obrigatoria ? 30 : 20));
+      })
+      .on("mouseout", function () {
+        d3.select(this).transition().duration(200).attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2")).attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15));
+      })
+      .on("click", function (event, d) {
+        const targetId = `disciplina-${d.id}`;
+        const targetElement = document.getElementById(targetId);
+        if (!targetElement) {
+          console.warn(`Elemento com ID ${targetId} não encontrado.`);
+          return;
+        }
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        setSelectedDiscipline(d.id);
+
+        setTimeout(() => {
+          setSelectedDiscipline(null);
+        }, 1500);
+      });
+
+    node.call(
+      d3.drag()
+        .on("start", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+        .on("drag", (event, d) => {
+          d.fx = event.x;
+          d.fy = event.y;
+        })
+        .on("end", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        })
+    );
+
+    const label = svg
+      .append("g")
+      .selectAll("text")
+      .data(disciplinas)
+      .enter()
+      .append("text")
+      .text((d) => d.nome)
+      .attr("dy", ".35em")
+      .attr("font-size", "10px")
+      .attr("fill", "#000")
+      .attr("text-anchor", "middle")
+      .style("pointer-events", "none");
+
+    simulation.on("tick", () => {
+      link
+        .attr("x1", (d) => d.source.x)
+        .attr("y1", (d) => d.source.y)
+        .attr("x2", (d) => d.target.x)
+        .attr("y2", (d) => d.target.y);
+
+      node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+      label.attr("x", (d) => d.x).attr("y", (d) => d.y - 10);
+    });
+
+    return () => {
+      d3.select("#roadmap").select("svg").remove();
+    };
+  }, []);
+
   return (
     <div>
       <div className={styles.backgroundRectangle}>
@@ -12,17 +149,10 @@ export default function Page() {
               <div>
                 <h1 className={styles.title}>ENGENHARIA DE SOFTWARE</h1>
                 <ul className={styles.objectives}>
-                  <li>
-                    Dominar técnicas avançadas de desenvolvimento de software, incluindo metodologias ágeis e práticas DevOps.</li>
-                  <li>
-                    Utilizar ferramentas de versionamento, automação e integração contínua para garantir qualidade e eficiência do software.
-                  </li>
-                  <li>
-                    Aplicar princípios de engenharia de software para resolver problemas reais em áreas como educação, saúde, e-commerce, etc.
-                  </li>
-                  <li>
-                    Analisar e otimizar sistemas legados para melhor desempenho e manutenção a longo prazo.
-                  </li>
+                  <li>Dominar técnicas avançadas de desenvolvimento de software, incluindo metodologias ágeis e práticas DevOps.</li>
+                  <li>Utilizar ferramentas de versionamento, automação e integração contínua para garantir qualidade e eficiência do software.</li>
+                  <li>Aplicar princípios de engenharia de software para resolver problemas reais em áreas como educação, saúde, e-commerce, etc.</li>
+                  <li>Analisar e otimizar sistemas legados para melhor desempenho e manutenção a longo prazo.</li>
                 </ul>
               </div>
             </div>
@@ -42,13 +172,7 @@ export default function Page() {
         <div className={styles.lineBottom}></div>
       </div>
 
-      <section className={styles.map}>
-        <img
-          src="/cdia_roadmap.svg"
-          alt="Mapa de Disciplinas"
-          className={styles.mapImage}
-        />
-      </section>
+      <div id="roadmap" className={styles.map}></div>
 
       <div className={styles.backgroundRectangle2}>
       <div className={styles.lineMid}></div> 
@@ -151,8 +275,11 @@ export default function Page() {
                 
                 
               ].map((disciplina, index) => (
-                <div className={styles.card} key={index}>
-                  <h3>{disciplina.codigo}</h3>
+                <div
+                  className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
+                  key={disciplina.id}
+                  id={`disciplina-${disciplina.id}`}
+                >
                   <p>{disciplina.nome}</p>
                   <p><strong>{disciplina.tipo}</strong></p>
                   <p>Período: {disciplina.periodo}</p>
