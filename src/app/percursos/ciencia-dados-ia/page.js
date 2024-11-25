@@ -9,37 +9,32 @@ export default function Page() {
 
   useEffect(() => {
     const disciplinas = [
-      { id: "root", nome: "Ciência de Dados & IA", periodo: 0, obrigatoria: true },
-      { id: "P3_EDA", nome: "Estrutura de Dados e Algoritmos I", periodo: 3, obrigatoria: true },
-      { id: "P3_PROB", nome: "Cálculo das Probabilidades e Estatística I", periodo: 3, obrigatoria: true },
-      { id: "P4_IA", nome: "Introdução à IA", periodo: 4, obrigatoria: true },
-      { id: "P5_BD1", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
-      { id: "P6_ML", nome: "Paradigmas de Aprendizagem de Máquina", periodo: 6, obrigatoria: true },
-      { id: "VIS_DADOS", nome: "Visualização de Dados", periodo: 5, obrigatoria: false },
-      { id: "SERIES_TEMP", nome: "Séries Temporais", periodo: 4, obrigatoria: false },
+      { id: "root", nome: "Pesquisa Operacional", periodo: 0, obrigatoria: true },
+      { id: "ALGEBRA", nome: "Introdução à Álgebra Linear", periodo: 2, obrigatoria: true },
+      { id: "APA", nome: "Análise de Projetos e Algoritmos", periodo: 5, obrigatoria: true },
+      { id: "PO", nome: "Pesquisa Operacional", periodo: 3, obrigatoria: false },
+      { id: "ALG", nome: "Álgebra Linear Computacional", periodo: 3, obrigatoria: false },
+      { id: "PROG", nome: "Programação Orientada a Objetos", periodo: 2, obrigatoria: true },
+      { id: "EDA", nome: "Estrutura de Dados e Algoritmos I", periodo: 3, obrigatoria: true },
+      { id: "ECON", nome: "Princípios de Economia", periodo: 0, obrigatoria: false },
       { id: "GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
-      { id: "IA_SAUDE", nome: "IA Aplicada à Saúde", periodo: 5, obrigatoria: false },
-      { id: "BIG_DATA", nome: "Big Data", periodo: 6, obrigatoria: false },
-      { id: "DEEP_LEARN", nome: "Aprendizado Profundo", periodo: 7, obrigatoria: false },
     ];
-  
+
     const links = [
-      { source: "root", target: "P3_EDA" },
-      { source: "P3_EDA", target: "VIS_DADOS" },
-      { source: "P3_EDA", target: "GRAFOS" },
-      { source: "root", target: "P3_PROB" },
-      { source: "P3_PROB", target: "SERIES_TEMP" },
-      { source: "root", target: "P4_IA" },
-      { source: "P4_IA", target: "IA_SAUDE" },
-      { source: "root", target: "P5_BD1" },
-      { source: "P5_BD1", target: "BIG_DATA" },
-      { source: "root", target: "P6_ML" },
-      { source: "P6_ML", target: "DEEP_LEARN" },
+      { source: "root", target: "ALGEBRA" },
+      { source: "root", target: "ECON" },
+      { source: "root", target: "EDA" },
+      { source: "root", target: "PROG" },
+      { source: "ALGEBRA", target: "PO" },
+      { source: "PROG", target: "ALG" },
+      { source: "PROG", target: "PO" },
+      { source: "EDA", target: "APA" },
+      { source: "EDA", target: "GRAFOS" },
     ];
-  
+
     const width = 1000;
     const height = 600;
-  
+
     const svg = d3
       .select("#roadmap")
       .append("svg")
@@ -51,14 +46,14 @@ export default function Page() {
     window.addEventListener("resize", () => {
       d3.select("#roadmap").select("svg").attr("viewBox", `0 0 ${width} ${height}`);
     });
-      
+
     const simulation = d3
       .forceSimulation(disciplinas)
-      .force("link", d3.forceLink(links).id((d) => d.id).distance(100))
+      .force("link", d3.forceLink(links).id((d) => d.id).distance(115))
       .force("charge", d3.forceManyBody().strength(-150))
       .force("radial", d3.forceRadial((d) => d.periodo * 50, width / 2, height / 2))
       .force("center", d3.forceCenter(width / 2, height / 2));
-  
+
     const link = svg
       .append("g")
       .selectAll("line")
@@ -67,8 +62,8 @@ export default function Page() {
       .append("line")
       .attr("stroke", "#999")
       .attr("stroke-width", 2);
-  
-      const node = svg
+
+    const node = svg
       .append("g")
       .selectAll("circle")
       .data(disciplinas)
@@ -80,12 +75,8 @@ export default function Page() {
       .on("mouseover", function () {
         d3.select(this).transition().duration(200).attr("fill", "#6747C7").attr("r", (d) => (d.id === "root" ? 45 : d.obrigatoria ? 30 : 20));
       })
-      .on("mouseout", function (event, d) {
-        d3.select(this)
-          .transition()
-          .duration(200)
-          .attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2"))
-          .attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15));
+      .on("mouseout", function () {
+        d3.select(this).transition().duration(200).attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2")).attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15));
       })
       .on("click", function (event, d) {
         const targetId = `disciplina-${d.id}`;
@@ -96,12 +87,12 @@ export default function Page() {
         }
         targetElement.scrollIntoView({ behavior: "smooth" });
         setSelectedDiscipline(d.id);
-      
+
         setTimeout(() => {
           setSelectedDiscipline(null);
-        }, 1500); 
+        }, 1500);
       });
-    
+
     node.call(
       d3.drag()
         .on("start", (event, d) => {
@@ -118,8 +109,8 @@ export default function Page() {
           d.fx = null;
           d.fy = null;
         })
-    );    
-  
+    );
+
     const label = svg
       .append("g")
       .selectAll("text")
@@ -132,19 +123,19 @@ export default function Page() {
       .attr("fill", "#000")
       .attr("text-anchor", "middle")
       .style("pointer-events", "none");
-  
+
     simulation.on("tick", () => {
       link
         .attr("x1", (d) => d.source.x)
         .attr("y1", (d) => d.source.y)
         .attr("x2", (d) => d.target.x)
         .attr("y2", (d) => d.target.y);
-  
+
       node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
-  
+
       label.attr("x", (d) => d.x).attr("y", (d) => d.y - 10);
     });
-  
+
     return () => {
       d3.select("#roadmap").select("svg").remove();
     };

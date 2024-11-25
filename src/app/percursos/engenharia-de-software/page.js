@@ -195,118 +195,138 @@ export default function Page() {
       <div className={styles.backgroundRectangle2}>
       <div className={styles.lineMid}></div> 
         <div className={styles.container}>
-          <section className={styles.courses}>
-            <h2 className={styles.subtitle}>DISCIPLINAS</h2>
-            <div className={styles.courseCards}>
+        <div className={styles.courseCards}>
             {[
               {
-                id: "intro_prog",
-                codigo: "1107136",
-                nome: "INTRODUÇÃO À PROGRAMAÇÃO",
-                tipo: "Obrigatória",
-                periodo: 1,
-                descricao: "Entenda os fundamentos da lógica de programação e aprenda a criar soluções práticas com código eficiente.",
-              },
-              {
-                id: "poo",
-                codigo: "GDCOC0101",
-                nome: "PROGRAMAÇÃO ORIENTADA A OBJETOS",
-                tipo: "Obrigatória",
-                periodo: 2,
-                descricao: "Aprenda a modelar soluções com base em objetos, encapsulando dados e comportamentos para desenvolver sistemas mais organizados e reutilizáveis.",
-              },
-              {
-                id: "estrutura_dados",
-                codigo: "DINF00047",
-                nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
-                tipo: "Obrigatória",
-                periodo: 3,
-                descricao: "Descubra como manipular e organizar dados de forma eficiente, explorando algoritmos essenciais para resolver problemas complexos.",
-              },
-              {
-                id: "eng_soft",
+                id: "ENG_SOFT",
                 codigo: "1107128",
                 nome: "ENGENHARIA DE SOFTWARE",
                 tipo: "Obrigatória",
                 periodo: 4,
-                descricao: "Entenda como projetar, desenvolver e gerenciar sistemas de software com qualidade e eficiência, aplicando práticas e metodologias modernas.",
+                descricao:
+                  "Entenda como projetar, desenvolver e gerenciar sistemas de software com qualidade e eficiência, aplicando práticas e metodologias modernas.",
               },
               {
-                id: "especificacao",
-                codigo: "1107184",
-                nome: "ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE",
-                tipo: "Obrigatória",
-                periodo: 5,
-                descricao: "Aprenda a entender e documentar as necessidades dos usuários, criando requisitos claros para o desenvolvimento de software eficaz.",
-              },
-              {
-                id: "metodos_projeto",
-                codigo: "1107202",
-                nome: "MÉTODOS DE PROJETO DE SOFTWARE",
-                tipo: "Obrigatória",
-                periodo: 6,
-                descricao: "Estude técnicas e metodologias para projetar sistemas de software escaláveis e eficientes, com foco em arquitetura e design.",
-              },
-              {
-                id: "teste_software",
-                codigo: "DINF00054",
-                nome: "TESTE DE SOFTWARE",
-                tipo: "Obrigatória",
-                periodo: 7,
-                descricao: "Compreenda as melhores práticas para garantir a qualidade e funcionalidade do software por meio de testes automatizados e manuais.",
-              },
-              {
-                id: "fund_ihc",
+                id: "FUND_IHC",
                 codigo: "DSCO00026",
                 nome: "FUNDAMENTOS DA INTERAÇÃO HUMANO-COMPUTADOR",
                 tipo: "Optativa",
                 periodo: 0,
-                descricao: "Explore como os seres humanos interagem com os sistemas computacionais, priorizando a usabilidade e a experiência do usuário.",
+                descricao:
+                  "Explore como os seres humanos interagem com os sistemas computacionais, priorizando a usabilidade e a experiência do usuário.",
               },
               {
-                id: "design_interacao",
-                codigo: "DSCO00025",
-                nome: "DESIGN DE INTERAÇÃO",
-                tipo: "Optativa",
-                periodo: 8,
-                descricao: "Desenvolva habilidades para projetar interfaces intuitivas e agradáveis, criando uma experiência de usuário envolvente e eficiente.",
+                id: "LOGICA",
+                codigo: "1107136",
+                nome: "LÓGICA APLICADA À COMPUTAÇÃO",
+                tipo: "Obrigatória",
+                periodo: 2,
+                descricao:
+                  "Estudo dos fundamentos lógicos para resolver problemas computacionais, abrangendo proposições, conectivos e sistemas formais.",
               },
               {
-                id: "reuso_software",
-                codigo: "DINF00064",
+                id: "REDES",
+                codigo: "DINF00047",
+                nome: "REDES DE COMPUTADORES I",
+                tipo: "Obrigatória",
+                periodo: 4,
+                descricao:
+                  "Introdução às redes de computadores, cobrindo conceitos de comunicação, protocolos e infraestrutura de rede.",
+              },
+              {
+                id: "ESTRUTURA_DADOS",
+                codigo: "DINF00048",
+                nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
+                tipo: "Obrigatória",
+                periodo: 3,
+                descricao:
+                  "Conceitos fundamentais de estruturas de dados e algoritmos, como listas, filas, pilhas e árvores, com análises de complexidade.",
+              },
+              {
+                id: "IHC",
+                codigo: "1108100",
+                nome: "INTERAÇÃO HUMANO-COMPUTADOR",
+                tipo: "Obrigatória",
+                periodo: 7,
+                descricao:
+                  "Estudo de princípios e práticas para projetar interfaces de usuário intuitivas e eficazes.",
+              },
+              {
+                id: "REUSO_SOFTWARE",
+                codigo: "1108200",
                 nome: "REUSO DE SOFTWARE",
                 tipo: "Optativa",
                 periodo: 5,
-                descricao: "Aprenda a reutilizar componentes e código para aumentar a produtividade, reduzir erros e melhorar a manutenção de sistemas.",
+                descricao:
+                  "Conceitos e técnicas para reaproveitar componentes de software, aumentando a produtividade e a qualidade dos sistemas.",
               },
               {
-                id: "teoria_grafos",
-                codigo: "GDCOC0091",
+                id: "TEORIA_GRAFOS",
+                codigo: "1108300",
                 nome: "TEORIA DOS GRAFOS APLICADA",
                 tipo: "Optativa",
                 periodo: 4,
-                descricao: "Aprofunde-se no estudo de grafos, com foco em sua aplicação prática em algoritmos e resolução de problemas complexos.",
+                descricao:
+                  "Explora grafos como modelos para resolver problemas em redes, roteamento e conectividade.",
               },
               {
-                id: "implementacao",
-                codigo: "DINF00066",
-                nome: "IMPLEMENTAÇÃO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS",
-                tipo: "Optativa",
-                periodo: 6,
-                descricao: "Estude as tecnologias e práticas necessárias para desenvolver aplicativos eficientes e funcionais para plataformas móveis.",
-              },
-              {
-                id: "metodos_formais",
+                id: "METODOS_FORMAIS",
                 codigo: "1107203",
                 nome: "MÉTODOS FORMAIS PARA DESENVOLVIMENTO DE SOFTWARE",
                 tipo: "Optativa",
                 periodo: 7,
-                descricao: "Explore abordagens matemáticas e lógicas para garantir a precisão, correção e segurança no desenvolvimento de sistemas de software complexos.",
+                descricao:
+                  "Técnicas baseadas em matemática para garantir precisão e segurança no desenvolvimento de software.",
+              },
+              {
+                id: "METODOS_PROJETO",
+                codigo: "1107202",
+                nome: "MÉTODOS DE PROJETO DE SOFTWARE",
+                tipo: "Obrigatória",
+                periodo: 6,
+                descricao:
+                  "Estudo de práticas e ferramentas para projetar sistemas de software escaláveis e eficientes.",
+              },
+              {
+                id: "ESPECIFICACAO",
+                codigo: "1107184",
+                nome: "ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE",
+                tipo: "Obrigatória",
+                periodo: 5,
+                descricao:
+                  "Estudo de técnicas para entender, documentar e gerenciar os requisitos dos usuários em projetos de software.",
+              },
+              {
+                id: "TESTE_SOFTWARE",
+                codigo: "DINF00054",
+                nome: "TESTE DE SOFTWARE",
+                tipo: "Obrigatória",
+                periodo: 7,
+                descricao:
+                  "Estudo de práticas de verificação e validação para garantir a qualidade e funcionalidade dos sistemas de software.",
+              },
+              {
+                id: "BANCO_DADOS",
+                codigo: "DINF00064",
+                nome: "BANCO DE DADOS I",
+                tipo: "Obrigatória",
+                periodo: 5,
+                descricao:
+                  "Conceitos de banco de dados, modelagem de dados e linguagens de consulta como SQL.",
+              },
+              {
+                id: "IMPLEMENTAÇÃO",
+                codigo: "DINF00066",
+                nome: "IMPLEMENTAÇÃO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS",
+                tipo: "Optativa",
+                periodo: 6,
+                descricao:
+                  "Desenvolvimento de aplicativos móveis eficientes, cobrindo tecnologias e boas práticas.",
               },
             ].map((disciplina) => (
               <div
                 className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
-                key={disciplina.id} // Adicionando o key único aqui
+                key={disciplina.id}
                 id={`disciplina-${disciplina.id}`}
               >
                 <p>{disciplina.nome}</p>
@@ -317,10 +337,8 @@ export default function Page() {
                 <p>{disciplina.descricao}</p>
               </div>
             ))}
-            </div>
-          </section>
         </div>
-
+      </div>
       </div>
       <footer className={styles.footer}>
         <p>© 2024 PerCurso, Todos os direitos reservados</p>

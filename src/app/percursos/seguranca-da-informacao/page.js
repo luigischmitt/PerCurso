@@ -1,6 +1,141 @@
+"use client";
+
 import styles from './page.module.css';
+import * as d3 from 'd3';
+import { useEffect, useState } from 'react';
 
 export default function Page() {
+  const [selectedDiscipline, setSelectedDiscipline] = useState(null);
+
+  useEffect(() => {
+    const disciplinas = [
+      { id: "root", nome: "Segurança da Informação", periodo: 0, obrigatoria: true },
+      { id: "REDES", nome: "Redes de Computadores", periodo: 4, obrigatoria: true },
+      { id: "SEG_COMP", nome: "Segurança Computacional", periodo: 6, obrigatoria: true },
+      { id: "SIS_DIST", nome: "Sistemas Distribuídos", periodo: 6, obrigatoria: true },
+      { id: "INFO_DEC", nome: "Sistemas de Informação e Decisão", periodo: 0, obrigatoria: false },
+      { id: "REDES_SEM_FIO", nome: "Redes Sem Fio", periodo: 5, obrigatoria: false },
+      { id: "ADM_SIS", nome: "Administração de Sistemas", periodo: 6, obrigatoria: false },
+    ];
+    
+    const links = [
+      { source: "root", target: "REDES" },
+      { source: "REDES", target: "SEG_COMP" },
+      { source: "REDES", target: "REDES_SEM_FIO" },
+      { source: "REDES", target: "ADM_SIS" },
+      { source: "SEG_COMP", target: "SIS_DIST" },
+      { source: "root", target: "INFO_DEC" },
+    ];    
+    
+    const width = 1000;
+    const height = 600;
+
+    const svg = d3
+      .select("#roadmap")
+      .append("svg")
+      .attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("preserveAspectRatio", "xMidYMid meet")
+      .style("width", "100%")
+      .style("height", "auto");
+
+    window.addEventListener("resize", () => {
+      d3.select("#roadmap").select("svg").attr("viewBox", `0 0 ${width} ${height}`);
+    });
+
+    const simulation = d3
+      .forceSimulation(disciplinas)
+      .force("link", d3.forceLink(links).id((d) => d.id).distance(115))
+      .force("charge", d3.forceManyBody().strength(-150))
+      .force("radial", d3.forceRadial((d) => d.periodo * 50, width / 2, height / 2))
+      .force("center", d3.forceCenter(width / 2.5, height / 2));
+
+    const link = svg
+      .append("g")
+      .selectAll("line")
+      .data(links)
+      .enter()
+      .append("line")
+      .attr("stroke", "#999")
+      .attr("stroke-width", 2);
+
+    const node = svg
+      .append("g")
+      .selectAll("circle")
+      .data(disciplinas)
+      .enter()
+      .append("circle")
+      .attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15))
+      .attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2"))
+      .style("cursor", "pointer")
+      .on("mouseover", function () {
+        d3.select(this).transition().duration(200).attr("fill", "#6747C7").attr("r", (d) => (d.id === "root" ? 45 : d.obrigatoria ? 30 : 20));
+      })
+      .on("mouseout", function () {
+        d3.select(this).transition().duration(200).attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2")).attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15));
+      })
+      .on("click", function (event, d) {
+        const targetId = `disciplina-${d.id}`;
+        const targetElement = document.getElementById(targetId);
+        if (!targetElement) {
+          console.warn(`Elemento com ID ${targetId} não encontrado.`);
+          return;
+        }
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        setSelectedDiscipline(d.id);
+
+        setTimeout(() => {
+          setSelectedDiscipline(null);
+        }, 1500);
+      });
+
+    node.call(
+      d3.drag()
+        .on("start", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x;
+          d.fy = d.y;
+        })
+        .on("drag", (event, d) => {
+          d.fx = event.x;
+          d.fy = event.y;
+        })
+        .on("end", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null;
+          d.fy = null;
+        })
+    );
+
+    const label = svg
+      .append("g")
+      .selectAll("text")
+      .data(disciplinas)
+      .enter()
+      .append("text")
+      .text((d) => d.nome)
+      .attr("dy", ".35em")
+      .attr("font-size", "10px")
+      .attr("fill", "#000")
+      .attr("text-anchor", "middle")
+      .style("pointer-events", "none");
+
+    simulation.on("tick", () => {
+      link
+        .attr("x1", (d) => d.source.x)
+        .attr("y1", (d) => d.source.y)
+        .attr("x2", (d) => d.target.x)
+        .attr("y2", (d) => d.target.y);
+
+      node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+
+      label.attr("x", (d) => d.x).attr("y", (d) => d.y - 10);
+    });
+
+    return () => {
+      d3.select("#roadmap").select("svg").remove();
+    };
+  }, []);
+
   return (
     <div>
       <div className={styles.backgroundRectangle}>
@@ -41,13 +176,7 @@ export default function Page() {
         <div className={styles.lineBottom}></div>
       </div>
 
-      <section className={styles.map}>
-        <img
-          src="/cdia_roadmap.svg"
-          alt="Mapa de Disciplinas"
-          className={styles.mapImage}
-        />
-      </section>
+      <div id="roadmap" className={styles.map}></div>
 
       <div className={styles.backgroundRectangle2}>
       <div className={styles.lineMid}></div>
@@ -57,20 +186,7 @@ export default function Page() {
           <div className={styles.courseCards}>
             {[
               {
-                codigo: "1107136",
-                nome: "INTRODUÇÃO À PROGRAMAÇÃO",
-                tipo: "Obrigatória",
-                periodo: 1,
-                descricao: "Entenda os fundamentos da lógica de programação e aprenda a criar soluções práticas com código eficiente.",
-              },
-              {
-                codigo: "GDCOC0101",
-                nome: "PROGRAMAÇÃO ORIENTADA A OBJETOS",
-                tipo: "Obrigatória",
-                periodo: 2,
-                descricao: "Aprenda a modelar soluções com base em objetos, encapsulando dados e comportamentos para desenvolver sistemas mais organizados e reutilizáveis.",
-              },
-              {
+                id: "REDES",
                 codigo: "DSCO00021",
                 nome: "REDES DE COMPUTADORES",
                 tipo: "Obrigatória",
@@ -78,6 +194,7 @@ export default function Page() {
                 descricao: "Explore os fundamentos da comunicação entre sistemas, aprendendo como projetar, configurar e gerenciar redes locais e globais de forma eficiente.",
               },
               {
+                id: "SEG_COMP",
                 codigo: "DSCO00021",
                 nome: "SEGURANÇA COMPUTACIONAL",
                 tipo: "Obrigatória",
@@ -85,6 +202,7 @@ export default function Page() {
                 descricao: "Explore as técnicas e práticas para proteger sistemas e dados contra ataques e vulnerabilidades.",
               },
               {
+                id: "SIS_DIST",
                 codigo: "DSCO00022",
                 nome: "SISTEMAS DISTRIBUÍDOS",
                 tipo: "Obrigatória",
@@ -92,6 +210,7 @@ export default function Page() {
                 descricao: "Entenda como projetar e implementar sistemas que operam em vários computadores interconectados.",
               },
               {
+                id: "INFO_DEC",
                 codigo: "GDADM0117",
                 nome: "SISTEMAS DE INFORMAÇÃO E DECISÃO",
                 tipo: "Optativa",
@@ -99,6 +218,7 @@ export default function Page() {
                 descricao: "Aprenda a integrar tecnologia e processos para suporte à tomada de decisão nas organizações.",
               },
               {
+                id: "REDES_SEM_FIO",
                 codigo: "GDSCO0032",
                 nome: "REDES SEM FIO",
                 tipo: "Optativa",
@@ -106,6 +226,7 @@ export default function Page() {
                 descricao: "Estude os princípios e tecnologias que possibilitam comunicação sem fio, como Wi-Fi e redes móveis.",
               },
               {
+                id: "ADM_SIS",
                 codigo: "DSCO00032",
                 nome: "ADMINISTRAÇÃO DE SISTEMAS",
                 tipo: "Optativa",
@@ -113,9 +234,12 @@ export default function Page() {
                 descricao: "Descubra como gerenciar e configurar sistemas operacionais, servidores e redes de maneira eficiente.",
               },
                         
-            ].map((disciplina, index) => (
-              <div className={styles.card} key={index}>
-                <h3>{disciplina.codigo}</h3>
+            ].map((disciplina) => (
+                <div
+                className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
+                key={disciplina.id}
+                id={`disciplina-${disciplina.id}`}
+                >
                 <p>{disciplina.nome}</p>
                 <p><strong>{disciplina.tipo}</strong></p>
                 <p>Período: {disciplina.periodo}</p>
