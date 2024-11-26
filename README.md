@@ -4,34 +4,33 @@
 
 <hr>
 
-O **PerCurso** vai te ajudar a se orientar durante a sua graduação em CC. Direcionado ao curso de Ciência da Computação da UFPB, esse repositório é um trabalho colaborativo contendo dicas, links úteis e provas antigas das disciplinas do curso. A ideia é que todos possam contribuir e ajudar uns aos outros a encontrar o seu percurso :)
+O **PerCurso** vai te ajudar a se orientar durante a sua graduação em CC. Direcionado ao curso de **Ciência da Computação da UFPB**, esse repositório é um trabalho colaborativo contendo dicas, links úteis e provas antigas das disciplinas do curso. A ideia é que todos possam contribuir e ajudar uns aos outros a encontrar o seu percurso :)
 
 <hr>
 
-## Como Usar?
+## 🛠 Como Contribuir?
 
-Para usar o projeto localmente, siga os passos abaixo: 
+Se é sua primeira vez contribuindo para um projeto open source, recomendamos que você leia o nosso [Guia do Primeiro PR](/GuiaDoPrimeiroPR.md). Mas, se já é veterano no mundo do código aberto, confira o nosso [Código de conduta](/Código_de_conduta.md)!
 
-1. Clone o repositório para o seu ambiente local.
-2. No diretório do projeto, instale as dependências com o comando:
+Sabemos que as disciplinas podem mudar de metodologia ao longo do tempo. Caso você perceba alguma informação desatualizada, não hesite em abrir uma issue para nos alertar. E se sentir que pode contribuir ainda mais, envie um Pull Request para corrigir ou atualizar o conteúdo. Vamos construir juntos um PerCurso melhor para as próximas gerações :) 
 
-   ```bash
-   npm install
+## ⚙️ Como Funciona?
 
-3. Depois basta rodar localmente com o comando:
+Cada disciplina do curso possui seu próprio conjunto de arquivos **Markdown (.md)** organizados na pasta [content](/content). Esses arquivos contêm seções específicas do tipo:
 
-    ```bash
-   npm run dev
-
-## Como Funciona?
-
-Cada disciplina do curso possui seu próprio conjunto de arquivos Markdown (.md) organizados na pasta **content**. Esses arquivos contêm seções específicas como dicas, dificuldades comuns, provas antigas, listas de exercícios e materiais extras.
+Arquivo | Finalidade
+------- | -----------
+**dicas.md** | Reúne dicas práticas e valiosas sobre a disciplina, incluindo orientações para otimizar seus estudos e se sair bem nas avaliações.
+**dificuldades.md** | Descreve os principais desafios enfrentados pelos alunos nessa disciplina, com relatos reais e sugestões para superá-los.
+**extras.md** | Um espaço para tópicos adicionais que não se encaixam nos outros arquivos, mas que agregam valor ao aprendizado.
+**listas.md** | Apresenta links para listas de exercícios e atividades de períodos anteriores, organizados para fácil acesso e consulta.
+**provas.md** | Centraliza provas antigas da disciplina, organizadas por período, ajudando na preparação para futuras avaliações.
 
 O site renderiza esses arquivos Markdown em HTML, o que permite que os alunos naveguem e acessem as informações de forma prática e organizada.
 
-Para contribuir com o PerCurso, você pode enviar um **pull request** para atualizar ou adicionar conteúdo a qualquer disciplina. Basta localizar o arquivo .md correspondente dentro da pasta content, fazer as edições desejadas e enviar o pull request. Assim, você estará contribuindo para o crescimento da comunidade e ajudando outros alunos!
+Para contribuir com o PerCurso, você pode enviar um **pull request** para atualizar ou adicionar conteúdo a qualquer disciplina. Basta localizar o arquivo .md correspondente dentro da pasta **content**, fazer as edições desejadas e enviar o pull request. Assim, você estará contribuindo para o crescimento da comunidade e ajudando outros alunos!
 
-## Disciplinas
+## 📚 Disciplinas
 
 | **1° Período**                              | **2° Período**                           | **3° Período**                                | **4° Período**                                | **5° Período**                                | **6° Período**                                 | **7° Período**                           | **8° Período**                             |
 |---------------------------------------------|------------------------------------------|-----------------------------------------------|-----------------------------------------------|------------------------------------------------|-------------------------------------------------|------------------------------------------|-------------------------------------------|
@@ -47,5 +46,10 @@ Para contribuir com o PerCurso, você pode enviar um **pull request** para atual
 <br>
 
 
-## PreCursores: Beatriz Pessoa, Luigi Schmitt e Nicolas Kleiton
-
+## 👥 PreCursores: 
+**O PerCurso é mantido por uma equipe de alunos apaixonados por compartilhar conhecimento:**
+- [Beatriz Pessoa](https://github.com/beapessoa)
+- [Luigi Schmitt](https://github.com/luigischmitt)
+- [Nicolas Kleiton](https://github.com/Nicolas-Kleiton)
+  
+Quer se juntar a nós? Envie seu Pull Request e faça parte da comunidade! 🎉
