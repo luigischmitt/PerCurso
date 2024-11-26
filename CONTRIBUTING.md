@@ -4,7 +4,9 @@
   <hr>
 </div>
 
-Contribuições são sempre bem-vindas, seja você um veterano do mundo open source ou alguém dando os primeiros passos!
+### Contribuições são sempre bem-vindas, seja você um veterano do mundo open source ou alguém dando os primeiros passos! 💡
+
+<hr>
 
 ## Código de Conduta
 
