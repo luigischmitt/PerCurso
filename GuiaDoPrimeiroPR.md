@@ -1,9 +1,11 @@
 <div align="center">
-  <h1>Guia do Primeiro Pull Request</h1>
+  <h1>Guia do Primeiro PR</h1>
   <img src="public/PerCurso2.svg" alt="PerCurso" width="350px">
+  <hr>
 </div>
 
 Bem-vindo ao **Guia do Primeiro Pull Request (PR) do PerCurso!** Estamos empolgados com sua contribuição para ajudar estudantes a explorar e planejar percursos acadêmicos da melhor forma. Este guia foi feito para facilitar o processo de envio do seu primeiro PR, mesmo que você nunca tenha contribuído para projetos de open source (código aberto) antes. Vamos lá?
+<hr>
 
 ## 1. Entendendo o PerCurso
 
@@ -13,14 +15,14 @@ O [PerCurso](https://percurso.vercel.app/) é um site estático open-source que 
 
 Antes de começar, você precisa:
 
-1. Uma conta no [GitHub](https://github.com/signup?source=login).
+1. Criar uma conta no [GitHub](https://github.com/signup?source=login).
 2. Conhecimento básico de Git e Markdown (não se preocupe, é simples!).
 3. Node.js e npm/yarn instalados (Opcional, caso vá rodar o site localmente para validar as mudanças.)
 
 ## 3. Fazendo seu Primeiro Pull Request
 **Passo 1: Faça o Fork do Repositório.**
 
-1. Acesse o repositório oficial do PerCurso no GitHub.
+1. Acesse o [repositório oficial](https://github.com/luigischmitt/PerCurso) do PerCurso no GitHub.
 2. Clique no botão Fork no canto superior direito.
 3. Agora você terá sua cópia do repositório no seu perfil.
 
@@ -87,6 +89,7 @@ git push origin nome-da-sua-branch
 4. Envie o PR para revisão.
 
 **Passo 10: Aguarde a revisão e aceitação :)**
+
 Seu Pull Request foi criado com sucesso e a curadoria do PerCurso já foi notificada sobre sua contribuição. Agora, é só aguardar a revisão das suas alterações. Caso sejam necessárias, os revisores poderão solicitar ajustes, e você terá a oportunidade de corrigir e aprimorar sua contribuição.
 
 Assim que tudo estiver revisado e aprovado, seu PR será aceito e suas mudanças serão incorporadas ao projeto.
