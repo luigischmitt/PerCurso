@@ -98,6 +98,11 @@ git push origin nome-da-sua-branch
 3. Adicione um título descritivo e uma explicação clara do que você mudou.
 4. Envie o PR para revisão.
 
+<br />
+<p align="center">
+  <img src="gifs/compare-pull.gif" alt="Compare & Pull" height="320">
+</p>
+
 **Passo 10: Aguarde a revisão e aceitação :)**
 
 Seu Pull Request foi criado com sucesso e a curadoria do PerCurso já foi notificada sobre sua contribuição. Agora, é só aguardar a revisão das suas alterações. Caso sejam necessárias, os revisores poderão solicitar ajustes, e você terá a oportunidade de corrigir e aprimorar sua contribuição.
