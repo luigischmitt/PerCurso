@@ -19,12 +19,22 @@ Antes de começar, você precisa:
 2. Conhecimento básico de Git e Markdown (não se preocupe, é simples!).
 3. Node.js e npm/yarn instalados (Opcional, caso vá rodar o site localmente para validar as mudanças.)
 
+<br />
+<p align="center">
+  <img src="gifs/criando-conta.gif" alt="Criar conta no Github" height="320">
+</p>
+
 ## 3. Fazendo seu Primeiro Pull Request
 **Passo 1: Faça o Fork do Repositório.**
 
 1. Acesse o [repositório oficial](https://github.com/luigischmitt/PerCurso) do PerCurso no GitHub.
 2. Clique no botão Fork no canto superior direito.
 3. Agora você terá sua cópia do repositório no seu perfil.
+
+<br />
+<p align="center">
+  <img src="gifs/fork.gif" alt="Primeiro Fork" height="320">
+</p>
 
 **Passo 2: Clone o Repositório para sua Máquina.**
 
