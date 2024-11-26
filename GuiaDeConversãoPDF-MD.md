@@ -4,7 +4,7 @@
   <hr>
 </div>
 
-Olá! Que ótimo ver você engajado em ajudar a comunidade do **PerCurso** com a conversão de PDFs para Markdown (MD). Saiba que você pode Linkar os pdfs em nosso Drive ao invés de Este guia foi criado para facilitar o processo e garantir que o conteúdo seja bem estruturado e acessível para todos. Caso tenha dúvidas, não hesite em entrar em contato com a equipe responsável ou abrir uma issue no repositório.
+Olá! Que ótimo ver você engajado em ajudar a comunidade do **PerCurso** com a conversão de PDFs para Markdown (MD). Saiba que você também pode anexar o PDF ao PR caso não queira seguir esse passo a passo. Esse guia foi criado para facilitar o processo e garantir que o conteúdo seja bem estruturado e acessível para todos. Caso tenha dúvidas, não hesite em entrar em contato com a equipe responsável ou abrir uma issue no repositório.
 <hr>
 
 # Provas e Listas de Exercícios
