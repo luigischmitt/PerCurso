@@ -8,6 +8,10 @@ O **PerCurso** vai te ajudar a se orientar durante a sua graduação em CC. Dire
 
 <hr>
 
+## 🌐 Visite o nosso site
+
+Explore o **PerCurso** diretamente no nosso site: [https://percurso.vercel.app/](https://percurso.vercel.app/). Lá você encontrará todas as disciplinas organizadas, com conteúdos prontos para facilitar seus estudos. Navegue, contribua e faça parte da nossa comunidade!
+
 ## 🛠 Como Contribuir?
 
 Se é sua primeira vez contribuindo para um projeto open source, recomendamos que você leia o nosso [Guia do Primeiro PR](/GuiaDoPrimeiroPR.md). Mas, se já é veterano no mundo do código aberto, confira o nosso [Guia de contribuição](/CONTRIBUTING.md)!
