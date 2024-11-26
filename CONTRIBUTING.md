@@ -26,6 +26,19 @@ Se deseja sugerir uma mudança no **PerCurso**, siga os passos abaixo:
 1. **Verifique as issues existentes**: Veja se já existe uma issue para o que você deseja propor. Se encontrar, manifeste interesse nos comentários.
 2. **Crie uma nova issue**: Caso não exista, abra uma issue detalhando sua proposta. Quanto mais claro você for, mais fácil será para a comunidade discutir e colaborar.
 
+## Como Upar Arquivos?
+
+Caso você tenha arquivos como **PDFs**, **documentos do Word (DOC)** ou **imagens (PNG, JPG)** que deseja contribuir para o **PerCurso**, fique tranquilo! Você pode adicionar esses arquivos diretamente ao seu Pull Request.
+
+Nossa equipe de curadoria será responsável por transferir esses arquivos para o Drive oficial do **PerCurso**, organizá-los e gerar links públicos que poderão ser usados no Markdown do repositório.
+
+### Passo a Passo:
+1. Inclua seus arquivos no Pull Request junto com uma breve explicação sobre como eles podem ser úteis (ex.: provas antigas, listas de exercícios, materiais de apoio, etc.).
+2. Nossa equipe irá revisar os arquivos, transferi-los para o Drive e ajustar as referências necessárias no Markdown.
+3. Assim que sua contribuição for aceita, os arquivos estarão disponíveis para toda a comunidade!
+
+**Nota:** Certifique-se de que os arquivos estão devidamente nomeados e organizados para facilitar o trabalho de curadoria. Se possível, inclua informações relevantes como o nome da disciplina, período ou qualquer outro dado que ajude na identificação do conteúdo.
+
 ## Restrições de Upload
 
 Para manter o **PerCurso** sustentável e organizado, seguimos algumas diretrizes sobre o upload de arquivos. Evitamos conteúdos protegidos por **copyright** e buscamos reduzir arquivos desnecessariamente grandes. Certifique-se de revisar as [Restrições de Upload](https://github.com/luigischmitt/PerCurso/wiki/Restri%C3%A7%C3%B5es-de-Upload) antes de submeter novos arquivos.
