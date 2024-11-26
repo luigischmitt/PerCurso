@@ -113,7 +113,7 @@ Assim que tudo estiver revisado e aprovado, seu PR será aceito e suas mudanças
 
 ## Dicas adicionais
 
-- Antes de contribuir para um projeto, tire um tempo para ler  o [código de conduta](/Código_de_conduta.md). Isso ajudará você a alinhar suas alterações com as expectativas da gente ;)
+- Antes de contribuir para um projeto, tire um tempo para ler  o [guia de contribuição](/CONTRIBUTING.md). Isso ajudará você a alinhar suas alterações com as expectativas da gente ;)
 
 - Procure manter seu Pull Request simples e focado em uma única tarefa ou melhoria. Alterações menores são mais fáceis de revisar e têm maiores chances de serem aceitas rapidamente.
 
