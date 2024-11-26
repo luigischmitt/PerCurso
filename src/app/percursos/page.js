@@ -198,55 +198,66 @@ const PercursosPage = () => {
     </div>
 
     <div className={styles.backgroundWhite}>
-      <div className={styles.lineMid}></div>
       <div className={styles.grupos}>
         <div className={styles.groupsContainer}>
-          {/* Primeira linha de grupos */}
           <div className={styles.row}>
             <div className={styles.groupItem}>
               <Link href="https://tail-tech.com/" target="_blank">
-                <img src="/tail_logo.svg" alt="Logo TAIL" className={styles.groupImage} />
+                <div className={styles.groupContent}>
+                  <img src="/tail_logo.svg" alt="Logo TAIL" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>TAIL</h3>
+                    <p className={styles.groupSubtitle}>Liga Acadêmica</p>
+                    <p className={styles.groupDescription}>
+                      Technology and Artificial Intelligence League, ou simplesmente TAIL, é a primeira liga acadêmica de IA da Paraíba, a TAIL busca incrementar a bagagem intelectual e social dos seus membros através do estudo e da aplicação de novas ideias no ramo da Inteligência Artificial.
+                    </p>
+                  </div>
+                </div>
               </Link>
-              <h3 className={styles.groupTitle}>TAIL</h3>
-              <p className={styles.groupSubtitle}>Liga Acadêmica</p>
-              <p className={styles.groupDescription}>
-                Technology and Artificial Intelligence League, ou simplesmente TAIL, é a primeira liga acadêmica de IA da Paraíba, a TAIL busca incrementar a bagagem intelectual e social dos seus membros através do estudo e da aplicação de novas ideias no ramo da Inteligência Artificial.
-              </p>
             </div>
-            <div className={styles.verticalDivider}></div>
             <div className={styles.groupItem}>
               <Link href="https://mcc.ci.ufpb.br/" target="_blank">
-                <img src="/mcc_logo.svg" alt="Logo MCCUFPB" className={styles.groupImage} />
+                <div className={styles.groupContent}>
+                  <img src="/mcc_logo.svg" alt="Logo MCCUFPB" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>MCCUFPB</h3>
+                    <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
+                    <p className={styles.groupDescription}>
+                      O Meninas na Ciência da Computação UFPB (MCCUFPB) é um grupo de professoras e alunas do CI que incentiva a presença feminina na computação, promovendo eventos e mentorias para aumentar a representatividade.
+                    </p>
+                  </div>
+                </div>
               </Link>
-              <h3 className={styles.groupTitle}>MCCUFPB</h3>
-              <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
-              <p className={styles.groupDescription}>
-                O Meninas na Ciência da Computação UFPB (MCCUFPB) é um grupo de professoras e alunas do CI que incentiva a presença feminina na computação, promovendo eventos e mentorias para aumentar a representatividade.
-              </p>
             </div>
           </div>
-          {/* Segunda linha de grupos */}
           <div className={styles.row}>
             <div className={styles.groupItem}>
               <Link href="https://www.petccufpb.com.br/" target="_blank">
-                <img src="/pet_logo.svg" alt="Logo PET" className={styles.groupImage} />
+                <div className={styles.groupContent}>
+                  <img src="/pet_logo.svg" alt="Logo PET" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>PET</h3>
+                    <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
+                    <p className={styles.groupDescription}>
+                      O Programa de Educação Tutorial (PET) do curso de Ciência da Computação da UFPB promove integração acadêmica, com projetos de ensino, pesquisa e extensão, incentivando o crescimento pessoal e profissional dos alunos.
+                    </p>
+                  </div>
+                </div>
               </Link>
-              <h3 className={styles.groupTitle}>PET</h3>
-              <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
-              <p className={styles.groupDescription}>
-                O Programa de Educação Tutorial (PET) do curso de Ciência da Computação da UFPB promove integração acadêmica, com projetos de ensino, pesquisa e extensão, incentivando o crescimento pessoal e profissional dos alunos.
-              </p>
             </div>
-            <div className={styles.verticalDivider}></div>
             <div className={styles.groupItem}>
               <Link href="https://www.instagram.com/log.ufpb/" target="_blank">
-                <img src="/log_logo.svg" alt="Logo LOG" className={styles.groupImage} />
+                <div className={styles.groupContent}>
+                  <img src="/log_logo.svg" alt="Logo LOG" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>LOG</h3>
+                    <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
+                    <p className={styles.groupDescription}>
+                    O Logistics and Optimization Group (LOG) foi fundado com o intuito de reunir alunos e professores interessados em trabalhar com a área de Otimização Combinatória e Logística. O LOG conta com uma extensa rede de colaboração no Brasil e no Exterior.
+                    </p>
+                  </div>
+                </div>
               </Link>
-              <h3 className={styles.groupTitle}>LOG</h3>
-              <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
-              <p className={styles.groupDescription}>
-              O Logistics and Optimization Group (LOG) foi fundado com o intuito de reunir alunos e professores interessados em trabalhar com a área de Otimização Combinatória e Logística. O LOG conta com uma extensa rede de colaboração no Brasil e no Exterior.
-              </p>
             </div>
           </div>
         </div>
