@@ -10,7 +10,7 @@ O **PerCurso** vai te ajudar a se orientar durante a sua graduação em CC. Dire
 
 ## 🛠 Como Contribuir?
 
-Se é sua primeira vez contribuindo para um projeto open source, recomendamos que você leia o nosso [Guia do Primeiro PR](/GuiaDoPrimeiroPR.md). Mas, se já é veterano no mundo do código aberto, confira o nosso [Código de conduta](/Código_de_conduta.md)!
+Se é sua primeira vez contribuindo para um projeto open source, recomendamos que você leia o nosso [Guia do Primeiro PR](/GuiaDoPrimeiroPR.md). Mas, se já é veterano no mundo do código aberto, confira o nosso [Guia de contribuição](/CONTRIBUTING.md)!
 
 Sabemos que as disciplinas podem mudar de metodologia ao longo do tempo. Caso você perceba alguma informação desatualizada, não hesite em abrir uma issue para nos alertar. E se sentir que pode contribuir ainda mais, envie um Pull Request para corrigir ou atualizar o conteúdo. Vamos construir juntos um PerCurso melhor para as próximas gerações :) 
 
