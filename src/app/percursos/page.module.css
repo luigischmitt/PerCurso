@@ -425,74 +425,80 @@
   position: absolute;
 }
 
-/* Responsividade para telas menores */
+/* Responsividade geral */
 @media (max-width: 768px) {
-  .main {
-    flex-direction: column;
+  .container {
     padding: 20px;
-    height: auto;
+    width: 100%;
   }
-
-  .title {
-    font-size: 8vw;
-    margin-left: 0;
-    text-align: center;
+  .sectionTitle {
+    font-size: 3rem;
   }
-
   .image {
     width: 80%;
     margin: 0 auto;
   }
-
-  .introSection {
-    margin: 0;
-    padding: 10px;
-    text-align: center;
+  .cardsContainer {
+    flex-direction: column;
+    gap: 10px;
   }
-
-  .buttonsSection {
-    align-items: center;
+  .carouselContainer {
+    flex-direction: column;
+    gap: 10px;
   }
-
-  .button {
-    font-size: 0.9rem;
-    padding: 0.8rem 1.5rem; 
+  .groupItem {
+    width: 100%;
   }
 }
 
-/* Responsividade para smartphones */
 @media (max-width: 480px) {
-  .header {
-    padding: 10px;
+  .sectionTitle {
+    font-size: 2.5rem;
   }
-
-  .logo {
-    font-size: 20px;
+  .cardTitle {
+    font-size: 1.5rem;
   }
-
-  .title {
-    font-size: 10vw;
-    text-align: center;
-    margin: 0; 
-  }
-
-  .button {
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-    width: 90%; 
-  }
-
-  .description,
-  .subtitle {
-    font-size: 16px;
-    max-width: 100%;
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .footer {
-    padding: 15px;
+  .cardText {
     font-size: 14px;
   }
+  .carouselButton {
+    font-size: 1.5rem;
+  }
+  .cardLink {
+    font-size: 14px;
+  }
+}
+
+.carouselButton {
+  background: transparent;
+  border: none;
+  color: #372179;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.carouselButton:hover {
+  transform: scale(1.1);
+  color: #6747c7;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  background-color: rgba(237, 246, 255, 0.5);
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2C274B;
+  color: #FFFFFF;
+}
+
+.footerLink {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 

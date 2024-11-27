@@ -105,7 +105,7 @@ const PercursosPage = () => {
             O sistema de percursos permite que você se especialize em uma <strong className={styles.accent}>área de interesse</strong>, ajudando a orientar suas escolhas de disciplinas optativas, ligas acadêmicas e laboratórios que mais se alinham ao tópico que deseja se especializar.
           </p>
           <p className={styles.percursosDescription}>
-            Ao seguir um percurso, você se beneficia de uma orientação direcionada, aproveitando ao máximo o que o curso oferece e fazendo escolhas mais assertivas para atingir seus objetivos.
+            Ao seguir um percurso, você se beneficia de uma <strong className={styles.accent}>orientação direcionada</strong>, aproveitando ao máximo o que o curso oferece e fazendo escolhas mais assertivas para atingir seus objetivos.
           </p>
         </div>
         <img src="/image2.svg" alt="Homem olhando para horizonte" className={styles.image}/>
