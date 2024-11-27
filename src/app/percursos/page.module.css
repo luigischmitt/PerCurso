@@ -445,81 +445,162 @@
   position: absolute;
 }
 
-
-/* Responsividade geral */
+/* Tamanho máximo de 768px (tablet e mobile) */
 @media (max-width: 768px) {
-  .container {
-    padding: 20px;
-    width: 100%;
-  }
-  .sectionTitle {
-    font-size: 3rem;
-  }
+
+  /* Imagens de destaque */
   .image {
-    width: 80%;
-    margin: 0 auto;
+    display: none;
   }
+
   .cardsContainer {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
-  .carouselContainer {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .groupItem {
+
+  .card {
     width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .sectionTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .sectionTitle2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .percursosDescription {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* Responsividade dos laboratórios */
+  .carouselContainer {
+    flex-direction: column; /* Organiza o carrossel em coluna */
+    padding: 20px;
+  }
+
+  .labCard {
+    width: 90%;
+    max-width: 400px; /* Ajusta o tamanho máximo do cartão em telas menores */
+  }
+
+  .cardTitleLab {
+    font-size: 1.6rem;
+  }
+
+  .cardTextLab {
+    font-size: 1.1rem;
+  }
+
+  .cardLink2 {
+    font-size: 0.9rem;
+  }
+
+  .carouselButton {
+    font-size: 1.5rem; /* Reduz o tamanho dos botões em telas pequenas */
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+  }
+  
+  .groupItem {
+    width: 100%; /* Força os itens a se ajustarem ao tamanho da tela */
+    margin: 10px 0; /* Adiciona um espaço entre os itens */
+    padding: 15px;
+  }
+
+  .groupContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha tudo ao centro para telas menores */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .groupImage {
+    width: 70%;  
+    max-width: 100px; 
+    height: auto; 
+    object-fit: contain; 
+    margin-bottom: -4%;
+  }
+
+  .groupText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .groupTitle {
+    font-size: 1.8rem;
+  }
+
+  .groupSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .groupDescription {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 20px 10px;
+    font-size: 14px;
   }
 }
 
+/* Para dispositivos pequenos (smartphones) */
 @media (max-width: 480px) {
+
+  .percursosDescription {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
   .sectionTitle {
     font-size: 2.5rem;
   }
+
   .cardTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
+
   .cardText {
     font-size: 14px;
   }
+
+  .groupTitle {
+    font-size: 1.6rem;
+  }
+
+  .groupSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .groupDescription {
+    font-size: 0.8rem;
+  }
+
+  .labCard {
+    width: 100%;
+    height: auto;
+  }
+
   .carouselButton {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
-  .cardLink {
-    font-size: 14px;
-  }
-}
 
-.carouselButton {
-  background: transparent;
-  border: none;
-  color: #372179;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
 }
-
-.carouselButton:hover {
-  transform: scale(1.1);
-  color: #6747c7;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
-  background-color: rgba(237, 246, 255, 0.5);
-  cursor: pointer;
-}
-
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #2C274B;
-  color: #FFFFFF;
-}
-
-.footerLink {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
