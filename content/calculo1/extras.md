@@ -1,6 +1,6 @@
 ## Extras
 
-### Playlist e videos no YouTube
+### Playlists e videos no YouTube
 
 - 🎥 Pré-Cálculo (Ferreto)  [ [Clique aqui para acessar](https://www.youtube.com/watch?v=SPZqQ5qn3P0&list=PL6oFLDTrOyYiNx4HmlLQakGHTSizaCAIW) ]
 

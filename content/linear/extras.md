@@ -1,6 +1,6 @@
 ## Extras
 
-### Playlist e videos no YouTube
+### Playlists e videos no YouTube
 
 - Cálculo Vetórial e Geometria Análitica (Adriano Medeiros) [ [Clique aqui para acessar](https://www.youtube.com/playlist?list=PLL4-RH1CsEaY9piDeATMqqtCFfnrwVHpY) ]
 

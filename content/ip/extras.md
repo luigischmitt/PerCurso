@@ -1,6 +1,6 @@
 ## Extras
 
-### Playlist e videos no YouTube
+### Playlists e videos no YouTube
 
 - 🎥 Introdução à Programação (De aluno para aluno)  [ [Clique aqui para acessar](https://www.youtube.com/playlist?list=PLa75BYTPDNKZWYypgOFEsX3H2Mg-SzuLW) ] 
 
