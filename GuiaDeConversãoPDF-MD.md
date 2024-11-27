@@ -18,7 +18,8 @@ Olá! Que ótimo ver você engajado em ajudar a comunidade do **PerCurso** com a
 
 Exemplo:
 ```shell
-Período: 2021.2  
+Disciplina: Cálculo I
+Período: 2023.2  
 Tipo: Prova  
 Etapa: 2º etapa
 ```
@@ -42,6 +43,6 @@ Etapa: 2º etapa
 
 # Outra opção
 
-Se você não quiser ou não puder converter o PDF para Markdown, pode **enviá-lo como anexo no seu Pull Request**. Nossa equipe cuidará de linkar o arquivo ao nosso Drive e deixá-lo bem organizado no site para você! 
+Se você não quiser ou não puder converter o PDF para Markdown, pode **enviá-lo como anexo no Pull Request**. Nossa equipe cuidará de linkar o arquivo ao nosso Drive e deixá-lo bem organizado no site para você! 
 
 Muito obrigado por contribuir com o PerCurso! 🚀
