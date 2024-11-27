@@ -159,6 +159,7 @@ const PercursosPage = () => {
       </Link>
     </div>
 
+
     <div className={styles.backgroundRectangle2}>
       <div className={styles.lineMid}></div>
       <div className={styles.laboratorios}>
@@ -171,20 +172,20 @@ const PercursosPage = () => {
             &lt;
           </button>
           <div className={styles.labCard}>
-            <a href={labs[labIndex].link} target="_blank" rel="noopener noreferrer">
-              <img
-                src={labs[labIndex].imgSrc}
-                alt={`Logo ${labs[labIndex].title}`}
-                className={styles.cardImage}
-              />
+            <a href={labs[labIndex].link} target="_blank" rel="noopener noreferrer" className={styles.labCardLink}>
+              <div className={styles.labCardContent}>
+                <img
+                  src={labs[labIndex].imgSrc}
+                  alt={`Logo ${labs[labIndex].title}`}
+                  className={styles.cardImage}
+                />
+                <div className={styles.labCardText}>
+                  <h3 className={styles.cardTitleLab}>{labs[labIndex].title}</h3>
+                  <p className={styles.cardTextLab}>{labs[labIndex].description}</p>
+                  <p className={styles.cardLink2}>Clique para saber mais!</p>
+                </div>
+              </div>
             </a>
-            <h3 className={styles.cardTitle}>{labs[labIndex].title}</h3>
-            <p className={styles.cardTextlab}>{labs[labIndex].description}</p>
-            <p className={styles.cardLink2}>
-              <a href={labs[labIndex].link} target="_blank" rel="noopener noreferrer">
-                Clique para saber mais!
-              </a>
-            </p>
           </div>
           <button
             className={`${styles.carouselButton} ${styles.right}`}

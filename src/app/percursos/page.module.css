@@ -138,17 +138,12 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .card:hover {
   transform: translateY(-10px); 
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); 
   background-color: rgba(237, 246, 255, 0.5); 
   cursor: pointer; 
-}
-
-.cardTitle {
-  font-size: 28px;
-  color: #372179;
-  margin: 30px;
 }
 
 .cardText {
@@ -158,24 +153,32 @@
 }
 
 .cardLink {
-  margin-top: -10px;
-  color: #3b5998;
-  font-weight: bold;
+  color: #2C274B;
+  font-weight: 700;
+  font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
+  border-radius: 0.5rem;
+  background: rgba(152, 129, 255, 0.41);
+  width: fit-content;
+  margin: 1.5rem 2.9rem;
 }
 
 .cardLink2 {
-  margin-top: 10px;
-  color: #3b5998;
-  font-weight: bold;
-  font-size: 16px;
+  margin-top: 1.5rem;
+  color: #2C274B;
+  font-weight: 700;
+  font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
+  border-radius: 0.5rem;
+  background: rgba(152, 129, 255, 0.41);
+  width: fit-content;
 }
 
 .laboratorios {
-  margin-top: 1%;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   height: auto;
 }
@@ -228,7 +231,7 @@
   justify-content: center;
   text-align: center;
   width: 87rem; 
-  height: 24rem;
+  height: 20rem;
   padding: 20px;
   border-radius: 19px;
   background-color: #fff;
@@ -236,15 +239,31 @@
   margin: 0%;
 }
 
+.labCardLink {
+  display: block;
+  text-decoration: none; 
+  color: inherit;
+}
+
+.labCardText {
+  text-align: left;
+  margin: 8rem;
+}
+
+.labCardContent {
+  display: flex;
+  align-items: center;
+  height: 100%; 
+  width: 100%;
+  text-decoration: none; 
+  color: inherit;
+}
+
 .cardImage {
   width: 150px; 
   height: 150px; 
   object-fit: contain;
-  margin-top: 10px;
-  margin-bottom: 12px; 
-  display: block;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: 5rem;
 }
 
 .cardTitle {
@@ -252,6 +271,8 @@
   color: #372179;
   font-weight: bold;
   margin-bottom: 10px;
+  color: #6747C7;
+  margin: 30px;
 }
 
 .cardText {
@@ -262,11 +283,19 @@
 }
 
 .cardTextlab {
-  font-size: 16px;
+  font-size: 2.25rem;
   line-height: 1.5;
   margin-bottom: 0px;
   margin-left: 25px;
   margin-right: 25px;
+}
+
+.cardTitleLab {
+  color: #372179;
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+  margin-right: 25px;
+  font-weight: 800;
 }
 
 .cardLink a:hover {
@@ -283,8 +312,8 @@
 }
 
 .carouselButton:hover {
-  transform: scale(1.1);
-  color: #6747c7;
+  transform: scale(1.4);
+  color: #6747c7
 }
 
 .carouselButton.left {
@@ -308,7 +337,7 @@
 }
 
 .accent {
-  background-color: var(--accent-color);
+  background-color:rgba(152, 129, 255, 0.41);
   border-radius: 8px;
 }
 
@@ -408,15 +437,6 @@
   position: relative;
 }
 
-.sectionTitle2 {
-  font-size: 2.5rem;
-  color: #6747c7;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 .lineMid, .lineBottom {
   background: rgba(161, 161, 161, 0.29);
   width: 100%;
@@ -424,6 +444,7 @@
   margin: 0;
   position: absolute;
 }
+
 
 /* Responsividade geral */
 @media (max-width: 768px) {
