@@ -302,7 +302,9 @@ export default function Page() {
                 >
                   <p>{disciplina.codigo}</p>
                   <h3>{disciplina.nome}</h3>
-                  <p><strong>{disciplina.tipo}</strong></p>
+                  <p>
+                    <strong>{disciplina.tipo}</strong>
+                  </p>
                   <p>Período: {disciplina.periodo}</p>
                   <p>{disciplina.descricao}</p>
                 </div>

@@ -150,14 +150,8 @@
 }
 
 .map {
-  margin: -6%;
+  margin: -4%;
   text-align: center;
-}
-
-.mapImage {
-  width: 64.75rem;
-  height: 46.23056rem;
-  border-radius: 8px;
 }
 
 .legend {

@@ -330,7 +330,7 @@ export default function Page() {
                 id={`disciplina-${disciplina.id}`}
               >
                 <p>{disciplina.codigo}</p>
-                <p>{disciplina.nome}</p>
+                <h3>{disciplina.nome}</h3>
                 <p>
                   <strong>{disciplina.tipo}</strong>
                 </p>
