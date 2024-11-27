@@ -261,6 +261,7 @@ export default function Page() {
                 key={disciplina.id}
                 id={`disciplina-${disciplina.id}`}
                 >
+                  <p>{disciplina.codigo}</p>
                   <p>{disciplina.nome}</p>
                   <p><strong>{disciplina.tipo}</strong></p>
                   <p>Período: {disciplina.periodo}</p>
