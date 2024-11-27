@@ -10,7 +10,7 @@
   background-color: #edf6ff;
   width: 100%;
   height: auto;
-  padding: 40px 0px 130px 0px;
+  padding: 90px 0px 130px 0px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -126,8 +126,7 @@
   color: #6747c7;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   font-weight: 900;
-  margin-bottom: 1.5rem;
-  margin-top: 0;
+  margin: 0;
 }
 
 .icon {
@@ -624,7 +623,7 @@
 
   .backgroundRectangle {
     width: 100%;
-    padding: 50px 0px 100px 0px;
+    padding: 10px 0px 50px 0px;
   }
 
   .introSection {
@@ -708,7 +707,7 @@
 
   .backgroundRectangle {
     width: 100%;
-    padding: 55px 0px 100px 0px;
+    padding: 15px 0px 100px 0px;
   }
 
   .introSection {
