@@ -36,18 +36,16 @@ const HomePage = () => {
           <div className={styles.columns}>
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>Como funciona?</h3>
-              <ol>
-                <li> Escolha um percurso: Explore áreas de interesse.</li>
-                <li> Acesse etapas guiadas: Conteúdos organizados para cada fase do curso.</li>
-                <li> Aproveite recursos colaborativos: Atualizado pela comunidade acadêmica.</li>
-              </ol>
+              <p className={styles.columnText}>
+              Os alunos <strong className={styles.accent}>colaboram</strong> para abastecer o site com listas, provas antigas e dicas sobre as cadeiras. Todo esse conteúdo é organizado em nosso repositório do <a href="https://github.com/luigischmitt/PerCurso" target="_blank" className={styles.accent}>GitHub</a>, além de estar acessível diretamente aqui.
+              </p>
             </div>
 
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>Regras</h3>
-              <ol>
+              <ol className={styles.columnTable}>
                 <li>
-                  Respeite o <a href="https://github.com/luigischmitt/PerCurso/blob/main/C%C3%B3digo_de_conduta.md" target="_blank" rel="noopener noreferrer" className={styles.accent}>código de conduta</a>.
+                  Respeite o <a href="https://github.com/luigischmitt/PerCurso/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" className={styles.accent}>código de conduta</a>.
                 </li>
                 <li>Proibido falar mal dos professores.</li>
                 <li>Proibido publicar soluções de atividades avaliativas.</li>
@@ -57,15 +55,17 @@ const HomePage = () => {
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>Como contribuir?</h3>
               <p className={styles.columnText}>
-                Alunos do curso <strong className={styles.accent}>colaboram</strong> com várias informações como links úteis, resumos, provas e várias dicas. Esses arquivos ficam todos em nosso repositório do 
+                Se você percebeu que alguma <strong className={styles.accent}>informação</strong> está desatualizada ou encontrou algo que pode ser melhorado no site, não hesite em contribuir conosco. Para tal, leia 
+                o nosso 
+                <span>&nbsp;</span>
                 <a 
-                  href="https://github.com/luigischmitt/PerCurso" 
+                  href="https://github.com/luigischmitt/PerCurso/blob/main/CONTRIBUTING.md" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className={styles.accent}
                 >
-                  GitHub
-                </a>, e também estão disponibilizados aqui no site.
+                  Guia de Contribuição!
+                </a>
               </p>
             </div>
           </div>

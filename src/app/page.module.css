@@ -110,30 +110,37 @@
 }
 
 .column {
-  width: 420px;
-  height: auto;
+  width: 480px; 
+  height: auto;  
   border-radius: 18px;
   background: rgba(237, 246, 255, 0.34);
   box-shadow: 9px 11px 11px -3px rgba(0, 0, 0, 0.25);
-  padding: 35px;
+  padding: 40px;  
 }
 
 .columnTitle {
-  font-size: 20px;
+  text-align: center;
+  font-size: 22px; 
   color: var(--secondary-color);
   font-weight: bold;
 }
 
+.columnTable {
+  margin-left: 25px;
+  font-size: 18px;  
+  margin-bottom: 20px; 
+}
+
 .footer {
-  text-align: center;
-  padding: 5px;
   background-color: var(--primary-color);
   color: var(--white);
-  height: 73px;
+  text-align: center;
+  padding: 20px;
+  height: 80px; 
 }
 
 .footerLink {
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -179,13 +186,11 @@
 
 .column li {
   text-align: left;
-  line-height: 1.5;
-  font-size: 16px;
-  margin: 5px 0;
+  margin: 7px 0px 0px 12px;
 }
 
 .columnText {
-  font-size: 16px;
+  margin: 5px 0px 0px 12px;
 }
 
 
@@ -259,7 +264,7 @@
 
   .columnTitle {
     font-size: 16px;
-    text-align: left; 
+    text-align: center; 
   }
 
   .imageContainer {
@@ -434,11 +439,11 @@
   }
 
   .column li {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .columnText {
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
   }
 
@@ -490,11 +495,11 @@
   }
 
   .column li {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .columnText {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .columnTitle {
@@ -535,11 +540,11 @@
   }
 
   .column li {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .columnText {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .columnTitle {
@@ -580,11 +585,11 @@
   }
 
   .column li {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .columnText {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .columnTitle {
