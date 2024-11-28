@@ -28,7 +28,7 @@ export default function Page() {
     ];    
     
     const width = 1000;
-    const height = 600;
+    const height = 480;
 
     const svg = d3
       .select("#roadmap")

@@ -145,7 +145,7 @@ export default function Page() {
     <div>
       <div className={styles.backgroundRectangle}>
         <div className={styles.lineMid}></div>
-        <div className={styles.container}>
+        <div className={styles.container2}>
           <header className={styles.header}>
             <div className={styles.iconTitle}>
               <img src="/estatistica_icon.svg" alt="Logo pesquisa operacional" className={styles.icon} />
