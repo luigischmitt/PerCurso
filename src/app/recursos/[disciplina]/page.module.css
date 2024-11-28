@@ -3,7 +3,7 @@
   width: 100%;
   height: auto;
   padding: 2rem 0;
-  margin: 0; 
+  margin: 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -30,18 +30,21 @@
 }
 
 .container {
+  flex: 1; 
   max-width: 80%;
   width: 100%;
   margin: 0 auto;
   padding: 20px;
+  font-size: 1.5rem;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center; 
   flex-wrap: nowrap;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 
 .iconTitle {
@@ -62,7 +65,7 @@
   font-size: 4rem;
   color: var(--secondary-color);
   font-weight: 900;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
   text-align: left;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -77,7 +80,7 @@
   align-items: center;
   justify-content: center;
   width: auto;
-  min-width: 20rem; 
+  min-width: 20rem;
   height: 3.5rem;
   flex-direction: column;
   text-align: center;
@@ -89,18 +92,18 @@
   cursor: pointer;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
-  margin: 0 auto;
-  margin-right: 3.7rem;
+  margin-left: 15rem;
+  margin-right: auto;
 }
 
 .editButton:hover {
-  background-color: #5436AD;
+  background-color: #5436ad;
 }
 
 .navTabs {
   display: flex;
   justify-content: space-around;
-  background-color: #EDF6FF;
+  background-color: #edf6ff;
   padding: 10px 15px;
   border-radius: 8px;
   margin-bottom: 30px;
@@ -118,17 +121,17 @@
 }
 
 .navTabs span:hover {
-  background-color: #D0E6FF;
+  background-color: #d0e6ff;
 }
 
 .activeTab {
-  background-color: #D0E6FF;
+  background-color: #d0e6ff;
   color: var(--secondary-color);
   border-radius: 5px;
 }
 
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 
 .sectionTitle {
@@ -139,7 +142,7 @@
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -154,118 +157,491 @@
   transform: translateY(-5px);
 }
 
-/* Responsividade */
-
-/* Desktops grandes e médios */
-@media all and (min-width: 1024px) and (max-width: 1280px) {
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .navTabs {
-    font-size: 1rem;
-    gap: 8px;
-  }
-
-  .editButton {
-    width: 18rem;
-    height: 2.8rem;
-  }
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
 }
 
-/* Tablets em paisagem */
-@media all and (min-width: 768px) and (max-width: 1024px) {
+
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  height: 80px;
+  margin-top: auto; 
+}
+
+.footerLink {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+  .backgroundRectangle {
+    padding: 2rem 0;
+  }
+
   .container {
-    padding: 10px;
-  }
-
-  .title {
-    font-size: 2.25rem;
-  }
-
-  .editButton {
-    width: 16rem;
-    font-size: 0.9rem;
-  }
-}
-
-/* Tablets em retrato */
-@media all and (min-width: 480px) and (max-width: 768px) {
-  .lineTop, .lineBottom {
-    height: 0.15rem;
-  }
-
-  .title {
-    font-size: 3rem;
-    margin-left: 2rem;
-    width: 35rem;
-  }
-
-  .editButton {
-    font-size: 0.85rem;
-    margin-left: 2rem;
-    width: 15rem;
-    margin-top: 1.5rem;
-    z-index: 10;
-    position: relative;
-  }
-
-  .navTabs {
-    font-size: 0.95rem;
-    gap: 6px;
-  }
-
-  .icon {
-    width: 3rem;
-    height: 4rem;
-    margin-top: 2.5rem;
-    margin-left: 2rem;
+    padding: 20px;
+    font-size: 0.85rem;  
   }
 
   .header {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
     margin-bottom: 2rem;
+    max-width: 800px; 
+    margin: 0 auto; 
   }
 
-  .container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-}
-
-/* Smartphones pequenos */
-@media all and (max-width: 480px) {
-  .lineTop, .lineBottom {
-    height: 0.1rem;
+  .iconTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem; 
   }
 
-  .container {
-    padding: 5px;
+  .icon {
+    width: 4.9rem;
+    height: 5.4rem;
+    margin-bottom: 1.2rem; 
   }
 
   .title {
-    font-size: 1.75rem;
-    width: auto;
-  }
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    font-weight: 900;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0 auto;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 90%; 
+    padding: 0px 300px;
+  }  
 
   .editButton {
-    width: 12rem;
-    font-size: 0.75rem;
-    padding: 4px 8px;
+    margin: 0 auto; 
+    margin-top: 0.9rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 14rem;
+    height: 2.0rem;
+    font-size: 0.7rem;
   }
 
   .navTabs {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .navTabs span {
+    padding: 10px 15px;
+  }
+
+  .section {
+    margin-bottom: 180px;
+  }
+
+  .card {
+    padding: 20px;
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .backgroundRectangle {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 20px;
+    font-size: 0.9rem;  
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    margin-bottom: 2rem;
+    max-width: 800px; 
+    margin: 0 auto; 
+  }
+
+  .iconTitle {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 1rem; 
+  }
+
+  .icon {
+    width: 4.9rem;
+    height: 5.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .title {
+    font-size: 2.3rem; 
+    color: var(--secondary-color);
+    font-weight: 900;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0 auto;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal; 
+    max-width: 90%; 
+    padding: 0px 300px;
+  }  
+
+  .editButton {
+    margin: 0 auto; 
+    margin-top: 0.9rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    height: 2.40rem;
+    font-size: 0.8rem;
+  }
+
+  .navTabs {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .navTabs span {
+    padding: 10px 15px;
+  }
+
+  .section {
+    margin-bottom: 180px;
+  }
+
+  .card {
+    padding: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .backgroundRectangle {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 20px;
+    font-size: 1rem;  
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    margin-bottom: 2rem;
+    max-width: 800px; 
+    margin: 0 auto; 
+  }
+
+  .iconTitle {
+    display: flex;
     flex-direction: column; 
     align-items: center;
-    font-size: 0.85rem;
-    gap: 4px; 
+    margin-bottom: 1rem; 
+  }
+
+  .icon {
+    width: 5.1rem;
+    height: 5.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    color: var(--secondary-color);
+    font-weight: 900;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0 auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 90%; 
+    padding: 0px 170px;
+  }  
+
+  .editButton {
+    margin: 0 auto; 
+    margin-top: 0.9rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    height: 2.60rem;
+    font-size: 0.87rem;
+  }
+
+  .navTabs {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .navTabs span {
+    padding: 10px 15px;
+  }
+
+  .section {
+    margin-bottom: 180px;
+  }
+
+  .card {
+    padding: 20px;
+    font-size: 0.86rem;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .backgroundRectangle {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .iconTitle {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 1rem;
+  }
+
+  .icon {
+    width: 5.5rem;
+    height: 6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .title {
+    font-size: 3.1rem;
+    color: var(--secondary-color);
+    font-weight: 900;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0;
+  }
+
+  .editButton {
+    margin: 0 auto; 
+    margin-top: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    height: 2.77rem;
+    font-size: 0.92rem;
+  }
+
+  .navTabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .navTabs span {
+    padding: 10px 15px;
+  }
+
+  .section {
+    margin-bottom: 180px;
+  }
+
+  .card {
+    padding: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .backgroundRectangle {
+    padding: 2rem 0;
+  }
+
+  .container {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    margin-bottom: 2rem;
+  }
+
+  .iconTitle {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 1rem; 
+  }
+
+  .icon {
+    width: 5.5rem;
+    height: 6rem;
+    margin-bottom: 1.2rem; 
+  }
+
+  .title {
+    font-size: 3.1rem; 
+    color: var(--secondary-color);
+    font-weight: 900;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0;
+  }
+
+  .editButton {
+    margin: 0 auto; 
+    margin-top: 0.9rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20rem;
+    height: 2.77rem;
+    font-size: 0.92rem;
+  }
+
+  .navTabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .navTabs span {
+    padding: 10px 15px;
+  }
+
+  .section {
+    margin-bottom: 180px;
+  }
+
+  .card {
+    padding: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .backgroundRectangle {
+    padding: 2rem 0;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.3rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .iconTitle {
+    width: 70rem;
+  }
+
+  .icon {
+    width: 5.3rem;
+    height: 5.7rem;
+    margin-right: 1.5rem;
+  }
+
+  .title {
+    font-size: 3.3rem;
+    margin-left: 2rem;
+  }
+
+  .editButton {
+    min-width: 20rem;
+    height: 2.8rem;
+    font-size: 0.95rem;
+    margin-left: 5rem;
+    margin-right: auto;
+  }
+
+  .navTabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    gap: 10px;
+  }
+
+  .navTabs span {
+    padding: 10px 15px;
+  }
+
+  .section {
+    margin-bottom: 180px;
   }
 
   .sectionTitle {
-    font-size: 1.25rem;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    padding: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
 }
