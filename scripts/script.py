@@ -9,7 +9,7 @@ class TextStyles:
     BOLD = '\033[1m'       # Bold text
     UNDERLINE = '\033[4m'  # Underlined text
 
-BASE_PATH = './content'
+BASE_PATH = '../content'
 
 FILES = {
     'dicas.md': '''
