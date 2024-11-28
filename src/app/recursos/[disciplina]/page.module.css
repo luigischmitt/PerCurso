@@ -178,6 +178,12 @@
   text-decoration: none;
 }
 
+/* Adiciona um alinhamento consistente para listas */
+.card ul, .card ol {
+  margin-left: 0.5rem; 
+  padding-left: 0.5rem; 
+}
+
 
 @media (min-width: 0px) and (max-width: 480px) {
 
