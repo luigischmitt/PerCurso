@@ -55,5 +55,7 @@ Para contribuir com o PerCurso, você pode enviar um **pull request** para atual
 - [Beatriz Pessoa](https://github.com/beapessoa)
 - [Luigi Schmitt](https://github.com/luigischmitt)
 - [Nicolas Kleiton](https://github.com/Nicolas-Kleiton)
+
+Entre em **contato** conosco: [percursoci@gmail.com](mailto:percursoci@gmail.com) 📧
   
 Quer se juntar a nós? Envie seu Pull Request e faça parte da comunidade! 🎉
