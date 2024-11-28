@@ -14,9 +14,18 @@ Adotamos um [código de conduta](CODE_OF_CONDUCT.md) para garantir um ambiente a
 
 ## Organização das Disciplinas
 
-Para facilitar a manutenção e o entendimento do **PerCurso**, seguimos uma estrutura padrão nas informações das disciplinas. Cada disciplina está localizada na pasta `content/` e contém arquivos Markdown com informações específicas, como dicas, dificuldades, listas de exercícios e provas antigas. Leia mais sobre essa estrutura no [Guia de Organização](https://github.com/luigischmitt/PerCurso/wiki/Organiza%C3%A7%C3%A3o-das-Disciplinas).
+O **PerCurso** é alimentado diretamente pelos arquivos **Markdown** encontrados na pasta `content/` do repositório. Cada disciplina é representada por uma pasta dentro dessa pasta, e os arquivos Markdown nela contêm informações sobre o conteúdo dessa disciplina. Essas informações podem incluir:
 
-Caso você deseje adicionar uma nova disciplina ao site e não queira perder tempo com a estrutura, você pode utilizar um script que criamos. Para usá-lo, basta seguir o passo a passo aqui: [script](scripts/script.md)
+- Dicas: Recomendações e sugestões úteis para os alunos.
+- Dificuldades comuns: Desafios comuns que os alunos podem enfrentar nessa cadeira.
+- Listas de Exercícios: Compilações de listas antigas para praticar.
+- Provas: Provas antigas dessa cadeira.
+
+Esses arquivos são **renderizados automaticamente** no site para fornecer conteúdo interativo e acessível aos usuários.
+
+Para facilitar a manutenção e o entendimento do **PerCurso**, seguimos uma estrutura padrão nas informações das disciplinas. Leia mais sobre essa estrutura no [Guia de Organização](https://github.com/luigischmitt/PerCurso/wiki/Organiza%C3%A7%C3%A3o-das-Disciplinas).
+
+Caso você deseje **adicionar uma nova disciplina** ao site e não queira perder tempo com a estrutura, você pode utilizar um script que criamos. Para usá-lo, basta seguir o passo a passo aqui: [script](scripts/script.md)
 
 ## Organização das Issues
 
