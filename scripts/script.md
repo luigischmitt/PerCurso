@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Script para Criar Pastas e Arquivos de Percurso</h1>
+  <h1>Script para Criar uma Nova Disciplina</h1>
   <img src="../public/PerCurso2.svg" alt="PerCurso" width="350px">
   <hr>
 </div>
