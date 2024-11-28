@@ -195,6 +195,7 @@ export default function Page() {
       <div className={styles.backgroundRectangle2}>
       <div className={styles.lineMid}></div> 
         <div className={styles.container}>
+        <h2 className={styles.subtitle}>DISCIPLINAS</h2>
         <div className={styles.courseCards}>
             {[
               {
@@ -336,7 +337,7 @@ export default function Page() {
                 </p>
                 <p>Período: {disciplina.periodo}</p>
                 <p>{disciplina.descricao}</p>
-              </div>
+                </div>
             ))}
         </div>
       </div>

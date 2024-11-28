@@ -201,6 +201,7 @@
 .card {
   background-color: #fff;
   border: 1px solid #ddd;
+  height: 14rem;
   border-radius: 8px;
   padding: 16px;
   box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
@@ -208,11 +209,11 @@
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Eleva o card levemente */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); /* Aumenta a sombra */
-  background-color: #f7f7ff; /* Altera a cor de fundo para algo mais claro */
-  border-color: #6747c7; /* Destaca a borda com a cor principal */
-  cursor: pointer; /* Mostra o cursor como uma mão ao passar o mouse */
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); 
+  background-color: #f7f7ff;
+  border-color: #6747c7;
+  cursor: pointer;
 }
 
 .card h3 {

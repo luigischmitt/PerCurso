@@ -307,7 +307,7 @@ export default function Page() {
                   </p>
                   <p>Período: {disciplina.periodo}</p>
                   <p>{disciplina.descricao}</p>
-                </div>
+                  </div>
               ))}
             </div>
           </section>
