@@ -73,7 +73,7 @@ const HomePage = () => {
       </div>
         <footer className={styles.footer}>
           <p>© 2024 PerCurso, Todos os direitos reservados</p>
-          <a href="https://github.com/luigischmitt/PerCurso/blob/main/C%C3%B3digo_de_conduta.md" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Código de Conduta</a>
+          <a href="https://github.com/luigischmitt/PerCurso/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" className={styles.footerLink}>Código de Conduta</a>
         </footer>
     </div>
   );
