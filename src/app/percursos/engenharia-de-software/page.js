@@ -10,21 +10,21 @@ export default function Page() {
   useEffect(() => {
     const disciplinas = [
       { id: "root", nome: "Engenharia de Software", periodo: 0, obrigatoria: true },
-      { id: "ENG_SOFT", nome: "Engenharia de Software", periodo: 4, obrigatoria: true },
+      { id: "ENG_SOFT", nome: "Eng. de Software", periodo: 4, obrigatoria: true },
       { id: "FUND_IHC", nome: "Fundamentos da IHC", periodo: 0, obrigatoria: false },
       { id: "DESIGN_INTERACAO", nome: "Design de Interação", periodo: 8, obrigatoria: false },
-      { id: "IHC", nome: "Interação Humano-Computador", periodo: 7, obrigatoria: true },
+      { id: "IHC", nome: "IHC", periodo: 7, obrigatoria: true },
       { id: "REUSO_SOFTWARE", nome: "Reuso de Software", periodo: 5, obrigatoria: false },
       { id: "TEORIA_GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
-      { id: "METODOS_FORMAIS", nome: "Métodos Formais para Desenvolvimento de Software", periodo: 7, obrigatoria: false },
-      { id: "LOGICA", nome: "Lógica Aplicada à Computação", periodo: 2, obrigatoria: true },
-      { id: "METODOS_PROJETO", nome: "Métodos de Projeto de Software", periodo: 6, obrigatoria: true },
-      { id: "ESPECIFICACAO", nome: "Especificação de Requisitos de Software", periodo: 5, obrigatoria: true },
+      { id: "METODOS_FORMAIS", nome: "Métodos Formais Para Desenvol. de Soft.", periodo: 7, obrigatoria: false },
+      { id: "LOGICA", nome: "Lógica Aplicada", periodo: 2, obrigatoria: true },
+      { id: "METODOS_PROJETO", nome: "Métodos de Projeto de Soft.", periodo: 6, obrigatoria: true },
+      { id: "ESPECIFICACAO", nome: "Espec. de Requisitos de Soft.", periodo: 5, obrigatoria: true },
       { id: "TESTE_SOFTWARE", nome: "Teste de Software", periodo: 7, obrigatoria: true },
-      { id: "REDES", nome: "Redes de Computadores I", periodo: 4, obrigatoria: true },
+      { id: "REDES", nome: "Redes de Comp. I", periodo: 4, obrigatoria: true },
       { id: "BANCO_DADOS", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
-      { id: "ESTRUTURA_DADOS", nome: "Estrutura de Dados e Algoritmos I", periodo: 3, obrigatoria: true },
-      { id: "IMPLEMENTAÇÃO", nome: "Implementação de Sistemas para Dispositivos Móveis", periodo: 6, obrigatoria: false },
+      { id: "ESTRUTURA_DADOS", nome: "EDA I", periodo: 3, obrigatoria: true },
+      { id: "IMPLEMENTAÇÃO", nome: "Sistemas para Disposivos Móveis", periodo: 6, obrigatoria: false },
     ];
     
     const links = [

@@ -10,8 +10,8 @@ export default function Page() {
   useEffect(() => {
     const disciplinas = [
       { id: "root", nome: "Ciência de Dados & IA", periodo: 0, obrigatoria: true },
-      { id: "P3_EDA", nome: "Estrutura de Dados e Algoritmos I", periodo: 3, obrigatoria: true },
-      { id: "P3_PROB", nome: "Cálculo das Probabilidades e Estatística I", periodo: 3, obrigatoria: true },
+      { id: "P3_EDA", nome: "EDA I", periodo: 3, obrigatoria: true },
+      { id: "P3_PROB", nome: "Probabilidades e Estatística I", periodo: 3, obrigatoria: true },
       { id: "P4_IA", nome: "Introdução à IA", periodo: 4, obrigatoria: true },
       { id: "P5_BD1", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
       { id: "P6_ML", nome: "Paradigmas de Aprendizagem de Máquina", periodo: 6, obrigatoria: true },

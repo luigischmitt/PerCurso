@@ -10,12 +10,12 @@ export default function Page() {
   useEffect(() => {
     const disciplinas = [
       { id: "root", nome: "Pesquisa Operacional",periodo: 0, obrigatoria: true }, 
-      { id: "ALGEBRA", nome: "Introdução à Álgebra Linear",periodo: 2, obrigatoria: true }, 
-      { id: "APA", nome: "Análise de Projetos e Algoritmos",periodo: 5, obrigatoria: true }, 
+      { id: "ALGEBRA", nome: "Intro à Álgebra Linear",periodo: 2, obrigatoria: true }, 
+      { id: "APA", nome: "APA",periodo: 5, obrigatoria: true }, 
       { id: "PO", nome: "Pesquisa Operacional", periodo: 3, obrigatoria: false },
       { id: "ALG", nome: "Álgebra Linear Computacional", periodo: 3, obrigatoria: false }, 
-      { id: "PROG", nome: "Programação Orientada a Objetos", periodo: 2, obrigatoria: true },
-      { id: "EDA", nome: "Estrutura de Dados e Algoritmos I", periodo: 3, obrigatoria: true }, 
+      { id: "PROG", nome: "POO", periodo: 2, obrigatoria: true },
+      { id: "EDA", nome: "EDA I", periodo: 3, obrigatoria: true }, 
       { id: "ECON", nome: "Princípios de Economia", periodo: 0, obrigatoria: false },
       { id: "GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false }, 
     ];
