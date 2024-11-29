@@ -5,13 +5,6 @@
   padding: 30px;
 }
 
-.container2 {
-  max-width: 1500px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 30px;
-}
-
 .backgroundRectangle {
   background-color: #edf6ff;
   width: 100%;
@@ -157,7 +150,7 @@
 }
 
 .map {
-  margin: -4%;
+  margin: -2%;
   text-align: center;
 }
 
@@ -208,6 +201,7 @@
 .card {
   background-color: #fff;
   border: 1px solid #ddd;
+  height: 15rem;
   border-radius: 8px;
   padding: 16px;
   box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
@@ -215,11 +209,11 @@
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Eleva o card levemente */
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); /* Aumenta a sombra */
-  background-color: #f7f7ff; /* Altera a cor de fundo para algo mais claro */
-  border-color: #6747c7; /* Destaca a borda com a cor principal */
-  cursor: pointer; /* Mostra o cursor como uma mão ao passar o mouse */
+  transform: translateY(-10px); 
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25); 
+  background-color: #f7f7ff; 
+  border-color: #6747c7;
+  cursor: pointer; 
 }
 
 .card h3 {
@@ -229,7 +223,7 @@
 }
 
 .card:hover h3 {
-  color: #6747c7; /* Altera a cor do título ao passar o mouse */
+  color: #6747c7; 
 }
 
 .card p {
@@ -238,7 +232,7 @@
 }
 
 .card:hover p {
-  color: #333; /* Torna o texto mais destacado ao passar o mouse */
+  color: #333; 
 }
 
 .footer {
@@ -276,26 +270,110 @@
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (min-width: 0px) and (max-width: 480px) {
+@media (max-width: 768px) {
+  .courseCards {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .iconTitle {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .labs {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .labsText {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .labs h3 {
+    font-size: 1.25rem;
+  }
+
+  .labs ul {
+    margin-left: 0;
+  }
+
+  .icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+/* Ajustes para dispositivos móveis (telas muito pequenas) */
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.5rem;
+  }
 
+  .objectives li {
+    font-size: 16px;
+  }
+
+  .labs h3 {
+    font-size: 1.2rem;
+  }
+
+  .labs ul {
+    font-size: 16px;
+  }
+
+  .labsText ul {
+    margin-left: 0;
+  }
+
+  .labs ul li {
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    padding: 15px;
+  }
+
+  .footerLink {
+    font-size: 14px;
+  }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-
+#roadmap svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
-
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2C274B;
+  color: #FFFFFF;
 }
 
-@media (min-width: 1281px) and (max-width: 1440px) {
-
+.footerLink {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
-
+.selectedCard {
+  background-color: #e0e4ff;
+  border-color: #6747c7;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }

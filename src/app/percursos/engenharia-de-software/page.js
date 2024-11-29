@@ -167,9 +167,9 @@ export default function Page() {
               <div>
                 <h1 className={styles.title}>ENGENHARIA DE SOFTWARE</h1>
                 <ul className={styles.objectives}>
-                  <li>Dominar técnicas avançadas de desenvolvimento de software, incluindo metodologias ágeis e práticas DevOps.</li>
-                  <li>Utilizar ferramentas de versionamento, automação e integração contínua para garantir qualidade e eficiência do software.</li>
-                  <li>Aplicar princípios de engenharia de software para resolver problemas reais em áreas como educação, saúde, e-commerce, etc.</li>
+                  <li>Dominar técnicas avançadas de desenvolvimento, metodologias ágeis e práticas DevOps.</li>
+                  <li>Utilizar ferramentas de versionamento, automação e integração contínua para garantir qualidade e eficiência.</li>
+                  <li>Aplicar princípios de engenharia de software para resolver problemas reais em áreas como educação, saúde e e-commerce.</li>
                   <li>Analisar e otimizar sistemas legados para melhor desempenho e manutenção a longo prazo.</li>
                 </ul>
               </div>
