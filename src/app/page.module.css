@@ -41,10 +41,17 @@
   font-size: 20px;
   font-weight: 400;
   margin-right: 30px;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
 }
 
 .nav a:first-child {
   margin-right: 55px;
+}
+
+.nav a:hover {
+  color: #5436AD; /* Muda a cor para um tom roxo suave */
+  transform: translateY(-2px); /* Move ligeiramente para cima */
 }
 
 .main {
