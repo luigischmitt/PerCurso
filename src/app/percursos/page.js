@@ -219,7 +219,7 @@ const PercursosPage = () => {
             <div className={styles.groupItem}>
               <Link href="https://mcc.ci.ufpb.br/" target="_blank">
                 <div className={styles.groupContent}>
-                  <img src="/mcc_logo.svg" alt="Logo MCCUFPB" className={styles.groupImage} />
+                  <img src="/mcc_logo.png" alt="Logo MCCUFPB" className={styles.groupImage} />
                   <div className={styles.groupText}>
                     <h3 className={styles.groupTitle}>MCCUFPB</h3>
                     <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
