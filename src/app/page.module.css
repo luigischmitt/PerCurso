@@ -98,7 +98,7 @@
 
 .button:hover { 
   background-color: #5436AD;
-  transform: scale(1.05); /* Leve aumento */
+  transform: scale(1.05); 
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
