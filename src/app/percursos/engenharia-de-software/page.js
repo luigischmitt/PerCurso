@@ -191,6 +191,15 @@ export default function Page() {
       </div>
 
       <div id="roadmap" className={styles.map}></div>
+      
+      <div className={styles.legend}>
+        <div className={styles.legendItem}>
+          <span>OBRIGATÓRIAS</span>
+        </div>
+        <div className={styles.legendItem}>
+          <span>OPTATIVAS</span>
+        </div>
+      </div>
 
       <div className={styles.backgroundRectangle2}>
       <div className={styles.lineMid}></div> 

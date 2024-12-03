@@ -109,6 +109,37 @@
   margin-bottom: 8px;
 }
 
+.legend {
+  position: absolute;
+  bottom: -350px; 
+  right: 200px; 
+  display: flex;
+  flex-direction: column; 
+  gap: 16px; 
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px; 
+}
+
+.legendItem span {
+  color: black;
+  background-color: rgba(94, 58, 161, 0.9); 
+  padding: 6px 14px; 
+  border-radius: 12px; 
+  width: 160px; 
+  text-align: center; 
+}
+
+.legendItem:nth-child(2) span {
+  background-color: rgba(189, 167, 226, 0.9);
+  width: 160px;
+  padding: 6px 27px; 
+}
+
 .labs {
   display: flex;
   text-align: right;
