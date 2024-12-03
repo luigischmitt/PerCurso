@@ -138,7 +138,7 @@ const PercursosPage = () => {
        <main className={`${styles.mainContainer} ${styles.inverted}`}>
         <div className={styles.lineTop}></div>
         <section className={`${styles.container} ${styles.introSection}`}>
-          <img src="/girl_studying.svg" alt="Imagem ilustrativa do PerCurso" className={styles.bannerImage} />
+          <img src="/img.svg" alt="Imagem ilustrativa do PerCurso" className={styles.bannerImage} />
           <div className={styles.introText}>
             <h2 className={styles.title}>Materiais de Estudo</h2>
             <p className={styles.title_p}>

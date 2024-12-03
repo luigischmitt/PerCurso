@@ -24,7 +24,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className={styles.imageContainer}>
-              <img src="/image1.svg" alt="Descrição da imagem" className={styles.mainImage} />
+              <img src="/img2.svg" alt="Descrição da imagem" className={styles.mainImage} />
             </div>
           </div>
         </main>
