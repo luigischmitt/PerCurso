@@ -1,7 +1,7 @@
 /* Ajeitar Responsividade dessas legendas */
 .legend {
   position: absolute;
-  bottom: -550px; 
+  bottom: -600px; 
   right: 200px; 
   display: flex;
   flex-direction: column; 
@@ -16,8 +16,8 @@
 }
 
 .legendItem span {
-  color: black;
-  background-color: rgba(94, 58, 161, 0.9); 
+  color: #2C274B;
+  background-color: rgb(149, 127, 216); 
   padding: 6px 14px; 
   border-radius: 12px; 
   width: 160px; 
@@ -25,7 +25,7 @@
 }
 
 .legendItem:nth-child(2) span {
-  background-color: rgba(189, 167, 226, 0.9);
+  background-color: rgb(212, 203, 255);
   width: 160px;
   padding: 6px 27px; 
 }
