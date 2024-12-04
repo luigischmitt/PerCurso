@@ -63,20 +63,40 @@ export default function Page() {
       .attr("stroke", "#999")
       .attr("stroke-width", 2);
 
+    const defs = svg.append("defs");
+
+    defs.append("filter")
+        .attr("id", "shadow")
+        .attr("x", "-50%")
+        .attr("y", "-50%")
+        .attr("width", "200%")
+        .attr("height", "200%")
+      .append("feDropShadow")
+        .attr("dx", 3)
+        .attr("dy", 3) 
+        .attr("stdDeviation", 7.9) 
+        .attr("flood-color", "rgba(0, 0, 0, 0.08)"); 
+  
+  
     const node = svg
       .append("g")
       .selectAll("circle")
       .data(disciplinas)
       .enter()
       .append("circle")
-      .attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15))
-      .attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2"))
+      .attr("r", (d) => (d.id === "root" ? 70 : d.obrigatoria ? 25 : 15))
+      .attr("fill", (d) => (d.id === "root" ? "#EDF6FF" : d.obrigatoria ? "#957FD8" : "#D4CBFF"))
       .style("cursor", "pointer")
+      .attr("filter", "url(#shadow)") 
       .on("mouseover", function () {
-        d3.select(this).transition().duration(200).attr("fill", "#6747C7").attr("r", (d) => (d.id === "root" ? 45 : d.obrigatoria ? 30 : 20));
+        d3.select(this).transition().duration(300)
+          .attr("fill", (d) => (d.id === "root" ? "#EDF6FF" : d.obrigatoria ? "#6F59B1" : "#B8AAF8"))
+          .attr("r", (d) => (d.id === "root" ? 70 : d.obrigatoria ? 30 : 20));
       })
       .on("mouseout", function () {
-        d3.select(this).transition().duration(200).attr("fill", (d) => (d.id === "root" ? "#9C6ADE" : d.obrigatoria ? "#5e3aa1" : "#bda7e2")).attr("r", (d) => (d.id === "root" ? 40 : d.obrigatoria ? 25 : 15));
+        d3.select(this).transition().duration(200)
+          .attr("fill", (d) => (d.id === "root" ? "#EDF6FF" : d.obrigatoria ? "#957FD8" : "#D4CBFF"))
+          .attr("r", (d) => (d.id === "root" ? 70 : d.obrigatoria ? 25 : 15));
       })
       .on("click", function (event, d) {
         const targetId = `disciplina-${d.id}`;
@@ -87,42 +107,51 @@ export default function Page() {
         }
         targetElement.scrollIntoView({ behavior: "smooth" });
         setSelectedDiscipline(d.id);
-
+  
         setTimeout(() => {
           setSelectedDiscipline(null);
         }, 1500);
       });
-
-    node.call(
-      d3.drag()
-        .on("start", (event, d) => {
-          if (!event.active) simulation.alphaTarget(0.3).restart();
-          d.fx = d.x;
-          d.fy = d.y;
-        })
-        .on("drag", (event, d) => {
-          d.fx = event.x;
-          d.fy = event.y;
-        })
-        .on("end", (event, d) => {
-          if (!event.active) simulation.alphaTarget(0);
-          d.fx = null;
-          d.fy = null;
-        })
-    );
-
-    const label = svg
-      .append("g")
-      .selectAll("text")
-      .data(disciplinas)
-      .enter()
-      .append("text")
-      .text((d) => d.nome)
-      .attr("dy", ".35em")
-      .attr("font-size", "10px")
-      .attr("fill", "#000")
-      .attr("text-anchor", "middle")
-      .style("pointer-events", "none");
+  
+          
+  
+      node.call(
+        d3.drag()
+          .on("start", (event, d) => {
+            if (!event.active) simulation.alphaTarget(0.3).restart();
+            d.fx = d.x;
+            d.fy = d.y;
+          })
+          .on("drag", (event, d) => {
+            d.fx = event.x;
+            d.fy = event.y;
+          })
+          .on("end", (event, d) => {
+            if (!event.active) simulation.alphaTarget(0);
+            d.fx = null;
+            d.fy = null;
+          })
+      );
+  
+      const label = svg
+        .append("g")
+        .selectAll("text")
+        .data(disciplinas)
+        .enter()
+        .append("text")
+        .text((d) => d.nome)
+        .attr("dy", "1.2em")
+        .attr("fill", (d) => (d.id === "root" ? "#6747C7" : "#372179"))
+        .attr("x", "50%") 
+        .attr("text-anchor", "middle")
+        .style("pointer-events", "none")
+        .style("text-transform", "uppercase")
+        .style("font-size", (d) => (d.id === "root" ? "14px" : "8px"))
+        .style("font-weight", (d) => (d.id === "root" ? "900" : "bold"))
+        .style("text-shadow", (d) => (d.id === "root" ? "2px 2px 5px rgba(0, 0, 0, 0.3)" : "none"))
+        .each(function(d) {
+          console.log(d.nome);
+      });
 
     simulation.on("tick", () => {
       link
