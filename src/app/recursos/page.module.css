@@ -99,6 +99,18 @@
   align-items: center;
 }
 
+.introText {
+  transition: all 0.3s ease;
+}
+
+.introText:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  background-color: rgba(237, 246, 255, 0.5);
+  cursor: pointer;
+}
+
+
 .title {
   font-size: 1.5rem;
   text-align: center;
