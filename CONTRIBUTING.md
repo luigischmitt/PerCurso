@@ -8,6 +8,10 @@
 
 <hr>
 
+## Entendendo o PerCurso
+
+O [PerCurso](https://percurso.vercel.app/) é um site estático open-source que organiza e apresenta os percursos acadêmicos de diferentes áreas de estudo, ajudando estudantes a entender melhor as disciplinas e suas interconexões. Ele é alimentado por arquivos Markdown (.md) no GitHub, que são renderizados em páginas HTML no site.
+
 ## Código de Conduta
 
 Adotamos um [código de conduta](CODE_OF_CONDUCT.md) para garantir um ambiente acolhedor e colaborativo para todos os participantes. É importante que você leia e compreenda as diretrizes antes de contribuir. Respeito e empatia são valores fundamentais na nossa comunidade. 🤝
