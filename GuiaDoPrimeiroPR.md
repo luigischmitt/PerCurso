@@ -4,7 +4,7 @@
   <hr>
 </div>
 
-Bem-vindo ao **Guia do Primeiro Pull Request (PR) do PerCurso!** Estamos empolgados com sua contribuição para ajudar estudantes a explorar e planejar percursos acadêmicos da melhor forma. Este guia **foi feito para facilitar** o processo de envio do seu primeiro PR, mesmo que você nunca tenha contribuído para projetos de open source (código aberto) antes. Caso você já tenha experiência no mundo open source, rencomendamos que você siga o nosso [Guia de Contribuição](/CONTRIBUTING.md)
+Bem-vindo ao **Guia do Primeiro Pull Request (PR) do PerCurso!** Estamos empolgados com sua contribuição para ajudar estudantes a explorar e planejar percursos acadêmicos da melhor forma. Este guia **foi feito para facilitar o processo de envio do seu primeiro PR**, mesmo que você nunca tenha contribuído para projetos de open source (código aberto) antes. Caso você já tenha experiência no mundo open source, recomendamos que você siga o nosso [Guia de Contribuição](/CONTRIBUTING.md).
 <hr>
 
 ## 1. Entendendo o PerCurso
