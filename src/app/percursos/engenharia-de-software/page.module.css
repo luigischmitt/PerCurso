@@ -1,3 +1,35 @@
+/* Ajeitar Responsividade dessas legendas */
+.legend {
+  position: absolute;
+  bottom: -550px; 
+  right: 200px; 
+  display: flex;
+  flex-direction: column; 
+  gap: 16px; 
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px; 
+}
+
+.legendItem span {
+  color: black;
+  background-color: rgba(94, 58, 161, 0.9); 
+  padding: 6px 14px; 
+  border-radius: 12px; 
+  width: 160px; 
+  text-align: center; 
+}
+
+.legendItem:nth-child(2) span {
+  background-color: rgba(189, 167, 226, 0.9);
+  width: 160px;
+  padding: 6px 27px; 
+}
+
 .container {
   max-width: 1500px;
   width: 100%;
@@ -107,37 +139,6 @@
 
 .objectives li {
   margin-bottom: 8px;
-}
-
-.legend {
-  position: absolute;
-  bottom: -550px; 
-  right: 200px; 
-  display: flex;
-  flex-direction: column; 
-  gap: 16px; 
-}
-
-.legendItem {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 24px; 
-}
-
-.legendItem span {
-  color: black;
-  background-color: rgba(94, 58, 161, 0.9); 
-  padding: 6px 14px; 
-  border-radius: 12px; 
-  width: 160px; 
-  text-align: center; 
-}
-
-.legendItem:nth-child(2) span {
-  background-color: rgba(189, 167, 226, 0.9);
-  width: 160px;
-  padding: 6px 27px; 
 }
 
 .labs {
@@ -301,110 +302,856 @@
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .courseCards {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
 
-  .header {
+@media (min-width: 0px) and (max-width: 480px) {
+  .container {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto; 
+  }
+  
+  .backgroundRectangle {
+    width: 100%;
+    height: 28rem; 
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .iconTitle {
-    width: 100%;
-    margin: 0;
     justify-content: center;
+    position: relative;
+  }
+  
+  .backgroundRectangle2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0; 
+  }
+  
+  .iconTitle {
+    width: 30rem; 
   }
 
+  .icon {
+    width: 3.2rem;
+    height: 3.8rem;
+    margin-right: 1rem;
+    margin-top: 100px;
+  }
+  
   .title {
-    font-size: 3rem;
+    font-size: 1.8rem;
+    text-align: center; 
+    margin: 100px auto 0 auto; 
+  }
+  
+  .objectives {
+    margin: 2rem auto; 
+    font-size: 13px;
     text-align: center;
   }
-
-  .labs {
-    margin-top: 2rem;
-    text-align: center;
+  
+  .objectives li {
+    margin-bottom: 8px;
   }
-
-  .labsText {
-    margin-left: 0;
-    margin-top: 1rem;
-  }
-
+  
   .labs h3 {
-    font-size: 1.25rem;
+    display: none;
+  }
+  
+  .labs ul {
+    display: none;
+  }
+  
+  .lineBottom {
+    display: none;
+  }
+  
+  .lineVertical {
+    display: none;
+  }
+  
+  .map {
+    margin: -2%;
+  }
+  
+  .legend {
+    margin-top: 20px;
+    gap: 20px;
   }
 
+  .courses {
+    margin-bottom: 1%;
+  }
+  .subtitle {
+    font-size: 2.3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  
+  .courseCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+    justify-content: center; 
+    margin: 0 auto; 
+  }
+  
+  .card {
+    height: 16rem;
+    width: 16rem;
+    padding: 16px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .card p {
+    margin: 3px 0;
+  }
+  
+  .codigo {
+    font-size: 13px;
+  }
+  
+  .nome {
+    font-size: 15px;
+  }
+  
+  .tipo {
+    font-size: 11px;
+  }
+  
+  .periodo {
+    font-size: 10px;
+  }
+  
+  .descricao {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto; 
+  }
+  
+  .backgroundRectangle {
+    width: 100%;
+    height: 26rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .backgroundRectangle2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0; 
+  }
+  
+  .iconTitle {
+    width: 30rem;
+  }
+
+  .icon {
+    width: 3.6rem;
+    height: 4.2rem;
+    margin-right: 1rem;
+    margin-top: 90px;
+  }
+  
+  .title {
+    font-size: 2.2rem;
+    text-align: center; 
+    margin: 90px auto 0 auto;
+  }
+  
+  .objectives {
+    margin: 2rem auto; 
+    font-size: 15px;
+    text-align: center; 
+  }
+  
+  .objectives li {
+    margin-bottom: 8px;
+  }
+  
+  .labs h3 {
+    font-size: 1.2rem;
+    display: none;
+  }
+  
   .labs ul {
-    margin-left: 0;
+    display: none;
+  }
+  
+  .lineBottom {
+    display: none;
+  }
+  
+  .lineVertical {
+    display: none;
+  }
+  
+  .map {
+    margin: -2%;
+  }
+  
+  .legend {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .courses {
+    margin-bottom: 1%;
+  }
+  .subtitle {
+    font-size: 2.7rem;
+    margin-bottom: 2.5rem;
+    text-align: center; 
+  }
+  
+  .courseCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
+    justify-content: center; 
+    margin: 0 auto; 
+  }
+  
+  .card {
+    height: 14rem;
+    width: 22rem;
+    padding: 16px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .card p {
+    margin: 4px 0;
+  }
+  
+  .codigo {
+    font-size: 15.5px;
+  }
+  
+  .nome {
+    font-size: 17px;
+  }
+  
+  .tipo {
+    font-size: 13.5px;
+  }
+  
+  .periodo {
+    font-size: 11.7px;
+  }
+  
+  .descricao {
+    font-size: 12.5px;
+  }
+}  
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto; 
+  }
+  
+  .backgroundRectangle {
+    width: 100%;
+    height: 24rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .backgroundRectangle2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
+    margin: 2rem 0; 
+  }
+  
+  .iconTitle {
+    width: 40rem; 
   }
 
   .icon {
     width: 4rem;
-    height: 4rem;
-    margin: 0;
+    height: 4.5rem;
+    margin-right: 1.6rem;
   }
+  
+  .title {
+    font-size: 2.8rem;
+    text-align: center; 
+    margin: 0 auto; 
+  }
+  
+  .objectives {
+    margin: 2rem auto; 
+    font-size: 16px;
+    text-align: center; 
+  }
+  
+  .objectives li {
+    margin-bottom: 8px;
+  }
+  
+  .labs h3 {
+    font-size: 1.2rem;
+    display: none;
+  }
+  
+  .labs ul {
+    display: none;
+  }
+  
+  .lineBottom {
+    display: none;
+  }
+  
+  .lineVertical {
+    display: none;
+  }
+  
+  .map {
+    margin: -2%;
+  }
+  
+  .legend {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .courses {
+    margin-bottom: 1%;
+  }
+  .subtitle {
+    font-size: 3.3rem;
+    margin-bottom: 2.5rem;
+    text-align: center; 
+  }
+  
+  .courseCards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    justify-content: center; 
+    margin: 0 auto; 
+  }
+  
+  .card {
+    height: 14rem;
+    width: 28rem;
+    padding: 16px;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .card p {
+    margin: 4px 0;
+  }
+  
+  .codigo {
+    font-size: 17px;
+  }
+  
+  .nome {
+    font-size: 20px;
+  }
+  
+  .tipo {
+    font-size: 15px;
+  }
+  
+  .periodo {
+    font-size: 13px;
+  }
+  
+  .descricao {
+    font-size: 14px;
+  }
+  
 }
 
-/* Ajustes para dispositivos móveis (telas muito pequenas) */
-@media (max-width: 480px) {
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+  }
+  
+  .backgroundRectangle {
+    width: 100%;
+    height: 29rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .backgroundRectangle2 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .iconTitle {
+    width: 40rem; 
+  }
+  
+  .icon {
+    display: none;
+  }
+  
   .title {
-    font-size: 2.5rem;
+    flex: 1;
+    font-size: 3.3rem;
+    text-align: left;
+    margin-left: 2rem;
   }
-
+  
+  .objectives {
+    margin: 2rem 0;
+    margin-left: 3rem;
+    font-size: 17px;  
+    text-align: left;
+  }
+  
   .objectives li {
-    font-size: 16px;
+    margin-bottom: 8px;
   }
-
+  
+  .labs {
+    text-align: right;
+    margin-right: 2.4rem;
+    margin-top: 4.5rem;
+  }
+  
+  .labsText {
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+  }
+  
+  
   .labs h3 {
     font-size: 1.2rem;
   }
-
+  
   .labs ul {
+    margin: 0.8rem 0;
+    margin-left: 2.2rem;
+    font-size: 17px;
+  }
+  
+  .map {
+    margin: -2%;
+  }
+  
+  .legend {
+    margin-top: 20px;
+    gap: 20px;
+  }
+
+  .courses {
+    margin-bottom: 1%;
+  }
+  
+  .subtitle {
+    font-size: 3.6rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .courseCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 0 50px;
+  }
+  
+  .card {
+    height: 13rem;
+    width: 25rem;
+    padding: 16px;
+  }
+
+  .card p {
+    margin: 4px 0;
+  }
+  
+  .codigo {
     font-size: 16px;
   }
+  
+  .nome {
+    font-size: 19px;
+  }
+  
+  .tipo {
+    font-size: 14px;
+  }
+  
+  .periodo {
+    font-size: 12px;
+  }
+  
+  .descricao {
+    font-size: 13px;
+  }
+  
+}
 
-  .labsText ul {
-    margin-left: 0;
+
+@media (min-width: 1281px) and (max-width: 1440px) {
+  .container {
+    max-width: 1100px;
+    width: 100%;
+    padding: 30px;
+  }
+  
+  .backgroundRectangle {
+    width: 100%;
+    height: 29rem;/* tamanho do background inicio azul claro */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .backgroundRectangle2 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .iconTitle {
+    width: 45rem; 
+  }
+  
+  .icon {
+    width: 5.3rem;
+    height: 5.8rem;
+    margin-right: 1.6rem;
+  }
+  
+  .title {
+    flex: 1;
+    font-size: 3.6rem;
+    text-align: left;
+    margin-left: 2rem;
+  }
+  
+  .objectives {
+    margin: 2rem 0;
+    margin-left: 2.2rem;
+    font-size: 18px;  
+    text-align: left;
+  }
+  
+  .objectives li {
+    margin-bottom: 8px;
+  }
+  
+  .labs {
+    text-align: right;
+    margin-right: 2rem;
+    margin-top: 4.5rem;
+  }
+  
+  .labsText {
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+  }
+  
+  
+  .labs h3 {
+    font-size: 1.3rem;
+  }
+  
+  .labs ul {
+    margin: 0.8rem 0;
+    margin-left: 2.2rem;
+    font-size: 18px;
+  }
+  
+  .map {
+    margin: -2%;
+  }
+  
+  .legend {
+    margin-top: 20px;
+    gap: 20px;
   }
 
-  .labs ul li {
-    font-size: 1.2rem;
+  .courses {
+    margin-bottom: 1%;
+  }
+  
+  .subtitle {
+    font-size: 3.75rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .courseCards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    height: 14rem;
+    padding: 16px;
   }
 
-  .footer {
-    padding: 15px;
+  .card p {
+    margin: 4px 0;
   }
-
-  .footerLink {
+  
+  .codigo {
+    font-size: 17px;
+  }
+  
+  .nome {
+    font-size: 21px;
+  }
+  
+  .tipo {
+    font-size: 15px;
+  }
+  
+  .periodo {
+    font-size: 13px;
+  }
+  
+  .descricao {
     font-size: 14px;
   }
 }
 
-#roadmap svg {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
+@media (min-width: 1441px) and (max-width: 1920px) {
+  .container {
+    max-width: 1300px;
+    width: 100%;
+    padding: 30px;
+  }
+  
+  .backgroundRectangle {
+    width: 100%;
+    height: 28rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .backgroundRectangle2 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .iconTitle {
+    width: 55rem; 
+  }
+  
+  .icon {
+    width: 5.5rem;
+    height: 6rem;
+    margin-right: 1.6rem;
+  }
+  
+  .title {
+    flex: 1;
+    font-size: 3.8rem;
+    text-align: left;
+    margin-left: 2rem;
+  }
+  
+  .objectives {
+    margin: 2rem 0;
+    margin-left: 2.2rem;
+    font-size: 19px;  
+    text-align: left;
+  }
+  
+  .objectives li {
+    margin-bottom: 8px;
+  }
+  
+  .labs {
+    text-align: right;
+    margin-right: 2rem;
+    margin-top: 4.5rem;
+  }
+  
+  .labsText {
+    margin-top: 0.5rem;
+    margin-left: 2.5rem;
+  }
+  
+  
+  .labs h3 {
+    font-size: 1.4rem;
+  }
+  
+  .labs ul {
+    margin: 0.8rem 0;
+    margin-left: 2.2rem;
+    font-size: 19px;
+  }
+  
+  .map {
+    margin: -2%;
+  }
+  
+  .legend {
+    margin-top: 20px;
+    gap: 20px;
+  }
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #2C274B;
-  color: #FFFFFF;
-}
+  .courses {
+    margin-bottom: 1%;
+  }
+  
+  .subtitle {
+    font-size: 3.9rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .courseCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    height: 14rem;
+    padding: 16px;
+  }
 
-.footerLink {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.selectedCard {
-  background-color: #e0e4ff;
-  border-color: #6747c7;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.35);
-  transform: translateY(-5px);
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  .card p {
+    margin: 4px 0;
+  }
+  
+  .codigo {
+    font-size: 16px;
+  }
+  
+  .nome {
+    font-size: 20px;
+  }
+  
+  .tipo {
+    font-size: 14px;
+  }
+  
+  .periodo {
+    font-size: 12px;
+  }
+  
+  .descricao {
+    font-size: 13px;
+  }
 }
