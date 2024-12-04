@@ -778,7 +778,7 @@
   
   .title {
     flex: 1;
-    font-size: 3.3rem;
+    font-size: 3rem;
     text-align: left;
     margin-left: 2rem;
   }
@@ -913,17 +913,18 @@
   
   .iconTitle {
     width: 45rem; 
+    margin-left: -2rem;
   }
   
   .icon {
-    width: 5.3rem;
-    height: 5.8rem;
+    width: 5rem;
+    height: 5rem;
     margin-right: 1.6rem;
   }
   
   .title {
     flex: 1;
-    font-size: 3.6rem;
+    font-size: 3rem;
     text-align: left;
     margin-left: 2rem;
   }
@@ -1054,6 +1055,7 @@
   
   .iconTitle {
     width: 55rem; 
+    margin-left: -4rem;
   }
   
   .icon {
@@ -1064,9 +1066,10 @@
   
   .title {
     flex: 1;
-    font-size: 3.8rem;
+    font-size: 3rem;
     text-align: left;
     margin-left: 2rem;
+    white-space: nowrap;
   }
   
   .objectives {

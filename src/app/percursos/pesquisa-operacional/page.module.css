@@ -159,6 +159,7 @@
   display: flex;
   text-align: right;
   margin-right: 2rem;
+  margin-left: 5rem;
   margin-top: 4.5rem;
 }
 
@@ -630,12 +631,12 @@
 
   .icon {
     width: 4rem;
-    height: 4.5rem;
+    height: 4rem;
     margin-right: 1.6rem;
   }
   
   .title {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     text-align: center; 
     margin: 0 auto; 
   }
@@ -778,7 +779,7 @@
   
   .title {
     flex: 1;
-    font-size: 3.3rem;
+    font-size: 3rem;
     text-align: left;
     margin-left: 2rem;
   }
@@ -913,19 +914,21 @@
   
   .iconTitle {
     width: 45rem; 
+    margin-left: -2rem;
   }
   
   .icon {
-    width: 5.3rem;
-    height: 5.8rem;
+    width: 5rem;
+    height: 5rem;
     margin-right: 1.6rem;
   }
   
   .title {
     flex: 1;
-    font-size: 3.6rem;
+    font-size: 3rem;
     text-align: left;
     margin-left: 2rem;
+    white-space: nowrap;
   }
   
   .objectives {
@@ -941,7 +944,7 @@
   
   .labs {
     text-align: right;
-    margin-right: 2rem;
+    margin-right: -4rem;
     margin-top: 4.5rem;
   }
   
@@ -960,7 +963,7 @@
     margin-left: 2.2rem;
     font-size: 18px;
   }
-  
+
   .map {
     margin: -2%;
   }
@@ -1054,6 +1057,7 @@
   
   .iconTitle {
     width: 55rem; 
+    margin-left: -8rem;
   }
   
   .icon {
@@ -1064,9 +1068,10 @@
   
   .title {
     flex: 1;
-    font-size: 3.8rem;
+    font-size: 3rem;
     text-align: left;
-    margin-left: 2rem;
+    margin-left: 3rem;
+    white-space: nowrap;
   }
   
   .objectives {
