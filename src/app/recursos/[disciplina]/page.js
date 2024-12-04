@@ -160,14 +160,24 @@ export default function DisciplinaPage({ params }) {
               <img src={disciplinaIcone} className={styles.icon} />
               <h1 className={styles.title}>{disciplinaNome}</h1>
             </div>
-            <a 
-              href={`https://github.com/luigischmitt/PerCurso/tree/main/content/${params.disciplina}`} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className={styles.editButton}
-            >
-              EDITAR ESTA CADEIRA
-            </a>
+            <div className={styles.buttonsWrapper}>
+              <a 
+                href={`https://github.com/luigischmitt/PerCurso/tree/main/content/${params.disciplina}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={styles.editButton}
+              >
+                EDITAR ESTA CADEIRA
+              </a>
+              <a
+                href="https://github.com/luigischmitt/PerCurso/blob/main/GuiaDoPrimeiroPR.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.howEditButton}
+              >
+                COMO EDITAR
+              </a>
+            </div>
           </header>
         </div>
         <div className={styles.lineBottom}></div>
