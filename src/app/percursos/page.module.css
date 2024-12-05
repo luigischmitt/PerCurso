@@ -88,7 +88,7 @@
   padding: 40px 20px;
   text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .sectionTitle {
@@ -469,7 +469,7 @@
   
   .sectionTitle {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     margin-bottom: 1.4rem;
   }
   
@@ -479,7 +479,7 @@
   
   .percursosDescription {
     text-align: center;
-    width: 17rem;
+    width: 19rem;
     font-size: 13px;
     margin: 0px 0px 34px 0px;
   }
@@ -631,6 +631,10 @@
     font-size: 0.6rem;
     line-height: 1.5;
     margin-bottom: 1rem;
+  }
+
+  .backgroundRectangle {
+    height: 20rem;
   }
 }
 
@@ -848,6 +852,7 @@
   
   .percursos {
     padding: 40px 20px;
+    justify-content: center;
   }
   
   .sectionTitle {
@@ -874,7 +879,7 @@
 
   .card {
     width: 100%;
-    max-width: 320px;
+    max-width: 520px;
     height: auto;
     margin: 10px auto;
     
@@ -886,7 +891,7 @@
 
   .cardLink {
     font-size: 0.84rem;
-    margin: 1.4rem 4rem;
+    margin: 1.4rem 11rem;
   }
 
   .cardTitle {
@@ -965,12 +970,12 @@
 
   .row {
     display: flex;
-    flex-direction: column; 
+    justify-content: center; 
     gap: 20px; 
   }
   
   .groupItem {
-    width: 100%;
+    width: 520px;
     margin: 10px 0; 
     padding: 15px;
   }
@@ -1025,7 +1030,7 @@
   
   .sectionTitle {
     text-align: center;
-    font-size: 4.1rem;
+    font-size: 4.5rem;
     margin-bottom: 1.4rem;
   }
   
@@ -1035,19 +1040,19 @@
   
   .percursosDescription {
     text-align: center;
-    width: 40rem;
+    width: 50rem;
     font-size: 18px;
     margin: 0px 0px 34px 0px;
   }
   
   .cardsContainer {
-    gap: 2px;
+    gap: 10px;
     margin-top: 17px;
   }
     
   .card {
     padding: 10px;
-    width: 15rem;
+    width: 14rem;
     height: 25rem;
   }
   
@@ -1163,7 +1168,8 @@
   .groupItem {
     gap: 2rem;
     width: 50%; 
-    height: 24rem;
+    min-width: 20rem;
+    height: 20rem;
     padding: 10px;
   }
   
@@ -1192,6 +1198,14 @@
     font-size: 0.8rem;
     line-height: 1.5;
     margin-bottom: 1rem;
+  }
+
+  .percursos {
+    justify-content: center;
+  }
+
+  .backgroundRectangle {
+    height: 23rem;
   }
 }
 
@@ -1381,7 +1395,7 @@
 
 @media (min-width: 1441px) and (max-width: 1920px) {
   .container {
-    max-width: 1300px;
+    max-width: 1400px;
   }
   
   .percursos {
@@ -1561,5 +1575,6 @@
     line-height: 1.5;
     margin-bottom: 1rem;
   }
+  
 
 }
