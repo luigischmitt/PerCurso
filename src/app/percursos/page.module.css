@@ -455,7 +455,7 @@
   }
 
   .container {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: 0 auto; 
     display: flex;
     flex-direction: column;
@@ -491,19 +491,19 @@
 
   .card {
     width: 100%;
-    max-width: 240px;
+    max-width: 340px;
     height: auto;
-    margin: 10px auto;
-    
+    margin-bottom: 1rem;
   }
 
   .cardText {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .cardLink {
     font-size: 0.7rem;
-    margin: 1.4rem 4rem;
+    margin: 1.4rem 3.5rem;
+    width: 10rem;
   }
 
   .cardTitle {
@@ -519,8 +519,8 @@
   }
   
   .laboratorios {
-    margin-top: 5rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   .highlightLab {
@@ -539,19 +539,21 @@
   
   .carouselContainer {
     gap: 20px;
-    padding: 30px; 
+    padding: 30px 0px; 
     max-width: 86%; 
   }
   
   .labCard {
-    width: 16rem; 
+    width: 15rem; 
     height: 23rem;
-    padding: 20px;
+    padding: 0px;
   }
 
   
   .labCardText {
     margin: 3.5rem;
+    font-size: 20px;
+    width: 13rem;
   }
 
   .cardImage {
@@ -574,7 +576,7 @@
   }
   
   .backgroundWhite {
-    padding: 0.9rem 3rem;
+    padding: 0.7rem 0rem;
   }
 
   .row {
@@ -592,13 +594,14 @@
   height: 100vh; 
   margin: 0 auto;
   padding: 20px; 
-}
+  }
 
 
   .groupItem {
-    width: 100%; 
+    width: 100%;
     margin: 10px 0;
     padding: 15px;
+    height: 25rem;
   }
   
   .groupContent {
@@ -614,7 +617,7 @@
     max-width: 75px; 
     height: auto; 
     object-fit: contain; 
-    margin-bottom: -14%;
+    margin-bottom: 0.2rem;
   } 
 
   .groupTitle {
@@ -623,12 +626,12 @@
   }
   
   .groupSubtitle {
-    font-size: 0.85rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
   }
   
   .groupDescription {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     line-height: 1.5;
     margin-bottom: 1rem;
   }
@@ -779,14 +782,16 @@
   }
   
   .labCard {
-    width: 26rem; 
+    width: 20rem; 
     height: 23rem;
-    padding: 20px;
+    padding: 0px;
   }
 
   
   .labCardText {
     margin: 3.5rem;
+    font-size: 20px;
+    width: 20rem;
   }
   
   .cardTextLab {
