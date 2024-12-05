@@ -52,7 +52,7 @@ const PercursosPage = () => {
       id: "lumo",
       title: "LUMO",
       description:
-        "O Laboratório de Computação Ubíqua e Móvel (LUMO) tem por finalidade realizar pesquisas, desenvolvimento e extensão nas áreas de computação ubíqua, computação móvel e áreas correlatas tais como: computação ubíqua, computação móvel, interação humano-computador, cidades inteligentes, sistemas modulares, educação a distância, redes de sensores sem fios, redes veiculares, internet das coisas, e evolução computacional.",
+        "O Laboratório de Computação Ubíqua e Móvel (LUMO) tem por finalidade realizar pesquisas, desenvolvimento e extensão em computação ubíqua, móvel e áreas relacionadas, como interação humano-computador, cidades inteligentes, sistemas modulares, educação a distância, redes de sensores, redes veiculares, internet das coisas e evolução computacional.",
       imgSrc: "/lumo_logo.svg",
       link: "http://plone.ufpb.br/lumo",
     },

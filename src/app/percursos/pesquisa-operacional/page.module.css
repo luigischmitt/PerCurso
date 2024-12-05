@@ -348,19 +348,22 @@
     width: 3.2rem;
     height: 3.8rem;
     margin-right: 1rem;
+    margin-left: 4em;
     margin-top: 100px;
   }
   
   .title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center; 
     margin: 100px auto 0 auto; 
+    margin-right: 8rem;
   }
   
   .objectives {
     margin: 2rem auto; 
     font-size: 13px;
     text-align: center;
+    margin-right: 8rem;
   }
   
   .objectives li {
@@ -410,7 +413,7 @@
   }
   
   .card {
-    height: 16rem;
+    height: 18rem;
     width: 16rem;
     padding: 16px;
     margin: 0 auto; 

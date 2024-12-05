@@ -351,7 +351,7 @@
   }
   
   .title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center; 
     margin: 100px auto 0 auto; 
   }
@@ -409,7 +409,7 @@
   }
   
   .card {
-    height: 16rem;
+    height: 18rem;
     width: 16rem;
     padding: 16px;
     margin: 0 auto; 
@@ -493,7 +493,7 @@
   }
   
   .title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center; 
     margin: 90px auto 0 auto;
   }
