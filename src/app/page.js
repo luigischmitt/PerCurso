@@ -47,8 +47,8 @@ const HomePage = () => {
                 <li>
                   Respeite o <a href="https://github.com/luigischmitt/PerCurso/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" className={styles.accent}>código de conduta</a>.
                 </li>
-                <li>Proibido falar mal dos professores.</li>
-                <li>Proibido publicar soluções de atividades avaliativas.</li>
+                <li>Não faça ataques ao corpo docente.</li>
+                <li>Não compartilhe soluções de atividades avaliativas.</li>
               </ol>
             </div>
 

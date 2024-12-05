@@ -198,7 +198,7 @@ export default function Page() {
             <aside className={styles.labs}>
               <div className={styles.lineVertical}></div>
               <div className={styles.labsText}>
-                <h3>Laboratórios & Ligas</h3>
+                <h3>Laboratórios & Grupos</h3>
                 <ul>
                   <li>LASER</li>
                   <li>LOG</li>
