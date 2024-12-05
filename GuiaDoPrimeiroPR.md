@@ -9,7 +9,7 @@ Bem-vindo ao **Guia do Primeiro Pull Request (PR) do PerCurso!** Estamos empolga
 
 ## 1. Entendendo o PerCurso
 
-O [PerCurso](https://percurso.vercel.app/) é um site estático open-source que organiza e apresenta os percursos acadêmicos de diferentes áreas de estudo, ajudando estudantes a entender melhor as disciplinas e suas interconexões. Ele é alimentado por arquivos Markdown (.md) no GitHub, que são renderizados em páginas HTML no site.
+O [PerCurso](https://percursoci.com.br/) é um site estático open-source que organiza e apresenta os percursos acadêmicos de diferentes áreas de estudo, ajudando estudantes a entender melhor as disciplinas e suas interconexões. Ele é alimentado por arquivos Markdown (.md) no GitHub, que são renderizados em páginas HTML no site.
 
 ## 2. Requisitos Básicos
 
