@@ -224,12 +224,28 @@ export default function Page() {
           <div className={styles.courseCards}>
             {[
               {
+                id: "INFO_DEC",
+                codigo: "GDADM0117",
+                nome: "SISTEMAS DE INFORMAÇÃO E DECISÃO",
+                tipo: "Optativa",
+                periodo: 0,
+                descricao: "Aprenda a integrar tecnologia e processos para suporte à tomada de decisão nas organizações.",
+              },
+              {
                 id: "REDES",
                 codigo: "DSCO00021",
                 nome: "REDES DE COMPUTADORES",
                 tipo: "Obrigatória",
                 periodo: 4,
                 descricao: "Explore os fundamentos da comunicação entre sistemas, aprendendo como projetar, configurar e gerenciar redes locais e globais de forma eficiente.",
+              },
+              {
+                id: "REDES_SEM_FIO",
+                codigo: "GDSCO0032",
+                nome: "REDES SEM FIO",
+                tipo: "Optativa",
+                periodo: 5,
+                descricao: "Estude os princípios e tecnologias que possibilitam comunicação sem fio, como Wi-Fi e redes móveis.",
               },
               {
                 id: "SEG_COMP",
@@ -246,22 +262,6 @@ export default function Page() {
                 tipo: "Obrigatória",
                 periodo: 6,
                 descricao: "Entenda como projetar e implementar sistemas que operam em vários computadores interconectados.",
-              },
-              {
-                id: "INFO_DEC",
-                codigo: "GDADM0117",
-                nome: "SISTEMAS DE INFORMAÇÃO E DECISÃO",
-                tipo: "Optativa",
-                periodo: 0,
-                descricao: "Aprenda a integrar tecnologia e processos para suporte à tomada de decisão nas organizações.",
-              },
-              {
-                id: "REDES_SEM_FIO",
-                codigo: "GDSCO0032",
-                nome: "REDES SEM FIO",
-                tipo: "Optativa",
-                periodo: 5,
-                descricao: "Estude os princípios e tecnologias que possibilitam comunicação sem fio, como Wi-Fi e redes móveis.",
               },
               {
                 id: "ADM_SIS",

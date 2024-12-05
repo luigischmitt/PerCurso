@@ -262,24 +262,6 @@ export default function Page() {
                     "Apresentação dos fundamentos da IA, incluindo técnicas básicas de busca, representação de conhecimento, raciocínio lógico e aprendizado de máquina.",
                 },
                 {
-                  id: "P5_BD1",
-                  codigo: "1107209",
-                  nome: "BANCO DE DADOS I",
-                  tipo: "OBRIGATÓRIA",
-                  periodo: 5,
-                  descricao:
-                    "Introdução ao conceito de bancos de dados, modelagem de dados, normalização e linguagens de consulta como SQL.",
-                },
-                {
-                  id: "P6_ML",
-                  codigo: "DINF00051",
-                  nome: "PARADIGMAS DE APRENDIZAGEM DE MÁQUINA",
-                  tipo: "OBRIGATÓRIA",
-                  periodo: 6,
-                  descricao:
-                    "Explora abordagens e técnicas de aprendizado de máquina, como aprendizado supervisionado, não supervisionado e por reforço, além de aplicações práticas em dados reais.",
-                },
-                {
                   id: "VIS_DADOS",
                   codigo: "GDCOC0096",
                   nome: "VISUALIZAÇÃO DE DADOS",
@@ -307,6 +289,15 @@ export default function Page() {
                     "Estudo de grafos para resolver problemas em áreas como redes sociais, rotas logísticas e análise de conectividade.",
                 },
                 {
+                  id: "P5_BD1",
+                  codigo: "1107209",
+                  nome: "BANCO DE DADOS I",
+                  tipo: "OBRIGATÓRIA",
+                  periodo: 5,
+                  descricao:
+                    "Introdução ao conceito de bancos de dados, modelagem de dados, normalização e linguagens de consulta como SQL.",
+                },
+                {
                   id: "IA_SAUDE",
                   codigo: "DINF00068",
                   nome: "IA APLICADA À SAÚDE",
@@ -314,6 +305,15 @@ export default function Page() {
                   periodo: 5,
                   descricao:
                     "Uso de algoritmos de IA para diagnósticos, otimização de tratamentos, e avanços na medicina personalizada.",
+                },
+                {
+                  id: "P6_ML",
+                  codigo: "DINF00051",
+                  nome: "PARADIGMAS DE APRENDIZAGEM DE MÁQUINA",
+                  tipo: "OBRIGATÓRIA",
+                  periodo: 6,
+                  descricao:
+                    "Explora abordagens e técnicas de aprendizado de máquina, como aprendizado supervisionado, não supervisionado e por reforço, além de aplicações práticas em dados reais.",
                 },
                 {
                   id: "BIG_DATA",

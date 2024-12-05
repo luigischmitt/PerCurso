@@ -229,6 +229,14 @@ export default function Page() {
             <div className={styles.courseCards}>
               {[
                 {
+                  id: "ECON",
+                  codigo: "PSAE00251",
+                  nome: "PRINCÍPIOS DE ECONOMIA",
+                  tipo: "Optativa",
+                  periodo: 0,
+                  descricao: "Introduz conceitos econômicos, como análise de custos e alocação eficiente de recursos, que orientam decisões estratégicas em projetos de Pesquisa Operacional.",
+                },
+                {
                   id: "PROG",
                   codigo: "GDCOC0101",
                   nome: "PROGRAMAÇÃO ORIENTADA A OBJETO",
@@ -243,6 +251,14 @@ export default function Page() {
                   tipo: "Obrigatória",
                   periodo: 2,
                   descricao: "Essa disciplina aborda os fundamentos da Álgebra Linear, como sistemas de equações lineares, matrizes, determinantes, vetores e espaços vetoriais. ",
+                },
+                {
+                  id: "EDA",
+                  codigo: "DINF00047",
+                  nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
+                  tipo: "Obrigatória",
+                  periodo: 3,
+                  descricao: "Descubra como manipular e organizar dados de forma eficiente, explorando algoritmos essenciais para resolver problemas complexos.",
                 },
                 {
                   id: "PO",
@@ -261,14 +277,6 @@ export default function Page() {
                   descricao: "Oferece métodos para resolver sistemas de equações lineares e otimizar problemas com restrições, essenciais para modelagem matemática e análise em Pesquisa Operacional.",
                 },
                 {
-                  id: "EDA",
-                  codigo: "DINF00047",
-                  nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
-                  tipo: "Obrigatória",
-                  periodo: 3,
-                  descricao: "Descubra como manipular e organizar dados de forma eficiente, explorando algoritmos essenciais para resolver problemas complexos.",
-                },
-                {
                   id: "GRAFOS",
                   codigo: "GDCOC0091",
                   nome: "TEORIA DOS GRAFOS APLICADA",
@@ -283,14 +291,6 @@ export default function Page() {
                   tipo: "OBRIGATÓRIA",
                   periodo: 5,
                   descricao: "Estudo de técnicas para criar algoritmos eficientes, essenciais na pesquisa operacional para resolver problemas de otimização e tomada de decisão.",
-                },
-                {
-                  id: "ECON",
-                  codigo: "PSAE00251",
-                  nome: "PRINCÍPIOS DE ECONOMIA",
-                  tipo: "Optativa",
-                  periodo: 0,
-                  descricao: "Introduz conceitos econômicos, como análise de custos e alocação eficiente de recursos, que orientam decisões estratégicas em projetos de Pesquisa Operacional.",
                 },
                 
               ].map((disciplina) => (

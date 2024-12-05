@@ -237,15 +237,6 @@ export default function Page() {
         <div className={styles.courseCards}>
             {[
               {
-                id: "ENG_SOFT",
-                codigo: "1107128",
-                nome: "ENGENHARIA DE SOFTWARE",
-                tipo: "Obrigatória",
-                periodo: 4,
-                descricao:
-                  "Entenda como projetar, desenvolver e gerenciar sistemas de software com qualidade e eficiência, aplicando práticas e metodologias modernas.",
-              },
-              {
                 id: "FUND_IHC",
                 codigo: "DSCO00026",
                 nome: "FUNDAMENTOS DA INTERAÇÃO HUMANO-COMPUTADOR",
@@ -264,15 +255,6 @@ export default function Page() {
                   "Estudo dos fundamentos lógicos para resolver problemas computacionais, abrangendo proposições, conectivos e sistemas formais.",
               },
               {
-                id: "REDES",
-                codigo: "DINF00047",
-                nome: "REDES DE COMPUTADORES I",
-                tipo: "Obrigatória",
-                periodo: 4,
-                descricao:
-                  "Introdução às redes de computadores, cobrindo conceitos de comunicação, protocolos e infraestrutura de rede.",
-              },
-              {
                 id: "ESTRUTURA_DADOS",
                 codigo: "DINF00048",
                 nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
@@ -282,22 +264,22 @@ export default function Page() {
                   "Conceitos fundamentais de estruturas de dados e algoritmos, como listas, filas, pilhas e árvores, com análises de complexidade.",
               },
               {
-                id: "IHC",
-                codigo: "1108100",
-                nome: "INTERAÇÃO HUMANO-COMPUTADOR",
+                id: "ENG_SOFT",
+                codigo: "1107128",
+                nome: "ENGENHARIA DE SOFTWARE",
                 tipo: "Obrigatória",
-                periodo: 7,
+                periodo: 4,
                 descricao:
-                  "Estudo de princípios e práticas para projetar interfaces de usuário intuitivas e eficazes.",
+                  "Entenda como projetar, desenvolver e gerenciar sistemas de software com qualidade e eficiência, aplicando práticas e metodologias modernas.",
               },
               {
-                id: "REUSO_SOFTWARE",
-                codigo: "1108200",
-                nome: "REUSO DE SOFTWARE",
-                tipo: "Optativa",
-                periodo: 5,
+                id: "REDES",
+                codigo: "DINF00047",
+                nome: "REDES DE COMPUTADORES I",
+                tipo: "Obrigatória",
+                periodo: 4,
                 descricao:
-                  "Conceitos e técnicas para reaproveitar componentes de software, aumentando a produtividade e a qualidade dos sistemas.",
+                  "Introdução às redes de computadores, cobrindo conceitos de comunicação, protocolos e infraestrutura de rede.",
               },
               {
                 id: "TEORIA_GRAFOS",
@@ -309,24 +291,6 @@ export default function Page() {
                   "Explora grafos como modelos para resolver problemas em redes, roteamento e conectividade.",
               },
               {
-                id: "METODOS_FORMAIS",
-                codigo: "1107203",
-                nome: "MÉTODOS FORMAIS PARA DESENVOLVIMENTO DE SOFTWARE",
-                tipo: "Optativa",
-                periodo: 7,
-                descricao:
-                  "Técnicas baseadas em matemática para garantir precisão e segurança no desenvolvimento de software.",
-              },
-              {
-                id: "METODOS_PROJETO",
-                codigo: "1107202",
-                nome: "MÉTODOS DE PROJETO DE SOFTWARE",
-                tipo: "Obrigatória",
-                periodo: 6,
-                descricao:
-                  "Estudo de práticas e ferramentas para projetar sistemas de software escaláveis e eficientes.",
-              },
-              {
                 id: "ESPECIFICACAO",
                 codigo: "1107184",
                 nome: "ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE",
@@ -334,15 +298,6 @@ export default function Page() {
                 periodo: 5,
                 descricao:
                   "Estudo de técnicas para entender, documentar e gerenciar os requisitos dos usuários em projetos de software.",
-              },
-              {
-                id: "TESTE_SOFTWARE",
-                codigo: "DINF00054",
-                nome: "TESTE DE SOFTWARE",
-                tipo: "Obrigatória",
-                periodo: 7,
-                descricao:
-                  "Estudo de práticas de verificação e validação para garantir a qualidade e funcionalidade dos sistemas de software.",
               },
               {
                 id: "BANCO_DADOS",
@@ -354,6 +309,24 @@ export default function Page() {
                   "Conceitos de banco de dados, modelagem de dados e linguagens de consulta como SQL.",
               },
               {
+                id: "REUSO_SOFTWARE",
+                codigo: "1108200",
+                nome: "REUSO DE SOFTWARE",
+                tipo: "Optativa",
+                periodo: 5,
+                descricao:
+                  "Conceitos e técnicas para reaproveitar componentes de software, aumentando a produtividade e a qualidade dos sistemas.",
+              },
+              {
+                id: "METODOS_PROJETO",
+                codigo: "1107202",
+                nome: "MÉTODOS DE PROJETO DE SOFTWARE",
+                tipo: "Obrigatória",
+                periodo: 6,
+                descricao:
+                  "Estudo de práticas e ferramentas para projetar sistemas de software escaláveis e eficientes.",
+              },
+              {
                 id: "IMPLEMENTAÇÃO",
                 codigo: "DINF00066",
                 nome: "IMPLEMENTAÇÃO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS",
@@ -362,6 +335,34 @@ export default function Page() {
                 descricao:
                   "Desenvolvimento de aplicativos móveis eficientes, cobrindo tecnologias e boas práticas.",
               },
+              {
+                id: "IHC",
+                codigo: "1108100",
+                nome: "INTERAÇÃO HUMANO-COMPUTADOR",
+                tipo: "Obrigatória",
+                periodo: 7,
+                descricao:
+                  "Estudo de princípios e práticas para projetar interfaces de usuário intuitivas e eficazes.",
+              },
+              {
+                id: "TESTE_SOFTWARE",
+                codigo: "DINF00054",
+                nome: "TESTE DE SOFTWARE",
+                tipo: "Obrigatória",
+                periodo: 7,
+                descricao:
+                  "Estudo de práticas de verificação e validação para garantir a qualidade e funcionalidade dos sistemas de software.",
+              },
+              {
+                id: "METODOS_FORMAIS",
+                codigo: "1107203",
+                nome: "MÉTODOS FORMAIS PARA DESENVOLVIMENTO DE SOFTWARE",
+                tipo: "Optativa",
+                periodo: 7,
+                descricao:
+                  "Técnicas baseadas em matemática para garantir precisão e segurança no desenvolvimento de software.",
+              },
+
             ].map((disciplina) => (
               <div
                 className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
