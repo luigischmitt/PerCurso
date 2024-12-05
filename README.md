@@ -10,7 +10,7 @@ O **PerCurso** vai te ajudar a se orientar durante a sua graduação em CC. Dire
 
 ## 🌐 Visite o nosso site
 
-Explore o **PerCurso** diretamente no nosso site: [https://percurso.vercel.app/](https://percurso.vercel.app/). Lá você encontrará todas as disciplinas organizadas, com conteúdos prontos para facilitar seus estudos. Navegue, contribua e faça parte da nossa comunidade!
+Explore o **PerCurso** diretamente no nosso site: [https://percursoci.com.br/](https://percursoci.com.br/). Lá você encontrará todas as disciplinas organizadas, com conteúdos prontos para facilitar seus estudos. Navegue, contribua e faça parte da nossa comunidade!
 
 ## 🛠 Como Contribuir?
 
