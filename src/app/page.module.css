@@ -228,7 +228,7 @@
 @media (min-width: 0px) and (max-width: 523px) {
   .logo {
     font-size: 21px;
-    margin: 30px 0px 5px 0px;
+    margin: 30px 0px 5px 10px;
   }
 
   .nav a {
