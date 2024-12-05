@@ -224,15 +224,17 @@
   color: #2c274b;
 }
 
-@media (min-width: 0px) and (max-width: 480px) {
+@media (min-width: 0px) and (max-width: 523px) {
   .logo {
     font-size: 21px;
     margin: 30px 0px 5px 0px;
   }
 
   .nav a {
-    font-size: 11px;
-    margin: 0px 1px 15px 0px;
+    font-size: 15px;
+    margin-bottom:15px;
+    margin-right: 0;
+    text-align: center;
   }
 
   .header {
@@ -243,19 +245,22 @@
   .nav {
     display: flex;
     justify-content: center;
+    gap: 16px;
     padding-top: 10px;
   }
 
   .title {
-    font-size: 43px;
+    font-size: 47px;
+    width: 22rem;
     text-align: center;
-    margin: 35px 0px 15px 0px;
+    margin: 10px 0px 15px 0px;
   }
 
   .description {
-    font-size: 13px;
-    text-align: center;
-    margin: 0px 0px 15px 0px; 
+    font-size: 15px;
+    text-align: center; 
+    margin: 0px 0px 15px 0px;
+    width: 20rem;
   }
 
   .buttonContainer {
@@ -264,10 +269,17 @@
     flex-wrap: wrap; 
   }
 
+  .textButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .button {
-    width: 160px;
-    height: 35px;
-    font-size: 14px;
+    width: 280px;
+    height: 47px;
+    font-size: 17px;
   }
 
   .contentContainer {
@@ -281,6 +293,7 @@
   .column {
     width: 90%; 
     padding: 20px;
+    height: 10rem;
   }
 
   .column li {
@@ -307,8 +320,10 @@
     align-items: center; 
   }
 
+
   .backgroundRectangle {
-    padding: 20px 0px 17px 0px; 
+    padding: 20px 0px 20px 0px;
+    height: 27rem;
   }
 
   .column ol {
@@ -318,15 +333,16 @@
   }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 524px) and (max-width: 768px) {
   .logo {
     font-size: 23px;
     margin: 30px 0px 5px 0px;
   }
 
   .nav a {
-    font-size: 13px;
-    margin: 0px 1px 15px 0px;
+    font-size: 15px;
+    margin-bottom:15px;
+    margin-right: 0;
   }
 
   .header {
@@ -337,19 +353,22 @@
   .nav {
     display: flex;
     justify-content: center;
+    gap: 16px;
     padding-top: 10px;
   }
 
   .title {
-    font-size: 58px;
+    font-size: 60px;
+    width: 32rem;
     text-align: center;
-    margin: 35px 0px 15px 0px;
+    margin: 10px 0px 15px 0px;
   }
 
   .description {
     font-size: 15px;
     text-align: center; 
     margin: 0px 0px 15px 0px;
+    width: 30rem;
   }
 
   .buttonContainer {
@@ -358,10 +377,17 @@
     flex-wrap: wrap; 
   }
 
+  .textButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .button {
-    width: 180px;
-    height: 40px;
-    font-size: 15px;
+    width: 270px;
+    height: 47px;
+    font-size: 17px;
   }
 
   .contentContainer {
@@ -375,15 +401,18 @@
   .column {
     margin: 0 auto; 
     text-align: center;
+    height: 10rem;
   }
 
   .column li {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .columnText {
-    font-size: 11px;
+    font-size: 13px;
     text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 
   .columnTitle {
@@ -403,10 +432,11 @@
 
   .backgroundRectangle {
     padding: 20px 0px 20px 0px;
+    height: 25rem;
   }
 
   .column ol {
-    padding: 0 10px; 
+    padding: 0 0px; 
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -453,7 +483,7 @@
   }
 
   .button {
-    width: 200px;
+    width: 220px;
     height: 46px;
     font-size: 17px;
   }
@@ -476,21 +506,23 @@
   .column {
     margin: 0 auto;
     text-align: center;
-    height: 20rem;
+    height: 12rem;
+    width: 30rem;
   }
 
   .column li {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .columnText {
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
   }
 
   .columnTitle {
     font-size: 17px;
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   .imageContainer {
