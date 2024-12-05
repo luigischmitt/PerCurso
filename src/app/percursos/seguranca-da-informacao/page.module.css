@@ -320,6 +320,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    pointer-events: none;
   }
   
   .backgroundRectangle2 {
@@ -330,6 +331,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    pointer-events: none;
   }
   
   .header {
@@ -352,15 +354,17 @@
   }
   
   .title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center; 
     margin: 100px auto 0 auto; 
+    margin-right: 4.5rem;
   }
   
   .objectives {
     margin: 2rem auto; 
     font-size: 13px;
     text-align: center;
+    margin-right: 4.5rem;
   }
   
   .objectives li {
@@ -462,6 +466,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    pointer-events: none;
   }
   
   .backgroundRectangle2 {
@@ -472,6 +477,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    pointer-events: none;
   }
   
   .header {
@@ -605,6 +611,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    pointer-events: none;
   }
   
   .backgroundRectangle2 {
@@ -615,6 +622,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    pointer-events: none;
   }
   
   .header {
@@ -747,6 +755,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
   }
   
   .backgroundRectangle2 {
@@ -757,6 +766,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
   }
   
   
