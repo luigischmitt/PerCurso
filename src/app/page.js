@@ -8,9 +8,9 @@ const HomePage = () => {
       <div className={styles.backgroundRectangle}>
         <div className={styles.lineMid}></div>
         <main className={`${styles.container} ${styles.main}`}>
-          <h2 className={styles.title}>BEM-VINDOS!</h2>
           <div className={styles.contentContainer}>
             <div className={styles.textButtonContainer}>
+              <h2 className={styles.title}>BEM-VINDOS!</h2>
               <p className={styles.description}>
                 No <strong className={styles.accent}>PerCurso</strong>, você encontra conteúdos e recursos organizados de forma acessível, focados especialmente para estudantes de Ciência da Computação da UFPB. Este é um projeto Open Source, desenvolvido por alunos, que oferece um caminho claro e objetivo para guiar o aprendizado de maneira eficiente e colaborativa.
               </p>

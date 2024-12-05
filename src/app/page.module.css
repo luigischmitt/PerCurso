@@ -1,4 +1,4 @@
-/* page.module.css */
+
 .header {
   display: flex;
   margin: 15px 60px;
@@ -42,7 +42,7 @@
   font-weight: 400;
   margin-right: 30px;
   text-decoration: none;
-  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+  transition: color 0.3s ease, transform 0.3s ease; 
 }
 
 .nav a:first-child {
@@ -50,8 +50,8 @@
 }
 
 .nav a:hover {
-  color: #5436AD; /* Muda a cor para um tom roxo suave */
-  transform: translateY(-2px); /* Move ligeiramente para cima */
+  color: #5436AD;
+  transform: translateY(-2px);
 }
 
 .main {
@@ -62,8 +62,8 @@
 .backgroundRectangle {
   background-color: #edf6ff;
   width: 100%;
-  padding: 5px 0px 55px 0px;
-  height: 35rem;
+  padding: 5px 0px 40px 0px;
+  height: 30rem;
   position: relative;
   box-sizing: content-box; 
 }
@@ -73,7 +73,7 @@
   color: var(--secondary-color);
   font-weight: 900;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin: 100px 0px 0px 2px;
+  margin: 30px 0px 0px 0px;
 }
 
 .accent {
@@ -141,16 +141,21 @@
 }
 
 .columnTitle {
+  font-size: 1.5rem;
   text-align: center;
-  font-size: 22px; 
-  color: var(--secondary-color);
-  font-weight: bold;
+  font-weight: 800;
+  color: #5436ad;
+  margin-bottom: 10px;
 }
 
 .columnTable {
   margin-left: 25px;
   font-size: 18px;  
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: #2c274b;
 }
 
 .footer {
@@ -169,8 +174,8 @@
 .contentContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 20px 0px 30px 0px;
+  justify-content: space-between;
+  margin: 50px 0px 0px 0px;
 }
 
 .description {
@@ -182,7 +187,6 @@
 }
 
 .imageContainer {
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,19 +195,20 @@
 .mainImage {
   max-width: 100%;
   height: 360px;
+  margin-top: 3rem;
 }
 
 .container {
   max-width: 1500px;
   margin: 0 auto;
   margin-top: -40px;
-  padding: 0px 20px 0px 5px;
+  padding: 0px 0px 0px 0px;
 }
 
 .container2 {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0px 20px 0px 5px;
+  padding: 0px 0px 0px 0px;
 }
 
 .column li {
@@ -213,8 +218,11 @@
 
 .columnText {
   margin: 5px 0px 0px 12px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: #2c274b;
 }
-
 
 @media (min-width: 0px) and (max-width: 480px) {
   .logo {
@@ -410,6 +418,7 @@
   .nav a {
     font-size: 15px;
     margin-bottom:15px;
+    margin-right: 0;
   }
 
   .header {
@@ -428,12 +437,14 @@
     font-size: 72px;
     text-align: center;
     margin: 35px 0px 15px 0px;
+    width: 40rem;
   }
 
   .description {
     font-size: 18px;
     text-align: center;
     margin: 0px 0px 15px 0px;
+    width: 40rem;
   }
 
   .buttonContainer {
@@ -447,6 +458,13 @@
     font-size: 17px;
   }
 
+  .textButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   .contentContainer {
     display: flex;
     flex-direction: column;
@@ -458,6 +476,7 @@
   .column {
     margin: 0 auto;
     text-align: center;
+    height: 20rem;
   }
 
   .column li {
@@ -484,12 +503,93 @@
     align-items: center;
   }
 
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .container2 {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
   .backgroundRectangle {
-    padding: 20px 0px 0px 0px;
+    padding: 0px;
+    height: 26rem;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 1025px) and (max-width: 1174px) {
+  .logo {
+    font-size: 28px;
+  }
+
+  .nav a {
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: 65px;
+    margin-top: 0rem;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .buttonContainer {
+    gap: 23px;
+  }
+
+  .button {
+    width: 220px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .columns {
+    gap: 40px;
+  }
+  .column {
+    padding: 25px;
+  }
+
+  .column li {
+    font-size: 13px;
+  }
+
+  .columnText {
+    font-size: 13px;
+  }
+
+  .mainImage {
+    margin-top: 1rem;
+    max-width: 80%;
+  }
+
+  .columnTitle {
+    font-size: 20px;
+  }
+
+  .container {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .container2 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .backgroundRectangle {
+    padding: 0px;
+    height: 25rem;
+  }
+}
+
+@media (min-width: 1174px) and (max-width: 1280px) {
   .logo {
     font-size: 28px;
   }
@@ -500,10 +600,12 @@
 
   .title {
     font-size: 78px;
+    margin-top: 0rem;
   }
 
   .description {
     font-size: 18px;
+    margin-bottom: 1rem;
   }
 
   .buttonContainer {
@@ -516,6 +618,10 @@
     font-size: 18px;
   }
 
+  .column {
+    padding: 30px;
+  }
+
   .column li {
     font-size: 13px;
   }
@@ -524,8 +630,28 @@
     font-size: 13px;
   }
 
+  .mainImage {
+    margin-top: 1rem;
+    max-width: 80%;
+  }
+
   .columnTitle {
-    font-size: 16px;
+    font-size: 20px;
+  }
+
+  .container {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .container2 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .backgroundRectangle {
+    padding: 0px;
+    height: 25rem;
   }
 }
 
@@ -546,8 +672,17 @@
     font-size: 16px;
   }
 
+  .mainImage {
+    margin-top: 1rem;
+    max-width: 90%;
+  }
+  .column {
+    padding: 30px;
+  }
+
   .description {
     font-size: 20px;
+    margin-bottom: 30px;
   }
 
   .buttonContainer {
@@ -570,11 +705,26 @@
   }
 
   .columnTitle {
-    font-size: 17px;
+    font-size: 20px;
+  }
+
+  .container {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .container2 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .backgroundRectangle {
+    padding: 0px;
+    height: 28rem;
   }
 }
 
-@media (min-width: 1441px) and (max-width: 1920px) {
+@media (min-width: 1441px) and (max-width: 1640px) {
   .logo {
     font-size: 34px;
   }
@@ -617,4 +767,64 @@
   .columnTitle {
     font-size: 19px;
   }
-}
+
+  .container {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .container2 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
+  .backgroundRectangle {
+    padding: 0px;
+  }
+
+} 
+
+@media (min-width: 1641px) and (max-width: 1920px) {
+  .logo {
+    font-size: 34px;
+  }
+
+  .nav a {
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 90px;
+  }
+
+  .columnTitle {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 22px;
+  }
+
+  .buttonContainer {
+    gap: 64px;
+  }
+
+  .button {
+    width: 280px;
+    height: 64px;
+    font-size: 23px;
+    padding: 290 69.4;
+  }
+
+  .column li {
+    font-size: 16px;
+  }
+
+  .columnText {
+    font-size: 16px;
+  }
+
+  .columnTitle {
+    font-size: 19px;
+  }
+} 
