@@ -1,5 +1,5 @@
 .container {
-  max-width: 1600px;
+  max-width: 1500px;
   width: 100%;
   margin: 0 auto;
   padding: 30px;
@@ -10,7 +10,7 @@
   background-color: #edf6ff;
   width: 100%;
   height: auto;
-  padding: 55px 0px 230px 0px;
+  padding: 0px 0px 20px 0px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -536,13 +536,13 @@
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   .container {
-    max-width: 1400px;
-    padding: 24px;
+    max-width: 1500px;
+    padding: 26px;
   }
 
   .backgroundRectangle {
     width: 100%;
-    padding: 40px 0px 80px 0px;
+    padding: 0px 0px 20px 0px;
   }
 
   .introSection {
@@ -609,7 +609,7 @@
   .card {
     padding: 18px;
     font-size: 1.12rem;
-    height: 3.9rem;
+    height: 4.2rem;
   }
 
   .mainContainer {
@@ -632,18 +632,18 @@
 
 @media (min-width: 1281px) and (max-width: 1440px) {
   .container {
-    max-width: 1400px;
+    max-width: 1500px;
     padding: 26px;
   }
 
   .backgroundRectangle {
     width: 100%;
-    padding: 55px 0px 185px 0px;
+    padding: 0px 0px 20px 0px;
   }
 
   .introSection {
     gap: 17px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
 
   .bannerImage {
@@ -716,13 +716,13 @@
 
 @media (min-width: 1441px) and (max-width: 1920px) {
   .container {
-    max-width: 1400px;
+    max-width: 1500px;
     padding: 26px;
   }
 
   .backgroundRectangle {
     width: 100%;
-    padding: 55px 0px 185px 0px;
+    padding: 0px 0px 20px 0px;
   }
 
   .introSection {
@@ -782,7 +782,7 @@
   }
 
   .resourceCards {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 20px;
     padding: 0 34px;
   }
@@ -790,7 +790,7 @@
   .card {
     padding: 18px;
     font-size: 1.25rem;
-    height: 4rem;
+    height: 4.7rem;
   }
 
   .noResults {
