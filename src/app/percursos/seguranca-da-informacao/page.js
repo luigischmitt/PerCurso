@@ -10,20 +10,20 @@ export default function Page() {
   useEffect(() => {
     const disciplinas = [
       { id: "root", nome: "Segurança da Informação", periodo: 0, obrigatoria: true },
-      { id: "REDES", nome: "Redes de Computadores", periodo: 4, obrigatoria: true },
-      { id: "SEG_COMP", nome: "Segurança Computacional", periodo: 6, obrigatoria: true },
-      { id: "SIS_DIST", nome: "Sistemas Distribuídos", periodo: 6, obrigatoria: true },
+      { id: "redes", nome: "Redes de Computadores", periodo: 4, obrigatoria: true },
+      { id: "seguranca", nome: "Segurança Computacional", periodo: 6, obrigatoria: true },
+      { id: "sistema_distribuidos", nome: "Sistemas Distribuídos", periodo: 6, obrigatoria: true },
       { id: "INFO_DEC", nome: "Sistemas de Informação e Decisão", periodo: 0, obrigatoria: false },
       { id: "REDES_SEM_FIO", nome: "Redes Sem Fio", periodo: 5, obrigatoria: false },
       { id: "ADM_SIS", nome: "Administração de Sistemas", periodo: 6, obrigatoria: false },
     ];
     
     const links = [
-      { source: "root", target: "REDES" },
-      { source: "REDES", target: "SEG_COMP" },
-      { source: "REDES", target: "REDES_SEM_FIO" },
-      { source: "REDES", target: "ADM_SIS" },
-      { source: "SEG_COMP", target: "SIS_DIST" },
+      { source: "root", target: "redes" },
+      { source: "redes", target: "seguranca" },
+      { source: "redes", target: "REDES_SEM_FIO" },
+      { source: "redes", target: "ADM_SIS" },
+      { source: "seguranca", target: "sistema_distribuidos" },
       { source: "root", target: "INFO_DEC" },
     ];    
     
@@ -205,7 +205,8 @@ export default function Page() {
         <div className={styles.lineBottom}></div>
       </div>
 
-      <div id="roadmap" className={styles.map}>
+      <div id="roadmap" className={styles.map}></div>
+
       <div className={styles.legend}>
         <div className={styles.legendItem}>
           <span>OBRIGATÓRIAS</span>
@@ -213,7 +214,6 @@ export default function Page() {
         <div className={styles.legendItem}>
           <span>OPTATIVAS</span>
         </div>
-      </div>
       </div>
 
       <div className={styles.backgroundRectangle2}>
@@ -232,9 +232,9 @@ export default function Page() {
                 descricao: "Aprenda a integrar tecnologia e processos para suporte à tomada de decisão nas organizações.",
               },
               {
-                id: "REDES",
+                id: "redes",
                 codigo: "DSCO00021",
-                nome: "REDES DE COMPUTADORES",
+                nome: "REDES DE COMPUTADORES I",
                 tipo: "Obrigatória",
                 periodo: 4,
                 descricao: "Explore os fundamentos da comunicação entre sistemas, aprendendo como projetar, configurar e gerenciar redes locais e globais de forma eficiente.",
@@ -248,7 +248,7 @@ export default function Page() {
                 descricao: "Estude os princípios e tecnologias que possibilitam comunicação sem fio, como Wi-Fi e redes móveis.",
               },
               {
-                id: "SEG_COMP",
+                id: "seguranca",
                 codigo: "DSCO00021",
                 nome: "SEGURANÇA COMPUTACIONAL",
                 tipo: "Obrigatória",
@@ -256,7 +256,7 @@ export default function Page() {
                 descricao: "Explore as técnicas e práticas para proteger sistemas e dados contra ataques e vulnerabilidades.",
               },
               {
-                id: "SIS_DIST",
+                id: "sistema_distribuidos",
                 codigo: "DSCO00022",
                 nome: "SISTEMAS DISTRIBUÍDOS",
                 tipo: "Obrigatória",
@@ -271,6 +271,7 @@ export default function Page() {
                 periodo: 6,
                 descricao: "Descubra como gerenciar e configurar sistemas operacionais, servidores e redes de maneira eficiente.",
               },
+                        
             ].map((disciplina) => (
               <div
                 key={disciplina.id}

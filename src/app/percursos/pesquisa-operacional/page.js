@@ -10,26 +10,26 @@ export default function Page() {
   useEffect(() => {
     const disciplinas = [
       { id: "root", nome: "Pesquisa Operacional",periodo: 0, obrigatoria: true }, 
-      { id: "ALGEBRA", nome: "Intro à Álgebra Linear",periodo: 2, obrigatoria: true }, 
-      { id: "APA", nome: "APA",periodo: 5, obrigatoria: true }, 
+      { id: "linear", nome: "Intro à Álgebra Linear",periodo: 2, obrigatoria: true }, 
+      { id: "apa", nome: "APA",periodo: 5, obrigatoria: true }, 
       { id: "PO", nome: "Pesquisa Operacional", periodo: 3, obrigatoria: false },
       { id: "ALG", nome: "Álgebra Linear Computacional", periodo: 3, obrigatoria: false }, 
-      { id: "PROG", nome: "POO", periodo: 2, obrigatoria: true },
-      { id: "EDA", nome: "EDA I", periodo: 3, obrigatoria: true }, 
+      { id: "poo", nome: "POO", periodo: 2, obrigatoria: true },
+      { id: "eda1", nome: "EDA I", periodo: 3, obrigatoria: true }, 
       { id: "ECON", nome: "Princípios de Economia", periodo: 0, obrigatoria: false },
       { id: "GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false }, 
     ];
 
     const links = [
-      { source: "root", target: "ALGEBRA" }, 
+      { source: "root", target: "linear" }, 
       { source: "root", target: "ECON" }, 
-      { source: "root", target: "EDA" }, 
-      { source: "root", target: "PROG" }, 
-      { source: "ALGEBRA", target: "PO" },
-      { source: "PROG", target: "ALG" }, 
-      { source: "PROG", target: "PO" },
-      { source: "EDA", target: "APA" },
-      { source: "EDA", target: "GRAFOS" },
+      { source: "root", target: "eda1" }, 
+      { source: "root", target: "poo" }, 
+      { source: "linear", target: "PO" },
+      { source: "poo", target: "ALG" }, 
+      { source: "poo", target: "PO" },
+      { source: "eda1", target: "apa" },
+      { source: "eda1", target: "GRAFOS" },
     ];
     
     const width = 1000;
@@ -237,7 +237,7 @@ export default function Page() {
                   descricao: "Introduz conceitos econômicos, como análise de custos e alocação eficiente de recursos, que orientam decisões estratégicas em projetos de Pesquisa Operacional.",
                 },
                 {
-                  id: "PROG",
+                  id: "poo",
                   codigo: "GDCOC0101",
                   nome: "PROGRAMAÇÃO ORIENTADA A OBJETO",
                   tipo: "Obrigatória",
@@ -245,7 +245,7 @@ export default function Page() {
                   descricao: "Aprenda a modelar soluções com base em objetos, encapsulando dados e comportamentos para desenvolver sistemas mais organizados e reutilizáveis.",
                 },
                 {
-                  id: "ALGEBRA",
+                  id: "linear",
                   codigo: "5102007",
                   nome: "INTRODUÇÃO À ALGEBRA LINEAR",
                   tipo: "Obrigatória",
@@ -253,7 +253,7 @@ export default function Page() {
                   descricao: "Essa disciplina aborda os fundamentos da Álgebra Linear, como sistemas de equações lineares, matrizes, determinantes, vetores e espaços vetoriais. ",
                 },
                 {
-                  id: "EDA",
+                  id: "eda1",
                   codigo: "DINF00047",
                   nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
                   tipo: "Obrigatória",
@@ -285,7 +285,7 @@ export default function Page() {
                   descricao: "Explora redes e conexões, permitindo resolver problemas de roteamento, escalonamento e alocação de recursos em Pesquisa Operacional.",
                 },
                 {
-                  id: "APA",
+                  id: "apa",
                   codigo: "GDCOC0076",
                   nome: "ANÁLISE E PROJETO DE ALGORITMOS",
                   tipo: "OBRIGATÓRIA",
