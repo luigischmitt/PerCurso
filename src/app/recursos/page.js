@@ -53,7 +53,14 @@ const PercursosPage = () => {
     { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa' },
     { name: "Fundamentos da Interação Humano-Computador", slug: 'fund_ihc' },
     { name: "Teoria dos Grafos Aplicada", slug: 'teoria_grafos' },
-    { name: "Reuso de Software", slug: 'reuso_software' }
+    { name: "Reuso de Software", slug: 'reuso_software' },
+    { name: "Implementação de Sistemas para Dispositivos Móveis", slug: 'implementacao' },
+    { name: "Métodos Formais para Desenvolvimento de Software", slug: 'metodos_formais' },
+    { name: "Visualização de Dados", slug: 'visualizacao' },
+    { name: "Séries Temporais", slug: 'series' },
+    { name: "IA Aplicada à Saúde", slug: 'ia_saude' },
+    { name: "Big Data", slug: 'big_data' },
+    { name: "Aprendizado Profundo", slug: 'deep_learn' },
   ];  
 
   const disciplinaIcones = {
@@ -102,6 +109,13 @@ const PercursosPage = () => {
     fund_ihc: "/ihc_icon.svg",
     teoria_grafos: "/estatistica_icon.svg",
     reuso_software: "/eds_icon.svg",
+    implementacao: "/redes_icon.svg",
+    metodos_formais: "/eds_icon.svg",
+    visualizacao: "/estatistica_icon.svg",
+    series: "/estatistica_icon.svg",
+    ia_saude: "/ia_icon.svg",
+    big_data: "/estatistica_icon.svg",
+    deep_learn: "/ia_icon.svg",
   };
 
   const updateCardsToShow = () => {

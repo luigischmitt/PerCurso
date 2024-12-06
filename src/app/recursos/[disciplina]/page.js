@@ -48,6 +48,7 @@ export async function generateStaticParams() {
     { disciplina: 'pesquisa' },
     { disciplina: 'fund_ihc' },
     { disciplina: 'teoria_grafos' },
+    { disciplina: 'series' },
   ];
 }
 
@@ -95,8 +96,15 @@ const disciplinaNomes = {
   teste_software: "TESTE DE SOFTWARE",
   pesquisa: "PESQUISA APLICADA À COMPUTAÇÃO",
   fund_ihc: "FUNDAMENTOS DA INTERAÇÃO HUMANO-COMPUTADOR",
-  teoria_grafos: "Teoria dos Grafos Aplicada",
-  reuso_software: "Reuso de Software",
+  teoria_grafos: "TEORIA DOS GRAFOS APLICADA",
+  reuso_software: "REUSO DE SOFTWARE",
+  implementacao: "IMPLEMENTAÇÃO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS",
+  metodos_formais: "MÉTODOS FORMAIS PARA DESENVOLVIMENTO DE SOFTWARE",
+  visualizacao: "VISUALIZAÇÃO DE DADOS",
+  series: "SÉRIES TEMPORAIS",
+  ia_saude: "IA APLICADA À SAÚDE",
+  big_data: "BIG DATA",
+  deep_learn: "APRENDIZADO PROFUNDO",
 };
 
 const disciplinaIcones = {
@@ -145,6 +153,14 @@ const disciplinaIcones = {
   fund_ihc: "/ihc_icon.svg",
   teoria_grafos: "/estatistica_icon.svg",
   reuso_software: "/eds_icon.svg",
+  implementacao: "/redes_icon.svg",
+  metodos_formais: "/eds_icon.svg",
+  visualizacao: "/estatistica_icon.svg",
+  series: "/estatistica_icon.svg",
+  ia_saude: "/ia_icon.svg",
+  big_data: "/estatistica_icon.svg",
+  deep_learn: "/ia_icon.svg",
+  
 };
 
 export default function DisciplinaPage({ params }) {

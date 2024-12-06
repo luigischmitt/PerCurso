@@ -24,7 +24,7 @@ export default function Page() {
       { id: "redes", nome: "Redes de Comp. I", periodo: 4, obrigatoria: true },
       { id: "bd", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
       { id: "eda1", nome: "EDA I", periodo: 3, obrigatoria: true },
-      { id: "IMPLEMENTAÇÃO", nome: "Sistemas para Disposivos Móveis", periodo: 6, obrigatoria: false },
+      { id: "implementacao", nome: "Sistemas para Disposivos Móveis", periodo: 6, obrigatoria: false },
     ];
     
     const links = [
@@ -43,8 +43,8 @@ export default function Page() {
       { source: "ihc", target: "DESIGN_INTERACAO" },
       { source: "eda1", target: "bd" },
       { source: "eda1", target: "teoria_grafos" },
-      { source: "redes", target: "IMPLEMENTAÇÃO" },
-      { source: "bd", target: "IMPLEMENTAÇÃO" },
+      { source: "redes", target: "implementacao" },
+      { source: "bd", target: "implementacao" },
     ];
     
     const width = 1000;
@@ -327,7 +327,7 @@ export default function Page() {
                   "Estudo de práticas e ferramentas para projetar sistemas de software escaláveis e eficientes.",
               },
               {
-                id: "IMPLEMENTAÇÃO",
+                id: "implementacao",
                 codigo: "DINF00066",
                 nome: "IMPLEMENTAÇÃO DE SISTEMAS PARA DISPOSITIVOS MÓVEIS",
                 tipo: "Optativa",
@@ -354,7 +354,7 @@ export default function Page() {
                   "Estudo de práticas de verificação e validação para garantir a qualidade e funcionalidade dos sistemas de software.",
               },
               {
-                id: "METODOS_FORMAIS",
+                id: "metodos_formais",
                 codigo: "1107203",
                 nome: "MÉTODOS FORMAIS PARA DESENVOLVIMENTO DE SOFTWARE",
                 tipo: "Optativa",
