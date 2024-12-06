@@ -49,6 +49,7 @@ export async function generateStaticParams() {
     { disciplina: 'fund_ihc' },
     { disciplina: 'teoria_grafos' },
     { disciplina: 'series' },
+    { disciplina: 'po' },
   ];
 }
 
@@ -106,6 +107,8 @@ const disciplinaNomes = {
   big_data: "BIG DATA",
   deep_learn: "APRENDIZADO PROFUNDO",
   econ: "PRINCÍPIOS DE ECONOMIA",
+  po: "PESQUISA OPERACIONAL",
+  linear_comp: "ÁLGEBRA LINEAR COMPUTACIONAL",
 };
 
 const disciplinaIcones = {
@@ -162,6 +165,8 @@ const disciplinaIcones = {
   big_data: "/estatistica_icon.svg",
   deep_learn: "/ia_icon.svg",
   econ: "/cv_icon.svg",
+  po: "/ip_icon.svg",
+  linear_comp: "/cv_icon.svg",
 };
 
 export default function DisciplinaPage({ params }) {

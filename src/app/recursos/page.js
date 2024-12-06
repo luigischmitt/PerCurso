@@ -62,6 +62,8 @@ const PercursosPage = () => {
     { name: "Big Data", slug: 'big_data' },
     { name: "Aprendizado Profundo", slug: 'deep_learn' },
     { name: "Princípios de Economia", slug: 'econ' },
+    { name: "Pesquisa Operacional", slug: 'po' },
+    { name: "Álgebra Linear Computacional", slug: 'linear_comp' },
   ];  
 
   const disciplinaIcones = {
@@ -118,6 +120,8 @@ const PercursosPage = () => {
     big_data: "/estatistica_icon.svg",
     deep_learn: "/ia_icon.svg",
     econ: "/cv_icon.svg",
+    po: "/ip_icon.svg",
+    linear_comp: "/cv_icon.svg",
   };
 
   const updateCardsToShow = () => {
