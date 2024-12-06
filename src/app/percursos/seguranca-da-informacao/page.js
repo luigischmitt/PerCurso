@@ -13,18 +13,18 @@ export default function Page() {
       { id: "redes", nome: "Redes de Computadores", periodo: 4, obrigatoria: true },
       { id: "seguranca", nome: "Segurança Computacional", periodo: 6, obrigatoria: true },
       { id: "sistema_distribuidos", nome: "Sistemas Distribuídos", periodo: 6, obrigatoria: true },
-      { id: "INFO_DEC", nome: "Sistemas de Informação e Decisão", periodo: 0, obrigatoria: false },
-      { id: "REDES_SEM_FIO", nome: "Redes Sem Fio", periodo: 5, obrigatoria: false },
-      { id: "ADM_SIS", nome: "Administração de Sistemas", periodo: 6, obrigatoria: false },
+      { id: "sistemas_informacao_decisao", nome: "Sistemas de Informação e Decisão", periodo: 0, obrigatoria: false },
+      { id: "redes_sem_fio", nome: "Redes Sem Fio", periodo: 5, obrigatoria: false },
+      { id: "administracao_sistemas", nome: "Administração de Sistemas", periodo: 6, obrigatoria: false },
     ];
     
     const links = [
       { source: "root", target: "redes" },
       { source: "redes", target: "seguranca" },
-      { source: "redes", target: "REDES_SEM_FIO" },
-      { source: "redes", target: "ADM_SIS" },
+      { source: "redes", target: "redes_sem_fio" },
+      { source: "redes", target: "administracao_sistemas" },
       { source: "seguranca", target: "sistema_distribuidos" },
-      { source: "root", target: "INFO_DEC" },
+      { source: "root", target: "sistemas_informacao_decisao" },
     ];    
     
     const width = 1000;
@@ -224,7 +224,7 @@ export default function Page() {
           <div className={styles.courseCards}>
             {[
               {
-                id: "INFO_DEC",
+                id: "sistemas_informacao_decisao",
                 codigo: "GDADM0117",
                 nome: "SISTEMAS DE INFORMAÇÃO E DECISÃO",
                 tipo: "Optativa",
@@ -240,7 +240,7 @@ export default function Page() {
                 descricao: "Explore os fundamentos da comunicação entre sistemas, aprendendo como projetar, configurar e gerenciar redes locais e globais de forma eficiente.",
               },
               {
-                id: "REDES_SEM_FIO",
+                id: "redes_sem_fio",
                 codigo: "GDSCO0032",
                 nome: "REDES SEM FIO",
                 tipo: "Optativa",
@@ -264,7 +264,7 @@ export default function Page() {
                 descricao: "Entenda como projetar e implementar sistemas que operam em vários computadores interconectados.",
               },
               {
-                id: "ADM_SIS",
+                id: "administracao_sistemas",
                 codigo: "DSCO00032",
                 nome: "ADMINISTRAÇÃO DE SISTEMAS",
                 tipo: "Optativa",

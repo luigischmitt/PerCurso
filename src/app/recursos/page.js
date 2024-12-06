@@ -64,6 +64,9 @@ const PercursosPage = () => {
     { name: "Princípios de Economia", slug: 'econ' },
     { name: "Pesquisa Operacional", slug: 'po' },
     { name: "Álgebra Linear Computacional", slug: 'linear_comp' },
+    { name: "Redes sem Fio", slug: 'redes_sem_fio' },
+    { name: "Sistemas de informação e decisão", slug: 'sistemas_informacao_decisao' },
+    { name: "Administração de Sistemas", slug: 'administracao_sistemas' },
   ];  
 
   const disciplinaIcones = {
@@ -122,6 +125,9 @@ const PercursosPage = () => {
     econ: "/cv_icon.svg",
     po: "/ip_icon.svg",
     linear_comp: "/cv_icon.svg",
+    redes_sem_fio: "/redes_icon.svg",
+    sistemas_informacao_decisao: "/ihc_icon.svg",
+    administracao_sistemas: "/ihc_icon.svg",
   };
 
   const updateCardsToShow = () => {
