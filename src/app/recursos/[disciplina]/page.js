@@ -46,6 +46,8 @@ export async function generateStaticParams() {
     { disciplina: 'metodos_psoft' },
     { disciplina: 'teste_software' },
     { disciplina: 'pesquisa' },
+    { disciplina: 'fund_ihc' },
+    { disciplina: 'teoria_grafos' },
   ];
 }
 
@@ -92,6 +94,9 @@ const disciplinaNomes = {
   metodos_psoft: "MÉTODOS DE PROJETO DE SOFTWARE",
   teste_software: "TESTE DE SOFTWARE",
   pesquisa: "PESQUISA APLICADA À COMPUTAÇÃO",
+  fund_ihc: "FUNDAMENTOS DA INTERAÇÃO HUMANO-COMPUTADOR",
+  teoria_grafos: "Teoria dos Grafos Aplicada",
+  reuso_software: "Reuso de Software",
 };
 
 const disciplinaIcones = {
@@ -137,7 +142,9 @@ const disciplinaIcones = {
   requisitos: "/eds_icon.svg",
   metodos_psoft: "/eds_icon.svg",
   teste_software: "/eds_icon.svg",
-  
+  fund_ihc: "/ihc_icon.svg",
+  teoria_grafos: "/estatistica_icon.svg",
+  reuso_software: "/eds_icon.svg",
 };
 
 export default function DisciplinaPage({ params }) {

@@ -10,41 +10,41 @@ export default function Page() {
   useEffect(() => {
     const disciplinas = [
       { id: "root", nome: "Engenharia de Software", periodo: 0, obrigatoria: true },
-      { id: "ENG_SOFT", nome: "Eng. de Software", periodo: 4, obrigatoria: true },
-      { id: "FUND_IHC", nome: "Fundamentos da IHC", periodo: 0, obrigatoria: false },
+      { id: "es", nome: "Eng. de Software", periodo: 4, obrigatoria: true },
+      { id: "fund_ihc", nome: "Fundamentos da IHC", periodo: 0, obrigatoria: false },
       { id: "DESIGN_INTERACAO", nome: "Design de Interação", periodo: 8, obrigatoria: false },
-      { id: "IHC", nome: "IHC", periodo: 7, obrigatoria: true },
-      { id: "REUSO_SOFTWARE", nome: "Reuso de Soft.", periodo: 5, obrigatoria: false },
-      { id: "TEORIA_GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
+      { id: "ihc", nome: "IHC", periodo: 7, obrigatoria: true },
+      { id: "reuso_software", nome: "Reuso de Soft.", periodo: 5, obrigatoria: false },
+      { id: "teoria_grafos", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
       { id: "METODOS_FORMAIS", nome: "Métodos Formais Para Desenvol. de Soft.", periodo: 7, obrigatoria: false },
-      { id: "LOGICA", nome: "Lógica Aplicada", periodo: 2, obrigatoria: true },
-      { id: "METODOS_PROJETO", nome: "Métodos de Projeto de Soft.", periodo: 6, obrigatoria: true },
-      { id: "ESPECIFICACAO", nome: "Espec. de Requisitos de Soft.", periodo: 5, obrigatoria: true },
-      { id: "TESTE_SOFTWARE", nome: "Teste de Soft.", periodo: 7, obrigatoria: true },
-      { id: "REDES", nome: "Redes de Comp. I", periodo: 4, obrigatoria: true },
-      { id: "BANCO_DADOS", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
-      { id: "ESTRUTURA_DADOS", nome: "EDA I", periodo: 3, obrigatoria: true },
+      { id: "logica", nome: "Lógica Aplicada", periodo: 2, obrigatoria: true },
+      { id: "metodos_psoft", nome: "Métodos de Projeto de Soft.", periodo: 6, obrigatoria: true },
+      { id: "requisitos", nome: "Espec. de Requisitos de Soft.", periodo: 5, obrigatoria: true },
+      { id: "teste_software", nome: "Teste de Soft.", periodo: 7, obrigatoria: true },
+      { id: "redes", nome: "Redes de Comp. I", periodo: 4, obrigatoria: true },
+      { id: "bd", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
+      { id: "eda1", nome: "EDA I", periodo: 3, obrigatoria: true },
       { id: "IMPLEMENTAÇÃO", nome: "Sistemas para Disposivos Móveis", periodo: 6, obrigatoria: false },
     ];
     
     const links = [
-      { source: "root", target: "ENG_SOFT" },
-      { source: "root", target: "FUND_IHC" },
-      { source: "root", target: "LOGICA" },
-      { source: "root", target: "REDES" },
-      { source: "root", target: "ESTRUTURA_DADOS" },
-      { source: "ENG_SOFT", target: "IHC" },
-      { source: "ENG_SOFT", target: "REUSO_SOFTWARE" },
-      { source: "ENG_SOFT", target: "METODOS_PROJETO" },
-      { source: "ENG_SOFT", target: "ESPECIFICACAO" },
-      { source: "ENG_SOFT", target: "TESTE_SOFTWARE" },
-      { source: "METODOS_PROJETO", target: "METODOS_FORMAIS" },
-      { source: "LOGICA", target: "METODOS_FORMAIS" },
-      { source: "IHC", target: "DESIGN_INTERACAO" },
-      { source: "ESTRUTURA_DADOS", target: "BANCO_DADOS" },
-      { source: "ESTRUTURA_DADOS", target: "TEORIA_GRAFOS" },
-      { source: "REDES", target: "IMPLEMENTAÇÃO" },
-      { source: "BANCO_DADOS", target: "IMPLEMENTAÇÃO" },
+      { source: "root", target: "es" },
+      { source: "root", target: "fund_ihc" },
+      { source: "root", target: "logica" },
+      { source: "root", target: "redes" },
+      { source: "root", target: "eda1" },
+      { source: "es", target: "ihc" },
+      { source: "es", target: "reuso_software" },
+      { source: "es", target: "metodos_psoft" },
+      { source: "es", target: "requisitos" },
+      { source: "es", target: "teste_software" },
+      { source: "metodos_psoft", target: "METODOS_FORMAIS" },
+      { source: "logica", target: "METODOS_FORMAIS" },
+      { source: "ihc", target: "DESIGN_INTERACAO" },
+      { source: "eda1", target: "bd" },
+      { source: "eda1", target: "teoria_grafos" },
+      { source: "redes", target: "IMPLEMENTAÇÃO" },
+      { source: "bd", target: "IMPLEMENTAÇÃO" },
     ];
     
     const width = 1000;
@@ -237,7 +237,7 @@ export default function Page() {
         <div className={styles.courseCards}>
             {[
               {
-                id: "FUND_IHC",
+                id: "fund_ihc",
                 codigo: "DSCO00026",
                 nome: "FUNDAMENTOS DA INTERAÇÃO HUMANO-COMPUTADOR",
                 tipo: "Optativa",
@@ -246,7 +246,7 @@ export default function Page() {
                   "Explore como os seres humanos interagem com os sistemas computacionais, priorizando a usabilidade e a experiência do usuário.",
               },
               {
-                id: "LOGICA",
+                id: "logica",
                 codigo: "1107136",
                 nome: "LÓGICA APLICADA À COMPUTAÇÃO",
                 tipo: "Obrigatória",
@@ -255,7 +255,7 @@ export default function Page() {
                   "Estudo dos fundamentos lógicos para resolver problemas computacionais, abrangendo proposições, conectivos e sistemas formais.",
               },
               {
-                id: "ESTRUTURA_DADOS",
+                id: "eda1",
                 codigo: "DINF00048",
                 nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
                 tipo: "Obrigatória",
@@ -264,7 +264,7 @@ export default function Page() {
                   "Conceitos fundamentais de estruturas de dados e algoritmos, como listas, filas, pilhas e árvores, com análises de complexidade.",
               },
               {
-                id: "ENG_SOFT",
+                id: "es",
                 codigo: "1107128",
                 nome: "ENGENHARIA DE SOFTWARE",
                 tipo: "Obrigatória",
@@ -273,7 +273,7 @@ export default function Page() {
                   "Entenda como projetar, desenvolver e gerenciar sistemas de software com qualidade e eficiência, aplicando práticas e metodologias modernas.",
               },
               {
-                id: "REDES",
+                id: "redes",
                 codigo: "DINF00047",
                 nome: "REDES DE COMPUTADORES I",
                 tipo: "Obrigatória",
@@ -282,7 +282,7 @@ export default function Page() {
                   "Introdução às redes de computadores, cobrindo conceitos de comunicação, protocolos e infraestrutura de rede.",
               },
               {
-                id: "TEORIA_GRAFOS",
+                id: "teoria_grafos",
                 codigo: "1108300",
                 nome: "TEORIA DOS GRAFOS APLICADA",
                 tipo: "Optativa",
@@ -291,7 +291,7 @@ export default function Page() {
                   "Explora grafos como modelos para resolver problemas em redes, roteamento e conectividade.",
               },
               {
-                id: "ESPECIFICACAO",
+                id: "requisitos",
                 codigo: "1107184",
                 nome: "ESPECIFICAÇÃO DE REQUISITOS DE SOFTWARE",
                 tipo: "Obrigatória",
@@ -300,7 +300,7 @@ export default function Page() {
                   "Estudo de técnicas para entender, documentar e gerenciar os requisitos dos usuários em projetos de software.",
               },
               {
-                id: "BANCO_DADOS",
+                id: "bd",
                 codigo: "DINF00064",
                 nome: "BANCO DE DADOS I",
                 tipo: "Obrigatória",
@@ -309,7 +309,7 @@ export default function Page() {
                   "Conceitos de banco de dados, modelagem de dados e linguagens de consulta como SQL.",
               },
               {
-                id: "REUSO_SOFTWARE",
+                id: "reuso_software",
                 codigo: "1108200",
                 nome: "REUSO DE SOFTWARE",
                 tipo: "Optativa",
@@ -318,7 +318,7 @@ export default function Page() {
                   "Conceitos e técnicas para reaproveitar componentes de software, aumentando a produtividade e a qualidade dos sistemas.",
               },
               {
-                id: "METODOS_PROJETO",
+                id: "metodos_psoft",
                 codigo: "1107202",
                 nome: "MÉTODOS DE PROJETO DE SOFTWARE",
                 tipo: "Obrigatória",
@@ -336,7 +336,7 @@ export default function Page() {
                   "Desenvolvimento de aplicativos móveis eficientes, cobrindo tecnologias e boas práticas.",
               },
               {
-                id: "IHC",
+                id: "ihc",
                 codigo: "1108100",
                 nome: "INTERAÇÃO HUMANO-COMPUTADOR",
                 tipo: "Obrigatória",
@@ -345,7 +345,7 @@ export default function Page() {
                   "Estudo de princípios e práticas para projetar interfaces de usuário intuitivas e eficazes.",
               },
               {
-                id: "TESTE_SOFTWARE",
+                id: "teste_software",
                 codigo: "DINF00054",
                 nome: "TESTE DE SOFTWARE",
                 tipo: "Obrigatória",

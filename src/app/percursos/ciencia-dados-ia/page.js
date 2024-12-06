@@ -11,10 +11,10 @@ export default function Page() {
     const disciplinas = [
       { id: "root", nome: "Ciência de Dados & IA", periodo: 0, obrigatoria: true },
       { id: "eda1", nome: "EDA I", periodo: 3, obrigatoria: true },
-      { id: "P3_PROB", nome: "Probabilidades e Estatística I", periodo: 3, obrigatoria: true },
-      { id: "P4_IA", nome: "Introdução à IA", periodo: 4, obrigatoria: true },
-      { id: "P5_BD1", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
-      { id: "P6_ML", nome: "Paradigmas de Aprendizagem de Máquina", periodo: 6, obrigatoria: true },
+      { id: "probabilidade", nome: "Probabilidades e Estatística I", periodo: 3, obrigatoria: true },
+      { id: "ia", nome: "Introdução à IA", periodo: 4, obrigatoria: true },
+      { id: "bd", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
+      { id: "aprendizagem_maquina", nome: "Paradigmas de Aprendizagem de Máquina", periodo: 6, obrigatoria: true },
       { id: "VIS_DADOS", nome: "Visualização de Dados", periodo: 5, obrigatoria: false },
       { id: "SERIES_TEMP", nome: "Séries Temporais", periodo: 4, obrigatoria: false },
       { id: "GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
@@ -27,14 +27,14 @@ export default function Page() {
       { source: "root", target: "eda1" },
       { source: "eda1", target: "VIS_DADOS" },
       { source: "eda1", target: "GRAFOS" },
-      { source: "root", target: "P3_PROB" },
-      { source: "P3_PROB", target: "SERIES_TEMP" },
-      { source: "root", target: "P4_IA" },
-      { source: "P4_IA", target: "IA_SAUDE" },
-      { source: "root", target: "P5_BD1" },
-      { source: "P5_BD1", target: "BIG_DATA" },
-      { source: "root", target: "P6_ML" },
-      { source: "P6_ML", target: "DEEP_LEARN" },
+      { source: "root", target: "probabilidade" },
+      { source: "probabilidade", target: "SERIES_TEMP" },
+      { source: "root", target: "ia" },
+      { source: "ia", target: "IA_SAUDE" },
+      { source: "root", target: "bd" },
+      { source: "bd", target: "BIG_DATA" },
+      { source: "root", target: "aprendizagem_maquina" },
+      { source: "aprendizagem_maquina", target: "DEEP_LEARN" },
     ];
 
     const width = 1000;
@@ -244,7 +244,7 @@ export default function Page() {
                     "Conceitos fundamentais de estruturas de dados e algoritmos, como listas, filas, pilhas e árvores. Inclui análises de complexidade e aplicações práticas.",
                 },
                 {
-                  id: "P3_PROB",
+                  id: "probabilidade",
                   codigo: "1108100",
                   nome: "CÁLCULO DAS PROBABILIDADES E ESTATÍSTICA I",
                   tipo: "OBRIGATÓRIA",
@@ -253,7 +253,7 @@ export default function Page() {
                     "Introdução à probabilidade, variáveis aleatórias, distribuições e estatística descritiva. Inclui conceitos básicos de inferência estatística e testes de hipóteses.",
                 },
                 {
-                  id: "P4_IA",
+                  id: "ia",
                   codigo: "1107191",
                   nome: "INTRODUÇÃO À INTELIGÊNCIA ARTIFICIAL",
                   tipo: "OBRIGATÓRIA",
@@ -289,7 +289,7 @@ export default function Page() {
                     "Estudo de grafos para resolver problemas em áreas como redes sociais, rotas logísticas e análise de conectividade.",
                 },
                 {
-                  id: "P5_BD1",
+                  id: "bd",
                   codigo: "1107209",
                   nome: "BANCO DE DADOS I",
                   tipo: "OBRIGATÓRIA",
@@ -307,7 +307,7 @@ export default function Page() {
                     "Uso de algoritmos de IA para diagnósticos, otimização de tratamentos, e avanços na medicina personalizada.",
                 },
                 {
-                  id: "P6_ML",
+                  id: "aprendizagem_maquina",
                   codigo: "DINF00051",
                   nome: "PARADIGMAS DE APRENDIZAGEM DE MÁQUINA",
                   tipo: "OBRIGATÓRIA",

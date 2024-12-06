@@ -50,8 +50,10 @@ const PercursosPage = () => {
     { name: "Especificação de Requisitos de Software", slug: 'requisitos' },
     { name: "Métodos de Projeto de Software", slug: 'metodos_psoft' },
     { name: "Teste de Software", slug: 'teste_software' },
-    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa' }
-
+    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa' },
+    { name: "Fundamentos da Interação Humano-Computador", slug: 'fund_ihc' },
+    { name: "Teoria dos Grafos Aplicada", slug: 'teoria_grafos' },
+    { name: "Reuso de Software", slug: 'reuso_software' }
   ];  
 
   const disciplinaIcones = {
@@ -97,7 +99,9 @@ const PercursosPage = () => {
     requisitos: "/eds_icon.svg",
     metodos_psoft: "/eds_icon.svg",
     teste_software: "/eds_icon.svg",
-    
+    fund_ihc: "/ihc_icon.svg",
+    teoria_grafos: "/estatistica_icon.svg",
+    reuso_software: "/eds_icon.svg",
   };
 
   const updateCardsToShow = () => {
