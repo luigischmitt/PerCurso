@@ -1,7 +1,7 @@
 /* Ajeitar Responsividade dessas legendas */
 .legend {
   position: absolute;
-  bottom: -400px; 
+  bottom: -600px; 
   right: 200px; 
   display: flex;
   flex-direction: column; 
@@ -30,7 +30,6 @@
   padding: 6px 27px; 
 }
 
-
 .legend {
   margin-top: 20px;
   display: flex;
@@ -49,7 +48,7 @@
   max-width: 1500px;
   width: 100%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 30px 0px;
 }
 
 .backgroundRectangle {
@@ -308,13 +307,12 @@
   .container {
     max-width: 500px;
     width: 100%;
-    padding: 30px;
     margin: 0 auto; 
   }
   
   .backgroundRectangle {
     width: 100%;
-    height: 28rem; 
+    height: 30rem; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,50 +334,61 @@
   
   .header {
     display: flex;
-    justify-content: center; 
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 2rem 0; 
   }
   
   .iconTitle {
-    width: 30rem; 
+    width: 22rem; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .icon {
-    width: 3.2rem;
-    height: 3.8rem;
-    margin-right: 1rem;
-    margin-top: 100px;
+    width: 3.6rem;
+    height: 4.2rem;
+    margin-right: 0rem;
+    margin-top: 10px;
   }
   
   .title {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center; 
-    margin: 100px auto 0 auto; 
-    margin-right: 4.5rem;
+    margin: 0px auto 0 auto;
   }
   
   .objectives {
-    margin: 2rem auto; 
-    font-size: 13px;
-    text-align: left;
-    margin-right: 4.5rem;
+    margin: 1.5rem 2rem; 
+    font-size: 12px;
+    text-align: left; 
+    width: 20rem;
   }
   
   .objectives li {
     margin-bottom: 8px;
   }
   
+  .labs {
+    text-align: center;
+    margin-right: 0rem;
+    margin-top: 0rem;
+  }
+  
+  .labsText {
+    margin-top: 0.5rem;
+    margin-left: 0rem;
+  }
+  
   .labs h3 {
-    display: none;
+    font-size: 1rem;
   }
   
   .labs ul {
-    display: none;
-  }
+    margin: 0.8rem 0;
+    margin-left: 2.2rem;
+    font-size: 15px;
+  } 
   
-
   .lineVertical {
     display: none;
   }
@@ -411,8 +420,8 @@
   }
   
   .card {
-    height: 17rem;
-    width: 16rem;
+    height: 20rem;
+    width: 18rem;
     padding: 16px;
     margin: 0 auto; 
     display: flex;
@@ -451,13 +460,12 @@
   .container {
     max-width: 500px;
     width: 100%;
-    padding: 30px;
     margin: 0 auto; 
   }
   
   .backgroundRectangle {
     width: 100%;
-    height: 26rem; 
+    height: 38rem; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -479,52 +487,65 @@
   
   .header {
     display: flex;
-    justify-content: center; 
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 2rem 0; 
   }
   
   .iconTitle {
-    width: 30rem;
+    width: 30rem; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .icon {
     width: 3.6rem;
     height: 4.2rem;
     margin-right: 1rem;
-    margin-top: 90px;
+    margin-top: 10px;
   }
   
   .title {
     font-size: 2.2rem;
     text-align: center; 
-    margin: 90px auto 0 auto;
+    margin: 0px auto 0 auto;
   }
   
   .objectives {
     margin: 2rem auto; 
-    font-size: 15px;
-    text-align: center; 
+    font-size: 16px;
+    text-align: left; 
+    width: 26rem;
   }
   
   .objectives li {
     margin-bottom: 8px;
   }
   
+  .labs {
+    text-align: center;
+    margin-right: 0rem;
+    margin-top: 0rem;
+  }
+  
+  .labsText {
+    margin-top: 0.5rem;
+    margin-left: 0rem;
+  }
+  
   .labs h3 {
     font-size: 1.2rem;
-    display: none;
   }
   
   .labs ul {
-    display: none;
-  }
+    margin: 0.8rem 0;
+    margin-left: 2.2rem;
+    font-size: 17px;
+  } 
   
   .lineVertical {
     display: none;
   }
-  
+
   .map {
     margin: -2%;
   }
@@ -552,7 +573,7 @@
   }
   
   .card {
-    height: 14rem;
+    height: 16rem;
     width: 22rem;
     padding: 16px;
     margin: 0 auto; 
@@ -592,13 +613,12 @@
   .container {
     max-width: 1000px;
     width: 100%;
-    padding: 30px;
     margin: 0 auto; 
   }
   
   .backgroundRectangle {
     width: 100%;
-    height: 24rem; 
+    height: 33rem; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -620,24 +640,24 @@
   
   .header {
     display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-wrap: wrap;
-    margin: 2rem 0; 
+    flex-direction: column;
+    align-items: center;
   }
   
   .iconTitle {
     width: 40rem; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .icon {
     width: 4rem;
-    height: 3rem;
+    height: 4.5rem;
     margin-right: 1.6rem;
   }
   
   .title {
-    font-size: 2rem;
+    font-size: 2.8rem;
     text-align: center; 
     margin: 0 auto; 
   }
@@ -645,22 +665,33 @@
   .objectives {
     margin: 2rem auto; 
     font-size: 16px;
-    text-align: center; 
+    text-align: left; 
   }
   
   .objectives li {
     margin-bottom: 8px;
   }
   
+  .labs {
+    text-align: center;
+    margin-right: 0rem;
+    margin-top: 0rem;
+  }
+  
+  .labsText {
+    margin-top: 0.5rem;
+    margin-left: 0rem;
+  }
+  
   .labs h3 {
     font-size: 1.2rem;
-    display: none;
   }
   
   .labs ul {
-    display: none;
-  }
-
+    margin: 0.8rem 0;
+    margin-left: 2.2rem;
+    font-size: 17px;
+  } 
   .lineVertical {
     display: none;
   }
@@ -693,7 +724,7 @@
   
   .card {
     height: 14rem;
-    width: 28rem;
+    width: 35rem;
     padding: 16px;
     margin: 0 auto; 
     display: flex;
@@ -733,7 +764,6 @@
   .container {
     max-width: 1000px;
     width: 100%;
-    padding: 30px;
   }
   
   .backgroundRectangle {
@@ -769,12 +799,9 @@
   }
   
   .iconTitle {
-    width: 40rem; 
+    width: 45rem; 
   }
-  
-  .icon {
-    display: none;
-  }
+
   
   .title {
     flex: 1;
@@ -797,7 +824,7 @@
   .labs {
     text-align: right;
     margin-right: 2.4rem;
-    margin-top: 4.5rem;
+    margin-top: 8rem;
   }
   
   .labsText {
@@ -842,7 +869,7 @@
   }
   
   .card {
-    height: 13rem;
+    height: 15rem;
     width: 25rem;
     padding: 16px;
   }
@@ -878,12 +905,11 @@
   .container {
     max-width: 1100px;
     width: 100%;
-    padding: 0px;
   }
   
   .backgroundRectangle {
     width: 100%;
-    height: 29rem;/* tamanho do background inicio azul claro */
+    height: 29rem;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -908,11 +934,12 @@
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
   }
   
   .iconTitle {
     width: 45rem; 
+    margin-left: -2rem;
   }
   
   .icon {
@@ -926,7 +953,6 @@
     font-size: 3rem;
     text-align: left;
     margin-left: 2rem;
-    white-space: nowrap;
   }
   
   .objectives {
@@ -942,8 +968,8 @@
   
   .labs {
     text-align: right;
-    margin-right: -3rem;
-    margin-top: 4.5rem;
+    margin-right: 2rem;
+    margin-top: 8rem;
   }
   
   .labsText {
@@ -1020,7 +1046,6 @@
   .container {
     max-width: 1300px;
     width: 100%;
-    padding: 30px;
   }
   
   .backgroundRectangle {
@@ -1130,7 +1155,7 @@
   }
   
   .card {
-    height: 14rem;
+    height: 15rem;
     padding: 16px;
   }
 
