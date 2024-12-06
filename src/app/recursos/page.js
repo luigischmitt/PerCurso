@@ -104,15 +104,15 @@ const PercursosPage = () => {
     const width = window.innerWidth;
 
     if (width >= 1400) {
-      setCardsToShow(42); // Exibe 42 cards para telas grandes
+      setCardsToShow(42); 
     } else if (width >= 1024) {
-      setCardsToShow(30); // Exibe 30 cards
+      setCardsToShow(42); 
     } else if (width >= 800) {
-      setCardsToShow(16); // Exibe 16 cards
+      setCardsToShow(42); 
     } else if (width >= 500) {
-      setCardsToShow(6); // Exibe 6 cards
+      setCardsToShow(42); 
     } else {
-      setCardsToShow(4); // Exibe 4 cards para telas pequenas
+      setCardsToShow(42); 
     }
   };
 

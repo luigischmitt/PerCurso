@@ -210,8 +210,7 @@ export default function Page() {
         <div className={styles.lineBottom}></div>
       </div>
 
-      <div id="roadmap" className={styles.map}></div>
-
+      <div id="roadmap" className={styles.map}>
       <div className={styles.legend}>
         <div className={styles.legendItem}>
           <span>OBRIGATÓRIAS</span>
@@ -219,6 +218,7 @@ export default function Page() {
         <div className={styles.legendItem}>
           <span>OPTATIVAS</span>
         </div>
+      </div>
       </div>
 
       <div className={styles.backgroundRectangle2}>

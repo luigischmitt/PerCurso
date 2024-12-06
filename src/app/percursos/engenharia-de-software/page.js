@@ -199,7 +199,7 @@ export default function Page() {
                   <li>Dominar técnicas avançadas de desenvolvimento, metodologias ágeis e práticas DevOps.</li>
                   <li>Utilizar ferramentas de versionamento, automação e integração contínua para garantir qualidade e eficiência.</li>
                   <li>Aplicar princípios de engenharia de software para resolver problemas reais em áreas como educação, saúde e e-commerce.</li>
-                  <li>Analisar e otimizar sistemas legados para melhor desempenho e manutenção a longo prazo.</li>
+                  <li>Analisar e otimizar sistemas antigos para melhor desempenho e manutenção a longo prazo.</li>
                 </ul>
               </div>
             </div>
@@ -219,8 +219,7 @@ export default function Page() {
         <div className={styles.lineBottom}></div>
       </div>
 
-      <div id="roadmap" className={styles.map}></div>
-      
+      <div id="roadmap" className={styles.map}>
       <div className={styles.legend}>
         <div className={styles.legendItem}>
           <span>OBRIGATÓRIAS</span>
@@ -229,7 +228,8 @@ export default function Page() {
           <span>OPTATIVAS</span>
         </div>
       </div>
-
+      </div>
+      
       <div className={styles.backgroundRectangle2}>
       <div className={styles.lineMid}></div> 
         <div className={styles.container}>
