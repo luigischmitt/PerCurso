@@ -271,13 +271,19 @@ export default function Page() {
                 periodo: 6,
                 descricao: "Descubra como gerenciar e configurar sistemas operacionais, servidores e redes de maneira eficiente.",
               },
-                        
             ].map((disciplina) => (
-                <div
-                className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
+              <div
                 key={disciplina.id}
                 id={`disciplina-${disciplina.id}`}
-                >
+                className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
+                onClick={(e) => {
+                  e.preventDefault();  
+                  setSelectedDiscipline(disciplina.id);  
+                  setTimeout(() => {
+                    window.location.href = `/recursos/${disciplina.id}`;  
+                  }, 200);  
+                }}
+              >
                 <p>{disciplina.codigo}</p>
                 <h3>{disciplina.nome}</h3>
                 <p>
@@ -285,7 +291,7 @@ export default function Page() {
                 </p>
                 <p>Período: {disciplina.periodo}</p>
                 <p>{disciplina.descricao}</p>
-                </div>
+              </div>
             ))}
           </div>
         </section>

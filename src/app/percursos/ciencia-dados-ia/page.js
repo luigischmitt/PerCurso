@@ -10,7 +10,7 @@ export default function Page() {
   useEffect(() => {
     const disciplinas = [
       { id: "root", nome: "Ciência de Dados & IA", periodo: 0, obrigatoria: true },
-      { id: "P3_EDA", nome: "EDA I", periodo: 3, obrigatoria: true },
+      { id: "eda1", nome: "EDA I", periodo: 3, obrigatoria: true },
       { id: "P3_PROB", nome: "Probabilidades e Estatística I", periodo: 3, obrigatoria: true },
       { id: "P4_IA", nome: "Introdução à IA", periodo: 4, obrigatoria: true },
       { id: "P5_BD1", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
@@ -24,9 +24,9 @@ export default function Page() {
     ];
 
     const links = [
-      { source: "root", target: "P3_EDA" },
-      { source: "P3_EDA", target: "VIS_DADOS" },
-      { source: "P3_EDA", target: "GRAFOS" },
+      { source: "root", target: "eda1" },
+      { source: "eda1", target: "VIS_DADOS" },
+      { source: "eda1", target: "GRAFOS" },
       { source: "root", target: "P3_PROB" },
       { source: "P3_PROB", target: "SERIES_TEMP" },
       { source: "root", target: "P4_IA" },
@@ -216,7 +216,8 @@ export default function Page() {
         <div className={styles.lineBottom}></div>
       </div>
 
-      <div id="roadmap" className={styles.map}>
+      <div id="roadmap" className={styles.map}></div>
+
       <div className={styles.legend}>
         <div className={styles.legendItem}>
           <span>OBRIGATÓRIAS</span>
@@ -224,7 +225,6 @@ export default function Page() {
         <div className={styles.legendItem}>
           <span>OPTATIVAS</span>
         </div>
-      </div>
       </div>
       
       <div className={styles.backgroundRectangle2}>
@@ -235,7 +235,7 @@ export default function Page() {
             <div className={styles.courseCards}>
               {[
                 {
-                  id: "P3_EDA",
+                  id: "eda1",
                   codigo: "1103118",
                   nome: "ESTRUTURA DE DADOS E ALGORITMOS I",
                   tipo: "OBRIGATÓRIA",
@@ -335,9 +335,16 @@ export default function Page() {
                 },
               ].map((disciplina) => (
                 <div
-                className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
-                key={disciplina.id}
-                id={`disciplina-${disciplina.id}`}
+                  key={disciplina.id}
+                  id={`disciplina-${disciplina.id}`}
+                  className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
+                  onClick={(e) => {
+                    e.preventDefault();  
+                    setSelectedDiscipline(disciplina.id);  
+                    setTimeout(() => {
+                      window.location.href = `/recursos/${disciplina.id}`;  
+                    }, 200);  
+                  }}
                 >
                   <p>{disciplina.codigo}</p>
                   <h3>{disciplina.nome}</h3>
@@ -346,7 +353,7 @@ export default function Page() {
                   </p>
                   <p>Período: {disciplina.periodo}</p>
                   <p>{disciplina.descricao}</p>
-                  </div>
+                </div>
               ))}
             </div>
           </section>

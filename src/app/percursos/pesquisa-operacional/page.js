@@ -292,12 +292,18 @@ export default function Page() {
                   periodo: 5,
                   descricao: "Estudo de técnicas para criar algoritmos eficientes, essenciais na pesquisa operacional para resolver problemas de otimização e tomada de decisão.",
                 },
-                
               ].map((disciplina) => (
                 <div
-                className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
-                key={disciplina.id}
-                id={`disciplina-${disciplina.id}`}
+                  key={disciplina.id}
+                  id={`disciplina-${disciplina.id}`}
+                  className={`${styles.card} ${selectedDiscipline === disciplina.id ? styles.selectedCard : ""}`}
+                  onClick={(e) => {
+                    e.preventDefault();  
+                    setSelectedDiscipline(disciplina.id);  
+                    setTimeout(() => {
+                      window.location.href = `/recursos/${disciplina.id}`;  
+                    }, 200);  
+                  }}
                 >
                   <p>{disciplina.codigo}</p>
                   <h3>{disciplina.nome}</h3>
@@ -306,7 +312,7 @@ export default function Page() {
                   </p>
                   <p>Período: {disciplina.periodo}</p>
                   <p>{disciplina.descricao}</p>
-                  </div>
+                </div>
               ))}
             </div>
           </section>
