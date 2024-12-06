@@ -10,26 +10,26 @@ export default function Page() {
   useEffect(() => {
     const disciplinas = [
       { id: "root", nome: "Pesquisa Operacional",periodo: 0, obrigatoria: true }, 
-      { id: "linear", nome: "Intro à Álgebra Linear",periodo: 2, obrigatoria: true }, 
+      { id: "linear_comp", nome: "Intro à Álgebra Linear",periodo: 2, obrigatoria: true }, 
       { id: "apa", nome: "APA",periodo: 5, obrigatoria: true }, 
-      { id: "PO", nome: "Pesquisa Operacional", periodo: 3, obrigatoria: false },
+      { id: "po", nome: "Pesquisa Operacional", periodo: 3, obrigatoria: false },
       { id: "ALG", nome: "Álgebra Linear Computacional", periodo: 3, obrigatoria: false }, 
       { id: "poo", nome: "POO", periodo: 2, obrigatoria: true },
       { id: "eda1", nome: "EDA I", periodo: 3, obrigatoria: true }, 
-      { id: "ECON", nome: "Princípios de Economia", periodo: 0, obrigatoria: false },
-      { id: "GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false }, 
+      { id: "econ", nome: "Princípios de Economia", periodo: 0, obrigatoria: false },
+      { id: "teoria_grafos", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false }, 
     ];
 
     const links = [
-      { source: "root", target: "linear" }, 
-      { source: "root", target: "ECON" }, 
+      { source: "root", target: "linear_comp" }, 
+      { source: "root", target: "econ" }, 
       { source: "root", target: "eda1" }, 
       { source: "root", target: "poo" }, 
-      { source: "linear", target: "PO" },
+      { source: "linear_comp", target: "po" },
       { source: "poo", target: "ALG" }, 
-      { source: "poo", target: "PO" },
+      { source: "poo", target: "po" },
       { source: "eda1", target: "apa" },
-      { source: "eda1", target: "GRAFOS" },
+      { source: "eda1", target: "teoria_grafos" },
     ];
     
     const width = 1000;
@@ -229,7 +229,7 @@ export default function Page() {
             <div className={styles.courseCards}>
               {[
                 {
-                  id: "ECON",
+                  id: "econ",
                   codigo: "PSAE00251",
                   nome: "PRINCÍPIOS DE ECONOMIA",
                   tipo: "Optativa",
@@ -261,7 +261,7 @@ export default function Page() {
                   descricao: "Descubra como manipular e organizar dados de forma eficiente, explorando algoritmos essenciais para resolver problemas complexos.",
                 },
                 {
-                  id: "PO",
+                  id: "po",
                   codigo: "5102007",
                   nome: "PESQUISA OPERACIONAL",
                   tipo: "Optativa",
@@ -269,7 +269,7 @@ export default function Page() {
                   descricao: "Estudo de técnicas de modelagem matemática para otimização de processos e tomada de decisão, aplicáveis em logística, planejamento e gestão.",
                 },
                 {
-                  id: "ALG",
+                  id: "linear_comp",
                   codigo: "5102009",
                   nome: "ALGEBRA LINEAR COMPUTACIONAL",
                   tipo: "Optativa",
@@ -277,7 +277,7 @@ export default function Page() {
                   descricao: "Oferece métodos para resolver sistemas de equações lineares e otimizar problemas com restrições, essenciais para modelagem matemática e análise em Pesquisa Operacional.",
                 },
                 {
-                  id: "GRAFOS",
+                  id: "teoria_grafos",
                   codigo: "GDCOC0091",
                   nome: "TEORIA DOS GRAFOS APLICADA",
                   tipo: "Optativa",

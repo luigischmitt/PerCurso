@@ -49,6 +49,10 @@ export async function generateStaticParams() {
     { disciplina: 'fund_ihc' },
     { disciplina: 'teoria_grafos' },
     { disciplina: 'series' },
+    { disciplina: 'po' },
+    {disciplina: 'redes_sem_fio' },
+    { disciplina: 'sistemas_informacao_decisao' },
+    { disciplina: 'administracao_sitemas' },
   ];
 }
 
@@ -105,6 +109,12 @@ const disciplinaNomes = {
   ia_saude: "IA APLICADA À SAÚDE",
   big_data: "BIG DATA",
   deep_learn: "APRENDIZADO PROFUNDO",
+  econ: "PRINCÍPIOS DE ECONOMIA",
+  po: "PESQUISA OPERACIONAL",
+  linear_comp: "ÁLGEBRA LINEAR COMPUTACIONAL",
+  redes_sem_fio: "REDES SEM FIO",
+  sistemas_informacao_decisao: "SISTEMAS DE INFORMAÇÃO E DECISÃO",
+  administracao_sistemas: "ADMINISTRAÇÃO DE SISTEMAS"
 };
 
 const disciplinaIcones = {
@@ -160,7 +170,12 @@ const disciplinaIcones = {
   ia_saude: "/ia_icon.svg",
   big_data: "/estatistica_icon.svg",
   deep_learn: "/ia_icon.svg",
-  
+  econ: "/cv_icon.svg",
+  po: "/ip_icon.svg",
+  linear_comp: "/cv_icon.svg",
+  redes_sem_fio: "/redes_icon.svg",
+  sistemas_informacao_decisao: "/ihc_icon.svg",
+  administracao_sistemas: "/ihc_icon.svg",
 };
 
 export default function DisciplinaPage({ params }) {
