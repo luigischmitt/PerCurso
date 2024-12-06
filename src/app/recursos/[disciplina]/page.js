@@ -105,6 +105,7 @@ const disciplinaNomes = {
   ia_saude: "IA APLICADA À SAÚDE",
   big_data: "BIG DATA",
   deep_learn: "APRENDIZADO PROFUNDO",
+  econ: "PRINCÍPIOS DE ECONOMIA",
 };
 
 const disciplinaIcones = {
@@ -160,7 +161,7 @@ const disciplinaIcones = {
   ia_saude: "/ia_icon.svg",
   big_data: "/estatistica_icon.svg",
   deep_learn: "/ia_icon.svg",
-  
+  econ: "/cv_icon.svg",
 };
 
 export default function DisciplinaPage({ params }) {

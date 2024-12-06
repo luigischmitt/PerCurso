@@ -16,13 +16,13 @@ export default function Page() {
       { id: "ALG", nome: "Álgebra Linear Computacional", periodo: 3, obrigatoria: false }, 
       { id: "poo", nome: "POO", periodo: 2, obrigatoria: true },
       { id: "eda1", nome: "EDA I", periodo: 3, obrigatoria: true }, 
-      { id: "ECON", nome: "Princípios de Economia", periodo: 0, obrigatoria: false },
+      { id: "econ", nome: "Princípios de Economia", periodo: 0, obrigatoria: false },
       { id: "GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false }, 
     ];
 
     const links = [
       { source: "root", target: "linear" }, 
-      { source: "root", target: "ECON" }, 
+      { source: "root", target: "econ" }, 
       { source: "root", target: "eda1" }, 
       { source: "root", target: "poo" }, 
       { source: "linear", target: "PO" },
@@ -229,7 +229,7 @@ export default function Page() {
             <div className={styles.courseCards}>
               {[
                 {
-                  id: "ECON",
+                  id: "econ",
                   codigo: "PSAE00251",
                   nome: "PRINCÍPIOS DE ECONOMIA",
                   tipo: "Optativa",

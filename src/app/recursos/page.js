@@ -61,6 +61,7 @@ const PercursosPage = () => {
     { name: "IA Aplicada à Saúde", slug: 'ia_saude' },
     { name: "Big Data", slug: 'big_data' },
     { name: "Aprendizado Profundo", slug: 'deep_learn' },
+    { name: "Princípios de Economia", slug: 'econ' },
   ];  
 
   const disciplinaIcones = {
@@ -116,6 +117,7 @@ const PercursosPage = () => {
     ia_saude: "/ia_icon.svg",
     big_data: "/estatistica_icon.svg",
     deep_learn: "/ia_icon.svg",
+    econ: "/cv_icon.svg",
   };
 
   const updateCardsToShow = () => {
