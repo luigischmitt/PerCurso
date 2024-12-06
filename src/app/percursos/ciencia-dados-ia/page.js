@@ -15,26 +15,26 @@ export default function Page() {
       { id: "ia", nome: "Introdução à IA", periodo: 4, obrigatoria: true },
       { id: "bd", nome: "Banco de Dados I", periodo: 5, obrigatoria: true },
       { id: "aprendizagem_maquina", nome: "Paradigmas de Aprendizagem de Máquina", periodo: 6, obrigatoria: true },
-      { id: "VIS_DADOS", nome: "Visualização de Dados", periodo: 5, obrigatoria: false },
-      { id: "SERIES_TEMP", nome: "Séries Temporais", periodo: 4, obrigatoria: false },
-      { id: "GRAFOS", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
-      { id: "IA_SAUDE", nome: "IA Aplicada à Saúde", periodo: 5, obrigatoria: false },
-      { id: "BIG_DATA", nome: "Big Data", periodo: 6, obrigatoria: false },
-      { id: "DEEP_LEARN", nome: "Aprendizado Profundo", periodo: 7, obrigatoria: false },
+      { id: "visualizacao", nome: "Visualização de Dados", periodo: 5, obrigatoria: false },
+      { id: "series", nome: "Séries Temporais", periodo: 4, obrigatoria: false },
+      { id: "teoria_grafos", nome: "Teoria dos Grafos Aplicada", periodo: 4, obrigatoria: false },
+      { id: "ia_saude", nome: "IA Aplicada à Saúde", periodo: 5, obrigatoria: false },
+      { id: "big_data", nome: "Big Data", periodo: 6, obrigatoria: false },
+      { id: "deep_learn", nome: "Aprendizado Profundo", periodo: 7, obrigatoria: false },
     ];
 
     const links = [
       { source: "root", target: "eda1" },
-      { source: "eda1", target: "VIS_DADOS" },
-      { source: "eda1", target: "GRAFOS" },
+      { source: "eda1", target: "visualizacao" },
+      { source: "eda1", target: "teoria_grafos" },
       { source: "root", target: "probabilidade" },
-      { source: "probabilidade", target: "SERIES_TEMP" },
+      { source: "probabilidade", target: "series" },
       { source: "root", target: "ia" },
-      { source: "ia", target: "IA_SAUDE" },
+      { source: "ia", target: "ia_saude" },
       { source: "root", target: "bd" },
-      { source: "bd", target: "BIG_DATA" },
+      { source: "bd", target: "big_data" },
       { source: "root", target: "aprendizagem_maquina" },
-      { source: "aprendizagem_maquina", target: "DEEP_LEARN" },
+      { source: "aprendizagem_maquina", target: "deep_learn" },
     ];
 
     const width = 1000;
@@ -262,7 +262,7 @@ export default function Page() {
                     "Apresentação dos fundamentos da IA, incluindo técnicas básicas de busca, representação de conhecimento, raciocínio lógico e aprendizado de máquina.",
                 },
                 {
-                  id: "VIS_DADOS",
+                  id: "visualizacao",
                   codigo: "GDCOC0096",
                   nome: "VISUALIZAÇÃO DE DADOS",
                   tipo: "OPTATIVA",
@@ -271,7 +271,7 @@ export default function Page() {
                     "Ferramentas e técnicas para transformar dados complexos em gráficos e visualizações interativas, facilitando sua interpretação e análise.",
                 },
                 {
-                  id: "SERIES_TEMP",
+                  id: "series",
                   codigo: "GDCOC0114",
                   nome: "SÉRIES TEMPORAIS",
                   tipo: "OPTATIVA",
@@ -280,7 +280,7 @@ export default function Page() {
                     "Análise de dados organizados em ordem cronológica para identificar padrões, tendências e previsões futuras.",
                 },
                 {
-                  id: "GRAFOS",
+                  id: "teoria_grafos",
                   codigo: "GDSCO0032",
                   nome: "TEORIA DOS GRAFOS APLICADA",
                   tipo: "OPTATIVA",
@@ -298,7 +298,7 @@ export default function Page() {
                     "Introdução ao conceito de bancos de dados, modelagem de dados, normalização e linguagens de consulta como SQL.",
                 },
                 {
-                  id: "IA_SAUDE",
+                  id: "ia_saude",
                   codigo: "DINF00068",
                   nome: "IA APLICADA À SAÚDE",
                   tipo: "OPTATIVA",
@@ -316,7 +316,7 @@ export default function Page() {
                     "Explora abordagens e técnicas de aprendizado de máquina, como aprendizado supervisionado, não supervisionado e por reforço, além de aplicações práticas em dados reais.",
                 },
                 {
-                  id: "BIG_DATA",
+                  id: "big_data",
                   codigo: "GDCOC0098",
                   nome: "BIG DATA",
                   tipo: "OPTATIVA",
@@ -325,7 +325,7 @@ export default function Page() {
                     "Conjunto de tecnologias para processar e analisar grandes volumes de dados variados, gerando insights estratégicos.",
                 },
                 {
-                  id: "DEEP_LEARN",
+                  id: "deep_learn",
                   codigo: "GDCOC0094",
                   nome: "APRENDIZADO PROFUNDO",
                   tipo: "OPTATIVA",
