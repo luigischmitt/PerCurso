@@ -1,3 +1,3 @@
 ## Dicas
 
-Dicas sobre a disciplina.
+Dicas sobre a disciplina..
