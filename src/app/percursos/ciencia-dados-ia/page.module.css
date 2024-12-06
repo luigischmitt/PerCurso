@@ -378,10 +378,6 @@
     display: none;
   }
   
-  .lineBottom {
-    display: none;
-  }
-  
   .lineVertical {
     display: none;
   }
@@ -522,10 +518,7 @@
   .labs ul {
     display: none;
   }
-  
-  .lineBottom {
-    display: none;
-  }
+ 
   
   .lineVertical {
     display: none;
@@ -667,9 +660,6 @@
     display: none;
   }
   
-  .lineBottom {
-    display: none;
-  }
   
   .lineVertical {
     display: none;
