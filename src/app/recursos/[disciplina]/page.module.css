@@ -216,7 +216,6 @@
   text-decoration: none;
 }
 
-/* Adiciona um alinhamento consistente para listas */
 .card ul, .card ol {
   margin-left: 0.5rem; 
   padding-left: 0.5rem; 
@@ -256,10 +255,11 @@
     width: 4.9rem;
     height: 5.4rem;
     margin-bottom: 1.2rem; 
+    margin-right: 0px;
   }
 
   .title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--secondary-color);
     font-weight: 900;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
@@ -268,7 +268,7 @@
     word-wrap: break-word; 
     overflow-wrap: break-word;
     white-space: normal;
-    max-width: 90%; 
+    max-width: 85%; 
     padding: 0px 300px;
   }  
 
@@ -278,9 +278,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 14rem;
-    height: 2.0rem;
-    font-size: 0.7rem;
+    min-width: 20rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .howEditButton {
@@ -289,9 +289,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 14rem;
-    height: 2.0rem;
-    font-size: 0.7rem;
+    min-width: 20rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .navTabs {
@@ -350,6 +350,7 @@
     width: 4.9rem;
     height: 5.4rem;
     margin-bottom: 1.2rem;
+    margin-right: 0px;
   }
 
   .title {
@@ -373,8 +374,8 @@
     align-items: center;
     justify-content: center;
     min-width: 20rem;
-    height: 2.40rem;
-    font-size: 0.8rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .howEditButton {
@@ -384,8 +385,8 @@
     align-items: center;
     justify-content: center;
     min-width: 20rem;
-    height: 2.40rem;
-    font-size: 0.8rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .navTabs {
@@ -443,6 +444,7 @@
     width: 5.1rem;
     height: 5.6rem;
     margin-bottom: 1.2rem;
+    margin-right: 0px;
   }
 
   .title {
@@ -466,8 +468,8 @@
     align-items: center;
     justify-content: center;
     min-width: 20rem;
-    height: 2.60rem;
-    font-size: 0.87rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .howEditButton {
@@ -477,8 +479,8 @@
     align-items: center;
     justify-content: center;
     min-width: 20rem;
-    height: 2.60rem;
-    font-size: 0.87rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .navTabs {
@@ -534,6 +536,7 @@
     width: 5.5rem;
     height: 6rem;
     margin-bottom: 1.2rem;
+    margin-right: 0px;
   }
 
   .title {
@@ -547,24 +550,24 @@
 
   .editButton {
     margin: 0 auto; 
-    margin-top: 0.9rem;
+    margin-top: 0.9rem; 
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 20rem;
-    height: 2.77rem;
-    font-size: 0.92rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .howEditButton {
     margin: 0 auto; 
-    margin-top: 0.9rem;
+    margin-top: 0.9rem; 
     display: flex;
     align-items: center;
     justify-content: center;
     min-width: 20rem;
-    height: 2.77rem;
-    font-size: 0.92rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .navTabs {
@@ -621,6 +624,7 @@
     width: 5.5rem;
     height: 6rem;
     margin-bottom: 1.2rem; 
+    margin-right: 0px;
   }
 
   .title {
@@ -639,8 +643,8 @@
     align-items: center;
     justify-content: center;
     min-width: 20rem;
-    height: 2.77rem;
-    font-size: 0.92rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .howEditButton {
@@ -650,8 +654,8 @@
     align-items: center;
     justify-content: center;
     min-width: 20rem;
-    height: 2.77rem;
-    font-size: 0.92rem;
+    height: 3.0rem;
+    font-size: 1rem;
   }
 
   .navTabs {
