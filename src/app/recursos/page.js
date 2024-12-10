@@ -134,15 +134,15 @@ const PercursosPage = () => {
     const width = window.innerWidth;
 
     if (width >= 1400) {
-      setCardsToShow(42); 
+      setCardsToShow(57); 
     } else if (width >= 1024) {
-      setCardsToShow(42); 
+      setCardsToShow(57); 
     } else if (width >= 800) {
-      setCardsToShow(42); 
+      setCardsToShow(57); 
     } else if (width >= 500) {
-      setCardsToShow(42); 
+      setCardsToShow(57); 
     } else {
-      setCardsToShow(42); 
+      setCardsToShow(57); 
     }
   };
 
