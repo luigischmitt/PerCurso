@@ -52,7 +52,7 @@ export async function generateStaticParams() {
     { disciplina: 'po' },
     {disciplina: 'redes_sem_fio' },
     { disciplina: 'sistemas_informacao_decisao' },
-    { disciplina: 'administracao_sitemas' },
+    { disciplina: 'administracao_sistemas' },
   ];
 }
 
