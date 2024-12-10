@@ -46,9 +46,26 @@ Para contribuir com o PerCurso, você pode enviar um **pull request** para atual
 | [Metodologia do Trabalho Científico](content/metodologia/) | 1ª Optativa | [Programação Funcional](content/funcional/) | [Engenharia de Software](content/es/) | [Especificação de Requisitos de Software](content/requisitos/) | [Métodos de Projeto de Software](content/metodos_psoft/) | [Teste de Software](content/teste_software/) | |
 | [Pesquisa Aplicada à Computação](content/pesquisa/) | | | | | 2ª Optativa | 3ª Optativa | |
 
+## Optativas
+
+- [Fundamentos da Interação Humano-Computador](content/fund_ihc)
+- [Teoria dos Grafos Aplicada](content/teoria_grafos)
+- [Reuso de Software](content/reuso_software)
+- [Implementação de Sistemas para Dispositivos Móveis](content/implementacao)
+- [Métodos Formais para Desenvolvimento de Software](content/metodos_formais)
+- [Visualização de Dados](content/visualizacao)
+- [Séries Temporais](content/series)
+- [IA Aplicada à Saúde](content/ia_saude)
+- [Big Data](content/big_data)
+- [Aprendizado Profundo](content/deep_learn)
+- [Princípios de Economia](content/econ)
+- [Pesquisa Operacional](content/po)
+- [Álgebra Linear Computacional](content/linear_comp)
+- [Redes sem Fio](content/redes_sem_fio)
+- [Sistemas de informação e decisão](content/sistemas_informacao_decisao)
+- [Administração de Sistemas](content/administracao_sistemas)
 
 <br>
-
 
 ## 👥 PreCursores: 
 **O PerCurso é mantido por uma equipe de alunos apaixonados por compartilhar conhecimento:**
