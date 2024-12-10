@@ -8,9 +8,11 @@ O **PerCurso** vai te ajudar a se orientar durante a sua graduação em CC. Dire
 
 <hr>
 
-## 🌐 Visite o nosso site
+## 🌐 Nos Visite!
 
 Explore o **PerCurso** diretamente no nosso site: [https://percursoci.com.br/](https://percursoci.com.br/). Lá você encontrará todas as disciplinas organizadas, com conteúdos prontos para facilitar seus estudos. Navegue, contribua e faça parte da nossa comunidade!
+
+Também temos um canal no **Youtube**, aonde você encontrará vídeos sobre o que é o **PerCurso** e como contribuir com o projeto. Espero te ver pelo [nosso canal](https://www.youtube.com/@PerCursoci)!
 
 ## 🛠 Como Contribuir?
 
