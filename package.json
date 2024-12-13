@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.1",
     "d3": "^7.9.0",
     "gray-matter": "^4.0.3",
     "next": "^15.0.3",
