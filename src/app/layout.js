@@ -1,4 +1,5 @@
 // layout.js
+import { Analytics } from "@vercel/analytics/react"
 import localFont from "next/font/local";
 import "./globals.css";
 import Link from "next/link"; // Importa o Link do Next.js
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Analytics />
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
