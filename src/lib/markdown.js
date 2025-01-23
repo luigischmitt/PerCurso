@@ -6,19 +6,31 @@ import html from 'remark-html';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
-export function getDisciplinaContent(disciplina, fileName) {
-  const fullPath = path.join(contentDirectory, disciplina, `${fileName}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
-  const matterResult = matter(fileContents);
+export function getDisciplinaContent(disciplina, fileName, curso) {
 
-  const processedContent = remark()
-    .use(html)
-    .processSync(matterResult.content);
+  if (!disciplina || !fileName || !curso) {
+    throw new Error(`Faltando parâmetros: disciplina=${disciplina}, fileName=${fileName}, curso=${curso}`);
+  }
 
-  const contentHtml = processedContent.toString();
+  const contentDirectory = path.join(process.cwd(), 'content', curso, disciplina); 
+  const fullPath = path.join(contentDirectory, `${fileName}.md`);
 
-  return {
-    title: matterResult.data.title,
-    contentHtml,
-  };
+  try {
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
+    const matterResult = matter(fileContents);
+
+    const processedContent = remark()
+      .use(html)
+      .processSync(matterResult.content);
+
+    const contentHtml = processedContent.toString();
+
+    return {
+      title: matterResult.data.title,
+      contentHtml,
+    };
+  } catch (error) {
+    console.error("Erro ao ler o arquivo:", error);
+    throw error;
+  }
 }

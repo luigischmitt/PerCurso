@@ -7,67 +7,70 @@ import styles from './page.module.css';
 const PercursosPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [cardsToShow, setCardsToShow] = useState(18);
+  const [cursoSelecionado, setCursoSelecionado] = useState('ciencia_computacao');
+
 
   const disciplines = [
-    { name: "Cálculo diferencial e integral I", slug: 'calculo1' },
-    { name: "Cálculo diferencial e integral II", slug: 'calculo2' },
-    { name: "Cálculo Numérico", slug: 'numerico' },
-    { name: "Introdução à Inteligência Artificial", slug: 'ia' },
-    { name: "Sistemas Baseados em Conhecimento", slug: 'sbc' },
-    { name: "Paradigmas de Aprendizagem de Máquina", slug: 'aprendizagem_maquina' },
-    { name: "Cálculo Vetorial e Geometria Analítica", slug: 'vetorial' },
-    { name: "Introdução à Álgebra Linear", slug: 'linear' },
-    { name: "Cálculo das Probabilidades e Estatística I", slug: 'probabilidade' },
-    { name: "Redes de Computadores I", slug: 'redes' },
-    { name: "Análise e Projeto de Algoritmos", slug: 'apa' },
-    { name: "Segurança Computacional", slug: 'seguranca' },
-    { name: "Sistemas de Informação nas Organizações", slug: 'sistemas_informacao' },
-    { name: "Computadores e Sociedade", slug: 'sociedade' },
-    { name: "Matemática Discreta", slug: 'discreta' },
-    { name: "Lógica Aplicada à Computação", slug: 'logica' },
-    { name: "Linguagens Formais e Computabilidade", slug: 'formais' },
-    { name: "Processamento Digital de Imagens", slug: 'imagens' },
-    { name: "Paradigmas de Linguagens de Programação", slug: 'paradigmas_linguagens' },
-    { name: "Construção de Compiladores I", slug: 'compiladores' },
-    { name: "Interação Humano-Computador", slug: 'ihc' },
-    { name: "Introdução à ciência da computação", slug: 'ic' },
-    { name: "Arquitetura de Computadores I", slug: 'arquitetura1' },
-    { name: "Arquitetura de Computadores II", slug: 'arquitetura2' },
-    { name: "Sistemas Operacionais I", slug: 'so' },
-    { name: "Programação Concorrente e Distribuída", slug: 'concorrente' },
-    { name: "Sistemas Distribuídos", slug: 'sistema_distribuidos' },
-    { name: "Engenharia de Sistemas Distribuídos", slug: 'engenharia_sistemas' },
-    { name: "Introdução à Programação", slug: 'ip' },
-    { name: "Programação Orientada a Objetos", slug: 'poo' },
-    { name: "Estruturas de Dados e Algoritmos I", slug: 'eda1' },
-    { name: "Estruturas de Dados e Algoritmos II", slug: 'eda2' },
-    { name: "Banco de Dados I", slug: 'bd' },
-    { name: "Inovação de Base Científica-Tecnológica", slug: 'inovacao' },
-    { name: "Gerenciamento de Projeto de Software", slug: 'gerencimento_psoft' },
-    { name: "Metodologia do trabalho científico", slug: 'metodologia' },
-    { name: "Programação Funcional", slug: 'funcional' },
-    { name: "Engenharia de Software", slug: 'es' },
-    { name: "Especificação de Requisitos de Software", slug: 'requisitos' },
-    { name: "Métodos de Projeto de Software", slug: 'metodos_psoft' },
-    { name: "Teste de Software", slug: 'teste_software' },
-    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa' },
-    { name: "Fundamentos da Interação Humano-Computador", slug: 'fund_ihc' },
-    { name: "Teoria dos Grafos Aplicada", slug: 'teoria_grafos' },
-    { name: "Reuso de Software", slug: 'reuso_software' },
-    { name: "Implementação de Sistemas para Dispositivos Móveis", slug: 'implementacao' },
-    { name: "Métodos Formais para Desenvolvimento de Software", slug: 'metodos_formais' },
-    { name: "Visualização de Dados", slug: 'visualizacao' },
-    { name: "Séries Temporais", slug: 'series' },
-    { name: "IA Aplicada à Saúde", slug: 'ia_saude' },
-    { name: "Big Data", slug: 'big_data' },
-    { name: "Aprendizado Profundo", slug: 'deep_learn' },
-    { name: "Princípios de Economia", slug: 'econ' },
-    { name: "Pesquisa Operacional", slug: 'po' },
-    { name: "Álgebra Linear Computacional", slug: 'linear_comp' },
-    { name: "Redes sem Fio", slug: 'redes_sem_fio' },
-    { name: "Sistemas de informação e decisão", slug: 'sistemas_informacao_decisao' },
-    { name: "Administração de Sistemas", slug: 'administracao_sistemas' },
-  ];  
+    { name: "Cálculo diferencial e integral I", slug: 'calculo1', curso: 'ciencia_computacao' },
+    { name: "Cálculo diferencial e integral II", slug: 'calculo2', curso: 'ciencia_computacao' },
+    { name: "Cálculo Numérico", slug: 'numerico', curso: 'ciencia_computacao' },
+    { name: "Introdução à Inteligência Artificial", slug: 'ia', curso: 'ciencia_computacao' },
+    { name: "Sistemas Baseados em Conhecimento", slug: 'sbc', curso: 'ciencia_computacao' },
+    { name: "Paradigmas de Aprendizagem de Máquina", slug: 'aprendizagem_maquina', curso: 'ciencia_computacao' },
+    { name: "Cálculo Vetorial e Geometria Analítica", slug: 'vetorial', curso: 'ciencia_computacao' },
+    { name: "Introdução à Álgebra Linear", slug: 'linear', curso: 'ciencia_computacao' },
+    { name: "Cálculo das Probabilidades e Estatística I", slug: 'probabilidade', curso: 'ciencia_computacao' },
+    { name: "Redes de Computadores I", slug: 'redes', curso: 'ciencia_computacao' },
+    { name: "Análise e Projeto de Algoritmos", slug: 'apa', curso: 'ciencia_computacao' },
+    { name: "Segurança Computacional", slug: 'seguranca', curso: 'ciencia_computacao' },
+    { name: "Sistemas de Informação nas Organizações", slug: 'sistemas_informacao', curso: 'ciencia_computacao' },
+    { name: "Computadores e Sociedade", slug: 'sociedade', curso: 'ciencia_computacao' },
+    { name: "Matemática Discreta", slug: 'discreta', curso: 'ciencia_computacao' },
+    { name: "Lógica Aplicada à Computação", slug: 'logica', curso: 'ciencia_computacao' },
+    { name: "Linguagens Formais e Computabilidade", slug: 'formais', curso: 'ciencia_computacao' },
+    { name: "Processamento Digital de Imagens", slug: 'imagens', curso: 'ciencia_computacao' },
+    { name: "Paradigmas de Linguagens de Programação", slug: 'paradigmas_linguagens', curso: 'ciencia_computacao' },
+    { name: "Construção de Compiladores I", slug: 'compiladores', curso: 'ciencia_computacao' },
+    { name: "Interação Humano-Computador", slug: 'ihc', curso: 'ciencia_computacao' },
+    { name: "Introdução à ciência da computação", slug: 'ic', curso: 'ciencia_computacao' },
+    { name: "Arquitetura de Computadores I", slug: 'arquitetura1', curso: 'ciencia_computacao' },
+    { name: "Arquitetura de Computadores II", slug: 'arquitetura2', curso: 'ciencia_computacao' },
+    { name: "Sistemas Operacionais I", slug: 'so', curso: 'ciencia_computacao' },
+    { name: "Programação Concorrente e Distribuída", slug: 'concorrente', curso: 'ciencia_computacao' },
+    { name: "Sistemas Distribuídos", slug: 'sistema_distribuidos', curso: 'ciencia_computacao' },
+    { name: "Engenharia de Sistemas Distribuídos", slug: 'engenharia_sistemas', curso: 'ciencia_computacao' },
+    { name: "Introdução à Programação", slug: 'ip', curso: 'ciencia_computacao' },
+    { name: "Programação Orientada a Objetos", slug: 'poo', curso: 'ciencia_computacao' },
+    { name: "Estruturas de Dados e Algoritmos I", slug: 'eda1', curso: 'ciencia_computacao' },
+    { name: "Estruturas de Dados e Algoritmos II", slug: 'eda2', curso: 'ciencia_computacao' },
+    { name: "Banco de Dados I", slug: 'bd', curso: 'ciencia_computacao' },
+    { name: "Inovação de Base Científica-Tecnológica", slug: 'inovacao', curso: 'ciencia_computacao' },
+    { name: "Gerenciamento de Projeto de Software", slug: 'gerencimento_psoft', curso: 'ciencia_computacao' },
+    { name: "Metodologia do trabalho científico", slug: 'metodologia', curso: 'ciencia_computacao' },
+    { name: "Programação Funcional", slug: 'funcional', curso: 'ciencia_computacao' },
+    { name: "Engenharia de Software", slug: 'es', curso: 'ciencia_computacao' },
+    { name: "Especificação de Requisitos de Software", slug: 'requisitos', curso: 'ciencia_computacao' },
+    { name: "Métodos de Projeto de Software", slug: 'metodos_psoft', curso: 'ciencia_computacao' },
+    { name: "Teste de Software", slug: 'teste_software', curso: 'ciencia_computacao' },
+    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa', curso: 'ciencia_computacao' },
+    { name: "Fundamentos da Interação Humano-Computador", slug: 'fund_ihc', curso: 'ciencia_computacao' },
+    { name: "Teoria dos Grafos Aplicada", slug: 'teoria_grafos', curso: 'ciencia_computacao' },
+    { name: "Reuso de Software", slug: 'reuso_software', curso: 'ciencia_computacao' },
+    { name: "Implementação de Sistemas para Dispositivos Móveis", slug: 'implementacao', curso: 'ciencia_computacao' },
+    { name: "Métodos Formais para Desenvolvimento de Software", slug: 'metodos_formais', curso: 'ciencia_computacao' },
+    { name: "Visualização de Dados", slug: 'visualizacao', curso: 'ciencia_computacao' },
+    { name: "Séries Temporais", slug: 'series', curso: 'ciencia_computacao' },
+    { name: "IA Aplicada à Saúde", slug: 'ia_saude', curso: 'ciencia_computacao' },
+    { name: "Big Data", slug: 'big_data', curso: 'ciencia_dados_ia' },
+    { name: "Aprendizado Profundo", slug: 'deep_learn', curso: 'ciencia_computacao' },
+    { name: "Princípios de Economia", slug: 'econ', curso: 'ciencia_computacao' },
+    { name: "Pesquisa Operacional", slug: 'po', curso: 'ciencia_computacao' },
+    { name: "Álgebra Linear Computacional", slug: 'linear_comp', curso: 'ciencia_computacao' },
+    { name: "Redes sem Fio", slug: 'redes_sem_fio', curso: 'ciencia_computacao' },
+    { name: "Sistemas de informação e decisão", slug: 'sistemas_informacao_decisao', curso: 'ciencia_computacao' },
+    { name: "Administração de Sistemas", slug: 'administracao_sistemas', curso: 'ciencia_computacao' },
+];
+
 
   const disciplinaIcones = {
     calculo1: "/c1_icon.svg",
@@ -134,15 +137,15 @@ const PercursosPage = () => {
     const width = window.innerWidth;
 
     if (width >= 1400) {
-      setCardsToShow(57); 
+      setCardsToShow(42); 
     } else if (width >= 1024) {
-      setCardsToShow(57); 
+      setCardsToShow(42); 
     } else if (width >= 800) {
-      setCardsToShow(57); 
+      setCardsToShow(42); 
     } else if (width >= 500) {
-      setCardsToShow(57); 
+      setCardsToShow(42); 
     } else {
-      setCardsToShow(57); 
+      setCardsToShow(42); 
     }
   };
 
@@ -157,9 +160,10 @@ const PercursosPage = () => {
   }, []);
 
   const filteredDisciplines = disciplines.filter(discipline => 
+    discipline.curso === cursoSelecionado &&
     discipline.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
       .includes(searchTerm.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase())
-  );
+  );  
 
   const disciplinaIcone = "Icone"; 
 
@@ -187,6 +191,11 @@ const PercursosPage = () => {
         <div className={styles.lineMid}></div>
         <section className={`${styles.container} ${styles.resourcesSection}`}>
             <h2 className={styles.sectionTitle}>RECURSOS</h2>
+            <div className={styles.courseFilter}>
+              <button className={styles.courseButton} onClick={() => setCursoSelecionado('ciencia_computacao')}>Ciência da Computação</button>
+              <button className={styles.courseButton} onClick={() => setCursoSelecionado('engenharia_computacao')}>Engenharia da Computação</button>
+              <button className={styles.courseButton} onClick={() => setCursoSelecionado('ciencia_dados_ia')}>Ciência de Dados e IA</button>
+            </div>
             <div className={styles.searchContainer}>
               <input
                 type="text"
