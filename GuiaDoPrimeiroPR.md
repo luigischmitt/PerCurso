@@ -19,9 +19,10 @@ Antes de começar, você precisa:
 2. Conhecimento básico de Git e Markdown (não se preocupe, é simples!).
 3. Node.js e npm/yarn instalados (Opcional, caso vá rodar o site localmente para validar as mudanças.)
 
-<br />
 <p align="center">
-  <img src="gifs/criando-conta.gif" alt="Criar conta no Github" height="320">
+  <video autoplay loop muted playsinline height="320">
+    <source src="gifs/criando-conta.mp4" type="video/mp4">
+  </video>
 </p>
 
 ## 3. Fazendo seu Primeiro Pull Request
@@ -31,9 +32,10 @@ Antes de começar, você precisa:
 2. Clique no botão Fork no canto superior direito.
 3. Agora você terá sua cópia do repositório no seu perfil.
 
-<br />
 <p align="center">
-  <img src="gifs/fork.gif" alt="Primeiro Fork" height="320">
+  <video autoplay loop muted playsinline height="320">
+    <source src="gifs/fork.mp4" type="video/mp4">
+  </video>
 </p>
 
 **Passo 2: Clone o Repositório para sua Máquina.**
@@ -98,9 +100,10 @@ git push origin nome-da-sua-branch
 3. Adicione um título descritivo e uma explicação clara do que você mudou.
 4. Envie o PR para revisão.
 
-<br />
 <p align="center">
-  <img src="gifs/compare-pull.gif" alt="Compare & Pull" height="320">
+  <video autoplay loop muted playsinline height="320">
+    <source src="gifs/compare-pull.mp4" type="video/mp4">
+  </video>
 </p>
 
 **Passo 10: Aguarde a revisão e aceitação :)**
