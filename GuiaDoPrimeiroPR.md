@@ -19,24 +19,12 @@ Antes de começar, você precisa:
 2. Conhecimento básico de Git e Markdown (não se preocupe, é simples!).
 3. Node.js e npm/yarn instalados (Opcional, caso vá rodar o site localmente para validar as mudanças.)
 
-<p align="center">
-  <video autoplay loop muted playsinline height="320">
-    <source src="gifs/criando-conta.mp4" type="video/mp4">
-  </video>
-</p>
-
 ## 3. Fazendo seu Primeiro Pull Request
 **Passo 1: Faça o Fork do Repositório.**
 
 1. Acesse o [repositório oficial](https://github.com/luigischmitt/PerCurso) do PerCurso no GitHub.
 2. Clique no botão Fork no canto superior direito.
 3. Agora você terá sua cópia do repositório no seu perfil.
-
-<p align="center">
-  <video autoplay loop muted playsinline height="320">
-    <source src="gifs/fork.mp4" type="video/mp4">
-  </video>
-</p>
 
 **Passo 2: Clone o Repositório para sua Máquina.**
 
@@ -100,11 +88,6 @@ git push origin nome-da-sua-branch
 3. Adicione um título descritivo e uma explicação clara do que você mudou.
 4. Envie o PR para revisão.
 
-<p align="center">
-  <video autoplay loop muted playsinline height="320">
-    <source src="gifs/compare-pull.mp4" type="video/mp4">
-  </video>
-</p>
 
 **Passo 10: Aguarde a revisão e aceitação :)**
 
