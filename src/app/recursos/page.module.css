@@ -66,19 +66,90 @@
 }
 
 .courseButton {
-  width: 300px;
-  height: 50px;
-  background-color: #ffffff;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
   color: #5436ad;
-  border-color: #5436ad;
+  border: 2px solid #5436ad;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(84, 54, 173, 0.1);
+  white-space: nowrap;
+  min-width: 180px;
+  font-family: 'Outfit', sans-serif;
+}
 
+.courseButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(84, 54, 173, 0.25);
+  background: linear-gradient(135deg, #f8f9ff 0%, #eef1fd 100%);
+  border-color: #6747c7;
+}
+
+.courseButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(84, 54, 173, 0.15);
+}
+
+.courseButtonActive {
+  background: linear-gradient(135deg, #5436ad 0%, #6747c7 100%);
+  color: #ffffff;
+  border-color: #5436ad;
+  box-shadow: 0 4px 16px rgba(84, 54, 173, 0.35);
+}
+
+.courseButtonActive:hover {
+  background: linear-gradient(135deg, #6747c7 0%, #7856d6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(84, 54, 173, 0.45);
 }
 
 .courseFilter {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* Responsividade para botões de curso */
+@media (max-width: 768px) {
+  .courseFilter {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .courseButton {
+    width: 100%;
+    max-width: 320px;
+    font-size: 14px;
+    padding: 12px 20px;
+    min-width: unset;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .courseButton {
+    font-size: 14px;
+    padding: 12px 22px;
+    min-width: 160px;
+  }
+
+  .courseFilter {
+    gap: 14px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .courseButton {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
 }
 
 
@@ -167,8 +238,8 @@
 
 .searchContainer {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   gap: 10px;
 }
@@ -198,21 +269,19 @@
 
 .resourceCards {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(387px, 1fr)
-  ); 
+  grid-template-columns: repeat(auto-fill,
+      minmax(387px, 1fr));
   gap: 20px;
   padding: 0 40px;
 }
 
 .noResults {
-  grid-column: 1 / -1; 
+  grid-column: 1 / -1;
   text-align: center;
-  font-size: 18px; 
+  font-size: 18px;
   color: #666;
-  margin: 0; 
-  padding: 10px 0; 
+  margin: 0;
+  padding: 10px 0;
 }
 
 .card {
@@ -231,8 +300,8 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.card:hover { 
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.18); 
+.card:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.18);
   background-color: #eef1fd;
   transform: scale(1.05);
 }
@@ -242,7 +311,7 @@
   color: var(--white);
   text-align: center;
   padding: 20px;
-  height: 80px; 
+  height: 80px;
 }
 
 .footerLink {
@@ -253,13 +322,13 @@
 .pageContainer {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .mainContainer {
   flex-grow: 1;
   margin-bottom: 0;
-  padding-bottom: 0; 
+  padding-bottom: 0;
 }
 
 .accent {
@@ -344,7 +413,7 @@
 
   .mainContainer {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .inverted .introSection {
@@ -352,7 +421,7 @@
   }
 
   .inverted .resourcesSection {
-    order: 1; 
+    order: 1;
   }
 
   .resourceCards {
@@ -360,14 +429,14 @@
   }
 
   .noResults {
-    font-size: 11px; 
+    font-size: 11px;
   }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
   .container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .backgroundRectangle {
@@ -452,11 +521,11 @@
   }
 
   .inverted .resourcesSection {
-    order: 1; 
+    order: 1;
   }
 
   .noResults {
-    font-size: 12px; 
+    font-size: 12px;
   }
 }
 
@@ -547,7 +616,7 @@
   }
 
   .noResults {
-    font-size: 14px; 
+    font-size: 14px;
   }
 }
 
@@ -631,19 +700,19 @@
 
   .mainContainer {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .inverted .introSection {
-    order: 2; 
+    order: 2;
   }
 
   .inverted .resourcesSection {
-    order: 1; 
+    order: 1;
   }
 
   .noResults {
-    font-size: 15px; 
+    font-size: 15px;
   }
 }
 
@@ -727,7 +796,7 @@
   }
 
   .noResults {
-    font-size: 16px; 
+    font-size: 16px;
   }
 }
 
@@ -811,6 +880,6 @@
   }
 
   .noResults {
-    font-size: 18px; 
+    font-size: 18px;
   }
 }

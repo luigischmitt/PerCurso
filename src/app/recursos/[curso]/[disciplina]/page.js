@@ -1,9 +1,16 @@
 import { getDisciplinaContent } from '@/lib/markdown';
 import styles from './page.module.css';
-import DisciplinaContent from '../DisciplinaContent.js';
+import DisciplinaContent from '../../DisciplinaContent.js';
+
+const cursoMap = {
+  ciencia_computacao: 'cc',
+  ciencia_dados_ia: 'cdia',
+  engenharia_computacao: 'ec',
+};
 
 export async function generateStaticParams() {
   return [
+    // Ciência da Computação
     { curso: 'ciencia_computacao', disciplina: 'calculo1' },
     { curso: 'ciencia_computacao', disciplina: 'calculo2' },
     { curso: 'ciencia_computacao', disciplina: 'numerico' },
@@ -48,11 +55,67 @@ export async function generateStaticParams() {
     { curso: 'ciencia_computacao', disciplina: 'pesquisa' },
     { curso: 'ciencia_computacao', disciplina: 'fund_ihc' },
     { curso: 'ciencia_computacao', disciplina: 'teoria_grafos' },
+    { curso: 'ciencia_computacao', disciplina: 'reuso_software' },
+    { curso: 'ciencia_computacao', disciplina: 'implementacao' },
+    { curso: 'ciencia_computacao', disciplina: 'metodos_formais' },
+    { curso: 'ciencia_computacao', disciplina: 'visualizacao' },
     { curso: 'ciencia_computacao', disciplina: 'series' },
+    { curso: 'ciencia_computacao', disciplina: 'ia_saude' },
+    { curso: 'ciencia_computacao', disciplina: 'deep_learn' },
+    { curso: 'ciencia_computacao', disciplina: 'econ' },
     { curso: 'ciencia_computacao', disciplina: 'po' },
     { curso: 'ciencia_computacao', disciplina: 'redes_sem_fio' },
     { curso: 'ciencia_computacao', disciplina: 'sistemas_informacao_decisao' },
-    { curso: 'ciencia_computacao', disciplina: 'administracao_sitemas' },
+    { curso: 'ciencia_computacao', disciplina: 'administracao_sistemas' },
+
+    // Ciência de Dados e IA
+    { curso: 'ciencia_dados_ia', disciplina: 'big_data' },
+    { curso: 'ciencia_dados_ia', disciplina: 'analise_multivariada' },
+    { curso: 'ciencia_dados_ia', disciplina: 'apa' },
+    { curso: 'ciencia_dados_ia', disciplina: 'aprendizagem_maquina' },
+    { curso: 'ciencia_dados_ia', disciplina: 'arquitetura1' },
+    { curso: 'ciencia_dados_ia', disciplina: 'bd' },
+    { curso: 'ciencia_dados_ia', disciplina: 'big_data' },
+    { curso: 'ciencia_dados_ia', disciplina: 'calculo1' },
+    { curso: 'ciencia_dados_ia', disciplina: 'calculo2' },
+    { curso: 'ciencia_dados_ia', disciplina: 'calculo3' },
+    { curso: 'ciencia_dados_ia', disciplina: 'cdia_financas' },
+    { curso: 'ciencia_dados_ia', disciplina: 'discreta' },
+    { curso: 'ciencia_dados_ia', disciplina: 'empreendedorismo' },
+    { curso: 'ciencia_dados_ia', disciplina: 'equacoes_diferenciais' },
+    { curso: 'ciencia_dados_ia', disciplina: 'es' },
+    { curso: 'ciencia_dados_ia', disciplina: 'estrutura_dados' },
+    { curso: 'ciencia_dados_ia', disciplina: 'gerencia_projetos' },
+    { curso: 'ciencia_dados_ia', disciplina: 'imagens' },
+    { curso: 'ciencia_dados_ia', disciplina: 'inferencia_estatistica' },
+    { curso: 'ciencia_dados_ia', disciplina: 'inteligencia_computacional' },
+    { curso: 'ciencia_dados_ia', disciplina: 'intro_cdia' },
+    { curso: 'ciencia_dados_ia', disciplina: 'intro_computador' },
+    { curso: 'ciencia_dados_ia', disciplina: 'intro_IA' },
+    { curso: 'ciencia_dados_ia', disciplina: 'iot' },
+    { curso: 'ciencia_dados_ia', disciplina: 'ip' },
+    { curso: 'ciencia_dados_ia', disciplina: 'linear' },
+    { curso: 'ciencia_dados_ia', disciplina: 'linear_computacional' },
+    { curso: 'ciencia_dados_ia', disciplina: 'linguagem_natural' },
+    { curso: 'ciencia_dados_ia', disciplina: 'metodologia' },
+    { curso: 'ciencia_dados_ia', disciplina: 'metodos_matematicos' },
+    { curso: 'ciencia_dados_ia', disciplina: 'metodos_numericos' },
+    { curso: 'ciencia_dados_ia', disciplina: 'mineracao_estatistica' },
+    { curso: 'ciencia_dados_ia', disciplina: 'otimizacao' },
+    { curso: 'ciencia_dados_ia', disciplina: 'otimizacao_nao-linear' },
+    { curso: 'ciencia_dados_ia', disciplina: 'pesquisa_aplicada' },
+    { curso: 'ciencia_dados_ia', disciplina: 'po' },
+    { curso: 'ciencia_dados_ia', disciplina: 'poo' },
+    { curso: 'ciencia_dados_ia', disciplina: 'programacao_estruturada' },
+    { curso: 'ciencia_dados_ia', disciplina: 'recuperacao_informacao' },
+    { curso: 'ciencia_dados_ia', disciplina: 'series' },
+    { curso: 'ciencia_dados_ia', disciplina: 'sistema_recomendacao' },
+    { curso: 'ciencia_dados_ia', disciplina: 'so' },
+    { curso: 'ciencia_dados_ia', disciplina: 'sociedade' },
+    { curso: 'ciencia_dados_ia', disciplina: 'teoria_grafos' },
+    { curso: 'ciencia_dados_ia', disciplina: 'teorias_probabilidades' },
+    { curso: 'ciencia_dados_ia', disciplina: 'vetorial' },
+    { curso: 'ciencia_dados_ia', disciplina: 'visualizacao_dados' },
   ];
 }
 
@@ -115,7 +178,34 @@ const disciplinaNomes = {
   linear_comp: "ÁLGEBRA LINEAR COMPUTACIONAL",
   redes_sem_fio: "REDES SEM FIO",
   sistemas_informacao_decisao: "SISTEMAS DE INFORMAÇÃO E DECISÃO",
-  administracao_sistemas: "ADMINISTRAÇÃO DE SISTEMAS"
+  administracao_sistemas: "ADMINISTRAÇÃO DE SISTEMAS",
+  // CDIA específicos
+  analise_multivariada: "ANÁLISE MULTIVARIADA",
+  calculo3: "CÁLCULO III",
+  cdia_financas: "CIÊNCIA DE DADOS E IA EM FINANÇAS",
+  empreendedorismo: "EMPREENDEDORISMO",
+  equacoes_diferenciais: "EQUAÇÕES DIFERENCIAIS",
+  estrutura_dados: "ESTRUTURA DE DADOS",
+  gerencia_projetos: "GERÊNCIA DE PROJETOS",
+  inferencia_estatistica: "INFERÊNCIA ESTATÍSTICA",
+  inteligencia_computacional: "INTELIGÊNCIA COMPUTACIONAL",
+  intro_cdia: "INTRODUÇÃO À CDIA",
+  intro_computador: "INTRODUÇÃO AO COMPUTADOR",
+  intro_IA: "INTRODUÇÃO À IA",
+  iot: "INTERNET DAS COISAS",
+  linear_computacional: "ÁLGEBRA LINEAR COMPUTACIONAL",
+  linguagem_natural: "PROCESSAMENTO DE LINGUAGEM NATURAL",
+  metodos_matematicos: "MÉTODOS MATEMÁTICOS",
+  metodos_numericos: "MÉTODOS NUMÉRICOS",
+  mineracao_estatistica: "MINERAÇÃO ESTATÍSTICA",
+  otimizacao: "OTIMIZAÇÃO",
+  "otimizacao_nao-linear": "OTIMIZAÇÃO NÃO-LINEAR",
+  pesquisa_aplicada: "PESQUISA APLICADA",
+  programacao_estruturada: "PROGRAMAÇÃO ESTRUTURADA",
+  recuperacao_informacao: "RECUPERAÇÃO DE INFORMAÇÃO",
+  sistema_recomendacao: "SISTEMA DE RECOMENDAÇÃO",
+  teorias_probabilidades: "TEORIAS DE PROBABILIDADES",
+  visualizacao_dados: "VISUALIZAÇÃO DE DADOS"
 };
 
 const disciplinaIcones = {
@@ -130,7 +220,7 @@ const disciplinaIcones = {
   logica: "/md_icon.svg",
   linear: "/cv_icon.svg",
   arquitetura1: "/ac_icon.svg",
-  arquitetura2:"/ac_icon.svg",
+  arquitetura2: "/ac_icon.svg",
   poo: "/ip_icon.svg",
   numerico: "/c1_icon.svg",
   probabilidade: "/estatistica_icon.svg",
@@ -177,14 +267,43 @@ const disciplinaIcones = {
   redes_sem_fio: "/redes_icon.svg",
   sistemas_informacao_decisao: "/ihc_icon.svg",
   administracao_sistemas: "/ihc_icon.svg",
+  // CDIA específicos
+  analise_multivariada: "/estatistica_icon.svg",
+  calculo3: "/c1_icon.svg",
+  cdia_financas: "/estatistica_icon.svg",
+  empreendedorismo: "/icc_icon.svg",
+  equacoes_diferenciais: "/c1_icon.svg",
+  estrutura_dados: "/eda_icon.svg",
+  gerencia_projetos: "/eds_icon.svg",
+  inferencia_estatistica: "/estatistica_icon.svg",
+  inteligencia_computacional: "/ia_icon.svg",
+  intro_cdia: "/icc_icon.svg",
+  intro_computador: "/icc_icon.svg",
+  intro_IA: "/ia_icon.svg",
+  iot: "/redes_icon.svg",
+  linear_computacional: "/cv_icon.svg",
+  linguagem_natural: "/ia_icon.svg",
+  metodos_matematicos: "/c1_icon.svg",
+  metodos_numericos: "/c1_icon.svg",
+  mineracao_estatistica: "/estatistica_icon.svg",
+  otimizacao: "/apa_icon.svg",
+  "otimizacao_nao-linear": "/apa_icon.svg",
+  pesquisa_aplicada: "/pa_icon.svg",
+  programacao_estruturada: "/ip_icon.svg",
+  recuperacao_informacao: "/bd_icon.svg",
+  sistema_recomendacao: "/ia_icon.svg",
+  teorias_probabilidades: "/estatistica_icon.svg",
+  visualizacao_dados: "/estatistica_icon.svg",
 };
 
 export default function DisciplinaPage({ params }) {
-  const dicas = getDisciplinaContent(params.disciplina, 'dicas');
-  const dificuldades = getDisciplinaContent(params.disciplina, 'dificuldades');
-  const listas = getDisciplinaContent(params.disciplina, 'listas');
-  const provas = getDisciplinaContent(params.disciplina, 'provas');
-  const extras = getDisciplinaContent(params.disciplina, 'extras');
+  const cursoFolder = cursoMap[params.curso] || 'cc'; // Default fallback
+
+  const dicas = getDisciplinaContent(params.disciplina, 'dicas', cursoFolder);
+  const dificuldades = getDisciplinaContent(params.disciplina, 'dificuldades', cursoFolder);
+  const listas = getDisciplinaContent(params.disciplina, 'listas', cursoFolder);
+  const provas = getDisciplinaContent(params.disciplina, 'provas', cursoFolder);
+  const extras = getDisciplinaContent(params.disciplina, 'extras', cursoFolder);
 
   const disciplinaNome = disciplinaNomes[params.disciplina] || "Disciplina";
   const disciplinaIcone = disciplinaIcones[params.disciplina] || "Icone";
@@ -200,9 +319,9 @@ export default function DisciplinaPage({ params }) {
               <h1 className={styles.title}>{disciplinaNome}</h1>
             </div>
             <div className={styles.buttonsWrapper}>
-              <a 
-                href={`https://github.com/luigischmitt/PerCurso/tree/main/content/${params.disciplina}`} 
-                target="_blank" 
+              <a
+                href={`https://github.com/luigischmitt/PerCurso/tree/main/content/${cursoFolder}/${params.disciplina}`}
+                target="_blank"
                 rel="noopener noreferrer"
                 className={styles.editButton}
               >
