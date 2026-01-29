@@ -6,13 +6,38 @@ import html from 'remark-html';
 
 const contentDirectory = path.join(process.cwd(), 'content');
 
+
+function findDisciplinaDirectory(baseDir, disciplina) {
+  if (!fs.existsSync(baseDir)) return null;
+  const items = fs.readdirSync(baseDir, { withFileTypes: true });
+
+  for (const item of items) {
+    if (item.isDirectory()) {
+      if (item.name === disciplina) {
+        return path.join(baseDir, item.name);
+      }
+      const found = findDisciplinaDirectory(path.join(baseDir, item.name), disciplina);
+      if (found) return found;
+    }
+  }
+  return null;
+}
+
 export function getDisciplinaContent(disciplina, fileName, curso) {
 
   if (!disciplina || !fileName || !curso) {
     throw new Error(`Faltando parâmetros: disciplina=${disciplina}, fileName=${fileName}, curso=${curso}`);
   }
 
-  const contentDirectory = path.join(process.cwd(), 'content', curso, disciplina); 
+  let contentDirectory = path.join(process.cwd(), 'content', curso, disciplina);
+
+  if (!fs.existsSync(contentDirectory)) {
+    const courseRoot = path.join(process.cwd(), 'content', curso);
+    const foundDir = findDisciplinaDirectory(courseRoot, disciplina);
+    if (foundDir) {
+      contentDirectory = foundDir;
+    }
+  }
   const fullPath = path.join(contentDirectory, `${fileName}.md`);
 
   try {
