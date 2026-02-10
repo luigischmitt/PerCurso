@@ -400,12 +400,7 @@ const PercursosPage = () => {
               >
                 Ciência de Dados e IA
               </button>
-              <button
-                className={`${styles.courseButton} ${cursoSelecionado === 'engenharia_computacao' ? styles.courseButtonActive : ''}`}
-                onClick={() => setCursoSelecionado('engenharia_computacao')}
-              >
-                Engenharia da Computação
-              </button>
+
             </div>
             <div className={styles.searchContainer}>
               <input
