@@ -8,173 +8,194 @@ const PercursosPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [cardsToShow, setCardsToShow] = useState(18);
   const [cursoSelecionado, setCursoSelecionado] = useState('ciencia_computacao');
+  const [periodoSelecionado, setPeriodoSelecionado] = useState('todos');
 
   const disciplines = [
-    // Engenharia da Computação
-    { name: "Cálculo Vetorial e Geometria Analítica", slug: 'vetorial', curso: 'engenharia_computacao' },
-    { name: "Cálculo Diferencial e Integral I", slug: 'calculo1', curso: 'engenharia_computacao' },
-    { name: "Metodologia do Trabalho Científico", slug: 'metodologia', curso: 'engenharia_computacao' },
-    { name: "Introdução à Engenharia de Computação", slug: 'intro_eng', curso: 'engenharia_computacao' },
-    { name: "Laboratório de Introdução à Programação", slug: 'lab_ip', curso: 'engenharia_computacao' },
-    { name: "Introdução à Programação para Engenharia de Computação", slug: 'ip_ec', curso: 'engenharia_computacao' },
-    { name: "Materiais para Micro e Nano Tecnologia", slug: 'materiais', curso: 'engenharia_computacao' },
-    { name: "Física Aplicada à Computação I", slug: 'fisica1', curso: 'engenharia_computacao' },
-    { name: "Cálculo Diferencial e Integral II", slug: 'calculo2', curso: 'engenharia_computacao' },
-    { name: "Laboratório de Linguagem de Programação I", slug: 'lab_lp1', curso: 'engenharia_computacao' },
-    { name: "Linguagem de Programação I", slug: 'lp1', curso: 'engenharia_computacao' },
-    { name: "Circuitos Lógicos I", slug: 'circuitos_logicos1', curso: 'engenharia_computacao' },
-    { name: "Eletricidade e Circuitos para Computação I", slug: 'eletricidade1', curso: 'engenharia_computacao' },
-    { name: "Física Experimental para Computação", slug: 'fisica_exp', curso: 'engenharia_computacao' },
-    { name: "Introdução à Álgebra Linear", slug: 'linear', curso: 'engenharia_computacao' },
-    { name: "Cálculo Diferencial e Integral III", slug: 'calculo3', curso: 'engenharia_computacao' },
-    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa', curso: 'engenharia_computacao' },
-    { name: "Cálculo das Probabilidades I", slug: 'probabilidade', curso: 'engenharia_computacao' },
-    { name: "Circuitos Lógicos II", slug: 'circuitos_logicos2', curso: 'engenharia_computacao' },
-    { name: "Eletricidade e Circuitos para Computação II", slug: 'eletricidade2', curso: 'engenharia_computacao' },
-    { name: "Mecânica para Engenharia da Computação", slug: 'mecanica', curso: 'engenharia_computacao' },
-    { name: "Física Aplicada à Computação II", slug: 'fisica2', curso: 'engenharia_computacao' },
-    { name: "Séries e Equações Diferenciais Ordinárias", slug: 'series_edo', curso: 'engenharia_computacao' },
-    { name: "Linguagem de Programação II", slug: 'lp2', curso: 'engenharia_computacao' },
-    { name: "Estrutura de Dados", slug: 'ed', curso: 'engenharia_computacao' },
-    { name: "Eletrônica Aplicada I", slug: 'eletronica1', curso: 'engenharia_computacao' },
-    { name: "Arquitetura de Computadores", slug: 'arquitetura', curso: 'engenharia_computacao' },
-    { name: "Arquitetura Avançada de Computadores", slug: 'arquitetura_avancada', curso: 'engenharia_computacao' },
-    { name: "Banco de Dados I", slug: 'bd', curso: 'engenharia_computacao' },
-    { name: "Cálculo Numérico", slug: 'numerico', curso: 'engenharia_computacao' },
-    { name: "Análise e Projeto de Algoritmos", slug: 'apa', curso: 'engenharia_computacao' },
-    { name: "Eletrônica Aplicada II", slug: 'eletronica2', curso: 'engenharia_computacao' },
-    { name: "Introdução à Mecânica dos Fluídos", slug: 'fluidos', curso: 'engenharia_computacao' },
-    { name: "Introdução à Microeletrônica", slug: 'microeletronica', curso: 'engenharia_computacao' },
-    { name: "Engenharia de Software", slug: 'es', curso: 'engenharia_computacao' },
-    { name: "Microcontroladores", slug: 'microcontroladores', curso: 'engenharia_computacao' },
-    { name: "Pesquisa Operacional", slug: 'po', curso: 'engenharia_computacao' },
-    { name: "Redes de Computadores I", slug: 'redes', curso: 'engenharia_computacao' },
-    { name: "Sinais e Sistemas Dinâmicos", slug: 'sinais', curso: 'engenharia_computacao' },
-    { name: "Sistemas Operacionais I", slug: 'so', curso: 'engenharia_computacao' },
-    { name: "Avaliação de Desempenho de Sistemas Operacionais", slug: 'avaliacao_desempenho', curso: 'engenharia_computacao' },
-    { name: "Redes sem Fio", slug: 'redes_sem_fio', curso: 'engenharia_computacao' },
-    { name: "Introdução à Computação Gráfica", slug: 'cg', curso: 'engenharia_computacao' },
-    { name: "Introdução ao Processamento Digital de Imagens", slug: 'pdi', curso: 'engenharia_computacao' },
-    { name: "Sistemas e Controle de Automação", slug: 'controle_automacao', curso: 'engenharia_computacao' },
-    { name: "Sistemas Embarcados I", slug: 'embarcados1', curso: 'engenharia_computacao' },
-    { name: "Introdução à Inteligência Artificial", slug: 'ia', curso: 'engenharia_computacao' },
-    { name: "Robótica", slug: 'robotica', curso: 'engenharia_computacao' },
-    { name: "Concepção Estruturada de Circuitos Integrados", slug: 'circuitos_integrados', curso: 'engenharia_computacao' },
-    { name: "Introdução à Teoria da Informação", slug: 'teoria_informacao', curso: 'engenharia_computacao' },
-    { name: "Economia I", slug: 'economia', curso: 'engenharia_computacao' },
-    { name: "Administração para Engenharia", slug: 'adm_eng', curso: 'engenharia_computacao' },
-    { name: "Computadores e Sociedade", slug: 'sociedade', curso: 'engenharia_computacao' },
-    { name: "Trabalho de Conclusão de Curso I", slug: 'tcc1', curso: 'engenharia_computacao' },
-    { name: "Trabalho de Conclusão de Curso II", slug: 'tcc2', curso: 'engenharia_computacao' },
-    { name: "Física Aplicada à Computação II (Optativa)", slug: 'fisica2_opt', curso: 'engenharia_computacao' },
-    { name: "Arquitetura Avançada de Computadores (Optativa)", slug: 'arquitetura_avancada_opt', curso: 'engenharia_computacao' },
+    // Ciência da Computação - Baseado na grade oficial do README
+    // 1º Período
+    { name: "Cálculo Diferencial e Integral I", slug: 'calculo1', curso: 'ciencia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Cálculo Vetorial e Geometria Analítica", slug: 'vetorial', curso: 'ciencia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Matemática Discreta", slug: 'discreta', curso: 'ciencia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Introdução à Ciência da Computação", slug: 'ic', curso: 'ciencia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Introdução à Programação", slug: 'ip', curso: 'ciencia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Metodologia do Trabalho Científico", slug: 'metodologia', curso: 'ciencia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa', curso: 'ciencia_computacao', periodo: 1, tipo: 'Obrigatória' },
 
-    // Ciência da Computação
-    { name: "Cálculo diferencial e integral I", slug: 'calculo1', curso: 'ciencia_computacao' },
-    { name: "Cálculo diferencial e integral II", slug: 'calculo2', curso: 'ciencia_computacao' },
-    { name: "Cálculo Numérico", slug: 'numerico', curso: 'ciencia_computacao' },
-    { name: "Introdução à Inteligência Artificial", slug: 'ia', curso: 'ciencia_computacao' },
-    { name: "Sistemas Baseados em Conhecimento", slug: 'sbc', curso: 'ciencia_computacao' },
-    { name: "Paradigmas de Aprendizagem de Máquina", slug: 'aprendizagem_maquina', curso: 'ciencia_computacao' },
-    { name: "Cálculo Vetorial e Geometria Analítica", slug: 'vetorial', curso: 'ciencia_computacao' },
-    { name: "Introdução à Álgebra Linear", slug: 'linear', curso: 'ciencia_computacao' },
-    { name: "Cálculo das Probabilidades e Estatística I", slug: 'probabilidade', curso: 'ciencia_computacao' },
-    { name: "Redes de Computadores I", slug: 'redes', curso: 'ciencia_computacao' },
-    { name: "Análise e Projeto de Algoritmos", slug: 'apa', curso: 'ciencia_computacao' },
-    { name: "Segurança Computacional", slug: 'seguranca', curso: 'ciencia_computacao' },
-    { name: "Sistemas de Informação nas Organizações", slug: 'sistemas_informacao', curso: 'ciencia_computacao' },
-    { name: "Computadores e Sociedade", slug: 'sociedade', curso: 'ciencia_computacao' },
-    { name: "Matemática Discreta", slug: 'discreta', curso: 'ciencia_computacao' },
-    { name: "Lógica Aplicada à Computação", slug: 'logica', curso: 'ciencia_computacao' },
-    { name: "Linguagens Formais e Computabilidade", slug: 'formais', curso: 'ciencia_computacao' },
-    { name: "Processamento Digital de Imagens", slug: 'imagens', curso: 'ciencia_computacao' },
-    { name: "Paradigmas de Linguagens de Programação", slug: 'paradigmas_linguagens', curso: 'ciencia_computacao' },
-    { name: "Construção de Compiladores I", slug: 'compiladores', curso: 'ciencia_computacao' },
-    { name: "Interação Humano-Computador", slug: 'ihc', curso: 'ciencia_computacao' },
-    { name: "Introdução à ciência da computação", slug: 'ic', curso: 'ciencia_computacao' },
-    { name: "Arquitetura de Computadores I", slug: 'arquitetura1', curso: 'ciencia_computacao' },
-    { name: "Arquitetura de Computadores II", slug: 'arquitetura2', curso: 'ciencia_computacao' },
-    { name: "Sistemas Operacionais I", slug: 'so', curso: 'ciencia_computacao' },
-    { name: "Programação Concorrente e Distribuída", slug: 'concorrente', curso: 'ciencia_computacao' },
-    { name: "Sistemas Distribuídos", slug: 'sistema_distribuidos', curso: 'ciencia_computacao' },
-    { name: "Engenharia de Sistemas Distribuídos", slug: 'engenharia_sistemas', curso: 'ciencia_computacao' },
-    { name: "Introdução à Programação", slug: 'ip', curso: 'ciencia_computacao' },
-    { name: "Programação Orientada a Objetos", slug: 'poo', curso: 'ciencia_computacao' },
-    { name: "Estruturas de Dados e Algoritmos I", slug: 'eda1', curso: 'ciencia_computacao' },
-    { name: "Estruturas de Dados e Algoritmos II", slug: 'eda2', curso: 'ciencia_computacao' },
-    { name: "Banco de Dados I", slug: 'bd', curso: 'ciencia_computacao' },
-    { name: "Inovação de Base Científica-Tecnológica", slug: 'inovacao', curso: 'ciencia_computacao' },
-    { name: "Gerenciamento de Projeto de Software", slug: 'gerencimento_psoft', curso: 'ciencia_computacao' },
-    { name: "Metodologia do trabalho científico", slug: 'metodologia', curso: 'ciencia_computacao' },
-    { name: "Programação Funcional", slug: 'funcional', curso: 'ciencia_computacao' },
-    { name: "Engenharia de Software", slug: 'es', curso: 'ciencia_computacao' },
-    { name: "Especificação de Requisitos de Software", slug: 'requisitos', curso: 'ciencia_computacao' },
-    { name: "Métodos de Projeto de Software", slug: 'metodos_psoft', curso: 'ciencia_computacao' },
-    { name: "Teste de Software", slug: 'teste_software', curso: 'ciencia_computacao' },
-    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa', curso: 'ciencia_computacao' },
-    { name: "Fundamentos da Interação Humano-Computador", slug: 'fund_ihc', curso: 'ciencia_computacao' },
-    { name: "Teoria dos Grafos Aplicada", slug: 'teoria_grafos', curso: 'ciencia_computacao' },
-    { name: "Reuso de Software", slug: 'reuso_software', curso: 'ciencia_computacao' },
-    { name: "Implementação de Sistemas para Dispositivos Móveis", slug: 'implementacao', curso: 'ciencia_computacao' },
-    { name: "Métodos Formais para Desenvolvimento de Software", slug: 'metodos_formais', curso: 'ciencia_computacao' },
-    { name: "Visualização de Dados", slug: 'visualizacao', curso: 'ciencia_computacao' },
-    { name: "Séries Temporais", slug: 'series', curso: 'ciencia_computacao' },
-    { name: "IA Aplicada à Saúde", slug: 'ia_saude', curso: 'ciencia_computacao' },
-    { name: "Aprendizado Profundo", slug: 'deep_learn', curso: 'ciencia_computacao' },
-    { name: "Princípios de Economia", slug: 'econ', curso: 'ciencia_computacao' },
-    { name: "Pesquisa Operacional", slug: 'po', curso: 'ciencia_computacao' },
-    { name: "Álgebra Linear Computacional", slug: 'linear_comp', curso: 'ciencia_computacao' },
-    { name: "Redes sem Fio", slug: 'redes_sem_fio', curso: 'ciencia_computacao' },
-    { name: "Sistemas de informação e decisão", slug: 'sistemas_informacao_decisao', curso: 'ciencia_computacao' },
-    { name: "Administração de Sistemas", slug: 'administracao_sistemas', curso: 'ciencia_computacao' },
+    // 2º Período
+    { name: "Cálculo Diferencial e Integral II", slug: 'calculo2', curso: 'ciencia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Introdução à Álgebra Linear", slug: 'linear', curso: 'ciencia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Lógica Aplicada à Computação", slug: 'logica', curso: 'ciencia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Arquitetura de Computadores I", slug: 'arquitetura1', curso: 'ciencia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Programação Orientada a Objetos", slug: 'poo', curso: 'ciencia_computacao', periodo: 2, tipo: 'Obrigatória' },
 
-    // Ciência de Dados e IA
-    { name: "Análise Multivariada", slug: 'analise_multivariada', curso: 'ciencia_dados_ia' },
-    { name: "Análise e Projeto de Algoritmos", slug: 'apa', curso: 'ciencia_dados_ia' },
-    { name: "Aprendizagem de Máquina", slug: 'aprendizagem_maquina', curso: 'ciencia_dados_ia' },
-    { name: "Arquitetura de Computadores I", slug: 'arquitetura1', curso: 'ciencia_dados_ia' },
-    { name: "Banco de Dados", slug: 'bd', curso: 'ciencia_dados_ia' },
-    { name: "Big Data", slug: 'big_data', curso: 'ciencia_dados_ia' },
-    { name: "Cálculo I", slug: 'calculo1', curso: 'ciencia_dados_ia' },
-    { name: "Cálculo II", slug: 'calculo2', curso: 'ciencia_dados_ia' },
-    { name: "Cálculo III", slug: 'calculo3', curso: 'ciencia_dados_ia' },
-    { name: "Ciência de Dados e IA em Finanças", slug: 'cdia_financas', curso: 'ciencia_dados_ia' },
-    { name: "Matemática Discreta", slug: 'discreta', curso: 'ciencia_dados_ia' },
-    { name: "Empreendedorismo", slug: 'empreendedorismo', curso: 'ciencia_dados_ia' },
-    { name: "Equações Diferenciais", slug: 'equacoes_diferenciais', curso: 'ciencia_dados_ia' },
-    { name: "Engenharia de Software", slug: 'es', curso: 'ciencia_dados_ia' },
-    { name: "Estrutura de Dados", slug: 'estrutura_dados', curso: 'ciencia_dados_ia' },
-    { name: "Gerência de Projetos", slug: 'gerencia_projetos', curso: 'ciencia_dados_ia' },
-    { name: "Processamento de Imagens", slug: 'imagens', curso: 'ciencia_dados_ia' },
-    { name: "Inferência Estatística", slug: 'inferencia_estatistica', curso: 'ciencia_dados_ia' },
-    { name: "Inteligência Computacional", slug: 'inteligencia_computacional', curso: 'ciencia_dados_ia' },
-    { name: "Introdução à CDIA", slug: 'intro_cdia', curso: 'ciencia_dados_ia' },
-    { name: "Introdução ao Computador", slug: 'intro_computador', curso: 'ciencia_dados_ia' },
-    { name: "Introdução à IA", slug: 'intro_IA', curso: 'ciencia_dados_ia' },
-    { name: "Internet das Coisas", slug: 'iot', curso: 'ciencia_dados_ia' },
-    { name: "Introdução à Programação", slug: 'ip', curso: 'ciencia_dados_ia' },
-    { name: "Álgebra Linear", slug: 'linear', curso: 'ciencia_dados_ia' },
-    { name: "Álgebra Linear Computacional", slug: 'linear_computacional', curso: 'ciencia_dados_ia' },
-    { name: "Processamento de Linguagem Natural", slug: 'linguagem_natural', curso: 'ciencia_dados_ia' },
-    { name: "Metodologia Científica", slug: 'metodologia', curso: 'ciencia_dados_ia' },
-    { name: "Métodos Matemáticos", slug: 'metodos_matematicos', curso: 'ciencia_dados_ia' },
-    { name: "Métodos Numéricos", slug: 'metodos_numericos', curso: 'ciencia_dados_ia' },
-    { name: "Mineração Estatística", slug: 'mineracao_estatistica', curso: 'ciencia_dados_ia' },
-    { name: "Otimização", slug: 'otimizacao', curso: 'ciencia_dados_ia' },
-    { name: "Otimização Não-Linear", slug: 'otimizacao_nao-linear', curso: 'ciencia_dados_ia' },
-    { name: "Pesquisa Aplicada", slug: 'pesquisa_aplicada', curso: 'ciencia_dados_ia' },
-    { name: "Pesquisa Operacional", slug: 'po', curso: 'ciencia_dados_ia' },
-    { name: "Programação Orientada a Objetos", slug: 'poo', curso: 'ciencia_dados_ia' },
-    { name: "Programação Estruturada", slug: 'programacao_estruturada', curso: 'ciencia_dados_ia' },
-    { name: "Recuperação de Informação", slug: 'recuperacao_informacao', curso: 'ciencia_dados_ia' },
-    { name: "Séries Temporais", slug: 'series', curso: 'ciencia_dados_ia' },
-    { name: "Sistema de Recomendação", slug: 'sistema_recomendacao', curso: 'ciencia_dados_ia' },
-    { name: "Sistemas Operacionais", slug: 'so', curso: 'ciencia_dados_ia' },
-    { name: "Computadores e Sociedade", slug: 'sociedade', curso: 'ciencia_dados_ia' },
-    { name: "Teoria dos Grafos", slug: 'teoria_grafos', curso: 'ciencia_dados_ia' },
-    { name: "Teorias de Probabilidades", slug: 'teorias_probabilidades', curso: 'ciencia_dados_ia' },
-    { name: "Cálculo Vetorial", slug: 'vetorial', curso: 'ciencia_dados_ia' },
-    { name: "Visualização de Dados", slug: 'visualizacao_dados', curso: 'ciencia_dados_ia' },
+    // 3º Período
+    { name: "Cálculo Numérico", slug: 'numerico', curso: 'ciencia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Cálculo das Probabilidades e Estatística I", slug: 'probabilidade', curso: 'ciencia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Linguagens Formais e Computabilidade", slug: 'formais', curso: 'ciencia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Arquitetura de Computadores II", slug: 'arquitetura2', curso: 'ciencia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Estruturas de Dados e Algoritmos I", slug: 'eda1', curso: 'ciencia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Programação Funcional", slug: 'funcional', curso: 'ciencia_computacao', periodo: 3, tipo: 'Obrigatória' },
+
+    // 4º Período
+    { name: "Introdução à Inteligência Artificial", slug: 'ia', curso: 'ciencia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Redes de Computadores I", slug: 'redes', curso: 'ciencia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Processamento Digital de Imagens", slug: 'imagens', curso: 'ciencia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Sistemas Operacionais I", slug: 'so', curso: 'ciencia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Estruturas de Dados e Algoritmos II", slug: 'eda2', curso: 'ciencia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Engenharia de Software", slug: 'es', curso: 'ciencia_computacao', periodo: 4, tipo: 'Obrigatória' },
+
+    // 5º Período
+    { name: "Sistemas Baseados em Conhecimento", slug: 'sbc', curso: 'ciencia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Análise e Projeto de Algoritmos", slug: 'apa', curso: 'ciencia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Paradigmas de Linguagens de Programação", slug: 'paradigmas_linguagens', curso: 'ciencia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Programação Concorrente e Distribuída", slug: 'concorrente', curso: 'ciencia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Banco de Dados I", slug: 'bd', curso: 'ciencia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Especificação de Requisitos de Software", slug: 'requisitos', curso: 'ciencia_computacao', periodo: 5, tipo: 'Obrigatória' },
+
+    // 6º Período
+    { name: "Paradigmas de Aprendizagem de Máquina", slug: 'aprendizagem_maquina', curso: 'ciencia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Segurança Computacional", slug: 'seguranca', curso: 'ciencia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Construção de Compiladores I", slug: 'compiladores', curso: 'ciencia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Sistemas Distribuídos", slug: 'sistema_distribuidos', curso: 'ciencia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Inovação de Base Científica-Tecnológica", slug: 'inovacao', curso: 'ciencia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Métodos de Projeto de Software", slug: 'metodos_psoft', curso: 'ciencia_computacao', periodo: 6, tipo: 'Obrigatória' },
+
+    // 7º Período
+    { name: "Sistemas de Informação nas Organizações", slug: 'sistemas_informacao', curso: 'ciencia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Interação Humano-Computador", slug: 'ihc', curso: 'ciencia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Engenharia de Sistemas Distribuídos", slug: 'engenharia_sistemas', curso: 'ciencia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Gerenciamento de Projeto de Software", slug: 'gerencimento_psoft', curso: 'ciencia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Teste de Software", slug: 'teste_software', curso: 'ciencia_computacao', periodo: 7, tipo: 'Obrigatória' },
+
+    // 8º Período
+    { name: "Computadores e Sociedade", slug: 'sociedade', curso: 'ciencia_computacao', periodo: 8, tipo: 'Obrigatória' },
+
+    // Optativas - Ciência da Computação
+    { name: "Fundamentos da Interação Humano-Computador", slug: 'fund_ihc', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Teoria dos Grafos Aplicada", slug: 'teoria_grafos', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Reuso de Software", slug: 'reuso_software', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Implementação de Sistemas para Dispositivos Móveis", slug: 'implementacao', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Métodos Formais para Desenvolvimento de Software", slug: 'metodos_formais', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Visualização de Dados", slug: 'visualizacao', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Séries Temporais", slug: 'series', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "IA Aplicada à Saúde", slug: 'ia_saude', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Big Data", slug: 'big_data', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Aprendizado Profundo", slug: 'deep_learn', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Princípios de Economia", slug: 'econ', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Pesquisa Operacional", slug: 'po', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Álgebra Linear Computacional", slug: 'linear_comp', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Redes sem Fio", slug: 'redes_sem_fio', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Sistemas de Informação e Decisão", slug: 'sistemas_informacao_decisao', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Administração de Sistemas", slug: 'administracao_sistemas', curso: 'ciencia_computacao', periodo: null, tipo: 'Optativa' },
+
+    // Engenharia da Computação - Estimativa baseada na ordem atual
+    { name: "Cálculo Vetorial e Geometria Analítica", slug: 'vetorial', curso: 'engenharia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Cálculo Diferencial e Integral I", slug: 'calculo1', curso: 'engenharia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Metodologia do Trabalho Científico", slug: 'metodologia', curso: 'engenharia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Introdução à Engenharia de Computação", slug: 'intro_eng', curso: 'engenharia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Laboratório de Introdução à Programação", slug: 'lab_ip', curso: 'engenharia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Introdução à Programação para Engenharia de Computação", slug: 'ip_ec', curso: 'engenharia_computacao', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Materiais para Micro e Nano Tecnologia", slug: 'materiais', curso: 'engenharia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Física Aplicada à Computação I", slug: 'fisica1', curso: 'engenharia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Cálculo Diferencial e Integral II", slug: 'calculo2', curso: 'engenharia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Laboratório de Linguagem de Programação I", slug: 'lab_lp1', curso: 'engenharia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Linguagem de Programação I", slug: 'lp1', curso: 'engenharia_computacao', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Circuitos Lógicos I", slug: 'circuitos_logicos1', curso: 'engenharia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Eletricidade e Circuitos para Computação I", slug: 'eletricidade1', curso: 'engenharia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Física Experimental para Computação", slug: 'fisica_exp', curso: 'engenharia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Introdução à Álgebra Linear", slug: 'linear', curso: 'engenharia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Cálculo Diferencial e Integral III", slug: 'calculo3', curso: 'engenharia_computacao', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Pesquisa Aplicada à Computação", slug: 'pesquisa', curso: 'engenharia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Cálculo das Probabilidades I", slug: 'probabilidade', curso: 'engenharia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Circuitos Lógicos II", slug: 'circuitos_logicos2', curso: 'engenharia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Eletricidade e Circuitos para Computação II", slug: 'eletricidade2', curso: 'engenharia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Mecânica para Engenharia da Computação", slug: 'mecanica', curso: 'engenharia_computacao', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Física Aplicada à Computação II", slug: 'fisica2', curso: 'engenharia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Séries e Equações Diferenciais Ordinárias", slug: 'series_edo', curso: 'engenharia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Linguagem de Programação II", slug: 'lp2', curso: 'engenharia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Estrutura de Dados", slug: 'ed', curso: 'engenharia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Eletrônica Aplicada I", slug: 'eletronica1', curso: 'engenharia_computacao', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Arquitetura de Computadores", slug: 'arquitetura', curso: 'engenharia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Arquitetura Avançada de Computadores", slug: 'arquitetura_avancada', curso: 'engenharia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Banco de Dados I", slug: 'bd', curso: 'engenharia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Cálculo Numérico", slug: 'numerico', curso: 'engenharia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Análise e Projeto de Algoritmos", slug: 'apa', curso: 'engenharia_computacao', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Eletrônica Aplicada II", slug: 'eletronica2', curso: 'engenharia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Introdução à Mecânica dos Fluídos", slug: 'fluidos', curso: 'engenharia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Introdução à Microeletrônica", slug: 'microeletronica', curso: 'engenharia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Engenharia de Software", slug: 'es', curso: 'engenharia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Microcontroladores", slug: 'microcontroladores', curso: 'engenharia_computacao', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Pesquisa Operacional", slug: 'po', curso: 'engenharia_computacao', periodo: 8, tipo: 'Obrigatória' },
+    { name: "Redes de Computadores I", slug: 'redes', curso: 'engenharia_computacao', periodo: 8, tipo: 'Obrigatória' },
+    { name: "Sinais e Sistemas Dinâmicos", slug: 'sinais', curso: 'engenharia_computacao', periodo: 8, tipo: 'Obrigatória' },
+    { name: "Sistemas Operacionais I", slug: 'so', curso: 'engenharia_computacao', periodo: 8, tipo: 'Obrigatória' },
+    { name: "Avaliação de Desempenho de Sistemas Operacionais", slug: 'avaliacao_desempenho', curso: 'engenharia_computacao', periodo: 9, tipo: 'Obrigatória' },
+    { name: "Introdução à Computação Gráfica", slug: 'cg', curso: 'engenharia_computacao', periodo: 9, tipo: 'Obrigatória' },
+    { name: "Introdução ao Processamento Digital de Imagens", slug: 'pdi', curso: 'engenharia_computacao', periodo: 9, tipo: 'Obrigatória' },
+    { name: "Sistemas e Controle de Automação", slug: 'controle_automacao', curso: 'engenharia_computacao', periodo: 9, tipo: 'Obrigatória' },
+    { name: "Sistemas Embarcados I", slug: 'embarcados1', curso: 'engenharia_computacao', periodo: 9, tipo: 'Obrigatória' },
+    { name: "Introdução à Inteligência Artificial", slug: 'ia', curso: 'engenharia_computacao', periodo: 9, tipo: 'Obrigatória' },
+    { name: "Robótica", slug: 'robotica', curso: 'engenharia_computacao', periodo: 10, tipo: 'Obrigatória' },
+    { name: "Concepção Estruturada de Circuitos Integrados", slug: 'circuitos_integrados', curso: 'engenharia_computacao', periodo: 10, tipo: 'Obrigatória' },
+    { name: "Introdução à Teoria da Informação", slug: 'teoria_informacao', curso: 'engenharia_computacao', periodo: 10, tipo: 'Obrigatória' },
+    { name: "Economia I", slug: 'economia', curso: 'engenharia_computacao', periodo: 10, tipo: 'Obrigatória' },
+    { name: "Administração para Engenharia", slug: 'adm_eng', curso: 'engenharia_computacao', periodo: 10, tipo: 'Obrigatória' },
+    { name: "Computadores e Sociedade", slug: 'sociedade', curso: 'engenharia_computacao', periodo: 10, tipo: 'Obrigatória' },
+    { name: "Trabalho de Conclusão de Curso I", slug: 'tcc1', curso: 'engenharia_computacao', periodo: 10, tipo: 'Obrigatória' },
+    { name: "Trabalho de Conclusão de Curso II", slug: 'tcc2', curso: 'engenharia_computacao', periodo: 10, tipo: 'Obrigatória' },
+    { name: "Redes sem Fio", slug: 'redes_sem_fio', curso: 'engenharia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Física Aplicada à Computação II (Optativa)", slug: 'fisica2_opt', curso: 'engenharia_computacao', periodo: null, tipo: 'Optativa' },
+    { name: "Arquitetura Avançada de Computadores (Optativa)", slug: 'arquitetura_avancada_opt', curso: 'engenharia_computacao', periodo: null, tipo: 'Optativa' },
+
+    // Ciência de Dados e IA - Baseado no arquivo percursos
+    { name: "Introdução à CDIA", slug: 'intro_cdia', curso: 'ciencia_dados_ia', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Introdução ao Computador", slug: 'intro_computador', curso: 'ciencia_dados_ia', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Introdução à Programação", slug: 'ip', curso: 'ciencia_dados_ia', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Cálculo I", slug: 'calculo1', curso: 'ciencia_dados_ia', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Álgebra Linear", slug: 'linear', curso: 'ciencia_dados_ia', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Metodologia Científica", slug: 'metodologia', curso: 'ciencia_dados_ia', periodo: 1, tipo: 'Obrigatória' },
+    { name: "Programação Estruturada", slug: 'programacao_estruturada', curso: 'ciencia_dados_ia', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Programação Orientada a Objetos", slug: 'poo', curso: 'ciencia_dados_ia', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Cálculo II", slug: 'calculo2', curso: 'ciencia_dados_ia', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Matemática Discreta", slug: 'discreta', curso: 'ciencia_dados_ia', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Cálculo Vetorial", slug: 'vetorial', curso: 'ciencia_dados_ia', periodo: 2, tipo: 'Obrigatória' },
+    { name: "Estrutura de Dados", slug: 'estrutura_dados', curso: 'ciencia_dados_ia', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Teorias de Probabilidades", slug: 'teorias_probabilidades', curso: 'ciencia_dados_ia', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Cálculo III", slug: 'calculo3', curso: 'ciencia_dados_ia', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Álgebra Linear Computacional", slug: 'linear_computacional', curso: 'ciencia_dados_ia', periodo: 3, tipo: 'Obrigatória' },
+    { name: "Introdução à IA", slug: 'intro_IA', curso: 'ciencia_dados_ia', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Análise e Projeto de Algoritmos", slug: 'apa', curso: 'ciencia_dados_ia', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Inferência Estatística", slug: 'inferencia_estatistica', curso: 'ciencia_dados_ia', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Métodos Numéricos", slug: 'metodos_numericos', curso: 'ciencia_dados_ia', periodo: 4, tipo: 'Obrigatória' },
+    { name: "Banco de Dados", slug: 'bd', curso: 'ciencia_dados_ia', periodo: 5, tipo: 'Obrigatória' },
+    { name: "Aprendizagem de Máquina", slug: 'aprendizagem_maquina', curso: 'ciencia_dados_ia', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Mineração Estatística", slug: 'mineracao_estatistica', curso: 'ciencia_dados_ia', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Inteligência Computacional", slug: 'inteligencia_computacional', curso: 'ciencia_dados_ia', periodo: 6, tipo: 'Obrigatória' },
+    { name: "Otimização", slug: 'otimizacao', curso: 'ciencia_dados_ia', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Engenharia de Software", slug: 'es', curso: 'ciencia_dados_ia', periodo: 7, tipo: 'Obrigatória' },
+    { name: "Computadores e Sociedade", slug: 'sociedade', curso: 'ciencia_dados_ia', periodo: 8, tipo: 'Obrigatória' },
+
+    // Optativas CDIA
+    { name: "Visualização de Dados", slug: 'visualizacao_dados', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Séries Temporais", slug: 'series', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Teoria dos Grafos", slug: 'teoria_grafos', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Big Data", slug: 'big_data', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Processamento de Imagens", slug: 'imagens', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Processamento de Linguagem Natural", slug: 'linguagem_natural', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Sistema de Recomendação", slug: 'sistema_recomendacao', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Recuperação de Informação", slug: 'recuperacao_informacao', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Análise Multivariada", slug: 'analise_multivariada', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Ciência de Dados e IA em Finanças", slug: 'cdia_financas', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Empreendedorismo", slug: 'empreendedorismo', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Equações Diferenciais", slug: 'equacoes_diferenciais', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Gerência de Projetos", slug: 'gerencia_projetos', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Internet das Coisas", slug: 'iot', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Métodos Matemáticos", slug: 'metodos_matematicos', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Otimização Não-Linear", slug: 'otimizacao_nao-linear', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Pesquisa Aplicada", slug: 'pesquisa_aplicada', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Pesquisa Operacional", slug: 'po', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Sistemas Operacionais", slug: 'so', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
+    { name: "Arquitetura de Computadores I", slug: 'arquitetura1', curso: 'ciencia_dados_ia', periodo: null, tipo: 'Optativa' },
   ];
 
 
@@ -349,11 +370,29 @@ const PercursosPage = () => {
     };
   }, []);
 
-  const filteredDisciplines = disciplines.filter(discipline =>
-    discipline.curso === cursoSelecionado &&
-    discipline.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
-      .includes(searchTerm.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase())
-  );
+  const filteredDisciplines = disciplines.filter(discipline => {
+    const matchesCurso = discipline.curso === cursoSelecionado;
+    const matchesSearch = discipline.name.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+      .includes(searchTerm.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase());
+
+    let matchesPeriodo = true;
+    if (periodoSelecionado === 'optativas') {
+      matchesPeriodo = discipline.tipo === 'Optativa';
+    } else if (periodoSelecionado !== 'todos') {
+      matchesPeriodo = discipline.periodo === parseInt(periodoSelecionado);
+    }
+
+    return matchesCurso && matchesSearch && matchesPeriodo;
+  });
+
+  // Obter períodos únicos do curso selecionado
+  const periodosDisponiveis = [...new Set(
+    disciplines
+      .filter(d => d.curso === cursoSelecionado && d.periodo !== null)
+      .map(d => d.periodo)
+  )].sort((a, b) => a - b);
+
+  const temOptativas = disciplines.some(d => d.curso === cursoSelecionado && d.tipo === 'Optativa');
 
   const disciplinaIcone = "Icone";
 
@@ -402,6 +441,34 @@ const PercursosPage = () => {
               </button>
 
             </div>
+
+            {/* Filtro de Períodos */}
+            <div className={styles.periodFilter}>
+              <button
+                className={`${styles.periodButton} ${periodoSelecionado === 'todos' ? styles.periodButtonActive : ''}`}
+                onClick={() => setPeriodoSelecionado('todos')}
+              >
+                Todos
+              </button>
+              {periodosDisponiveis.map(periodo => (
+                <button
+                  key={periodo}
+                  className={`${styles.periodButton} ${periodoSelecionado === String(periodo) ? styles.periodButtonActive : ''}`}
+                  onClick={() => setPeriodoSelecionado(String(periodo))}
+                >
+                  {periodo}º Período
+                </button>
+              ))}
+              {temOptativas && (
+                <button
+                  className={`${styles.periodButton} ${styles.periodButtonOptativas} ${periodoSelecionado === 'optativas' ? styles.periodButtonActive : ''}`}
+                  onClick={() => setPeriodoSelecionado('optativas')}
+                >
+                  Optativas
+                </button>
+              )}
+            </div>
+
             <div className={styles.searchContainer}>
               <input
                 type="text"

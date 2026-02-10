@@ -152,6 +152,149 @@
   }
 }
 
+/* Filtro de Períodos */
+.periodFilter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.periodButton {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #fafbff 100%);
+  color: #6747c7;
+  border: 1.5px solid #d4cbff;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 6px rgba(103, 71, 199, 0.08);
+  white-space: nowrap;
+  font-family: 'Outfit', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.periodButton::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(103, 71, 199, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.periodButton:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.periodButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(103, 71, 199, 0.2);
+  border-color: #b8aaf8;
+  background: linear-gradient(135deg, #fafbff 0%, #f5f3ff 100%);
+}
+
+.periodButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(103, 71, 199, 0.12);
+}
+
+.periodButtonActive {
+  background: linear-gradient(135deg, #6747c7 0%, #7856d6 100%);
+  color: #ffffff;
+  border-color: #6747c7;
+  box-shadow: 0 4px 12px rgba(103, 71, 199, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 4px 12px rgba(103, 71, 199, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 6px 16px rgba(103, 71, 199, 0.4);
+  }
+}
+
+.periodButtonActive:hover {
+  background: linear-gradient(135deg, #7856d6 0%, #8965e5 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(103, 71, 199, 0.4);
+}
+
+.periodButtonOptativas {
+  background: linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%);
+  color: #7c3aed;
+  border-color: #c4b5fd;
+}
+
+.periodButtonOptativas:hover {
+  background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
+  border-color: #a78bfa;
+}
+
+.periodButtonOptativas.periodButtonActive {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.35);
+}
+
+.periodButtonOptativas.periodButtonActive:hover {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.45);
+}
+
+/* Responsividade para filtros de período */
+@media (max-width: 768px) {
+  .periodFilter {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .periodButton {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .periodFilter {
+    gap: 9px;
+  }
+
+  .periodButton {
+    font-size: 13px;
+    padding: 9px 18px;
+  }
+}
 
 .main {
   padding: 40px 20px;
