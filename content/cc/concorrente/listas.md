@@ -1,3 +1,0 @@
-## Listas
-
-Listas dessa disciplina.
