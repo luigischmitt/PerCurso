@@ -482,31 +482,33 @@ const PercursosPage = () => {
               </button>
             </div>
 
-            <div className={styles.resourceCards}>
-              {filteredDisciplines.length > 0 ? (
-                filteredDisciplines
-                  .slice(0, cardsToShow)
-                  .map((discipline, index) => (
-                    <Link
-                      href={`/recursos/${discipline.curso}/${discipline.slug}`}
-                      key={index}
-                      passHref
-                    >
-                      <div className={`${styles.card} ${styles.resourceCard}`}>
-                        <img
-                          src={disciplinaIcones[discipline.slug]}
-                          alt={discipline.name}
-                          className={styles.icon}
-                        />
-                        {discipline.name}
-                      </div>
-                    </Link>
-                  ))
-              ) : (
-                <p className={styles.noResults}>
-                  Nenhuma cadeira foi encontrada para o termo pesquisado.
-                </p>
-              )}
+            <div className={styles.scrollContainer}>
+              <div className={styles.resourceCards}>
+                {filteredDisciplines.length > 0 ? (
+                  filteredDisciplines
+                    .slice(0, cardsToShow)
+                    .map((discipline, index) => (
+                      <Link
+                        href={`/recursos/${discipline.curso}/${discipline.slug}`}
+                        key={index}
+                        passHref
+                      >
+                        <div className={`${styles.card} ${styles.resourceCard}`}>
+                          <img
+                            src={disciplinaIcones[discipline.slug]}
+                            alt={discipline.name}
+                            className={styles.icon}
+                          />
+                          {discipline.name}
+                        </div>
+                      </Link>
+                    ))
+                ) : (
+                  <p className={styles.noResults}>
+                    Nenhuma cadeira foi encontrada para o termo pesquisado.
+                  </p>
+                )}
+              </div>
             </div>
           </section>
           <div className={styles.lineBottom}></div>
