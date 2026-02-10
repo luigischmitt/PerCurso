@@ -116,6 +116,65 @@ export async function generateStaticParams() {
     { curso: 'ciencia_dados_ia', disciplina: 'teorias_probabilidades' },
     { curso: 'ciencia_dados_ia', disciplina: 'vetorial' },
     { curso: 'ciencia_dados_ia', disciplina: 'visualizacao_dados' },
+
+    // Engenharia da Computação
+    { curso: 'engenharia_computacao', disciplina: 'vetorial' },
+    { curso: 'engenharia_computacao', disciplina: 'calculo1' },
+    { curso: 'engenharia_computacao', disciplina: 'metodologia' },
+    { curso: 'engenharia_computacao', disciplina: 'intro_eng' },
+    { curso: 'engenharia_computacao', disciplina: 'lab_ip' },
+    { curso: 'engenharia_computacao', disciplina: 'ip_ec' },
+    { curso: 'engenharia_computacao', disciplina: 'materiais' },
+    { curso: 'engenharia_computacao', disciplina: 'fisica1' },
+    { curso: 'engenharia_computacao', disciplina: 'calculo2' },
+    { curso: 'engenharia_computacao', disciplina: 'lab_lp1' },
+    { curso: 'engenharia_computacao', disciplina: 'lp1' },
+    { curso: 'engenharia_computacao', disciplina: 'circuitos_logicos1' },
+    { curso: 'engenharia_computacao', disciplina: 'eletricidade1' },
+    { curso: 'engenharia_computacao', disciplina: 'fisica_exp' },
+    { curso: 'engenharia_computacao', disciplina: 'linear' },
+    { curso: 'engenharia_computacao', disciplina: 'calculo3' },
+    { curso: 'engenharia_computacao', disciplina: 'pesquisa' },
+    { curso: 'engenharia_computacao', disciplina: 'probabilidade' },
+    { curso: 'engenharia_computacao', disciplina: 'circuitos_logicos2' },
+    { curso: 'engenharia_computacao', disciplina: 'eletricidade2' },
+    { curso: 'engenharia_computacao', disciplina: 'mecanica' },
+    { curso: 'engenharia_computacao', disciplina: 'fisica2' },
+    { curso: 'engenharia_computacao', disciplina: 'series_edo' },
+    { curso: 'engenharia_computacao', disciplina: 'lp2' },
+    { curso: 'engenharia_computacao', disciplina: 'ed' },
+    { curso: 'engenharia_computacao', disciplina: 'eletronica1' },
+    { curso: 'engenharia_computacao', disciplina: 'arquitetura' },
+    { curso: 'engenharia_computacao', disciplina: 'arquitetura_avancada' },
+    { curso: 'engenharia_computacao', disciplina: 'bd' },
+    { curso: 'engenharia_computacao', disciplina: 'numerico' },
+    { curso: 'engenharia_computacao', disciplina: 'apa' },
+    { curso: 'engenharia_computacao', disciplina: 'eletronica2' },
+    { curso: 'engenharia_computacao', disciplina: 'fluidos' },
+    { curso: 'engenharia_computacao', disciplina: 'microeletronica' },
+    { curso: 'engenharia_computacao', disciplina: 'es' },
+    { curso: 'engenharia_computacao', disciplina: 'microcontroladores' },
+    { curso: 'engenharia_computacao', disciplina: 'po' },
+    { curso: 'engenharia_computacao', disciplina: 'redes' },
+    { curso: 'engenharia_computacao', disciplina: 'sinais' },
+    { curso: 'engenharia_computacao', disciplina: 'so' },
+    { curso: 'engenharia_computacao', disciplina: 'avaliacao_desempenho' },
+    { curso: 'engenharia_computacao', disciplina: 'redes_sem_fio' },
+    { curso: 'engenharia_computacao', disciplina: 'cg' },
+    { curso: 'engenharia_computacao', disciplina: 'pdi' },
+    { curso: 'engenharia_computacao', disciplina: 'controle_automacao' },
+    { curso: 'engenharia_computacao', disciplina: 'embarcados1' },
+    { curso: 'engenharia_computacao', disciplina: 'ia' },
+    { curso: 'engenharia_computacao', disciplina: 'robotica' },
+    { curso: 'engenharia_computacao', disciplina: 'circuitos_integrados' },
+    { curso: 'engenharia_computacao', disciplina: 'teoria_informacao' },
+    { curso: 'engenharia_computacao', disciplina: 'economia' },
+    { curso: 'engenharia_computacao', disciplina: 'adm_eng' },
+    { curso: 'engenharia_computacao', disciplina: 'sociedade' },
+    { curso: 'engenharia_computacao', disciplina: 'tcc1' },
+    { curso: 'engenharia_computacao', disciplina: 'tcc2' },
+    { curso: 'engenharia_computacao', disciplina: 'fisica2_opt' },
+    { curso: 'engenharia_computacao', disciplina: 'arquitetura_avancada_opt' },
   ];
 }
 
@@ -205,7 +264,48 @@ const disciplinaNomes = {
   recuperacao_informacao: "RECUPERAÇÃO DE INFORMAÇÃO",
   sistema_recomendacao: "SISTEMA DE RECOMENDAÇÃO",
   teorias_probabilidades: "TEORIAS DE PROBABILIDADES",
-  visualizacao_dados: "VISUALIZAÇÃO DE DADOS"
+  visualizacao_dados: "VISUALIZAÇÃO DE DADOS",
+
+  // Engenharia da Computação
+  intro_eng: "INTRODUÇÃO À ENGENHARIA DE COMPUTAÇÃO",
+  lab_ip: "LABORATÓRIO DE INTRODUÇÃO À PROGRAMAÇÃO",
+  ip_ec: "INTRODUÇÃO À PROGRAMAÇÃO PARA ENGENHARIA DE COMPUTAÇÃO",
+  materiais: "MATERIAIS PARA MICRO E NANO TECNOLOGIA",
+  fisica1: "FÍSICA APLICADA À COMPUTAÇÃO I",
+  lab_lp1: "LABORATÓRIO DE LINGUAGEM DE PROGRAMAÇÃO I",
+  lp1: "LINGUAGEM DE PROGRAMAÇÃO I",
+  circuitos_logicos1: "CIRCUITOS LÓGICOS I",
+  eletricidade1: "ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO I",
+  fisica_exp: "FÍSICA EXPERIMENTAL PARA COMPUTAÇÃO",
+  circuitos_logicos2: "CIRCUITOS LÓGICOS II",
+  eletricidade2: "ELETRICIDADE E CIRCUITOS PARA COMPUTAÇÃO II",
+  mecanica: "MECÂNICA PARA ENGENHARIA DA COMPUTAÇÃO",
+  fisica2: "FÍSICA APLICADA À COMPUTAÇÃO II",
+  series_edo: "SÉRIES E EQUAÇÕES DIFERENCIAIS ORDINÁRIAS",
+  lp2: "LINGUAGEM DE PROGRAMAÇÃO II",
+  ed: "ESTRUTURA DE DADOS",
+  eletronica1: "ELETRÔNICA APLICADA I",
+  arquitetura: "ARQUITETURA DE COMPUTADORES",
+  arquitetura_avancada: "ARQUITETURA AVANÇADA DE COMPUTADORES",
+  eletronica2: "ELETRÔNICA APLICADA II",
+  fluidos: "INTRODUÇÃO À MECÂNICA DOS FLUÍDOS",
+  microeletronica: "INTRODUÇÃO À MICROELETRÔNICA",
+  microcontroladores: "MICROCONTROLADORES",
+  sinais: "SINAIS E SISTEMAS DINÂMICOS",
+  avaliacao_desempenho: "AVALIAÇÃO DE DESEMPENHO DE SISTEMAS OPERACIONAIS",
+  cg: "INTRODUÇÃO À COMPUTAÇÃO GRÁFICA",
+  pdi: "INTRODUÇÃO AO PROCESSAMENTO DIGITAL DE IMAGENS",
+  controle_automacao: "SISTEMAS E CONTROLE DE AUTOMAÇÃO",
+  embarcados1: "SISTEMAS EMBARCADOS I",
+  robotica: "ROBÓTICA",
+  circuitos_integrados: "CONCEPÇÃO ESTRUTURADA DE CIRCUITOS INTEGRADOS",
+  teoria_informacao: "INTRODUÇÃO À TEORIA DA INFORMAÇÃO",
+  economia: "ECONOMIA I",
+  adm_eng: "ADMINISTRAÇÃO PARA ENGENHARIA",
+  tcc1: "TRABALHO DE CONCLUSÃO DE CURSO I - ENG. DE COMPUTAÇÃO",
+  tcc2: "TRABALHO DE CONCLUSÃO DE CURSO II - ENG. DE COMPUTAÇÃO",
+  fisica2_opt: "FÍSICA APLICADA À COMPUTAÇÃO II (OPTATIVA)",
+  arquitetura_avancada_opt: "ARQUITETURA AVANÇADA DE COMPUTADORES (OPTATIVA)"
 };
 
 const disciplinaIcones = {
@@ -297,7 +397,29 @@ const disciplinaIcones = {
 };
 
 export default function DisciplinaPage({ params }) {
-  const cursoFolder = cursoMap[params.curso] || 'cc'; // Default fallback
+  let cursoFolder = cursoMap[params.curso] || 'cc'; // Default fallback
+
+  // Disciplinas de Engenharia que usam o conteúdo de Ciência da Computação
+  const disciplinasCompartilhadasEC = [
+    'calculo1', 'calculo2', 'vetorial', 'metodologia', 'linear',
+    'probabilidade', 'pesquisa', 'bd', 'numerico', 'apa', 'es',
+    'po', 'redes', 'so', 'ia', 'sociedade'
+  ];
+
+  // Disciplinas de CDIA que usam o conteúdo de Ciência da Computação
+  const disciplinasCompartilhadasCDIA = [
+    'calculo1', 'calculo2', 'vetorial', 'linear', 'discreta',
+    'ip', 'poo', 'apa', 'bd', 'es', 'so', 'sociedade',
+    'metodologia', 'teoria_grafos', 'imagens', 'po', 'arquitetura1'
+  ];
+
+  if (params.curso === 'engenharia_computacao' && disciplinasCompartilhadasEC.includes(params.disciplina)) {
+    cursoFolder = 'cc';
+  }
+
+  if (params.curso === 'ciencia_dados_ia' && disciplinasCompartilhadasCDIA.includes(params.disciplina)) {
+    cursoFolder = 'cc';
+  }
 
   const dicas = getDisciplinaContent(params.disciplina, 'dicas', cursoFolder);
   const dificuldades = getDisciplinaContent(params.disciplina, 'dificuldades', cursoFolder);
