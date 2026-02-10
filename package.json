@@ -12,7 +12,7 @@
     "@vercel/analytics": "^1.4.1",
     "d3": "^7.9.0",
     "gray-matter": "^4.0.3",
-    "next": "^15.0.3",
+    "next": "^15.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "remark": "^15.0.1",
