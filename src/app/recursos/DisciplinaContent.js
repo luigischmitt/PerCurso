@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import styles from './[disciplina]/page.module.css';
+import styles from './[curso]/[disciplina]/page.module.css';
 
 export default function DisciplinaContent({ dicas, dificuldades, listas, provas, extras }) {
   const [activeSection, setActiveSection] = useState('dicas');
