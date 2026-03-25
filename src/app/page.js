@@ -4,7 +4,7 @@ import styles from './page.module.css';
 
 const HomePage = () => {
   return (
-    <div>
+    <div className={styles.pageWrapper}>
       <div className={styles.backgroundRectangle}>
         <div className={styles.lineMid}></div>
         <main className={`${styles.container} ${styles.main}`}>

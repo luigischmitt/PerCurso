@@ -40,22 +40,25 @@ export function getDisciplinaContent(disciplina, fileName, curso) {
   }
   const fullPath = path.join(contentDirectory, `${fileName}.md`);
 
-  try {
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
-
-    const processedContent = remark()
-      .use(html)
-      .processSync(matterResult.content);
-
-    const contentHtml = processedContent.toString();
-
+  if (!fs.existsSync(fullPath)) {
+    console.warn(`Arquivo não encontrado: ${fullPath}`);
     return {
-      title: matterResult.data.title,
-      contentHtml,
+      title: fileName.charAt(0).toUpperCase() + fileName.slice(1),
+      contentHtml: '<p>Conteúdo ainda não disponível.</p>',
     };
-  } catch (error) {
-    console.error("Erro ao ler o arquivo:", error);
-    throw error;
   }
+
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const matterResult = matter(fileContents);
+
+  const processedContent = remark()
+    .use(html)
+    .processSync(matterResult.content);
+
+  const contentHtml = processedContent.toString();
+
+  return {
+    title: matterResult.data.title,
+    contentHtml,
+  };
 }
