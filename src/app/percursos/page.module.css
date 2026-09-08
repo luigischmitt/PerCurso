@@ -360,26 +360,34 @@
 }
 
 .row {
-  display: flex; 
+  display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 2rem; 
+  align-items: stretch;
+  gap: 2rem;
   width: 100%;
   max-width: 90%;
 }
 
 .groupItem {
-  text-align: left; 
+  text-align: left;
   display: flex;
   gap: 2rem;
   justify-content: center;
-  width: 45%; 
-  height: 20rem;
+  width: 45%;
+  min-height: 20rem;
   background-color: rgba(237, 246, 255, 0.34);
   padding: 20px;
   border-radius: 19px;
   box-shadow: 9px 11px 11px -8px rgba(0, 0, 0, 0.17);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.groupCategoryTitle {
+  font-size: 2rem;
+  color: #372179;
+  font-weight: 800;
+  text-align: center;
+  margin: 2rem 0 0.5rem;
 }
 
 .groupItem:hover {
@@ -389,23 +397,33 @@
   cursor: pointer; 
 }
 
+.groupItem > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
 .groupText {
   margin: 1.6rem;
 }
 
 .groupContent {
   display: flex;
-  height: 100%; 
+  align-items: flex-start;
+  height: 100%;
   width: 100%;
-  text-decoration: none; 
+  text-decoration: none;
   color: inherit;
 }
 
 .groupImage {
-  width: 150px; 
+  width: 150px;
   height: 150px;
   object-fit: contain;
-  margin: 3.2rem 1rem;
+  flex-shrink: 0;
+  margin: 1.6rem 1rem;
 }
 
 .groupTitle {
@@ -601,7 +619,7 @@
     width: 100%;
     margin: 10px 0;
     padding: 15px;
-    height: 25rem;
+    min-height: 25rem;
   }
   
   .groupContent {
@@ -981,9 +999,9 @@
   
   .groupItem {
     width: 520px;
-    margin: 10px 0; 
+    margin: 10px 0;
     padding: 15px;
-    height: 25rem;
+    min-height: 25rem;
   }
   
   .groupContent {
@@ -1173,9 +1191,9 @@
   
   .groupItem {
     gap: 2rem;
-    width: 50%; 
+    width: 50%;
     min-width: 20rem;
-    height: 22rem;
+    min-height: 21rem;
     padding: 10px;
   }
   
@@ -1184,10 +1202,10 @@
   }
   
   .groupImage {
-    width: 140px; 
+    width: 140px;
     height: 140px;
     object-fit: contain;
-    margin: 3.2rem 1rem;
+    margin: 0 1rem;
   }
   
   .groupTitle {
@@ -1366,8 +1384,8 @@
   
   .groupItem {
     gap: 2rem;
-    width: 50%; 
-    height: 20rem;
+    width: 50%;
+    min-height: 20rem;
     padding: 20px;
   }
   
@@ -1376,10 +1394,10 @@
   }
   
   .groupImage {
-    width: 145px; 
+    width: 145px;
     height: 145px;
     object-fit: contain;
-    margin: 3.2rem 1rem;
+    margin: 0 1rem;
   }
   
   .groupTitle {
@@ -1550,8 +1568,8 @@
   
   .groupItem {
     gap: 2rem;
-    width: 45%; 
-    height: 20rem;
+    width: 45%;
+    min-height: 20rem;
     padding: 20px;
   }
   
@@ -1560,10 +1578,10 @@
   }
   
   .groupImage {
-    width: 150px; 
+    width: 150px;
     height: 150px;
     object-fit: contain;
-    margin: 3.2rem 1rem;
+    margin: 0 1rem;
   }
   
   .groupTitle {

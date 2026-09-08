@@ -201,6 +201,7 @@ const PercursosPage = () => {
     <div className={styles.backgroundWhite}>
       <div className={styles.grupos}>
         <div className={styles.groupsContainer}>
+          <h3 className={styles.groupCategoryTitle}>Ligas Acadêmicas</h3>
           <div className={styles.row}>
             <div className={styles.groupItem}>
               <Link href="https://tail-tech.com/" target="_blank">
@@ -217,6 +218,40 @@ const PercursosPage = () => {
               </Link>
             </div>
             <div className={styles.groupItem}>
+              <Link href="https://www.instagram.com/cortechx.ufpb/" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/CortechX_logo.png" alt="Logo CortechX" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>CortechX</h3>
+                    <p className={styles.groupSubtitle}>Liga Acadêmica</p>
+                    <p className={styles.groupDescription}>
+                    Liga acadêmica de tecnologia e Interação Humano-Computador que desenvolve projetos práticos nas fronteiras entre tecnologia, mente e sociedade, passando por inteligência artificial, neurociência, EEG e análise de comportamento. Busca unir conhecimento científico e aplicação prática, com foco em interdisciplinaridade, empreendedorismo e tecnologias centradas no ser humano.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.groupItem}>
+              <Link href="https://www.instagram.com/ufpbquantum/" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/QUASAR_logo.png" alt="Logo QUASAR" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>QUASAR</h3>
+                    <p className={styles.groupSubtitle}>Liga Acadêmica</p>
+                    <p className={styles.groupDescription}>
+                    Liga acadêmica de Computação Quântica da Universidade Federal da Paraíba.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <h3 className={styles.groupCategoryTitle}>Grupos Acadêmicos</h3>
+          <div className={styles.row}>
+            <div className={styles.groupItem}>
               <Link href="https://mcc.ci.ufpb.br/" target="_blank">
                 <div className={styles.groupContent}>
                   <img src="/mcc_logo.png" alt="Logo MCCUFPB" className={styles.groupImage} />
@@ -230,8 +265,6 @@ const PercursosPage = () => {
                 </div>
               </Link>
             </div>
-          </div>
-          <div className={styles.row}>
             <div className={styles.groupItem}>
               <Link href="https://www.petccufpb.com.br/" target="_blank">
                 <div className={styles.groupContent}>
@@ -246,6 +279,8 @@ const PercursosPage = () => {
                 </div>
               </Link>
             </div>
+          </div>
+          <div className={styles.row}>
             <div className={styles.groupItem}>
               <Link href="https://www.instagram.com/log.ufpb/" target="_blank">
                 <div className={styles.groupContent}>
@@ -255,6 +290,112 @@ const PercursosPage = () => {
                     <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
                     <p className={styles.groupDescription}>
                     O Logistics and Optimization Group (LOG) faz parte do LASER e foi fundado com o intuito de reunir pessoas interessadas em trabalhar com a área de Otimização Combinatória e Logística. O LOG conta com uma extensa rede de colaboração no Brasil e no Exterior.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className={styles.groupItem}>
+              <Link href="https://www.instagram.com/capybots/" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/capybots_logo.png" alt="Logo CapyBots" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>CapyBots</h3>
+                    <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
+                    <p className={styles.groupDescription}>
+                    Grupo estudantil de robótica vinculado ao LASER que representa a UFPB na Flying Robots League, competição na qual já conquistou o título de bicampeão brasileiro.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.groupItem}>
+              <Link href="https://www.instagram.com/ramoieee.ufpb/" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/IEEE_logo.png" alt="Logo IEEE" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>IEEE</h3>
+                    <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
+                    <p className={styles.groupDescription}>
+                    Ramo estudantil do IEEE (Institute of Electrical and Electronics Engineers) no Centro de Informática da UFPB, organização profissional global voltada ao avanço da tecnologia. Reúne capítulos especializados como RAS, CS, PES e PELS/IAS, promovendo atividades educacionais, projetos técnicos e networking em engenharia elétrica, eletrônica e computação.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className={styles.groupItem}>
+              <Link href="https://sites.google.com/academico.ufpb.br/colabciufpb/home?pli=1&authuser=0" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/Colab_logo.png" alt="Logo Núcleo Colab" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>Núcleo Colab</h3>
+                    <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
+                    <p className={styles.groupDescription}>
+                    Núcleo de Incubação e Inovação Colaborativa voltado aos alunos do Centro de Informática da UFPB, que apoia estudantes e fomenta a inovação tecnológica por meio de empreendedorismo, pesquisa e ensino. Atua de forma interdisciplinar em áreas como Ciência de Dados, Engenharia da Computação, Sistemas de Informação e Inteligência Artificial, aproximando a academia da indústria.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className={styles.row}>
+            <div className={styles.groupItem}>
+              <Link href="https://www.instagram.com/pacodeufpb/" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/Pacode_logo.png" alt="Logo PaCode" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>PaCode</h3>
+                    <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
+                    <p className={styles.groupDescription}>
+                    Grupo de estudos voltado à programação competitiva da Universidade Federal da Paraíba.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className={styles.groupItem}>
+              <Link href="https://www.otrilha.com/" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/Trilha_logo.png" alt="Logo Trilha" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>Trilha</h3>
+                    <p className={styles.groupSubtitle}>Grupo Acadêmico</p>
+                    <p className={styles.groupDescription}>
+                    Organização estudantil do Centro de Informática formada por alunos veteranos que, a cada semestre, selecionam uma turma de calouros para acompanhar com aulas semanais, mentorias individuais, apoio técnico, eventos e palestras. O objetivo é oferecer aos estudantes uma base profissional voltada às demandas do mercado de trabalho.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <h3 className={styles.groupCategoryTitle}>Projetos de Extensão</h3>
+          <div className={styles.row}>
+            <div className={styles.groupItem}>
+              <Link href="https://www.aquarioufpb.com/" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/Aquario_logo.png" alt="Logo Aquário" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>Aquário</h3>
+                    <p className={styles.groupSubtitle}>Projeto de Extensão</p>
+                    <p className={styles.groupDescription}>
+                    Projeto de extensão do Centro de Informática da UFPB que constrói uma plataforma online para conectar alunos e divulgar projetos, grupos e demais iniciativas, funcionando como um mural do Centro. Hoje já disponibiliza o mural de entidades e guias acadêmicos, com planos de trazer blog, vagas, login e expansão para outros centros.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <div className={styles.groupItem}>
+              <Link href="https://www.instagram.com/cangaconoespaco/" target="_blank">
+                <div className={styles.groupContent}>
+                  <img src="/cangaconoespaco_logo.png" alt="Logo Cangaço no Espaço" className={styles.groupImage} />
+                  <div className={styles.groupText}>
+                    <h3 className={styles.groupTitle}>Cangaço no Espaço</h3>
+                    <p className={styles.groupSubtitle}>Projeto de Extensão</p>
+                    <p className={styles.groupDescription}>
+                    Projeto de extensão da UFPB dedicado à área aeroespacial, com atividades de pesquisa, divulgação científica e capacitação dos seus integrantes nesse campo.
                     </p>
                   </div>
                 </div>
